@@ -11,7 +11,7 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void loginButton_Click(object sender, EventArgs e)
@@ -57,6 +57,10 @@ namespace METWebsite
         protected void viewCoursesButton_Click(object sender, EventArgs e)
         {
 
+        }
+        protected void ShowHover(object sender, EventArgs e)
+        {
+            Response.Redirect("AboutUsPage.aspx");
         }
 
     }

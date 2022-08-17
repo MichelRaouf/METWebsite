@@ -8,6 +8,44 @@
     <link rel="icon" href="./images/gucLogo.png">
     <link  rel="stylesheet" href="./StyleSheets/HomeStyles.css"/>
 </head>
+    <script>
+        function SeeMore(){
+            alert(12);
+        }
+        function ShowHover() {
+//
+            var x = document.createElement("div");
+            x.setAttribute("class", "whitebox");
+            x.setAttribute("id", "addeddiv");
+            x.style.width = "401px";
+            x.style.height = event.srcElement.offsetHeight + "px";
+            x.style.position = "absolute";
+            x.style.left = event.srcElement.offsetLeft+"px";
+            x.style.top = event.srcElement.offsetTop + "px";
+            var label2 = document.createElement("label");
+            label2.innerHTML = event.srcElement.getAttribute("title")
+            label2.setAttribute("class", "newsitemlabel");
+            var label = document.createElement("label");
+            label.innerHTML = event.srcElement.getAttribute("description");
+            label.setAttribute("class", "newsinfo");
+            x.appendChild(label2)
+            x.appendChild(label);
+            var button = document.createElement("button");
+            button.innerHTML = "See More";
+            button.setAttribute("class", "newsbtn");
+            button.setAttribute("onclick", "SeeMore()");
+            x.appendChild(button);
+            x.setAttribute("onmouseleave", "removeHover()");
+            document.querySelector("body").appendChild(x);
+            
+        }
+        function removeHover() {
+            
+            var x = document.getElementById("addeddiv");
+            document.querySelector("body").removeChild(x);
+
+        }
+    </script>
 <body>
     <form id="form1" runat="server">
         <div class="header">
@@ -73,15 +111,34 @@
             <asp:Button ID="readMoreButton" CssClass="readMore" runat="server" Text="Read More" OnClick="readMoreButton_Click"/>
         </div>
 
-        <div class="latestNewsDiv">
-            <div class="latestNewsLabel">
-                <label>
-                    Latest News
-                </label>
-            </div>
-            <div class="latestNewsElements">
+            <div class="news" >
+            <div> <label class="newslabel">Latest News</label> </div>
+            <div class="newsitem" id="newsdiv" runat="server" >
+                <div>
+                    <section class="whitebox" id="image11" >
+                        <label class="newsitemlabel">Job Fair 2022</label>
+                    </section>
+                    <img onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
+                    
+                </div>
+                <div>
+                    <section class="whitebox">
+                        <label class="newsitemlabel">Job Fair 2022</label>
+                    </section>
+                    <img onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
 
+                </div>
+                <div>
+                    <section class="whitebox">
+                        <label class="newsitemlabel">Job Fair 2022</label>
+                    </section>
+                    <img onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
+
+                </div>
+                
             </div>
+            
+            
         </div>
 
         <div class="pathsDiv">
@@ -110,7 +167,7 @@
         </div>
             <div class="gucianinfo">
                 <div>
-                <img src="./images/person1.svg"/>
+                <img src="./images/homePageImages/person1.svg"/>
                 <div class="alumniinfo">
                 <label class="name">Ahmed Sabah</label>
                 <br />
@@ -119,10 +176,10 @@
                 </div>
             </div>
             <div>
-                <img src="./images/verticalbar.svg" />
+                <img src="./images/homePageImages/verticalbarwhite.svg" />
             </div>
             <div>
-                <img src="./images/person1.svg"/>
+                <img src="./images/homePageImages/person1.svg"/>
 <div class="alumniinfo">
                 <label class="name">Ahmed Sabah</label>
                 <br />
@@ -132,10 +189,10 @@
                 
             </div>
             <div>
-                <img src="./images/verticalbar.svg" />
+                <img src="./images/homePageImages/verticalbarwhite.svg" />
             </div>
             <div>
-                <img src="./images/person1.svg"/>
+                <img src="./images/homePageImages/person1.svg"/>
                 <div class="alumniinfo">
                 <label class="name">Ahmed Sabah</label>
                 <br />
@@ -273,7 +330,8 @@
                 </div>
 
             </div>
-            
+            <br />
+            <br />
 
 
 

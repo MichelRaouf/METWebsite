@@ -138,23 +138,25 @@
     <Content Include="images\aboutUsPageImages\studactiv.svg" />
     <Content Include="images\aboutUsPageImages\WhyMET.svg" />
     <Content Include="images\aboutUsPageImages\yellowbar.svg" />
-    <Content Include="images\homePageImages\callLogo.svg" />
-    <Content Include="images\homePageImages\deskLogo.svg" />
-    <Content Include="images\homePageImages\mailLogo.svg" />
-    <Content Include="StActivitiesHomePage.aspx" />
-    <Content Include="StyleSheets\AboutUs.css" />
-    <Content Include="StyleSheets\HomeStyles.css" />
-    <Content Include="images\gucLogo.png" />
     <Content Include="images\homePageImages\aboutUs.svg" />
     <Content Include="images\homePageImages\alumni.svg" />
+    <Content Include="images\homePageImages\callLogo.svg" />
     <Content Include="images\homePageImages\courses.svg" />
+    <Content Include="images\homePageImages\deskLogo.svg" />
     <Content Include="images\homePageImages\graduation.svg" />
     <Content Include="images\homePageImages\gucFullLogo.svg" />
     <Content Include="images\homePageImages\inHome.svg" />
+    <Content Include="images\homePageImages\mailLogo.svg" />
+    <Content Include="images\homePageImages\news1.svg" />
     <Content Include="images\homePageImages\pathsPhoto.svg" />
+    <Content Include="images\homePageImages\person1.svg" />
     <Content Include="images\homePageImages\staff.svg" />
     <Content Include="images\homePageImages\studentActivities.svg" />
     <Content Include="images\homePageImages\verticalBar.svg" />
+    <Content Include="images\homePageImages\verticalbarwhite.svg" />
+    <Content Include="StActivitiesHomePage.aspx" />
+    <Content Include="StyleSheets\AboutUs.css" />
+    <Content Include="images\gucLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -185,6 +187,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="StaffHomePage.aspx" />
+    <Content Include="StyleSheets\HomeStyles.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -216,7 +219,6 @@
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
