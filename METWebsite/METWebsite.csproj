@@ -125,6 +125,9 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="HomePage.aspx" />
+    <Content Include="images\homePageImages\callLogo.svg" />
+    <Content Include="images\homePageImages\deskLogo.svg" />
+    <Content Include="images\homePageImages\mailLogo.svg" />
     <Content Include="StActivitiesHomePage.aspx" />
     <Content Include="StyleSheets\HomeStyles.css" />
     <Content Include="images\gucLogo.png" />
