@@ -104,21 +104,53 @@
                 <img class="pathsPhoto" src="./images/homePageImages/pathsPhoto.svg"/>
             </div>
         </div>
-<%--        <div class ="weGucians">
-           <div class="gucianstitle">
-               <label class="GuciansLabel">#we_GUCians</label>
-           </div>
-            <div class="honors"> 
+<div class="wegucians">
+            <div class="redlabel">
+                <label class="gucianlabel">#We_Gucians</label>
+        </div>
+            <div class="gucianinfo">
+                <div>
+                <img src="./images/person1.svg"/>
+                <div class="alumniinfo">
+                <label class="name">Ahmed Sabah</label>
+                <br />
+                <label class="description"> Co-Founder & CTO  of Swvl Forbes Middle East ARAB 30 UNDER 30: Class of 2018 Category of Consumer Technology</label>
 
+                </div>
+            </div>
+            <div>
+                <img src="./images/verticalbar.svg" />
+            </div>
+            <div>
+                <img src="./images/person1.svg"/>
+<div class="alumniinfo">
+                <label class="name">Ahmed Sabah</label>
+                <br />
+                <label class="description"> Co-Founder & CTO  of Swvl Forbes Middle East ARAB 30 UNDER 30: Class of 2018 Category of Consumer Technology</label>
+
+                </div>              
+                
+            </div>
+            <div>
+                <img src="./images/verticalbar.svg" />
+            </div>
+            <div>
+                <img src="./images/person1.svg"/>
+                <div class="alumniinfo">
+                <label class="name">Ahmed Sabah</label>
+                <br />
+                <label class="description"> Co-Founder & CTO  of Swvl Forbes Middle East ARAB 30 UNDER 30: Class of 2018 Category of Consumer Technology</label>
+
+                </div>
+            </div>
 
             </div>
-            <div class ="honorsButton">
-
-
-
-
+        
+            <div>
+                <asp:button id="button10" cssclass="showmore" runat="server" text="Show More"   />
             </div>
-        </div>--%>
+
+        </div>
         <div class="ContactUs">
            <div class="contacttitle">
                <label class="contactustext">Contact Us</label>
@@ -126,38 +158,117 @@
             <div class="contactInfo" >
                <div class="hotlines">
                   <div class ="Iconandtitle">
-
-
+                      <img class="contactIcons" src="./images/homePageImages/callLogo.svg"/>
+                      <label class="contactTitlesText">
+                          GUC Hotlines:
+                      </label>
                   </div>
                    <div class="info">
-
-
-
+                       <label class="contactText">
+                           16482
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           IT:
+                       </label>
+                       <br />
+                            <label class="contactText">
+                            +201006820746 
+                       </label>
+                       <br />
+                        <label class="contactText">
+                            +201006820746 
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           MET Coordinator:
+                       </label>
+                       <br />
+                       <label class="contactText">
+                            +201006820746 
+                       </label>
+                       <br />
+                       <label class="contactText">
+                            +201006820746 
+                       </label>
+                       <br />
                    </div>
-
-
                </div>
                 <div class="emails">
                     <div class ="Iconandtitle">
-
-
+                        <img class="contactIcons" src="./images/homePageImages/mailLogo.svg"/>
+                      <label class="contactTitlesText">
+                          Admission:
+                      </label>
                   </div>
                    <div class="info">
-
-
-
+                       <label class="contactText">
+                           admission@guc.edu.eg
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           IT:
+                       </label>
+                       <br />
+                            <label class="contactText">
+                             it1@guc.edu.eg
+                       </label>
+                        <label class="contactText">
+                                    it2@guc.edu.eg 
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           MET Coordinator:
+                       </label>
+                       <br />
+                       <label class="contactText">
+                                     coordinator1@guc.edu.eg 
+                       </label>
+                       <br />
+                       <label class="contactText">
+                                     coordinator2@guc.edu.eg 
+                       </label>
+                       <br />
+                       <label class="contactText">
+                                     coordinator3@guc.edu.eg 
+                       </label>
+                       <br />
                    </div>
 
                 </div>
                 <div class="office">
                       <div class ="Iconandtitle">
-
+                          <img class="contactIcons" src="./images/homePageImages/deskLogo.svg"/>
+                      <label class="contactTitlesText">
+                          IT:
+                      </label>
 
                   </div>
                    <div class="info">
-
-
-
+                       <label class="contactText">
+                            C6.123
+                       </label>
+                       <br />
+                       <label class="contactText">
+                            C6.123
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           MET Coordinator:
+                       </label>
+                       <br />
+                            <label class="contactText">
+                             C7.235
+                       </label>
+                       <br />
+                        <label class="contactText">
+                             C7.235
+                       </label>
                    </div>
                 </div>
 
