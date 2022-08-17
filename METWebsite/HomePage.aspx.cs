@@ -39,6 +39,11 @@ namespace METWebsite
 
         }
 
+        protected void alumniButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         protected void aboutUsButton_Click(object sender, EventArgs e)
         {
 

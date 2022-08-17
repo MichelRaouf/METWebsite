@@ -6,7 +6,7 @@
 <head runat="server">
     <title>MET Website</title>
     <link rel="icon" href="./images/gucLogo.png">
-    <link  rel="stylesheet" href="HomeStyles.css"/>
+    <link  rel="stylesheet" href="./StyleSheets/HomeStyles.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,16 +33,20 @@
                 <asp:Button ID="homeButton" CssClass="navButtonIn" runat="server" Text="Home" OnClick="homeButton_Click"/>
             </div>
             <div>
-                <img href="CoursesPage.aspx" class="navIcons" src="./images/homePageImages/courses.svg"/>
+                <img href="CoursesHomePage.aspx" class="navIcons" src="./images/homePageImages/courses.svg"/>
                 <asp:Button ID="coursesButton" CssClass="navButton" runat="server" Text="Courses" OnClick="coursesButton_Click"/>
             </div>
             <div>
-                <img href="StaffPage.aspx" class="navIcons" src="./images/homePageImages/staff.svg"/>
+                <img href="StaffHomePage.aspx" class="navIcons" src="./images/homePageImages/staff.svg"/>
                 <asp:Button ID="staffButton" CssClass="navButton" runat="server" Text="Staff" OnClick="staffButton_Click"/>
             </div>
             <div>
-                <img href="StudentActivitiesPage.aspx" class="navIcons" src="./images/homePageImages/studentActivities.svg"/>
+                <img href="StActivitiesHomePage.aspx" class="navIcons" src="./images/homePageImages/studentActivities.svg"/>
                 <asp:Button ID="studentActivitiesButton" CssClass="navButton" runat="server" Text="Student Activities" OnClick="studentActivitiesButton_Click"/>
+            </div>
+            <div>
+                <img href="AlumniPage.aspx" class="navIcons" src="./images/homePageImages/alumni.svg"/>
+                <asp:Button ID="alumniButton" CssClass="navButton" runat="server" Text="Alumni" OnClick="alumniButton_Click"/>
             </div>
             <div>
                 <img href="AboutUsPage.aspx" class="navIcons" src="./images/homePageImages/aboutUs.svg"/>
