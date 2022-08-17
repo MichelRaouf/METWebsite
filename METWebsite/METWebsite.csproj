@@ -125,10 +125,24 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="HomePage.aspx" />
+    <Content Include="images\aboutUsPageImages\about.svg" />
+    <Content Include="images\aboutUsPageImages\about_red.svg" />
+    <Content Include="images\aboutUsPageImages\alumni.svg" />
+    <Content Include="images\aboutUsPageImages\bar.svg" />
+    <Content Include="images\aboutUsPageImages\course.svg" />
+    <Content Include="images\aboutUsPageImages\grad.svg" />
+    <Content Include="images\aboutUsPageImages\GUC-logo 2.svg" />
+    <Content Include="images\aboutUsPageImages\home.svg" />
+    <Content Include="images\aboutUsPageImages\homeclicked.svg" />
+    <Content Include="images\aboutUsPageImages\staff.svg" />
+    <Content Include="images\aboutUsPageImages\studactiv.svg" />
+    <Content Include="images\aboutUsPageImages\WhyMET.svg" />
+    <Content Include="images\aboutUsPageImages\yellowbar.svg" />
     <Content Include="images\homePageImages\callLogo.svg" />
     <Content Include="images\homePageImages\deskLogo.svg" />
     <Content Include="images\homePageImages\mailLogo.svg" />
     <Content Include="StActivitiesHomePage.aspx" />
+    <Content Include="StyleSheets\AboutUs.css" />
     <Content Include="StyleSheets\HomeStyles.css" />
     <Content Include="images\gucLogo.png" />
     <Content Include="images\homePageImages\aboutUs.svg" />
@@ -246,7 +260,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\aboutUsPageImages\" />
     <Folder Include="images\alumniPageImages\" />
     <Folder Include="images\coursesPageImages\" />
     <Folder Include="images\stActivitiesPageImages\" />
