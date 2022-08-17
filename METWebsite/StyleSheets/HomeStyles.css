@@ -193,3 +193,84 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 5%;
 }
+.weGucians{
+    background-color:#343434
+
+}
+.gucianstitle{
+    text-align:center;
+   
+}
+.GuciansLabel {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 1% 3% 1% 3%;
+    border: 2px solid #ED1C24;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #ED1C24
+}
+.ContactUs {
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+
+}
+.contacttitle{
+  font-size:40px;
+  font-weight:bold;
+
+
+
+}
+.contactustext {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left:3%;
+}
+
+
+
+.contactInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+.hotlines{
+
+
+
+
+}
+.emails{
+
+
+
+}
+.office{
+
+
+
+
+}
+.Iconandtitle{
+
+}
+.info{
+
+
+
+
+}
+
+
+
+
+
+
+
+

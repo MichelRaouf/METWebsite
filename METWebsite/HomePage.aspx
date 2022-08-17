@@ -104,7 +104,69 @@
                 <img class="pathsPhoto" src="./images/homePageImages/pathsPhoto.svg"/>
             </div>
         </div>
+<%--        <div class ="weGucians">
+           <div class="gucianstitle">
+               <label class="GuciansLabel">#we_GUCians</label>
+           </div>
+            <div class="honors"> 
 
+
+            </div>
+            <div class ="honorsButton">
+
+
+
+
+            </div>
+        </div>--%>
+        <div class="ContactUs">
+           <div class="contacttitle">
+               <label class="contactustext">Contact Us</label>
+           </div>
+            <div class="contactInfo" >
+               <div class="hotlines">
+                  <div class ="Iconandtitle">
+
+
+                  </div>
+                   <div class="info">
+
+
+
+                   </div>
+
+
+               </div>
+                <div class="emails">
+                    <div class ="Iconandtitle">
+
+
+                  </div>
+                   <div class="info">
+
+
+
+                   </div>
+
+                </div>
+                <div class="office">
+                      <div class ="Iconandtitle">
+
+
+                  </div>
+                   <div class="info">
+
+
+
+                   </div>
+                </div>
+
+            </div>
+            
+
+
+
+        </div>
     </form>
 </body>
 </html>
