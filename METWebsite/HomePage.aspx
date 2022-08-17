@@ -13,6 +13,7 @@
             alert(12);
         }
         function ShowHover() {
+///
             var x = document.createElement("div");
             x.setAttribute("class", "whitebox");
             x.setAttribute("id", "addeddiv");
