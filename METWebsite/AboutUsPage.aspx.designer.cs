@@ -33,57 +33,57 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// homeButton control.
+        /// Button4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeButton;
+        protected global::System.Web.UI.WebControls.Button Button4;
 
         /// <summary>
-        /// coursesButton control.
+        /// Button5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button coursesButton;
+        protected global::System.Web.UI.WebControls.Button Button5;
 
         /// <summary>
-        /// staffButton control.
+        /// Button3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button staffButton;
+        protected global::System.Web.UI.WebControls.Button Button3;
 
         /// <summary>
-        /// studentActivitiesButton control.
+        /// Button6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button studentActivitiesButton;
+        protected global::System.Web.UI.WebControls.Button Button6;
 
         /// <summary>
-        /// alumniButton control.
+        /// Button7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button alumniButton;
+        protected global::System.Web.UI.WebControls.Button Button7;
 
         /// <summary>
-        /// aboutUsButton control.
+        /// Button8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button aboutUsButton;
+        protected global::System.Web.UI.WebControls.Button Button8;
     }
 }

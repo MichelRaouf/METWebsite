@@ -28,31 +28,38 @@
 
             </div>
         </div>
-           <div class="navBar">
-            <div>
-                <img href="HomePage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/inHome.svg"/>
-                <asp:Button ID="homeButton" CssClass="navButtonIn" runat="server" Text="Home"/>
+           <div class="navbar">
+            <div class="home">
+                <img src="./images/aboutUsPageImages/home.svg" />
+                <asp:Button ID="Button4" CssClass="navbtn" runat="server" Text="Home"   />
+
             </div>
-            <div>
-                <img href="CoursesHomePage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/courses.svg"/>
-                <asp:Button ID="coursesButton" CssClass="navButton" runat="server" Text="Courses" />
+            <div class="courses">
+                <img src="./images/aboutUsPageImages/course.svg" />
+                <asp:Button ID="Button5" CssClass="navbtn" runat="server" Text="Courses"   />
+
             </div>
-            <div>
-                <img href="StaffHomePage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/staff.svg"/>
-                <asp:Button ID="staffButton" CssClass="navButton" runat="server" Text="Staff" />
+            <div class="staff">
+                <img src="./images/aboutUsPageImages/staff.svg" />
+                <asp:Button ID="Button3" CssClass="navbtn" runat="server" Text="Staff"   />
+
             </div>
-            <div>
-                <img href="StActivitiesHomePage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/studentActivities.svg"/>
-                <asp:Button ID="studentActivitiesButton" CssClass="navButton" runat="server" Text="Student Activities"/>
+            <div class="stud">
+                <img src="./images/aboutUsPageImages/studactiv.svg" />
+                <asp:Button ID="Button6" CssClass="navbtn" runat="server" Text="Student Activities"   />
+
             </div>
-            <div>
-                <img href="AlumniPage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/alumni.svg"/>
-                <asp:Button ID="alumniButton" CssClass="navButton" runat="server" Text="Alumni" />
+            <div class="alumni">
+                <img src="./images/aboutUsPageImages/alumni.svg" />
+                <asp:Button ID="Button7" CssClass="navbtn" runat="server" Text="Alumni"   />
+
             </div>
-            <div>
-                <img href="AboutUsPage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/aboutUs.svg"/>
-                <asp:Button ID="aboutUsButton" CssClass="navButton" runat="server" Text="About Us" />
+            <div class="about">
+                <img src="./images/aboutUsPageImages/about_red.svg" />
+                <asp:Button ID="Button8" CssClass="navbtn" runat="server" Text="About Us"   />
+
             </div>
+            
         </div>
         <div class="flex-container">
         <div class="metinfo">

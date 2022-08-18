@@ -7,6 +7,7 @@ body {
 }
 
 .header {
+    height: 7.6171875vw;
     width: 100%;
     display: flex;
     background-color: white;
@@ -83,15 +84,6 @@ body {
     padding-left:50px;
     
 }
-.label5 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 27px;
-    font-weight:400;
-    position: relative;
-    padding-left: 40px;
-}
-
-
 .navbtn {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8vw;
@@ -113,9 +105,9 @@ body {
     background-color: black;
     width: 100%;
     display: flex;
-    height: 87px;
+    height: 5.208333333333333vw;
     align-items: center;
-    column-gap: 60px;
+    column-gap: 3.90625vw;
     flex-direction: row;
     justify-content: start;
 }
@@ -130,7 +122,7 @@ body {
 
 .navbar2 {
     width: 100%;
-    height: 3em;
+    height: 3.1901041666666665vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -142,7 +134,7 @@ body {
         margin-left: 10px;
         flex-grow: 1 1 0;
         display: flex;
-        padding: 20px;
+        padding: 1.3vw;
         top: 0px;
     }
 
@@ -150,12 +142,12 @@ body {
 
 .logo {
     width: 20.57vw;
-    height: 6.3vw;
+    height: 5.315104166666667vw;
 }
 
 .bar {
     width: 2.57vw;
-    height: 6.3vw;
+    height: 5.315104166666667vw;
 }
 .AboutNav {
     color: white;
