@@ -12,10 +12,10 @@
     <form id="form1" runat="server">
         <div class="header">
             
-                            <img class="logo" src="./images/aboutUsPageImages/GUC-logo 2.svg" />
+                            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
            
            
-                            <img class="bar" src="./images/aboutUsPageImages/bar.svg"/>
+                            <img class="bar" src="./images/topBarImages/bar.svg"/>
             
           
                             <label class="label1">Faculty of Media Engineering & Technology</label>
@@ -25,27 +25,27 @@
         </div>
         <div class="navbar">
             <div >
-                <img src="images/aboutUsPageImages/home.svg" alt="Alternate Text" class="navimg" />
+                <img src="images/topBarImages/home.svg" alt="Alternate Text" class="navimg" />
                                     <asp:Button Text="Home" runat="server" CssClass="navbtn" />
             </div>
                 <div>
-                <img src="images/aboutUsPageImages/course.svg" alt="Alternate Text"class="navimg"/>
+                <img src="images/topBarImages/course.svg" alt="Alternate Text"class="navimg"/>
                                     <asp:Button Text="Courses" runat="server" CssClass="navbtn" />
             </div>
                 <div>
-                <img src="images/aboutUsPageImages/staff.svg" alt="Alternate Text" class="navimg"/>
+                <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg"/>
                                     <asp:Button Text="Staff" runat="server" CssClass="navbtn" />
             </div>
                 <div >
-                <img src="images/aboutUsPageImages/studactiv.svg" alt="Alternate Text"class="navimg" />
+                <img src="images/topBarImages/studactiv.svg" alt="Alternate Text"class="navimg" />
                                     <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" />
             </div>
                 <div >
-                <img src="images/aboutUsPageImages/Alumni.svg" alt="Alternate Text"class="navimg2" />
+                <img src="images/topBarImages/Alumni.svg" alt="Alternate Text"class="navimg2" />
                                     <asp:Button Text="Alumni" runat="server" CssClass="navbtn" />
             </div>
                 <div >
-                <img src="images/aboutUsPageImages/about_red.svg" alt="Alternate Text" class="navimg3" />
+                <img src="images/topBarImages/about_red.svg" alt="Alternate Text" class="navimg3" />
                                     <asp:Button Text="About Us" runat="server" CssClass="navbtn" />
             </div>
            
