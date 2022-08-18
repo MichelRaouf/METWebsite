@@ -4,13 +4,13 @@
 body {
     width: 100%;
     margin-left: -1px;
+    margin-top: -1px;
 }
 
 .header {
     height: 7.6171875vw;
     width: 100%;
     display: flex;
-    background-color: white;
     align-items: center;
     flex-direction: row;
     justify-content: start;
@@ -34,7 +34,7 @@ body {
     background-color: #FFCB05;
     border: none;
     font-size: 1.5625vw;
-    margin-left: 6.510416666666667vw;
+    margin-left: 22vw;
     font-weight: bold;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -86,14 +86,10 @@ body {
 }
 .navbtn {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8vw;
+    font-size: 1.5625vw;
     font-weight: 500;
     background-color: black;
     color: white;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.5vw;
-    line-height: 49px;
 }
 
 .whyMETimg {
@@ -103,20 +99,20 @@ body {
 
 .navbar {
     background-color: black;
+    height: 5.208333333333333vw;
     width: 100%;
     display: flex;
-    height: 5.208333333333333vw;
-    align-items: center;
-    column-gap: 3.90625vw;
     flex-direction: row;
-    justify-content: start;
+    align-items: center;
+    justify-content: space-around;
+   
 }
 
     .navbar > div {
         margin-left: 10px;
         flex-grow: 1 1 0;
         display: flex;
-        padding: 1.5vw;
+        padding: 1.3vw;
         top: 0px;
     }
 
@@ -141,6 +137,7 @@ body {
 
 
 .logo {
+
     width: 20.57vw;
     height: 5.315104166666667vw;
 }
@@ -148,6 +145,7 @@ body {
 .bar {
     width: 2.57vw;
     height: 5.315104166666667vw;
+
 }
 .AboutNav {
     color: white;
@@ -209,4 +207,16 @@ li {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+.navimg {
+    width: 1.8229166666666667vw;
+    height: 1.8229166666666667vw;
+    padding-top: .27vw;
+
+  
+}
+.navimg2 {
+    width: 1.8229166666666667vw;
+    height: 1.8229166666666667vw;
+    padding-top: .4vw;
 }
