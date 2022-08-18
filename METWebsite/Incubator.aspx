@@ -76,7 +76,7 @@
 
             <div>
                     <label class="subTitle">MET Related Tracks</label>
-                    <ul class"list" style="margin-top:0;font-family: 'Montserrat', sans-serif;font-size:27px;margin-left:0;">
+                    <ul class"list" style="margin-top:0;font-family: 'Montserrat', sans-serif;font-size:2.1739130434782608vw;margin-left:0;">
                       <li class"item">Software Development</li>
                       <li class"item">App Development</li>
                       <li class"item">R & D</li>
@@ -88,10 +88,10 @@
                     <label class="subTitle">Socials</label>
                     <div class="socialIcons">
                         <a href="https://www.facebook.com/IncubatorGUC/?ref=page_internal">
-                            <img class="facebook" alt="facebook" src="./images/stActivitiesPageImages/facebook.svg" width="55" height="55">
+                            <img class="facebook" alt="facebook" src="./images/stActivitiesPageImages/facebook.svg" style="width:4.428341384863124vw ;height:4.428341384863124vw";>
                         </a>
                         <a class="instagram" href="https://www.instagram.com/incubator_guc/">
-                            <img alt="instagram" src="./images/stActivitiesPageImages/instagram.png" style="width:55px ;height:55px";>
+                            <img alt="instagram" src="./images/stActivitiesPageImages/instagram.png" style="width:4.428341384863124vw ;height:4.428341384863124vw";>
                         </a>
                     </div>
                 </div>

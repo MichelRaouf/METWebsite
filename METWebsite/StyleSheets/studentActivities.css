@@ -113,25 +113,25 @@ body {
     justify-content: start;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 0.8051529790660226vw;
 }
     .studentActivity > div {
         flex-grow: 1 1 0;
         display: flex;
-        width: 444px;
-        height: 300px;
+        width: 32.5vw;
+        height: 24.154589371980677vw;
     }
 
 .image {
-    width: 444px;
-    height: 300px;
+    width: 32.5vw;
+    height: 24.154589371980677vw;
     opacity: 0.5;
 }
 
 .incuabator:hover .image, .brain:hover .image, .acm:hover .image, .gdg:hover .image, .ieee:hover .image, .svy:hover .image {
     opacity: 1;
-    width: 464px;
-    height: 320px;
+    width: 34vw;
+    height: 25.764895330112722vw;
 }
 
 

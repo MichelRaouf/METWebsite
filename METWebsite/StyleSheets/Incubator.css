@@ -111,13 +111,13 @@ body {
 
 .IncubatorHeader {
     background-image: linear-gradient(to right,RGBA(27,51,124,100),RGBA(237,28,36,90));
-    height: 302px;
+    height: 24.315619967793882vw;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    column-gap: 25px;
-    padding-left: 175px;
+    column-gap: 2.0128824476650564vw;
+    padding-left: 14.090177133655395vw;
 }
 
     .IncubatorHeader > div {
@@ -126,27 +126,27 @@ body {
     }
 
 .incubatorIcon {
-    width: 180px;
-    height: 180px;
+    width: 14.492753623188406vw;
+    height: 14.492753623188406vw;
 }
 
 .title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 4.025764895330113vw;
     font-weight: 400;
     color: white;
 }
 
 .typeDiv {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 0.4025764895330113vw;
 }
 
 .type {
     font-family: 'Montserrat', sans-serif;
-    width: 57px;
-    height: 22px;
-    font-size: 17px;
+    width: 4.5893719806763285vw;
+    height: 1.7713365539452497vw;
+    font-size: 1.3687600644122384vw;
     font-weight: 500;
     text-align: center;
     background: -webkit-linear-gradient(RGBA(27,51,124,100),RGBA(237,28,36,90));
@@ -158,15 +158,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     flex: 1 1 0;
     display: flex;
-    flex-direction:row;
-    flex-wrap:wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     flex-basis: 100%;
-    column-gap: 100px;
-    padding-top: 30px;
+    column-gap: 8.051529790660226vw;
+    padding-top: 2.4154589371980677vw;
     justify-content: center;
     align-items: initial;
-    font-size: 32px;
-    font-weight: 400;    
+    font-size: 2.576489533011272vw;
+    font-weight: 400;
 }
 
     .IncubatorInfo > div {
@@ -180,17 +180,16 @@ body {
     background: -webkit-linear-gradient(RGBA(27,51,124,100),RGBA(237,28,36,90));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top:20px;
-    margin-bottom:20px;
-    font-weight:600;
+    margin-top: 1.6103059581320451vw;
+    margin-bottom: 1.6103059581320451vw;
+    font-weight: 600;
 }
 
 ul {
     padding-left:7%;
 }
 li {
-    margin-bottom: 15px;
-    
+    margin-bottom: 1.2077294685990339vw;
 }
 .list li{
     list-style-type:decimal-leading-zero;
@@ -198,12 +197,12 @@ li {
 
 .titleInfo {
     font-family: 'Montserrat', sans-serif;
-    font-size:27px;
+    font-size: 2.1739130434782608vw;
 }
 .item {
     font-family: 'Montserrat', sans-serif;
-    font-size: 27px;
-    margin-bottom: 5px;
+    font-size: 2.1739130434782608vw;
+    margin-bottom: 0.4025764895330113vw;
 }
 
 .section{
@@ -213,8 +212,8 @@ li {
  
 }
 .instagram {
-    width:55px;
-    height:55px;
+    width: 4.428341384863124vw;
+    height: 4.428341384863124vw;
 }
 
 .item {
@@ -232,13 +231,13 @@ li {
     margin-top: 0px;
     display: flex;
     flex-direction: row;
-    column-gap: 25px;
-    justify-content:start;
+    column-gap: 2.0128824476650564vw;
+    justify-content: start;
 }
 
 .list {
     list-style: none;
-    border-width: 2px;
+    border-width: 0.1610305958132045vw;
     border-style: solid;
     border-image: linear-gradient(to bottom, RGBA(27,51,124,100),RGBA(237,28,36,90));
     margin-left: 0px;
