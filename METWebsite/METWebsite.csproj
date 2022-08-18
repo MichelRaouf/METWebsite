@@ -154,7 +154,8 @@
     <Content Include="images\homePageImages\studentActivities.svg" />
     <Content Include="images\homePageImages\verticalBar.svg" />
     <Content Include="images\homePageImages\verticalbarwhite.svg" />
-    <Content Include="StActivitiesHomePage.aspx" />
+    <Content Include="Incubator.aspx" />
+    <Content Include="StudentActivities.aspx" />
     <Content Include="StyleSheets\AboutUs.css" />
     <Content Include="images\gucLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -188,6 +189,8 @@
     <Content Include="Site.Master" />
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\HomeStyles.css" />
+    <Content Include="StyleSheets\Incubator.css" />
+    <Content Include="StyleSheets\studentActivities.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -219,9 +222,17 @@
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incubator.aspx.cs">
+      <DependentUpon>Incubator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Incubator.aspx.designer.cs">
+      <DependentUpon>Incubator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -238,19 +249,19 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="StActivitiesHomePage.aspx.cs">
-      <DependentUpon>StActivitiesHomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StActivitiesHomePage.aspx.designer.cs">
-      <DependentUpon>StActivitiesHomePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="StaffHomePage.aspx.cs">
       <DependentUpon>StaffHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="StaffHomePage.aspx.designer.cs">
       <DependentUpon>StaffHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentActivities.aspx.cs">
+      <DependentUpon>StudentActivities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentActivities.aspx.designer.cs">
+      <DependentUpon>StudentActivities.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
