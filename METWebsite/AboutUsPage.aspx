@@ -23,13 +23,13 @@
                     <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
             
         </div>
-                <div class="navbar">
+        <div class="navbar">
             <div >
                 <img src="images/aboutUsPageImages/home.svg" alt="Alternate Text" class="navimg" />
                                     <asp:Button Text="Home" runat="server" CssClass="navbtn" />
             </div>
-                <div c>
-                <img src="images/aboutUsPageImages/course.svg" alt="Alternate Text"class="navimg" />
+                <div>
+                <img src="images/aboutUsPageImages/course.svg" alt="Alternate Text"class="navimg"/>
                                     <asp:Button Text="Courses" runat="server" CssClass="navbtn" />
             </div>
                 <div>
@@ -41,12 +41,12 @@
                                     <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" />
             </div>
                 <div >
-                <img src="images/aboutUsPageImages/Alumni.svg" alt="Alternate Text"class="navimg" />
+                <img src="images/aboutUsPageImages/Alumni.svg" alt="Alternate Text"class="navimg2" />
                                     <asp:Button Text="Alumni" runat="server" CssClass="navbtn" />
             </div>
                 <div >
-                <img src="images/aboutUsPageImages/about_red.svg" alt="Alternate Text" class="navimg" />
-                                    <asp:Button Text="AboutUs" runat="server" CssClass="navbtn" />
+                <img src="images/aboutUsPageImages/about_red.svg" alt="Alternate Text" class="navimg3" />
+                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" />
             </div>
            
             

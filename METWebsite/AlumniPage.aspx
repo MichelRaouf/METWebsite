@@ -10,51 +10,51 @@
 <body>
     <form id="form1" runat="server">
          <div class="header">
-            <div>
+        
+             
                             <img class="logo" src="./images/alumniPageImages/GUC-logo 2.svg" />
 
-            </div>
-            <div>
-                            <img class="SeparatingBar" src="./images/alumniPageImages/bar.svg"/>
-
-            </div>
-            <div>
+    
+                            <img class="separatingBar1" src="./images/alumniPageImages/bar.svg"/>
+            
+            
+            
                             <label class="label1">Faculty of Media Engineering & Technology</label>
 
-            </div>
-            <div>
+            
+           
                              <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
 
-            </div>
+           
         </div>
         <div class="navbar">
             <div class="home">
-                <img src="./images/alumniPageImages/homeclicked.svg" style="width:25px;height:25px;margin-right:1px" />
+                <img src="./images/alumniPageImages/homeclicked.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
                 <asp:Button ID="Button4" CssClass="navbtn" runat="server" Text="Home"   />
 
             </div>
             <div class="courses">
-                <img src="./images/alumniPageImages/course.svg" style="width:25px;height:25px;margin-right:1px" />
+                <img src="./images/alumniPageImages/course.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
                 <asp:Button ID="Button5" CssClass="navbtn" runat="server" Text="Courses"   />
 
             </div>
             <div class="staff">
-                <img src="./images/alumniPageImages/staff.svg" style="width:25px;height:25px;margin-right:1px" />
+                <img src="./images/alumniPageImages/staff.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
                 <asp:Button ID="Button3" CssClass="navbtn" runat="server" Text="Staff"   />
 
             </div>
             <div class="stud">
-                <img src="./images/alumniPageImages/studactiv.svg" style="width:25px;height:25px;margin-right:1px" />
+                <img src="./images/alumniPageImages/studactiv.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
                 <asp:Button ID="Button6" CssClass="navbtn" runat="server" Text="Student Activities"   />
 
             </div>
             <div class="alumni">
-                <img src="./images/alumniPageImages/alumni.svg" style="width:25px;height:25px;margin-right:1px" />
+                <img src="./images/alumniPageImages/alumni.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
                 <asp:Button ID="Button7" CssClass="navbtn" runat="server" Text="Alumni"   />
 
             </div>
             <div class="about">
-                <img src="./images/alumniPageImages/about.svg"  style="width:25px;height:25px;margin-right:1px" />
+                <img src="./images/alumniPageImages/about.svg"  style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
                 <asp:Button ID="Button8" CssClass="navbtn" runat="server" Text="About Us"   />
 
             </div>
@@ -65,8 +65,8 @@
 
 
         <div class="honors"> 
-            <div style="width:100%;display:flex;flex-direction:row;justify-content:center;margin-top:-30px">
-            <h4 class="honorsTitle">#we_<span style="font-size:58px;">GUC</span>inas</h4>
+            <div style="width:100%;display:flex;flex-direction:row;justify-content:center;margin-top:-1.953125vw">
+            <h4 class="honorsTitle">#we_<span style="font-size:3.7760416666666665vw;">GUC</span>inas</h4>
                 </div>
 
             <div class="honorsProfile">
@@ -77,7 +77,9 @@
                 </div> 
             </div>
 
-            <img src="images/alumniPageImages/Rectangle 28.svg" class="spereatingBar"/>
+            <div class="lol">
+                
+            </div>
 
              <div class="honorsProfile">
                 <img src="images/alumniPageImages/Hayat.png" class="img"/>
@@ -87,7 +89,9 @@
                 </div>               
             </div>
 
-            <img src="images/alumniPageImages/Rectangle 28.svg" class="spereatingBar"/>
+            <div class="lol">
+                
+            </div>
 
              <div class="honorsProfile">
                 <img src="images/alumniPageImages/Hussien.png" class="img"/>
@@ -104,8 +108,10 @@
                     <p class="honorParagraph">Co-Founder & CTO  of Swvl Forbes Middle East ARAB 30 UNDER 30: Class of 2018 Category of Consumer Technology</p>
                 </div>
             </div>
-
-            <img src="images/alumniPageImages/Rectangle 28.svg" class="spereatingBar"/>
+            
+            <div class="lol">
+                
+            </div>
 
              <div class="honorsProfile">
                 <img src="images/alumniPageImages/Youmna.png" class="img"/>
