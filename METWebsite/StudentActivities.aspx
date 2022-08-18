@@ -56,22 +56,22 @@
         
         <div class="studentActivity">
             <div class="incuabator">
-                 <img class="imageIncubator" src="./images/stActivitiesPageImages/incubator.svg" />
+                 <img class="image" src="./images/stActivitiesPageImages/incubatorN.svg" />
             </div>
             <div class="brain">
-                 <img class="image" src="./images/stActivitiesPageImages/brain.svg" />
+                 <img class="image" src="./images/stActivitiesPageImages/brainN.svg" />
             </div>
             <div class="acm">
-                  <img class="image" src="./images/stActivitiesPageImages/acm.svg" />
+                  <img class="image" src="./images/stActivitiesPageImages/acmN.svg" />
             </div>
             <div class="gdg">
-                   <img class="image" src="./images/stActivitiesPageImages/gdg.svg" />
+                   <img class="image" src="./images/stActivitiesPageImages/gdgN.svg" />
             </div>
             <div class="ieee">
-                   <img class="image" src="./images/stActivitiesPageImages/ieee.svg" />
+                   <img class="image" src="./images/stActivitiesPageImages/ieeeN.svg" />
             </div>
             <div class="svy">
-                   <img class="image" src="./images/stActivitiesPageImages/svy.svg" />
+                   <img class="image" src="./images/stActivitiesPageImages/svyN.svg" />
             </div>
         </div>
     </form>

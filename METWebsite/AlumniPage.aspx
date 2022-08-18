@@ -115,11 +115,18 @@
                 </div>
             </div>
 
-         
-            
-          
+        </div>
 
-            
+        <div class ="careers">  
+
+            <div class="careerText">
+                <label class="careerTitle">
+                    ALUMNI CAREERS
+                </label>  
+            </div>
+             <img src="images/alumniPageImages/CareersSeperatingBar.png" style="height:19.5vw;margin-left:5vh;margin-right:1vw;margin-top:1.6vw;"/>
+           
+            <img src="images/alumniPageImages/Companies.png" style="width:68vw;height:21vw;"/>
 
 
         </div>
