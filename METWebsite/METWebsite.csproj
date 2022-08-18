@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -123,6 +123,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
+    <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="HomePage.aspx" />
     <Content Include="images\aboutUsPageImages\about.svg" />
@@ -194,6 +196,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="StaffHomePage.aspx" />
+    <Content Include="StyleSheets\Alumni.css" />
     <Content Include="StyleSheets\HomeStyles.css" />
     <Content Include="StyleSheets\Incubator.css" />
     <Content Include="StyleSheets\studentActivities.css" />

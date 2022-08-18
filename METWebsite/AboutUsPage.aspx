@@ -11,48 +11,45 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
-            <div>
+            
                             <img class="logo" src="./images/aboutUsPageImages/GUC-logo 2.svg" />
-
-            </div>
-            <div>
+           
+           
                             <img class="bar" src="./images/aboutUsPageImages/bar.svg"/>
-
-            </div>
-            <div>
+            
+          
                             <label class="label1">Faculty of Media Engineering & Technology</label>
-
-            </div>
-            <div>
-                                            <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
-
-            </div>
+            
+                    <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
+            
         </div>
-           <div class="navBar">
-            <div>
-                <img href="HomePage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/inHome.svg"/>
-                <asp:Button ID="homeButton" CssClass="navButtonIn" runat="server" Text="Home"/>
+                <div class="navbar">
+            <div >
+                <img src="images/aboutUsPageImages/home.svg" alt="Alternate Text" class="navimg" />
+                                    <asp:Button Text="Home" runat="server" CssClass="navbtn" />
             </div>
-            <div>
-                <img href="CoursesHomePage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/courses.svg"/>
-                <asp:Button ID="coursesButton" CssClass="navButton" runat="server" Text="Courses" />
+                <div c>
+                <img src="images/aboutUsPageImages/course.svg" alt="Alternate Text"class="navimg" />
+                                    <asp:Button Text="Courses" runat="server" CssClass="navbtn" />
             </div>
-            <div>
-                <img href="StaffHomePage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/staff.svg"/>
-                <asp:Button ID="staffButton" CssClass="navButton" runat="server" Text="Staff" />
+                <div>
+                <img src="images/aboutUsPageImages/staff.svg" alt="Alternate Text" class="navimg"/>
+                                    <asp:Button Text="Staff" runat="server" CssClass="navbtn" />
             </div>
-            <div>
-                <img href="StActivitiesHomePage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/studentActivities.svg"/>
-                <asp:Button ID="studentActivitiesButton" CssClass="navButton" runat="server" Text="Student Activities"/>
+                <div >
+                <img src="images/aboutUsPageImages/studactiv.svg" alt="Alternate Text"class="navimg" />
+                                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" />
             </div>
-            <div>
-                <img href="AlumniPage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/alumni.svg"/>
-                <asp:Button ID="alumniButton" CssClass="navButton" runat="server" Text="Alumni" />
+                <div >
+                <img src="images/aboutUsPageImages/Alumni.svg" alt="Alternate Text"class="navimg" />
+                                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" />
             </div>
-            <div>
-                <img href="AboutUsPage.aspx" class="navIcons" src="./images/aboutUsPageImages/homePageimages/aboutUsPageImages/aboutUs.svg"/>
-                <asp:Button ID="aboutUsButton" CssClass="navButton" runat="server" Text="About Us" />
+                <div >
+                <img src="images/aboutUsPageImages/about_red.svg" alt="Alternate Text" class="navimg" />
+                                    <asp:Button Text="AboutUs" runat="server" CssClass="navbtn" />
             </div>
+           
+            
         </div>
         <div class="flex-container">
         <div class="metinfo">
