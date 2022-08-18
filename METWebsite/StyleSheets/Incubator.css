@@ -163,7 +163,7 @@ ul {
 }
 li {
     margin-bottom: 15px;
-    list-style-type:circle;
+    
 }
 .list li{
     list-style-type:decimal-leading-zero;
@@ -208,10 +208,6 @@ li {
     column-gap: 25px;
     justify-content:start;
 }
-
-
-
-
 
 .list {
     list-style: none;

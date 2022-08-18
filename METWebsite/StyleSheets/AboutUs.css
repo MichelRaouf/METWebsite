@@ -1,10 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
-    width: 100%;
-    margin-left: -1px;
-    margin-top: -1px;
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
 .header {
@@ -25,7 +24,7 @@ body {
         top: 0px;
     }
 
-
+/*BOF*/
 .login {
     position: relative;
     width: 10.590494791666666vw;
@@ -39,6 +38,61 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+.navbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+}
+.navbar {
+    background-color: black;
+    height: 4.5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .navbar > div {
+        margin-left: 10px;
+        flex-grow: 1 1 0;
+        display: flex;
+        padding: 1.3vw;
+        top: 0px;
+    }
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+.navimg {
+    width: 1.8229166666666667vw;
+    height: 1.8229166666666667vw;
+    padding-top: .27vw;
+    vertical-align: middle;
+}
+
+.navimg2 {
+    width: 2.5vw;
+    height: 2.5vw;
+    vertical-align: middle;
+    padding-top: .4vw;
+}
+
+.navimg3 {
+    width: 3.3vw;
+    height: 3.3vw;
+    padding-top: .4vw;
+    vertical-align: middle;
+}
+
+/*EOF*/
 
 .label1 {
     font-family: 'Montserrat', sans-serif;
@@ -84,37 +138,12 @@ body {
     padding-left:50px;
     
 }
-.navbtn {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5625vw;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-}
 
 .whyMETimg {
     width: 100%;
     flex-direction: row;
 }
 
-.navbar {
-    background-color: black;
-    height: 5.208333333333333vw;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-   
-}
-
-    .navbar > div {
-        margin-left: 10px;
-        flex-grow: 1 1 0;
-        display: flex;
-        padding: 1.3vw;
-        top: 0px;
-    }
 
 .navbar2 {
     width: 100%;
@@ -135,18 +164,6 @@ body {
     }
 
 
-
-.logo {
-
-    width: 20.57vw;
-    height: 5.315104166666667vw;
-}
-
-.bar {
-    width: 2.57vw;
-    height: 5.315104166666667vw;
-
-}
 .AboutNav {
     color: white;
     font-family: 'Montserrat';
@@ -207,16 +224,4 @@ li {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-}
-.navimg {
-    width: 1.8229166666666667vw;
-    height: 1.8229166666666667vw;
-    padding-top: .27vw;
-
-  
-}
-.navimg2 {
-    width: 1.8229166666666667vw;
-    height: 1.8229166666666667vw;
-    padding-top: .4vw;
 }

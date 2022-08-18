@@ -99,7 +99,16 @@ body {
 .image {
     width: 444px;
     height: 300px;
+    opacity: 0.5;
 }
+
+.incuabator:hover .image, .brain:hover .image, .acm:hover .image, .gdg:hover .image, .ieee:hover .image, .svy:hover .image {
+    opacity: 1;
+    width: 464px;
+    height: 320px;
+}
+
+
 
 
     
