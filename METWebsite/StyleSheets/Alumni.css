@@ -1,0 +1,152 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    width:100%;
+    margin-left:-1px;
+}
+.header {
+    margin-top:-20px;
+    width: inherit;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 30px;
+        top: 0px;
+    }
+
+.logindiv {
+    position: absolute;
+    left: 87.22%;
+    right: 4.31%;
+    top: 7.5%;
+    bottom: 26.5%;
+}
+.logo{
+    height:70px
+
+}
+.SeparatingBar{
+    height:70px
+}
+.login {
+    width: 140px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #FFCB05;
+    border: none;
+    font-size: 22px;
+    margin-left: 400px;
+    right: 10px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+}
+.navbar {
+    background-color: black;
+    width: inherit;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    column-gap: 60px;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.navbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+}
+.home, .courses, .staff, .stud, .alumni, .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Button4 {
+    font-weight: 600;
+    border-bottom: 3.5px solid #ED1C24;
+}
+.honors {
+   width:inherit    ;
+   background-color:#343434;
+   padding:10px;
+   display:flex;
+   align-items:start;
+   justify-content:center;
+   flex-wrap:wrap;
+   flex-direction:row;
+}
+.honorsTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size:55px;
+    padding-top:-25px;
+    font-weight:600;
+    background-color: #b52329;
+    text-align: center;
+    color: white;
+    height: 60px;
+    width: 616px;
+}
+.honorsProfile {
+
+    margin: 10px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    align-content: start;
+    width: 30%;
+    flex-wrap: wrap
+}
+.img {
+
+}
+
+.profileTextContainer {
+    display: flex;
+    margin-top: 5px;
+    margin-left:15px;
+    flex-direction: column;
+    justify-items: center;
+    width: 280px;
+}
+.honorName {
+    margin-top: 0;
+    margin-bottom: 2px;
+    margin-top: 0;
+    color: white;
+    font-weight:600;
+    font-size: 25.5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.honorParagraph {
+    margin: 0;
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+.spereatingBar{
+    margin-right:20px;
+}
