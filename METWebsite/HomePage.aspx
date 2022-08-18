@@ -118,21 +118,21 @@
                     <section class="whitebox" id="image11" >
                         <label class="newsitemlabel">Job Fair 2022</label>
                     </section>
-                    <img onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
+                    <img class="newsimage" onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
                     
                 </div>
                 <div>
                     <section class="whitebox">
                         <label class="newsitemlabel">Job Fair 2022</label>
                     </section>
-                    <img onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
+                    <img class="newsimage"  onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
 
                 </div>
                 <div>
                     <section class="whitebox">
                         <label class="newsitemlabel">Job Fair 2022</label>
                     </section>
-                    <img onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
+                    <img class="newsimage"  onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
 
                 </div>
                 
@@ -157,9 +157,9 @@
                     <asp:Button ID="viewCoursesButton" CssClass="viewCourses" runat="server" Text="View Courses" OnClick="viewCoursesButton_Click"/>
                 </div>
             </div>
-            <div class="pathsPhotoDiv">
+          
                 <img class="pathsPhoto" src="./images/homePageImages/pathsPhoto.svg"/>
-            </div>
+        
         </div>
 <div class="wegucians">
             <div class="redlabel">
@@ -167,7 +167,7 @@
         </div>
             <div class="gucianinfo">
                 <div>
-                <img src="./images/homePageImages/person1.svg"/>
+                <img  class="alumniImage" src="./images/homePageImages/person1.svg"/>
                 <div class="alumniinfo">
                 <label class="name">Ahmed Sabah</label>
                 <br />
@@ -176,10 +176,10 @@
                 </div>
             </div>
             <div>
-                <img src="./images/homePageImages/verticalbarwhite.svg" />
+                <img class="whiteVerBar" src="./images/homePageImages/verticalbarwhite.svg" />
             </div>
             <div>
-                <img src="./images/homePageImages/person1.svg"/>
+                <img class="alumniImage" src="./images/homePageImages/person1.svg"/>
 <div class="alumniinfo">
                 <label class="name">Ahmed Sabah</label>
                 <br />
@@ -189,10 +189,10 @@
                 
             </div>
             <div>
-                <img src="./images/homePageImages/verticalbarwhite.svg" />
+                <img class="whiteVerBar" src="./images/homePageImages/verticalbarwhite.svg" />
             </div>
             <div>
-                <img src="./images/homePageImages/person1.svg"/>
+                <img  class="alumniImage" src="./images/homePageImages/person1.svg"/>
                 <div class="alumniinfo">
                 <label class="name">Ahmed Sabah</label>
                 <br />
@@ -208,7 +208,10 @@
             </div>
 
         </div>
+        
         <div class="ContactUs">
+            <br />
+            <br />
            <div class="contacttitle">
                <label class="contactustext">Contact Us</label>
            </div>
