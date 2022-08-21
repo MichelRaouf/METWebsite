@@ -1,0 +1,254 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+body {
+    width: 100%;
+    margin-left: -1px;
+}
+
+.header {
+    height: 7.6171875vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.login {
+    position: relative;
+    width: 10.590494791666666vw;
+    height: 3.7109375vw;
+    border-radius: 0.32552vw;
+    background-color: #FFCB05;
+    border: none;
+    font-size: 1.5625vw;
+    margin-left: 22vw;
+    font-weight: bold;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+}
+
+.navbar {
+    background-color: black;
+    height: 4.5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .navbar > div {
+        margin-left: 10px;
+        flex-grow: 1 1 0;
+        display: flex;
+        padding: 1.3vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.navimg {
+    width: 1.8229166666666667vw;
+    height: 1.8229166666666667vw;
+    padding-top: .27vw;
+    vertical-align: middle;
+}
+
+.navimg2 {
+    width: 2.5vw;
+    height: 2.5vw;
+    vertical-align: middle;
+    padding-top: .4vw;
+}
+
+.navimg3 {
+    width: 3vw;
+    height: 3vw;
+    padding-top: .4vw;
+    vertical-align: middle;
+}
+
+.navimg4 {
+    width: 2.3vw;
+    height: 2.3vw;
+    padding-top: .4vw;
+    vertical-align: middle;
+}
+
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.Header {
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 0.9));
+    height: 24.315619967793882vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2.0128824476650564vw;
+    padding-left: 14.090177133655395vw;
+}
+
+    .Header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+    }
+
+.Icon {
+    width: 14.492753623188406vw;
+    height: 14.492753623188406vw;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.025764895330113vw;
+    font-weight: 400;
+    color: white;
+}
+
+.typeDiv {
+    background-color: white;
+    border-radius: 0.4025764895330113vw;
+}
+
+.type {
+    font-family: 'Montserrat', sans-serif;
+    width: 9vw;
+    height: 1.7713365539452497vw;
+    font-size: 1.3687600644122384vw;
+    font-weight: 500;
+    text-align: center;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 1),rgba(237, 28, 36, 0.9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Info {
+    font-family: 'Montserrat', sans-serif;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    column-gap: 8.051529790660226vw;
+    padding-top: 2.4154589371980677vw;
+    justify-content: center;
+    align-items: initial;
+    font-size: 2.576489533011272vw;
+    font-weight: 400;
+}
+
+    .Info > div {
+        display: flex;
+        flex-flow: column;
+        width: 27%;
+    }
+
+.subTitle {
+    font-family: 'Montserrat', sans-serif;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 1),rgba(237, 28, 36, 0.9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1.6103059581320451vw;
+    margin-bottom: 1.6103059581320451vw;
+    font-weight: 600;
+}
+
+ul {
+    padding-left: 7%;
+}
+
+li {
+    margin-bottom: 1.2077294685990339vw;
+}
+
+.list li {
+    list-style-type: decimal-leading-zero;
+}
+
+.titleInfo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.1739130434782608vw;
+}
+
+.item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.1739130434782608vw;
+    margin-bottom: 0.4025764895330113vw;
+}
+
+.section {
+    width: 20%;
+}
+
+.facebook {
+}
+
+.instagram {
+    width: 4.428341384863124vw;
+    height: 4.428341384863124vw;
+}
+    .facebook:hover, .instagram :hover {
+        opacity: 0.7;
+    }
+
+.item {
+    list-style: none;
+}
+
+    .item::before {
+        content: "\2022";
+        color: grey;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+    }
+
+.socialIcons {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2.0128824476650564vw;
+    justify-content: start;
+}
+
+.list {
+    list-style: none;
+    border-width: 0.1610305958132045vw;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(237, 28, 36, 0.9));
+    margin-left: 0px;
+    border: dashed;
+    border-color: red;
+}

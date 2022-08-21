@@ -54,22 +54,22 @@
         
         <div class="studentActivity">
             <div class="incuabator">
-                 <img class="image" src="./images/stActivitiesPageImages/incubatorN.svg" />
+                 <asp:ImageButton runat="server" class="image" src="./images/stActivitiesPageImages/incubatorN.svg" OnClick="incubator" />
             </div>
             <div class="brain">
-                 <img class="image" src="./images/stActivitiesPageImages/brainN.svg" />
+                 <asp:ImageButton runat="server" class="image" src="./images/stActivitiesPageImages/brainN.svg" OnClick="GucBrain" />
             </div>
             <div class="acm">
-                  <img class="image" src="./images/stActivitiesPageImages/acmN.svg" />
+                  <asp:ImageButton runat="server" class="image" src="./images/stActivitiesPageImages/acmN.svg" OnClick="ACM" />
             </div>
             <div class="gdg">
-                   <img class="image" src="./images/stActivitiesPageImages/gdgN.svg" />
+                   <asp:ImageButton runat="server" class="image" src="./images/stActivitiesPageImages/gdgN.svg" OnClick="GDG" />
             </div>
             <div class="ieee">
-                   <img class="image" src="./images/stActivitiesPageImages/ieeeN.svg" />
+                   <asp:ImageButton runat="server" class="image" src="./images/stActivitiesPageImages/ieeeN.svg" OnClick="IEEE" />
             </div>
             <div class="svy">
-                   <img class="image" src="./images/stActivitiesPageImages/svyN.svg" />
+                   <asp:ImageButton runat="server" class="image" src="./images/stActivitiesPageImages/svyN.svg" OnClick="Savvy" />
             </div>
         </div>
     </form>

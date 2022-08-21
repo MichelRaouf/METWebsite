@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUsPage.aspx" />
+    <Content Include="ACM.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -126,8 +127,18 @@
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="GDG.aspx" />
+    <Content Include="GucBrain.aspx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="IEEE.aspx" />
     <Content Include="images\aboutUsPageImages\about.svg" />
+    <Content Include="images\stActivitiesPageImages\ACMIcon.svg" />
+    <Content Include="images\stActivitiesPageImages\BrainIcon.svg" />
+    <Content Include="images\stActivitiesPageImages\GDGIcon.svg" />
+    <Content Include="images\stActivitiesPageImages\IEEEIcon.svg" />
+    <Content Include="images\stActivitiesPageImages\SavvyIcon.svg" />
+    <Content Include="images\staff\Lecture.svg" />
+    <Content Include="images\staff\Tutorial.svg" />
     <Content Include="images\topBarImages\about.svg" />
     <Content Include="images\topBarImages\about_red.svg" />
     <Content Include="images\topBarImages\alumni-red.svg" />
@@ -167,6 +178,7 @@
     <Content Include="images\stActivitiesPageImages\svyN.svg" />
     <Content Include="images\topBarImages\studactive-red.svg" />
     <Content Include="Incubator.aspx" />
+    <Content Include="Savvy.aspx" />
     <Content Include="StudentActivities.aspx" />
     <Content Include="StyleSheets\AboutUs.css" />
     <Content Include="images\gucLogo.png" />
@@ -200,9 +212,15 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="StaffHomePage.aspx" />
+    <Content Include="StyleSheets\ACM.css" />
     <Content Include="StyleSheets\Alumni.css" />
+    <Content Include="StyleSheets\GDG.css" />
+    <Content Include="StyleSheets\GucBrain.css" />
     <Content Include="StyleSheets\HomeStyles.css" />
+    <Content Include="StyleSheets\IEEE.css" />
     <Content Include="StyleSheets\Incubator.css" />
+    <Content Include="StyleSheets\Savvy.css" />
+    <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StyleSheets\studentActivities.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -216,6 +234,13 @@
     </Compile>
     <Compile Include="AboutUsPage.aspx.designer.cs">
       <DependentUpon>AboutUsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ACM.aspx.cs">
+      <DependentUpon>ACM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ACM.aspx.designer.cs">
+      <DependentUpon>ACM.aspx</DependentUpon>
     </Compile>
     <Compile Include="AlumniPage.aspx.cs">
       <DependentUpon>AlumniPage.aspx</DependentUpon>
@@ -233,12 +258,33 @@
     <Compile Include="CoursesHomePage.aspx.designer.cs">
       <DependentUpon>CoursesHomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GDG.aspx.cs">
+      <DependentUpon>GDG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GDG.aspx.designer.cs">
+      <DependentUpon>GDG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GucBrain.aspx.cs">
+      <DependentUpon>GucBrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GucBrain.aspx.designer.cs">
+      <DependentUpon>GucBrain.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IEEE.aspx.cs">
+      <DependentUpon>IEEE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IEEE.aspx.designer.cs">
+      <DependentUpon>IEEE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Incubator.aspx.cs">
       <DependentUpon>Incubator.aspx</DependentUpon>
@@ -248,6 +294,13 @@
       <DependentUpon>Incubator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Savvy.aspx.cs">
+      <DependentUpon>Savvy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Savvy.aspx.designer.cs">
+      <DependentUpon>Savvy.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

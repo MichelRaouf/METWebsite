@@ -51,9 +51,9 @@
             
         </div>
 
-        <div class="IncubatorHeader">
+        <div class="Header">
                 <div>
-                    <img class="incubatorIcon" src="./images/stActivitiesPageImages/incubatorIcon.svg" />
+                    <img class="Icon" src="./images/stActivitiesPageImages/incubatorIcon.svg" />
                 </div>
 
                 <div>
@@ -66,10 +66,10 @@
         </div>
 
 
-        <div class="IncubatorInfo">
+        <div class="Info">
             <div>
                     <label class="subTitle">About</label>
-                    <label class="titleInfo" > Incubator is a student activity at the GUC.Their visionis to prepare every student to be future inventors and researchers. As the starnova lightens the sky by creating stars, we aim to lighten the world by their discoveries.</label>
+                    <label class="titleInfo" > Incubator is a student activity at the GUC.Their vision is to prepare every student to be future inventors and researchers. As the starnova lightens the sky by creating stars, we aim to lighten the world by their discoveries.</label>
             </div>
 
 
@@ -91,7 +91,7 @@
                             <img class="facebook" alt="facebook" src="./images/stActivitiesPageImages/facebook.svg" style="width:4.428341384863124vw ;height:4.428341384863124vw";>
                         </a>
                         <a class="instagram" href="https://www.instagram.com/incubator_guc/">
-                            <img alt="instagram" src="./images/stActivitiesPageImages/instagram.png" style="width:4.428341384863124vw ;height:4.428341384863124vw";>
+                            <img class="instagram" alt="instagram" src="./images/stActivitiesPageImages/instagram.png" style="width:4.428341384863124vw ;height:4.428341384863124vw";>
                         </a>
                     </div>
                 </div>

@@ -109,7 +109,7 @@ body {
     font-size: 1.8vw;
 }
 
-.IncubatorHeader {
+.Header {
     background-image: linear-gradient(to right,RGBA(27,51,124,100),RGBA(237,28,36,90));
     height: 24.315619967793882vw;
     display: flex;
@@ -120,12 +120,12 @@ body {
     padding-left: 14.090177133655395vw;
 }
 
-    .IncubatorHeader > div {
+    .Header > div {
         flex-grow: 1 1 0;
         display: flex;
     }
 
-.incubatorIcon {
+.Icon {
     width: 14.492753623188406vw;
     height: 14.492753623188406vw;
 }
@@ -154,7 +154,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.IncubatorInfo {
+.Info {
     font-family: 'Montserrat', sans-serif;
     flex: 1 1 0;
     display: flex;
@@ -169,7 +169,7 @@ body {
     font-weight: 400;
 }
 
-    .IncubatorInfo > div {
+    .Info > div {
         display: flex;
         flex-flow: column;
         width:27%;
@@ -209,12 +209,16 @@ li {
     width:20%;
 }
 .facebook {
- 
+
 }
 .instagram {
     width: 4.428341384863124vw;
     height: 4.428341384863124vw;
 }
+    .facebook:hover, .instagram :hover {
+        opacity:0.7; 
+    }
+
 
 .item {
     list-style: none;
