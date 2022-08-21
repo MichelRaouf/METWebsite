@@ -6,11 +6,9 @@ html, body {
 }
 
 .header {
-   
-    height: 6.5vw;
-    width: stretch;
+    height: 7.6171875vw;
+    width: 100%;
     display: flex;
-    background-color: white;
     align-items: center;
     flex-direction: row;
     justify-content: start;
@@ -20,17 +18,103 @@ html, body {
         flex-grow: 1 1 0;
         display: flex;
         background-color: #ffff;
-        padding: 1.3020833333333333vw;
+        padding: 20px;
+        font-size: 2vw;
         top: 0px;
     }
 
+.login {
+    position: relative;
+    width: 10.590494791666666vw;
+    height: 3.7109375vw;
+    border-radius: 0.32552vw;
+    background-color: #FFCB05;
+    border: none;
+    font-size: 1.5625vw;
+    margin-left: 22vw;
+    font-weight: bold;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+}
+
+.navbar {
+    background-color: black;
+    height: 4.5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .navbar > div {
+        margin-left: 10px;
+        flex-grow: 1 1 0;
+        display: flex;
+        padding: 1.3vw;
+        top: 0px;
+    }
 
 .logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.navimg {
+    width: 1.8229166666666667vw;
+    height: 1.8229166666666667vw;
+    padding-top: .27vw;
+    vertical-align: middle;
+}
+
+.navimg2 {
+    width: 2.5vw;
+    height: 2.5vw;
+    vertical-align: middle;
+    padding-top: .4vw;
+}
+
+.navimg3 {
+    width: 3vw;
+    height: 3vw;
+    padding-top: .4vw;
+    vertical-align: middle;
+}
+
+.navimg4 {
+    width: 2.3vw;
+    height: 2.3vw;
+    padding-top: .4vw;
+    vertical-align: middle;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+
+
+/*.logo {
     height: auto;
     width: 100%;
     max-width: 13vw;
     margin-left: 1.5vw;
-}
+}*/
 .separatingBar1 {
     margin-left: 1.7vw;
     margin-right: 1.7vw;
@@ -38,46 +122,9 @@ html, body {
     width: 1px;
 }
 
-.login {
-    width: 9.114583333333334vw;
-    height: 3.2552083333333335vw;
-    border-radius: 0.32552vw;
-    background-color: #FFCB05;
-    border: none;
-    font-size: 1.5625vw;
-    margin-left: 30vw;
-    font-weight: bold;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-}
 
-.label1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6vw;
-}
-.navbar {
-    background-color: black;
-    width: inherit;
-    display: flex;
-    height: 3.90625vw;
-    align-items: center;
-    column-gap: 3.90625vw;
-    flex-direction: row;
-    justify-content: center;
-}
 
-.navbtn {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4322916666666667vw;
-    font-weight: 400;
-    background-color: black;
-    color: white;
-}
-.home, .courses, .staff, .stud, .alumni, .about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 #Button4 {
     font-weight: 600;
     border-bottom: 0.22786458333333334vw solid #ED1C24;

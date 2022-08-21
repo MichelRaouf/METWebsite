@@ -5,98 +5,105 @@ body {
 }
 
 .header {
+    height: 7.6171875vw;
     width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
     justify-content: start;
 }
 
-.gucLogoDiv {
-    width: 16.5%;
-    max-width: 316px;
-    margin-right: 2%;
-}
-
-.gucLogo {
-    width: 100%;
-}
-
-.verticalBarDiv {
-    margin-right: 2%;
-    width: 0.07%;
-    max-width: 2px;
-    height: auto;
-}
-
-.verticalBar {
-    width: 100%;
-}
-
-.facultyLabel {
-    font-family: 'Montserrat', sans-serif;
+.header > div {
+    flex-grow: 1 1 0;
+    display: flex;
+    background-color: #ffff;
+    padding: 20px;
     font-size: 2vw;
-    vertical-align: middle;
-}
-
-.labelDiv {
-    margin-right: 15%;
-}
-
-.loginDiv {
-    width: 8.5%;
-    height: auto;
+    top: 0px;
 }
 
 .login {
-    padding: 10% 18% 10% 18%;
-    border-radius: 5px;
+    position: relative;
+    width: 10.590494791666666vw;
+    height: 3.7109375vw;
+    border-radius: 0.32552vw;
     background-color: #FFCB05;
     border: none;
-    font-size: 1.7vw;
+    font-size: 1.5625vw;
+    margin-left: 22vw;
     font-weight: bold;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
-.navBar {
+.navbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+}
+
+.navbar {
+    background-color: black;
+    height: 4.5vw;
     width: 100%;
-    height: 3em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: black;
 }
 
-.navIcons {
-    vertical-align: middle;
-}
-
-.navButton {
-    color: white;
-    background-color: black;
-    text-align: center;
-    font-size: 1.7vw;
-    vertical-align: middle;
-    font-weight: lighter;
-}
-    .navButton:hover {
-        text-decoration: underline;
-        text-decoration-color:red;
-        text-decoration-thickness:3px;
+    .navbar > div {
+        margin-left: 10px;
+        flex-grow: 1 1 0;
+        display: flex;
+        padding: 1.3vw;
+        top: 0px;
     }
-.navButtonIn {
-    color: white;
-    background-color: black;
-    text-align: center;
-    font-size: 1.7vw;
+
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.navimg {
+    width: 1.8229166666666667vw;
+    height: 1.8229166666666667vw;
+    padding-top: .27vw;
     vertical-align: middle;
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-color: #ED1C24;
-    text-decoration-thickness: from-font;
-    text-underline-offset: 5px;
+}
+
+.navimg2 {
+    width: 2.5vw;
+    height: 2.5vw;
+    vertical-align: middle;
+    padding-top: .4vw;
+}
+
+.navimg3 {
+    width: 2.3vw;
+    height: 2.3vw;
+    padding-top: .4vw;
+    vertical-align: middle;
+}
+
+.navimg4 {
+    width: 2.3vw;
+    height: 2.3vw;
+    padding-top: .4vw;
+    vertical-align: middle;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
 }
 
 .graduationImageDiv {
