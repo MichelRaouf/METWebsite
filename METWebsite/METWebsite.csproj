@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -113,6 +113,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CourePage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -217,6 +218,7 @@
     <Content Include="StyleSheets\ACM.css" />
     <Content Include="StyleSheets\Alumni.css" />
     <Content Include="StyleSheets\CourseHome.css" />
+    <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\GDG.css" />
     <Content Include="StyleSheets\GucBrain.css" />
     <Content Include="StyleSheets\HomeStyles.css" />
@@ -254,6 +256,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CourePage.aspx.cs">
+      <DependentUpon>CourePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourePage.aspx.designer.cs">
+      <DependentUpon>CourePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GDG.aspx.cs">
       <DependentUpon>GDG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
