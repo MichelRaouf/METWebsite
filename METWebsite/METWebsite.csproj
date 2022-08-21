@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -113,7 +113,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CoursesHomePage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -126,6 +125,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
+    <Content Include="CourseHomePage.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="GDG.aspx" />
     <Content Include="GucBrain.aspx" />
@@ -216,6 +216,7 @@
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\ACM.css" />
     <Content Include="StyleSheets\Alumni.css" />
+    <Content Include="StyleSheets\CourseHome.css" />
     <Content Include="StyleSheets\GDG.css" />
     <Content Include="StyleSheets\GucBrain.css" />
     <Content Include="StyleSheets\HomeStyles.css" />
@@ -253,13 +254,6 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CoursesHomePage.aspx.cs">
-      <DependentUpon>CoursesHomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CoursesHomePage.aspx.designer.cs">
-      <DependentUpon>CoursesHomePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="GDG.aspx.cs">
       <DependentUpon>GDG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -337,6 +331,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseHomePage.aspx.cs">
+      <DependentUpon>CourseHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseHomePage.aspx.designer.cs">
+      <DependentUpon>CourseHomePage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
