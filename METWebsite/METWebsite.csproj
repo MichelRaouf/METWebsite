@@ -138,6 +138,8 @@
     <Content Include="images\stActivitiesPageImages\IEEEIcon.svg" />
     <Content Include="images\stActivitiesPageImages\SavvyIcon.svg" />
     <Content Include="images\staff\Lecture.svg" />
+    <Content Include="images\staff\Lecturer.png" />
+    <Content Include="images\staff\TA .png" />
     <Content Include="images\staff\Tutorial.svg" />
     <Content Include="images\topBarImages\about.svg" />
     <Content Include="images\topBarImages\about_red.svg" />
