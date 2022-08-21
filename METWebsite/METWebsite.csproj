@@ -113,7 +113,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CoursesHomePage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -126,6 +125,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
+    <Content Include="CourseHomePage.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="GDG.aspx" />
     <Content Include="GucBrain.aspx" />
@@ -137,10 +137,28 @@
     <Content Include="images\stActivitiesPageImages\GDGIcon.svg" />
     <Content Include="images\stActivitiesPageImages\IEEEIcon.svg" />
     <Content Include="images\stActivitiesPageImages\SavvyIcon.svg" />
+    <Content Include="images\staff\AmrElmougy.png" />
+    <Content Include="images\staff\book.png" />
+    <Content Include="images\staff\email.png" />
+    <Content Include="images\staff\graduated.png" />
+    <Content Include="images\staff\group.png" />
+    <Content Include="images\staff\Haytham.png" />
+    <Content Include="images\staff\headphones.png" />
+    <Content Include="images\staff\Hesham.png" />
+    <Content Include="images\staff\home.png" />
+    <Content Include="images\staff\info.png" />
     <Content Include="images\staff\Lecture.svg" />
     <Content Include="images\staff\Lecturer.png" />
+    <Content Include="images\staff\Mervat.png" />
+    <Content Include="images\staff\Milad.png" />
+    <Content Include="images\staff\MohammedSalem.png" />
+    <Content Include="images\staff\Remoon.png" />
+    <Content Include="images\staff\Seif.png" />
+    <Content Include="images\staff\Soubra.png" />
     <Content Include="images\staff\TA .png" />
     <Content Include="images\staff\Tutorial.svg" />
+    <Content Include="images\staff\Wael.png" />
+    <Content Include="images\staff\workplace.png" />
     <Content Include="images\topBarImages\about.svg" />
     <Content Include="images\topBarImages\about_red.svg" />
     <Content Include="images\topBarImages\alumni-red.svg" />
@@ -180,6 +198,7 @@
     <Content Include="images\stActivitiesPageImages\svyN.svg" />
     <Content Include="images\topBarImages\studactive-red.svg" />
     <Content Include="Incubator.aspx" />
+    <Content Include="LecturersProfiles.aspx" />
     <Content Include="Savvy.aspx" />
     <Content Include="StudentActivities.aspx" />
     <Content Include="StyleSheets\AboutUs.css" />
@@ -216,11 +235,13 @@
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\ACM.css" />
     <Content Include="StyleSheets\Alumni.css" />
+    <Content Include="StyleSheets\CourseHome.css" />
     <Content Include="StyleSheets\GDG.css" />
     <Content Include="StyleSheets\GucBrain.css" />
     <Content Include="StyleSheets\HomeStyles.css" />
     <Content Include="StyleSheets\IEEE.css" />
     <Content Include="StyleSheets\Incubator.css" />
+    <Content Include="StyleSheets\LecturersProfiles.css" />
     <Content Include="StyleSheets\Savvy.css" />
     <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StyleSheets\studentActivities.css" />
@@ -253,13 +274,6 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CoursesHomePage.aspx.cs">
-      <DependentUpon>CoursesHomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CoursesHomePage.aspx.designer.cs">
-      <DependentUpon>CoursesHomePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="GDG.aspx.cs">
       <DependentUpon>GDG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -294,6 +308,13 @@
     </Compile>
     <Compile Include="Incubator.aspx.designer.cs">
       <DependentUpon>Incubator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LecturersProfiles.aspx.cs">
+      <DependentUpon>LecturersProfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LecturersProfiles.aspx.designer.cs">
+      <DependentUpon>LecturersProfiles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Savvy.aspx.cs">
@@ -337,6 +358,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseHomePage.aspx.cs">
+      <DependentUpon>CourseHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseHomePage.aspx.designer.cs">
+      <DependentUpon>CourseHomePage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
