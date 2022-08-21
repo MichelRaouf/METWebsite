@@ -17,5 +17,29 @@ namespace METWebsite
         {
             
         }
+        protected void incubator(object sender, EventArgs e)
+        {
+            Response.Redirect("Incubator.aspx");
+        }
+        protected void GucBrain(object sender, EventArgs e)
+        {
+            Response.Redirect("GucBrain.aspx");
+        }
+        protected void ACM(object sender, EventArgs e)
+        {
+            Response.Redirect("ACM.aspx");
+        }
+        protected void GDG(object sender, EventArgs e)
+        {
+            Response.Redirect("GDG.aspx");
+        }
+        protected void IEEE(object sender, EventArgs e)
+        {
+            Response.Redirect("IEEE.aspx");
+        }
+        protected void Savvy(object sender, EventArgs e)
+        {
+            Response.Redirect("Savvy.aspx");
+        }
     }
 }

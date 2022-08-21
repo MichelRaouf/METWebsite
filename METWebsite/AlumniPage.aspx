@@ -9,60 +9,43 @@
 </head>
 <body>
     <form id="form1" runat="server">
-         <div class="header">
-        
-             
-                            <img class="logo" src="./images/alumniPageImages/GUC-logo 2.svg" />
 
-    
-                            <img class="separatingBar1" src="./images/alumniPageImages/bar.svg"/>
-            
-            
-            
+        <div class="header">
+                            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+                            <img class="bar" src="./images/topBarImages/bar.svg"/>
                             <label class="label1">Faculty of Media Engineering & Technology</label>
-
             
-           
-                             <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
-
-           
+                    <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
+            
         </div>
         <div class="navbar">
-            <div class="home">
-                <img src="./images/alumniPageImages/homeclicked.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
-                <asp:Button ID="Button4" CssClass="navbtn" runat="server" Text="Home"   />
-
+            <div >
+                <img src="images/topBarImages/home.svg" alt="Alternate Text" class="navimg" />
+                                    <asp:Button Text="Home" runat="server" CssClass="navbtn" />
             </div>
-            <div class="courses">
-                <img src="./images/alumniPageImages/course.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
-                <asp:Button ID="Button5" CssClass="navbtn" runat="server" Text="Courses"   />
-
+                <div>
+                <img src="images/topBarImages/course.svg" alt="Alternate Text"class="navimg"/>
+                                    <asp:Button Text="Courses" runat="server" CssClass="navbtn" />
             </div>
-            <div class="staff">
-                <img src="./images/alumniPageImages/staff.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
-                <asp:Button ID="Button3" CssClass="navbtn" runat="server" Text="Staff"   />
-
+                <div>
+                <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg"/>
+                                    <asp:Button Text="Staff" runat="server" CssClass="navbtn" />
             </div>
-            <div class="stud">
-                <img src="./images/alumniPageImages/studactiv.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
-                <asp:Button ID="Button6" CssClass="navbtn" runat="server" Text="Student Activities"   />
-
+                <div >
+                <img src="images/topBarImages/studactiv.svg" alt="Alternate Text"class="navimg" />
+                                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" />
             </div>
-            <div class="alumni">
-                <img src="./images/alumniPageImages/alumni.svg" style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
-                <asp:Button ID="Button7" CssClass="navbtn" runat="server" Text="Alumni"   />
-
+                <div >
+                <img src="images/topBarImages/alumni-red.svg" alt="Alternate Text"class="navimg3" />
+                                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" />
             </div>
-            <div class="about">
-                <img src="./images/alumniPageImages/about.svg"  style="width:1.6276041666666667vw;height:1.6276041666666667vw;margin-right:0.06510416666666667vw" />
-                <asp:Button ID="Button8" CssClass="navbtn" runat="server" Text="About Us"   />
-
+                <div >
+                <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg4" />
+                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" />
             </div>
-
+           
+            
         </div>
-
-
-
 
         <div class="honors"> 
             <div style="width:100%;display:flex;flex-direction:row;justify-content:center;margin-top:-1.953125vw">
