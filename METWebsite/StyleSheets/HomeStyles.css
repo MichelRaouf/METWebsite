@@ -44,7 +44,11 @@ body {
     color: white;
     vertical-align: middle;
 }
-
+.navbtn:hover{
+    text-decoration:underline;
+    text-decoration-color:red;
+    bottom:20px;
+}
 .navbar {
     background-color: black;
     height: 4.5vw;
@@ -228,7 +232,7 @@ body {
     font-size: 1.5vw;
     font-weight: 500;
     top:20%;
-    margin-left:-46%;
+    
     position:relative;
     
 }

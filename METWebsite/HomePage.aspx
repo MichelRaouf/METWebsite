@@ -28,7 +28,6 @@
             var label = document.createElement("label");
             label.innerHTML = event.srcElement.getAttribute("description");
             label.setAttribute("class", "newsinfo");
-            x.appendChild(label2)
             x.appendChild(label);
             var button = document.createElement("button");
             button.innerHTML = "See More";
