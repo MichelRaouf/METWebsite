@@ -38,6 +38,7 @@ body {
     .login:hover {
         background-color: black;
         transition: 0.5s;
+        cursor: pointer;
     }
 .navbtn {
     font-family: 'Montserrat', sans-serif;
