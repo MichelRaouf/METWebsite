@@ -1,7 +1,9 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
-    width: 99%;
+html,body {
+    margin:0px;
+    height:100%;
+    
 }
 
 .header {
@@ -38,6 +40,7 @@ body {
     .login:hover {
         background-color: black;
         transition: 0.5s;
+        cursor:pointer;
     }
 .navbtn {
     font-family: 'Montserrat', sans-serif;
@@ -48,9 +51,13 @@ body {
     vertical-align: middle;
 }
 .navbtn:hover{
-    text-decoration:underline;
-    text-decoration-color:red;
-    bottom:20px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:solid;
+    border-color:red;
+    border-width:3px;
+    cursor:pointer;
 }
 .navbar {
     background-color: black;
@@ -63,7 +70,7 @@ body {
 }
 
     .navbar > div {
-        margin-left: 10px;
+        margin-left: 1vw;
         flex-grow: 1 1 0;
         display: flex;
         padding: 1.3vw;
@@ -118,7 +125,7 @@ body {
 }
 
 .graduationImage {
-    width: 97.9vw;
+    width: 100%;
 }
 
 .aboutParagraphDiv {
@@ -150,6 +157,7 @@ body {
 .readMore:hover{
     background-color:black;
     transition:0.5s;
+    cursor:pointer;
 }
 .latestNewsDiv {
     background-color: #ECECEC;
@@ -161,20 +169,18 @@ body {
     font-family: Montserrat;
     font-size: 2.8vw;
     font-weight: 600;
-    line-height: 55px;
-    letter-spacing: 0em;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.6vw;
 }
 
 .news {
-    margin-top: 20px;
+    margin-top: 1.6vw;
     width: 100%;
     display: flex;
-    height: 88.47vh;
+    height: auto;
     background-color: #ECECEC;
     align-items: center;
-    row-gap: 13.02vw;
+    row-gap: 5vw;
     flex-direction: column;
     justify-content: start;
 }
@@ -182,7 +188,8 @@ body {
     .news > div {
         flex-grow: 1 1 0;
         display: flex;
-        font-size: 30px;
+        height:auto;
+        font-size: 2vw;
         top: 0px;
     }
 
@@ -209,17 +216,19 @@ body {
 }
 .newsbtn {
     position: relative;
-    width: 300px;
-    font-size: 30px;
+    width: 50%;
+    font-size: 1.8vw;
     background-color:transparent;
     border:none;
     font-family: Montserrat;
-    top: 30%;
+    left:-40%;
+    top: 25%;
    
 }
 .newsbtn:hover{
     text-decoration-line:underline;
     text-decoration-color:blue;
+    cursor:pointer;
 }
 
 .newsitemlabel {
@@ -235,10 +244,10 @@ body {
 }
 .newsinfo {
     font-family: Montserrat;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-weight: 500;
-    top:20%;
-    
+    top:7%;
+    left:5%;
     position:relative;
     
 }
@@ -247,19 +256,19 @@ body {
     background-color: #ECECEC;
     width: 99%;
     display: flex;
-    height: 5.66vw;
+    height: auto;
     align-items: center;
     column-gap: 3.9vw;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
 }
 
     .newsitem > div {
-        margin-left: 10px;
+        margin-left: 1vw;
         flex-grow: 1 1 0;
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: 1vw;
         top: 0px;
     }
 
@@ -316,6 +325,7 @@ body {
         background-color: red;
         transition: 0.5s;
         color:white;
+        cursor:pointer;
     }
 .weGucians{
     background-color:#343434
@@ -402,16 +412,16 @@ body {
 .wegucians {
     background-color: #343434;
     width: 100%;
-    height: 560px;
+    height: auto;
     display: flex;
     align-items: center;
-    row-gap: 50px;
+    row-gap: 1.5vw;
     flex-direction: column;
     justify-content: start;
 }
 
     .wegucians > div {
-        margin-left: 10px;
+        margin-left: 1vw;
         flex-grow: 1 1 0;
         display: flex;
     }
@@ -419,7 +429,7 @@ body {
 .redlabel {
     margin-top: 3.9vh;
     background-color: #ED1C24B2;
-    height: 8 vh;
+    height: 4.5vw;
     width: 29.2vw;
 }
 
@@ -445,7 +455,7 @@ body {
     text-align: center;
     color: white;
     position: relative;
-    left: 40px;
+    left: 2vw;
 }
 
 .name {
@@ -465,14 +475,14 @@ body {
 }
 
 .showmore {
-    width: 227.24px;
-    height: 57px;
-    border-radius: 5px;
+    width: 18vw;
+    height: 4vw;
+    border-radius: 0.5vw;
     background-color: #FFFFFF;
     border: none;
     font-size: 1.7vw;
-    margin-top: 60px;
-    right: 10px;
+    margin-top: 2vw;
+    right: 1vw;
     font-weight: bold;
     color: #ED1C24;
     font-family: 'Montserrat', sans-serif;
@@ -481,6 +491,7 @@ body {
     background-color: red;
     transition: 0.5s;
     color:white;
+    cursor:pointer;
 }
 .alumniImage{
     width:10vw;
