@@ -17,7 +17,7 @@
             var x = document.createElement("div");
             x.setAttribute("class", "whitebox");
             x.setAttribute("id", "addeddiv");
-            x.style.width = "401px";
+            x.style.width = event.srcElement.offsetWidth + "px";
             x.style.height = event.srcElement.offsetHeight + "px";
             x.style.position = "absolute";
             x.style.left = event.srcElement.offsetLeft+"px";
