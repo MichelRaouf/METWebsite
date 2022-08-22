@@ -15,6 +15,7 @@
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -113,6 +114,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CourePage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -139,6 +141,7 @@
     <Content Include="images\stActivitiesPageImages\SavvyIcon.svg" />
     <Content Include="images\staff\AmrElmougy.png" />
     <Content Include="images\staff\book.png" />
+    <Content Include="images\staff\default.png" />
     <Content Include="images\staff\email.png" />
     <Content Include="images\staff\graduated.png" />
     <Content Include="images\staff\group.png" />
@@ -153,9 +156,12 @@
     <Content Include="images\staff\Milad.png" />
     <Content Include="images\staff\MohammedSalem.png" />
     <Content Include="images\staff\Remoon.png" />
+    <Content Include="images\staff\search.png" />
     <Content Include="images\staff\Seif.png" />
     <Content Include="images\staff\Soubra.png" />
     <Content Include="images\staff\TA .png" />
+    <Content Include="images\staff\TA1.png" />
+    <Content Include="images\staff\TA2.png" />
     <Content Include="images\staff\Tutorial.svg" />
     <Content Include="images\staff\Wael.png" />
     <Content Include="images\staff\workplace.png" />
@@ -236,6 +242,7 @@
     <Content Include="StyleSheets\ACM.css" />
     <Content Include="StyleSheets\Alumni.css" />
     <Content Include="StyleSheets\CourseHome.css" />
+    <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\GDG.css" />
     <Content Include="StyleSheets\GucBrain.css" />
     <Content Include="StyleSheets\HomeStyles.css" />
@@ -245,6 +252,7 @@
     <Content Include="StyleSheets\Savvy.css" />
     <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StyleSheets\studentActivities.css" />
+    <Content Include="TAsProfiles.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -274,6 +282,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CourePage.aspx.cs">
+      <DependentUpon>CourePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourePage.aspx.designer.cs">
+      <DependentUpon>CourePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GDG.aspx.cs">
       <DependentUpon>GDG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -351,6 +366,13 @@
     </Compile>
     <Compile Include="StudentActivities.aspx.designer.cs">
       <DependentUpon>StudentActivities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TAsProfiles.aspx.cs">
+      <DependentUpon>TAsProfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TAsProfiles.aspx.designer.cs">
+      <DependentUpon>TAsProfiles.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
