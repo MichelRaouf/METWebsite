@@ -5,77 +5,68 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Course Page</title>
-    <link rel="icon" href="./images/gucLogo.png">
+    <link rel="icon" href="./images/gucLogo.png"/>
     <link rel="stylesheet" href="./StyleSheets/HomeStyles.css" />
     <link rel="stylesheet" href="./StyleSheets/CoursePage.css" />
 
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="header">
-            <div class="gucLogoDiv">
-                <img class="gucLogo" src="./images/homePageImages/gucFullLogo.svg" />
-            </div>
-            <div class="verticalBarDiv">
-                <img class="verticalBar" src="./images/homePageImages/verticalBar.svg" />
-            </div>
-            <div class="labelDiv">
-                <label class="facultyLabel">
-                    Faculty of Media Engineering & Technology
-               
-                </label>
-            </div>
-            <div class="loginDiv">
-                <asp:Button ID="loginButton" CssClass="login" runat="server" Text="Login" OnClick="loginButton_Click" />
-            </div>
+       <div class="header">
+           <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+           <img class="bar" src="./images/topBarImages/bar.svg"/>
+           <label class="label1">Faculty of Media Engineering & Technology</label>
+            <asp:Button ID="Button2" CssClass="login" runat="server" Text="Login"  />
+            
         </div>
-
-        <div class="navBar">
-            <div>
-                <img href="HomePage.aspx" class="navIcons" src="./images/homePageImages/home.png" />
-                <asp:Button ID="homeButton" CssClass="navButton" runat="server" Text="Home" OnClick="homeButton_Click" />
+        <div class="navbar">
+            <div >
+                <img src="images/topBarImages/home.svg" alt="Alternate Text" class="navimg3" />
+                <asp:Button Text="Home" runat="server" CssClass="navbtn" />
+            </div>
+                <div>
+                <img src="images/coursePageImages/coursesopen.svg" alt="Alternate Text"class="navimg"/>
+                <asp:Button Text="Courses" runat="server" CssClass="navbtn" />
             </div>
             <div>
-                <img href="CoursesHomePage.aspx" class="navIcons" src="./images/homePageImages/coursesopen.svg" />
-                <asp:Button ID="coursesButton" CssClass="navButtonIn" runat="server" Text="Courses" OnClick="coursesButton_Click" />
+                <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg"/>
+                <asp:Button Text="Staff" runat="server" CssClass="navbtn" />
             </div>
             <div>
-                <img href="StaffHomePage.aspx" class="navIcons" src="./images/homePageImages/staff.svg" />
-                <asp:Button ID="staffButton" CssClass="navButton" runat="server" Text="Staff" OnClick="staffButton_Click" />
+                <img src="images/topBarImages/studactiv.svg" alt="Alternate Text"class="navimg" />
+                <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" />
             </div>
             <div>
-                <img href="StActivitiesHomePage.aspx" class="navIcons" src="./images/homePageImages/studentActivities.svg" />
-                <asp:Button ID="studentActivitiesButton" CssClass="navButton" runat="server" Text="Student Activities" OnClick="studentActivitiesButton_Click" />
+                <img src="images/topBarImages/Alumni.svg" alt="Alternate Text"class="navimg2" />
+                <asp:Button Text="Alumni" runat="server" CssClass="navbtn" />
             </div>
             <div>
-                <img href="AlumniPage.aspx" class="navIcons" src="./images/homePageImages/alumni.svg" />
-                <asp:Button ID="alumniButton" CssClass="navButton" runat="server" Text="Alumni" OnClick="alumniButton_Click" />
+                <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg4" />
+                <asp:Button Text="About Us" runat="server" CssClass="navbtn" />
             </div>
-            <div>
-                <img href="AboutUsPage.aspx" class="navIcons" src="./images/homePageImages/aboutUs.svg" />
-                <asp:Button ID="aboutUsButton" CssClass="navButton" runat="server" Text="About Us" OnClick="aboutUsButton_Click" />
-            </div>
+           
         </div>
-        <div class="course-title">
-            <div class="course-title-text">
+    
+        <div class="flex-container-1">
+            <div class="flex-child-1">
                 (CSEN301) Data Structures and Algorithms
             </div>
 
-            <div class="course-title-info center">
+            <div class="flex-child-1 center">
                 <div class="margin-bottom">
-                    <img class="navIcons" src="./images/coursePageImages/credit.svg" />
+                    <img class="nav2-img" src="./images/coursePageImages/credit.svg" />
                     <span>&nbsp;&nbsp;6 Credits Hours</span>
                 </div>
                 <div class="margin-bottom">
-                    <img class="navIcons" src="./images/coursePageImages/lecture.svg" />
+                    <img class="nav2-img" src="./images/coursePageImages/lecture.svg" />
                     <span>&nbsp;&nbsp;12 Lectures</span>
                 </div>
                 <div class="margin-bottom">
-                    <img class="navIcons" src="./images/coursePageImages/tutorial.svg" />
+                    <img class="nav2-img" src="./images/coursePageImages/tutorial.svg" />
                     <span>&nbsp;&nbsp;11 Tutorials</span>
                 </div>
                 <div class="margin-bottom">
-                    <img class="navIcons" src="./images/coursePageImages/lab.svg" />
+                    <img class="nav2-img" src="./images/coursePageImages/lab.svg" />
                     <span>&nbsp;&nbsp;6 Labs</span>
                 </div>
             </div>
@@ -104,8 +95,7 @@
         </div>
         <div class="line">
         </div>
-        <div style="height: 75px;">
-        </div>
+        
 
         <div class="title" id="updates">
             <p>Course Updates</p>
@@ -119,8 +109,7 @@
         </div>
         <div class="line2 centerdiv">
         </div>
-        <div style="height: 75px;">
-        </div>
+     
 
         <div class="title" id="description">
             <p>Description</p>
@@ -140,8 +129,7 @@
         </div>
         <div class="line2 centerdiv">
         </div>
-        <div style="height: 75px;">
-        </div>
+    
 
         <div class="title" id="prerequisites">
             <p>Prerequisites</p>
@@ -155,8 +143,6 @@
             </ul>
         </div>
         <div class="line2 centerdiv">
-        </div>
-        <div style="height: 75px;">
         </div>
 
         <div class="title" id="syllabus">
@@ -215,8 +201,7 @@
 
         <div class="line2 centerdiv">
         </div>
-        <div style="height: 75px;">
-        </div>
+
 
         <div class="title" id="instructors">
             <p>Instructors</p>
@@ -240,8 +225,7 @@
 
         <div class="line2 centerdiv">
         </div>
-        <div style="height: 75px;">
-        </div>
+ 
 
         <div class="title" id="resources">
             <p>Resources</p>

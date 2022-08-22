@@ -1,15 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LecturersProfiles.aspx.cs" Inherits="METWebsite.LecturersProfiles" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TAsProfiles.aspx.cs" Inherits="METWebsite.TAsProfiles" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <link  rel="stylesheet" href="./StyleSheets/LecturersProfiles.css"/>
+    <link rel="stylesheet" href="StyleSheets/LecturersProfiles.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="header">
+         <div class="header">
                             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                             <img class="bar" src="./images/topBarImages/bar.svg"/>
                             <label class="label1">Faculty of Media Engineering & Technology</label>
@@ -46,13 +46,15 @@
         </div>
 
 
-        <div class="profileContainer" >
 
-            <div class="hierarchyTitle">DEAN <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div> </div>
+
+          <div class="profileContainer" >
+
+            <div class="hierarchyTitle">TEACHING ASSISTANT TEAM <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
 
               <div class="profileData">
 
-                <img src="images/staff/Haytham.png" style="width:16.276041666666668vw"/><br />
+                <img src="images/staff/TA1.png" style="width:16.276041666666668vw"/><br />
                     <div class="Name"> Assoc. Prof. Haytham Ismail</div>
 
                     <div class="mailContainer">
@@ -68,72 +70,10 @@
                     <asp:Button ID="Button3" CssClass="viewProfile" runat="server" Text="View Profile"  />
 
             </div>
- 
 
-        </div>
+                <div class="profileData">
 
-
-
-<div style="width:100%;height:fit-content;display:flex;flex-direction:row;justify-content:center;margin-top:2.5vw;margin-bottom:3vw"><div class="separatingBar2"></div></div>
-
-
-
-         <div class="profileContainer" >
-
-            <div class="hierarchyTitle">VICE DEANS</div>
-
-              <div class="profileData">
-
-                <img src="images/staff/AmrElmougy.png" style="width:16.276041666666668vw"/><br />
-                    <div class="Name"> Assoc. Prof. Haytham Ismail</div>
-
-                    <div class="mailContainer">
-                        <img src="images/staff/email.png"/>
-                        haytham.imail@guc.edu.eg
-                    </div>
-
-                    <div class="officeContainer">
-                        <img src="images/staff/workplace.png" />
-                        C7.203
-                    </div>
-
-                    <asp:Button ID="Button4" CssClass="viewProfile" runat="server" Text="View Profile"  />
-
-            </div>
-
-
-             <div class="profileData">
-
-                <img src="images/staff/Mervat.png" style="width:16.276041666666668vw"/><br />
-                    <div class="Name"> Assoc. Prof. Haytham Ismail</div>
-
-                    <div class="mailContainer">
-                        <img src="images/staff/email.png"/>
-                        haytham.imail@guc.edu.eg
-                    </div>
-
-                    <div class="officeContainer">
-                        <img src="images/staff/workplace.png" />
-                        C7.203
-                    </div>
-
-                    <asp:Button ID="Button5" CssClass="viewProfile" runat="server" Text="View Profile"  />
-
-            </div>
-
-
-        </div>
-
-<div style="width:100%;height:fit-content;display:flex;flex-direction:row;justify-content:center;margin-top:2.5vw;margin-bottom:3vw"><div class="separatingBar2"></div></div>
-
-          
-         <div class="profileContainer" >
-
-            <div class="hierarchyTitle">PROFESSORS</div>
-
-              <div class="profileData">
-
-                <img src="images/staff/Soubra.png" style="width:16.276041666666668vw"/><br />
+                <img src="images/staff/TA2.png" style="width:16.276041666666668vw"/><br />
                     <div class="Name"> Assoc. Prof. Haytham Ismail</div>
 
                     <div class="mailContainer">
@@ -150,10 +90,47 @@
 
             </div>
 
+                <div class="profileData">
 
-             <div class="profileData">
+                <img src="images/staff/default.png" style="width:16.276041666666668vw"/><br />
+                    <div class="Name"> Assoc. Prof. Haytham Ismail</div>
 
-                <img src="images/staff/Remoon.png" style="width:16.276041666666668vw"/><br />
+                    <div class="mailContainer">
+                        <img src="images/staff/email.png"/>
+                        haytham.imail@guc.edu.eg
+                    </div>
+
+                    <div class="officeContainer">
+                        <img src="images/staff/workplace.png" />
+                        C7.203
+                    </div>
+
+                    <asp:Button ID="Button4" CssClass="viewProfile" runat="server" Text="View Profile"  />
+
+            </div>
+
+                <div class="profileData">
+
+                <img src="images/staff/default.png" style="width:16.276041666666668vw"/><br />
+                    <div class="Name"> Assoc. Prof. Haytham Ismail</div>
+
+                    <div class="mailContainer">
+                        <img src="images/staff/email.png"/>
+                        haytham.imail@guc.edu.eg
+                    </div>
+
+                    <div class="officeContainer">
+                        <img src="images/staff/workplace.png" />
+                        C7.203
+                    </div>
+
+                    <asp:Button ID="Button5" CssClass="viewProfile" runat="server" Text="View Profile"  />
+
+            </div>
+
+                <div class="profileData">
+
+                <img src="images/staff/default.png" style="width:16.276041666666668vw"/><br />
                     <div class="Name"> Assoc. Prof. Haytham Ismail</div>
 
                     <div class="mailContainer">
@@ -170,10 +147,9 @@
 
             </div>
 
+                <div class="profileData">
 
-            <div class="profileData">
-
-                <img src="images/staff/MohammedSalem.png" style="width:16.276041666666668vw"/><br />
+                <img src="images/staff/default.png" style="width:16.276041666666668vw"/><br />
                     <div class="Name"> Assoc. Prof. Haytham Ismail</div>
 
                     <div class="mailContainer">
@@ -190,10 +166,9 @@
 
             </div>
 
+                <div class="profileData">
 
-            <div class="profileData">
-
-                <img src="images/staff/Seif.png" style="width:16.276041666666668vw"/><br />
+                <img src="images/staff/default.png" style="width:16.276041666666668vw"/><br />
                     <div class="Name"> Assoc. Prof. Haytham Ismail</div>
 
                     <div class="mailContainer">
@@ -210,22 +185,9 @@
 
             </div>
 
+                <div class="profileData">
 
-        </div>
-
-
-
-<div style="width:100%;height:fit-content;display:flex;flex-direction:row;justify-content:center;margin-top:2.5vw;margin-bottom:3vw"><div class="separatingBar2"></div></div>
-
-
-          
-         <div class="profileContainer" >
-
-            <div class="hierarchyTitle">LECTURERS</div>
-
-              <div class="profileData">
-
-                <img src="images/staff/Hesham.png" style="width:16.276041666666668vw"/><br />
+                <img src="images/staff/default.png" style="width:16.276041666666668vw"/><br />
                     <div class="Name"> Assoc. Prof. Haytham Ismail</div>
 
                     <div class="mailContainer">
@@ -242,10 +204,9 @@
 
             </div>
 
+                <div class="profileData">
 
-             <div class="profileData">
-
-                <img src="images/staff/Wael.png" style="width:16.276041666666668vw"/><br />
+                <img src="images/staff/default.png" style="width:16.276041666666668vw"/><br />
                     <div class="Name"> Assoc. Prof. Haytham Ismail</div>
 
                     <div class="mailContainer">
@@ -261,36 +222,9 @@
                     <asp:Button ID="Button10" CssClass="viewProfile" runat="server" Text="View Profile"  />
 
             </div>
-
-
-            <div class="profileData">
-
-                <img src="images/staff/Milad.png" style="width:16.276041666666668vw"/><br />
-                    <div class="Name"> Assoc. Prof. Haytham Ismail</div>
-
-                    <div class="mailContainer">
-                        <img src="images/staff/email.png"/>
-                        haytham.imail@guc.edu.eg
-                    </div>
-
-                    <div class="officeContainer">
-                        <img src="images/staff/workplace.png" />
-                        C7.203
-                    </div>
-
-                    <asp:Button ID="Button11" CssClass="viewProfile" runat="server" Text="View Profile"  />
-
-            </div>
-
-
-           
-
+ 
 
         </div>
-               
-
-
-
 
     </form>
 </body>
