@@ -56,7 +56,15 @@
 
     <div class="row_flex">
         <div class="Catalouge">
+                        <div class="hierarchyTitle"> <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
+           
+            <li><Label><input class="custom_radio"  type="radio" name="choice" value="2" checked /><span>Course Catalouge</span> </label></li>
+            <li><Label><input class="custom_radio" type="radio" name="choice" value="2" /><span>Graduate Courses</span> </label></li>
+            <Label><input class="custom_radio"  type="radio" name="choice" value="2" /><span>Undergraduate Courses</span> </label>
 
+<style>
+
+</style>
         </div>
             <img src="./images/coursePageImages/VbarCourses.svg" alt="Alternate Text" class="vbar" />
     <div class="semesters">

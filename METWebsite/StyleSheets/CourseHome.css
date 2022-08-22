@@ -119,12 +119,14 @@
 
 
 .Catalouge {
+
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: start;
 }
     .Catalouge > div {
+      
         flex-grow: 1 1 0;
         display: flex;
         background-color: #ffff;
@@ -188,4 +190,42 @@
 .vbar{
     height : 100%;
     margin-top : 1.3vw;
+}
+
+
+
+
+
+    .hierarchyTitle div {
+        background-color: #ECECEC;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 1.3vw;
+        padding-left: 0.9765625vw;
+        margin-right: 0.5vw;
+    }
+
+    .hierarchyTitle input[type=text] {
+        height: 2.5vw;
+        width: 20vw;
+        background-color: #ECECEC;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        padding-left: 0.3255208333333333vw;
+        margin-right: 1.0416666666666667vw;
+        font-size: 1.0416666666666667vw;
+    }
+
+        .hierarchyTitle input[type=text]:focus {
+            outline: none;
+        }
+input[type="radio"]:checked + span {
+    font-weight: bold;
+}
+.custom_radio {
+   
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
