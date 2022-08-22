@@ -133,30 +133,33 @@
         top: 0px;
     }
 .semesters {
+   
+    margin-top : 1.3vw;
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    justify-content: start;
+    justify-content : space-between;
+    row-gap : 1.7vh;
+    width : 100%;
+  
 }
 
     .semesters > div {
-        flex-grow: 1 1 0;
+       
         display: flex;
-        background-color: #ffff;
-        padding: 20px;
         font-size: 2vw;
-        top: 0px;
+    
     }
 .collapsible {
     background: linear-gradient(to right, #000000, #ED1C24, #FFCB05);
     color: white;
     cursor: pointer;
-    padding: 18px;
+    padding: 1.17vw;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 2.6vw;
+    border-radius: 0.62552vw;
 }
 
     .active, .collapsible:hover {
@@ -168,7 +171,7 @@
         color: white;
         font-weight: bold;
         float: right;
-        margin-left: 5px;
+        margin-left: 0.325vw;
     }
 
 .active:after {
@@ -180,8 +183,9 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
+ 
 }
 .vbar{
     height : 100%;
+    margin-top : 1.3vw;
 }
