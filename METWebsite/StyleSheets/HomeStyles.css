@@ -35,7 +35,10 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
-
+    .login:hover {
+        background-color: black;
+        transition: 0.5s;
+    }
 .navbtn {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5625vw;
@@ -144,7 +147,10 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
-
+.readMore:hover{
+    background-color:black;
+    transition:0.5s;
+}
 .latestNewsDiv {
     background-color: #ECECEC;
     width: 100%;
@@ -306,6 +312,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 5%;
 }
+    .viewCourses:hover {
+        background-color: red;
+        transition: 0.5s;
+        color:white;
+    }
 .weGucians{
     background-color:#343434
 
@@ -465,6 +476,11 @@ body {
     font-weight: bold;
     color: #ED1C24;
     font-family: 'Montserrat', sans-serif;
+}
+.showmore:hover {
+    background-color: red;
+    transition: 0.5s;
+    color:white;
 }
 .alumniImage{
     width:10vw;
