@@ -25,7 +25,7 @@
                 <asp:Button Text="Home" runat="server" CssClass="navbtn" />
             </div>
                 <div>
-                <img src="images/coursePageImages/coursesopen.svg" alt="Alternate Text"class="navimg"/>
+                <img src="images/coursePageImages/coursesopen.svg" alt="Alternate Text"class="navimg3"/>
                 <asp:Button Text="Courses" runat="server" CssClass="navbtn" />
             </div>
             <div>
