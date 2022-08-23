@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CoursePage.aspx.cs" Inherits="METWebsite.CourePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourePage.aspx.cs" Inherits="METWebsite.CourePage" %>
 
 <!DOCTYPE html>
 
@@ -21,7 +21,7 @@
         </div>
         <div class="navbar">
             <div >
-                <img src="images/topBarImages/home.svg" alt="Alternate Text" class="navimg3" />
+                <img src="images/topBarImages/home.svg" alt="Alternate Text" class="navimg" />
                 <asp:Button Text="Home" runat="server" CssClass="navbtn" />
             </div>
                 <div>
@@ -37,11 +37,11 @@
                 <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" />
             </div>
             <div>
-                <img src="images/topBarImages/Alumni.svg" alt="Alternate Text"class="navimg2" />
+                <img src="images/topBarImages/Alumni.svg" alt="Alternate Text"class="navimg" />
                 <asp:Button Text="Alumni" runat="server" CssClass="navbtn" />
             </div>
             <div>
-                <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg4" />
+                <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg" />
                 <asp:Button Text="About Us" runat="server" CssClass="navbtn" />
             </div>
            
