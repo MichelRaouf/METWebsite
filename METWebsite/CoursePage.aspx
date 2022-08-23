@@ -93,11 +93,11 @@
             </div>
             <br />
         </div>
-        <div class="line">
+        <div class="line" id="updates">
         </div>
         
 
-        <div class="title" id="updates">
+        <div class="title">
             <p>Course Updates</p>
         </div>
         <div>
@@ -107,11 +107,11 @@
                 <li>The midterm will contain only the first five lectures, their labs and tutorials.</li>
             </ul>
         </div>
-        <div class="line2 centerdiv">
+        <div class="line2 centerdiv" id="description">
         </div>
      
 
-        <div class="title" id="description">
+        <div class="title" >
             <p>Description</p>
         </div>
         <div class="description">
@@ -127,11 +127,11 @@
             Contrary to the previous courses you have encountered, the Computer Programming Lab is
             a course that leaves it up to the students to identify and obtain the required knowledge to complete the course tasks.
         </div>
-        <div class="line2 centerdiv">
+        <div class="line2 centerdiv" id="prerequisites">
         </div>
     
 
-        <div class="title" id="prerequisites">
+        <div class="title" >
             <p>Prerequisites</p>
         </div>
         <div>
@@ -142,10 +142,10 @@
                 </li>
             </ul>
         </div>
-        <div class="line2 centerdiv">
+        <div class="line2 centerdiv" id="syllabus">
         </div>
 
-        <div class="title" id="syllabus">
+        <div class="title" >
             <p>Syllabus</p>
         </div>
         <div class="flex-container-2">
@@ -199,11 +199,11 @@
             <asp:Button ID="Button1" CssClass="show-more" runat="server" Text="Show More" OnClick="showMore_Click" />
         </div>
 
-        <div class="line2 centerdiv">
+        <div class="line2 centerdiv" id="instructors">
         </div>
 
 
-        <div class="title" id="instructors">
+        <div class="title" >
             <p>Instructors</p>
         </div>
         <div>
@@ -223,11 +223,11 @@
             </ul>
         </div>
 
-        <div class="line2 centerdiv">
+        <div class="line2 centerdiv" id="resources">
         </div>
  
 
-        <div class="title" id="resources">
+        <div class="title" >
             <p>Resources</p>
         </div>
         <div class="margin-bottom margin-left">
