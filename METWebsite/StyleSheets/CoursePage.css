@@ -287,7 +287,7 @@ span {
         font-weight: 500;
     }
     */
-.hover-underline-animation {
+/*.hover-underline-animation {
     display: inline-block;
     position: relative;
     color: black;
@@ -316,4 +316,20 @@ span {
     .hover-underline-animation:hover:after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }*/
+.hover-underline-animation {
+    color: black;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    text-decoration: none;
+    line-height: 3.9452495974235107vw;
+}
+
+    .hover-underline-animation:hover {
+        font-weight: 900;
+        text-decoration: underline;
+        font-size: 1.6vw;
+        cursor: pointer;
     }
