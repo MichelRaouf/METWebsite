@@ -136,9 +136,9 @@
         </div>
         <div>
             <ul class="prerequisites">
-                <li>CSEN101 Introduction to Computer Science
+                <li class="itemDiv">CSEN101 Introduction to Computer Science
                 </li>
-                <li>CSEN201 Introduction to Java Programming
+                <li class="itemDiv">CSEN201 Introduction to Java Programming
                 </li>
             </ul>
         </div>
@@ -231,11 +231,11 @@
             <p>Resources</p>
         </div>
         <div class="margin-bottom margin-left">
-            <img class="navIcons" src="./images/coursePageImages/book.svg" />
+            <img class="navimg" src="./images/coursePageImages/book.svg" />
             <span class="resources">&nbsp;&nbsp;Data Structures And Algorithms By Shi-Kuo</span>
         </div>
         <div class="margin-bottom margin-left">
-            <img class="navIcons" src="./images/coursePageImages/link.svg" />
+            <img class="navimg" src="./images/coursePageImages/link.svg" />
             <span class="resources">&nbsp;&nbsp;<a href="https://www.w3schools.in/data-structures/intro#:~:text=A%20data%20structure%20is%20said,using%20a%20linear%20memory%20location." style="direction: ltr">
                 W3 Schools Lesson</a></span>
         </div>
