@@ -46,6 +46,15 @@ body {
     color: white;
     vertical-align: middle;
 }
+    .navbtn:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid;
+        border-color: red;
+        border-width: 3px;
+        cursor: pointer;
+    }
 
 .navbar {
     background-color: black;

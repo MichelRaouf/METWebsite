@@ -135,7 +135,9 @@ OCTYPE html>
             };
         </script>
 
-        <section id="personalInfo" class="PersonalInfo">
+        <div id="PersonalInfo">
+        </div>
+        <section class="PersonalInfo">
             <div class="infoTitleDiv">
                 <label class="infoTitle">Personal Info</label>
             </div>
@@ -417,7 +419,7 @@ OCTYPE html>
             </div>
         </section>
 
-
+        <div></div>
         <section  class="Research">
             <div class="infoTitleDiv">
                 <label class="infoTitle">Research</label>

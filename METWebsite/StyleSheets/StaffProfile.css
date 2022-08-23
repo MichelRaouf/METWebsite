@@ -304,7 +304,8 @@ body {
 }
     .showMore:hover {
         background-color: #000000;
-        transition: background-color 1s ease-out;
+        transition: 0.5s;
+        cursor:pointer;
     }
 .showMoreDiv {
     padding-bottom: 2.4154589371980677vw;
