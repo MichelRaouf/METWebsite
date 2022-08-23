@@ -146,6 +146,7 @@
     <Content Include="images\stActivitiesPageImages\IEEEIcon.svg" />
     <Content Include="images\stActivitiesPageImages\SavvyIcon.svg" />
     <Content Include="images\staff\AmrElmougy.png" />
+    <Content Include="images\staff\blackBar.png" />
     <Content Include="images\staff\book.png" />
     <Content Include="images\staff\default.png" />
     <Content Include="images\staff\email.png" />

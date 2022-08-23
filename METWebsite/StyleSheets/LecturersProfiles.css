@@ -8,12 +8,18 @@ html, body {
 
 
 .header {
-    height: 5.5vw;
-    width: 100%;
+    /*border:solid;
+    border-color:green;*/
+    height: 9vw;
+    width: inherit;
     display: flex;
     align-items: center;
     flex-direction: row;
+    row-gap:20px;
     justify-content: start;
+    padding-left:20px;
+  
+    
 }
 
     .header > div {
@@ -23,31 +29,47 @@ html, body {
         padding: 20px;
         font-size: 2vw;
         top: 0px;
+
     }
 
 .logo {
-    width: 14vw;
-    height: 4vw;
+    width: 16vw;
+    height: 4.7vw;
 }
 
 .bar {
     width: 2.57vw;
-    height: 4vw;
+    height: 5.5vw;
 }
-
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.9vw;
+    white-space: nowrap;
+    color: black;
+    font-weight: 400;
+   /* background-color: red;
+    background-image: linear-gradient(to right, #000000, #ED1C24, #E0B821);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;*/
+}
 .login {
     position: relative;
     width: 8.4vw;
-    height: 3.1vw;
+    height: 3.5vw;
     border-radius: 0.32552vw;
     background-color: #FFCB05;
     border: none;
     font-size: 1.4vw;
-    margin-left: 33vw;
+    margin-left: 24vw;
     font-weight: bold;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 .navbtn {
     /* border: solid;
@@ -60,12 +82,10 @@ html, body {
 }
 
 .navbar {
-    /*z-index: 10000;
-   position: fixed;
-   top: 0px;
-   width: 100%;*/
-    border:solid;
-    border-color:forestgreen;
+    z-index: 10000;
+    position: sticky;
+    top: 0px;
+    width: 100%;
     background-color: black;
     height: 4.3vw;
     width: 100%;
@@ -82,7 +102,7 @@ html, body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 1.5vw;
+        margin: 1.7vw;
     }
 
 
@@ -112,15 +132,30 @@ html, body {
     height: 2vw;
 }
 
-.label1 {
+    /*.label1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6vw;
-}
-@font-face {
-    font-family: Tanseek;
-    src: url('../fonts/Tanseek Modern Pro Arabic.ttf');
-}
-.profileContainer {
+    font-size: 1.8vw;
+    white-space: nowrap;
+    font-weight: 700;
+    background-color: red;*/
+    /* Create the gradient. */
+    /*background-image: linear-gradient(to right, #000000, #ED1C24, #FFCB05);*/
+    /* Set the background size and repeat properties. */
+    /*background-size: 100%;
+    background-repeat: repeat;*/
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    /*-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}*/
+    @font-face {
+        font-family: Tanseek;
+        src: url('../fonts/Tanseek Modern Pro Arabic.ttf');
+    }
+
+    .profileContainer {
     /*border: solid;
     border-color: green;*/
     display: flex;
