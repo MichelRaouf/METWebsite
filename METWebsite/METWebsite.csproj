@@ -134,6 +134,12 @@
     <Content Include="HomePage.aspx" />
     <Content Include="IEEE.aspx" />
     <Content Include="images\aboutUsPageImages\about.svg" />
+    <Content Include="images\Profile\emailIcon.svg" />
+    <Content Include="images\Profile\faxIcon.svg" />
+    <Content Include="images\Profile\gradientBar.svg" />
+    <Content Include="images\Profile\Haythem.svg" />
+    <Content Include="images\Profile\officeIcon.svg" />
+    <Content Include="images\Profile\phoneIcon.svg" />
     <Content Include="images\stActivitiesPageImages\ACMIcon.svg" />
     <Content Include="images\stActivitiesPageImages\BrainIcon.svg" />
     <Content Include="images\stActivitiesPageImages\GDGIcon.svg" />
@@ -172,6 +178,7 @@
     <Content Include="images\topBarImages\home-red.svg" />
     <Content Include="images\topBarImages\home.svg" />
     <Content Include="images\aboutUsPageImages\homeclicked.svg" />
+    <Content Include="images\topBarImages\staff-red.svg" />
     <Content Include="images\topBarImages\staff.svg" />
     <Content Include="images\topBarImages\studactiv.svg" />
     <Content Include="images\aboutUsPageImages\WhyMET.svg" />
@@ -201,6 +208,7 @@
     <Content Include="images\topBarImages\studactive-red.svg" />
     <Content Include="Incubator.aspx" />
     <Content Include="LecturersProfiles.aspx" />
+    <Content Include="StaffProfile.aspx" />
     <Content Include="Savvy.aspx" />
     <Content Include="StudentActivities.aspx" />
     <Content Include="StyleSheets\AboutUs.css" />
@@ -245,6 +253,7 @@
     <Content Include="StyleSheets\IEEE.css" />
     <Content Include="StyleSheets\Incubator.css" />
     <Content Include="StyleSheets\LecturersProfiles.css" />
+    <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StyleSheets\Savvy.css" />
     <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StyleSheets\studentActivities.css" />
@@ -325,6 +334,13 @@
     </Compile>
     <Compile Include="LecturersProfiles.aspx.designer.cs">
       <DependentUpon>LecturersProfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffProfile.aspx.cs">
+      <DependentUpon>StaffProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffProfile.aspx.designer.cs">
+      <DependentUpon>StaffProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Savvy.aspx.cs">

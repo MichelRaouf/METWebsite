@@ -1,0 +1,334 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+body {
+    width: 100%;
+    margin-left: -0.08051529790660225vw;
+}
+
+.header {
+    height: 7.6171875vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 1.6103059581320451vw;
+        font-size: 2vw;
+        top: 0vw;
+    }
+
+.login {
+    position: relative;
+    width: 10.590494791666666vw;
+    height: 3.7109375vw;
+    border-radius: 0.32552vw;
+    background-color: #FFCB05;
+    border: none;
+    font-size: 1.5625vw;
+    margin-left: 22vw;
+    font-weight: bold;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+}
+    .navbtn:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid;
+        border-color: red;
+        border-width: 3px;
+        cursor: pointer;
+    }
+
+.navbar {
+    background-color: black;
+    height: 4.5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .navbar > div {
+        margin-left: 0.8051529790660226vw;
+        flex-grow: 1 1 0;
+        display: flex;
+        padding: 1.3vw;
+        top: 0vw;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.navimg {
+    width: 1.8229166666666667vw;
+    height: 1.8229166666666667vw;
+    padding-top: .27vw;
+    vertical-align: middle;
+}
+
+.navimg2 {
+    width: 2.5vw;
+    height: 2.5vw;
+    vertical-align: middle;
+    padding-top: .4vw;
+}
+
+.navimg3 {
+    width: 3vw;
+    height: 3vw;
+    padding-top: .4vw;
+    vertical-align: middle;
+}
+
+.navimg4 {
+    width: 2.3vw;
+    height: 2.3vw;
+    padding-top: .4vw;
+    vertical-align: middle;
+}
+
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.ProfileHeader {
+    display: flex;
+    column-gap: 8.051529790660226vw;
+    justify-content: center;
+    align-items: center;
+}
+
+    .ProfileHeader > div {
+    
+    }
+
+.profileImageDiv {
+    width: 15.297906602254429vw;
+    height: 16.10305958132045vw;
+}
+
+.profileImage {
+    width: 15.297906602254429vw;
+    height: 16.10305958132045vw;
+}
+
+.name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4154589371980677vw;
+    font-weight: 500;
+}
+
+.titleDiv {
+    padding-top: 1.6103059581320451vw;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6103059581320451vw;
+    font-weight: 400;
+}
+
+.info {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1.6103059581320451vw;
+}
+
+.icon {
+    width: 2.4154589371980677vw;
+    height: 3.2206119162640903vw;
+}
+.iconLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2077294685990339vw;
+}
+
+.navbar2 {
+    width: 100%;
+    height: 3.1901041666666665vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 1),rgba(255, 203, 5, 0.8));
+}
+
+    .navbar2 > div {
+        margin-left: 0.8051529790660226vw;
+        flex-grow: 1 1 0;
+        display: flex;
+        padding: 1.3vw;
+        top: 0vw;
+    }
+
+
+.AboutNav {
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    line-height: 3.9452495974235107vw;
+}
+
+    .AboutNav:hover {
+        font-weight: 900;
+        text-decoration: underline;
+        font-size: 1.6vw;
+    }
+
+
+.infoTitle {
+    font-family: 'Montserrat';
+    font-size: 2.818035426731079vw;
+    font-weight: 500;
+}
+
+.infoTitleDiv {
+    text-align: center;
+    margin-top: 1.6103059581320451vw;
+}
+
+.listDiv {
+    font-family: 'Montserrat';
+    font-size: 1.6103059581320451vw;
+    font-weight: 300;
+    margin-left: 0.8051529790660226vw;
+}
+
+
+.infoSubTitle {
+    font-family: 'Montserrat';
+    font-size: 2.0128824476650564vw;
+    font-weight: 500;
+    margin-left: 2.4154589371980677vw;
+}
+.infoSubTitleDiv {
+    padding-top: 2.4154589371980677vw;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5.636070853462158vw;
+    padding-top: 1.6103059581320451vw;
+    align-items: center;
+    column-gap: 1.6103059581320451vw;
+}
+
+.date {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 1),rgba(237, 28, 36, 0.9),rgba(255, 203, 5, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Montserrat';
+    font-size: 1.2077294685990339vw;
+    align-content: center;
+    line-height: 1.6103059581320451vw;
+}
+
+.dateDiv {
+    width: 10.869565217391305vw;
+}
+
+.title1Div {
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+.title2Div {
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.title3Div {
+    font-family: 'Montserrat';
+    font-weight: 300;
+}
+
+.vertical {
+    border-left: 0.08051529790660225vw solid grey;
+    height: 4.830917874396135vw;
+    position: center;
+    left: 50%;
+    opacity: 0.5;
+}
+
+.titles {
+    width: 64.4122383252818vw;
+}
+
+.showMore {
+    background-color: #FFCB05;
+    align-content: center;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.32552vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    display: flex;
+    display: grid;
+    margin: auto;
+}
+    .showMore:hover {
+        background-color: #000000;
+        transition: background-color 1s ease-out;
+    }
+.showMoreDiv {
+    padding-bottom: 2.4154589371980677vw;
+    padding-top: 1.2077294685990339vw;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.itemDiv {
+    height: 1.6103059581320451vw;
+}
+    .itemDiv:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+.list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    width: 64.4122383252818vw;
+}
+.itemDiv2 {
+    height: 1.6103059581320451vw;
+}

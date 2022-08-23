@@ -249,6 +249,4 @@ li {
     border-style: solid;
     border-image: linear-gradient(to bottom, rgba(51, 102, 187, 1),rgba(51, 102, 187, 1),rgba(37, 175, 68, 1));
     margin-left: 0px;
-    border: dashed;
-    border-color: red;
 }
