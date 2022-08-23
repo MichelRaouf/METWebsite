@@ -175,14 +175,20 @@ body {
 }
 
 .show-more {
-    padding: 10% 18% 10% 18%;
-    border-radius: 0.3255208333333333vw;
     background-color: #FFCB05;
+    align-content: center;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.32552vw;
     border: none;
-    font-size: 1.5625vw;
-    font-weight: 400;
+    font-size: 1.2vw;
+    font-weight: 600;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    display: flex;
+    display: grid;
+    margin: auto;
 }
 
     .show-more:hover {
