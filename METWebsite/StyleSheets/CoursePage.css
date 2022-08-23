@@ -4,60 +4,112 @@
 */
 body {
 }
-
-.course-title {
+.flex-container-1 {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 493px;
+    height: 32.096354166666664vw;
+    background: linear-gradient(to right, #000000, #ED1C24, #FFCB05);
+}
+
+.flex-child-1 {
+
+}
+
+    .flex-child-1:first-child {
+        margin-right: 24.994791666666668vw;
+        margin-left: 3.90625vw;
+        width: 11.393229166666666vw;
+        width: 46.77734375vw;
+        overflow: hidden;
+        font-family: Monda;
+        font-size: 3.5807291666666665vw;
+        font-weight: bold;
+        text-align: left;
+        color: #FFFFFF;
+        margin-left: 3.2552083333333335vw;
+        position: relative;
+        left: 25%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0.6510416666666666vw;
+        padding-top: 13.020833333333334vw;
+    }
+    .flex-child-1:last-child {
+        padding-top: 5.208333333333333vw;
+    }
+
+.nav2-img {
+    width: 2.9vw;
+    height: 2.9vw;
+    padding-top: .2vw;
+    vertical-align: middle;
+}
+
+/*.course-title {
+    width: 100%;
+    height: 32.096354166666664vw;
     background: linear-gradient(to right, #000000, #ED1C24, #FFCB05);
     display: flex;
 }
 
 .course-title-text {
-    width: 718.5px;
+    width: 46.77734375vw;
     overflow: hidden;
     font-family: Monda;
-    font-size: 55px;
+    font-size: 3.5807291666666665vw;
     font-weight: bold;
     text-align: left;
     color: #FFFFFF;
-    margin-left: 50px;
-    position: absolute;
+    margin-left: 3.2552083333333335vw;
+    position: relative;
     left: 25%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px;
+    padding: 0.6510416666666666vw;
+    border: 3px solid green;
 }
 
 .course-title-info {
+    border: 3px solid green;
+    position: relative;
 }
+
+.center {
+    position: absolute;
+    left: 80%;
+    top: 52.5%;
+    transform: translate(-50%, -50%);
+    padding: 0.6510416666666666vw;
+}*/
 
 .line {
     width: 100%;
-    height: 1px;
+    height: 0.06510416666666667vw;
     background-color: #D9D9D9;
     display: flex;
 }
 
 .title {
     font-family: 'Montserrat';
-    font-size: 50px;
+    font-size: 3.2552083333333335vw;
     font-weight: 300;
     text-align: center;
 }
 
 .updates {
     font-family: 'Montserrat';
-    font-size: 35px;
+    font-size: 2.2786458333333335vw;
     font-weight: 600;
     color: #ED1C24;
     display: table;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 3.2552083333333335vw;
 }
 
 .line2 {
-    width: 1000px;
-    height: 11px;
+    width: 65.10416666666667vw;
+    height: 0.7161458333333334vw;
     background: linear-gradient(to right, #000000, #ED1C24, #FFCB05);
     display: flex;
 }
@@ -69,36 +121,36 @@ body {
 
 .description {
     font-family: 'Montserrat';
-    font-size: 26px;
+    font-size: 1.6927083333333333vw;
     font-weight: 400;
     color: #000000;
-    margin-bottom: 50px;
-    margin-left: 30px;
+    margin-bottom: 3.2552083333333335vw;
+    margin-left: 1.953125vw;
 }
 
 .prerequisites {
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 1.953125vw;
     font-weight: 400;
     color: #000000;
-    margin-bottom: 50px;
-    margin-left: 30px;
+    margin-bottom: 3.2552083333333335vw;
+    margin-left: 1.953125vw;
 }
 
 .margin-left-180 {
-    margin-left: 180px;
+    margin-left: 11.71875vw;
 }
 
 .syllabus-title {
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 1.953125vw;
     font-weight: 300;
     color: #000000;
 }
 
 .syllabus-description {
     font-family: 'Montserrat';
-    font-size: 25px;
+    font-size: 1.6276041666666667vw;
     font-weight: 300;
     color: #000000;
 }
@@ -112,21 +164,21 @@ body {
 }
 
     .flex-child:first-child {
-        margin-right: 20px;
-        margin-left: 60px;
-        width: 175px;
+        margin-right: 1.3020833333333333vw;
+        margin-left: 3.90625vw;
+        width: 11.393229166666666vw;
     }
 
 .syllabus-line {
-    margin-left: 210px;
-    width: 1250px;
+    margin-left: 13.671875vw;
+    width: 81.38020833333333vw;
 }
 
 .week-number {
     font-family: 'Montserrat';
-    font-size: 50px;
+    font-size: 3.2552083333333335vw;
     font-weight: 300;
-    padding-left: 25px;
+    padding-left: 1.6276041666666667vw;
     background: -webkit-linear-gradient(#000000, #ED1C24, #FFCB05);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -137,63 +189,63 @@ body {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    margin-bottom: 3.2552083333333335vw;
 }
 
 .show-more {
     padding: 10% 18% 10% 18%;
-    border-radius: 5px;
+    border-radius: 0.3255208333333333vw;
     background-color: #FFCB05;
     border: none;
-    font-size: 24px;
+    font-size: 1.5625vw;
     font-weight: 400;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
+    .show-more:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
 .instructors-title {
     font-family: 'Montserrat';
-    font-size: 40px;
+    font-size: 2.6041666666666665vw;
     font-weight: 300;
-    margin-left: 30px;
+    margin-left: 1.953125vw;
 }
 
 .instructors-names {
     font-family: 'Montserrat';
-    font-size: 25px;
+    font-size: 1.6276041666666667vw;
     font-weight: 400;
     color: #000000;
-    margin-bottom: 50px;
-    margin-left: 60px;
+    margin-bottom: 3.2552083333333335vw;
+    margin-left: 3.90625vw;
 }
 
 .resources {
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 1.953125vw;
     font-weight: 300;
     color: #000000;
 }
 
 
 .margin-bottom {
-    margin-bottom: 31px;
+    margin-bottom: 2.0182291666666665vw;
 }
 
 .margin-left {
-    margin-left: 30px;
+    margin-left: 1.953125vw;
 }
 
-.center {
-    position: absolute;
-    left: 80%;
-    top: 52.5%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-}
+
 
 span {
     font-family: Monda;
-    font-size: 25px;
+    font-size: 1.6276041666666667vw;
     font-weight: bold;
     color: #FFFFFF;
 }
@@ -211,11 +263,11 @@ span {
 }
 
     .navbar2 > div {
-        margin-left: 10px;
+        margin-left: 0.6510416666666666vw;
         flex-grow: 1 1 0;
         display: flex;
         padding: 1.3vw;
-        top: 0px;
+        top: 0vw;
     }
 
 /*.AboutNav {
@@ -243,7 +295,7 @@ span {
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.6276041666666667vw;
 }
 
     .hover-underline-animation:after {
@@ -251,7 +303,7 @@ span {
         position: absolute;
         width: 100%;
         transform: scaleX(0);
-        height: 2px;
+        height: 0.13020833333333334vw;
         bottom: 0;
         left: 0;
         background-color: black;

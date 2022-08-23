@@ -89,9 +89,9 @@
             
         </div>
 
-        <div class="graduationImageDiv">
+        
             <img class="graduationImage" src="./images/homePageImages/graduation.svg"/>
-        </div>
+        
 
         <div class="aboutParagraphDiv">
             <label class="aboutParagraph">
