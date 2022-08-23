@@ -64,6 +64,8 @@ html, body {
    position: fixed;
    top: 0px;
    width: 100%;*/
+    border:solid;
+    border-color:forestgreen;
     background-color: black;
     height: 4.3vw;
     width: 100%;
@@ -186,7 +188,7 @@ html, body {
 }
 .mailContainer img, .officeContainer img {
     /*border: solid;
-    border-color: red*/;
+    border-color: red*/
     width: 1.6vw;
     margin-top: 0.58vw;
     margin-right: 0.5vw;
