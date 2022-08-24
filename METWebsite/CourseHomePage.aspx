@@ -55,16 +55,46 @@
         </form>
 
     <div class="row_flex">
-        <div class="Catalouge">
+           <div class="Catalouge">
                         <div class="hierarchyTitle"> <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
-           
-            <li><Label><input class="custom_radio"  type="radio" name="choice" value="2" checked /><span>Course Catalouge</span> </label></li>
-            <li><Label><input class="custom_radio" type="radio" name="choice" value="2" /><span>Graduate Courses</span> </label></li>
-            <Label><input class="custom_radio"  type="radio" name="choice" value="2" /><span>Undergraduate Courses</span> </label>
+               <ul>
+                   <li id="CourseCatalouge"><Label>Course Catalouge</Label> </li>
+                   <li id="gradCourses"><Label>Graduate Courses</Label></li>
+                   <li id="underCourses"><Label>Undergraduate Courses</Label>
+                       <div id="underGradContent">
+                           <ul>
+                               <li id="MET"><Label>Media Engineering and Technology</Label><div class="coll" id="METContent">
+                                   <ul>
+                                       <li><a href="#">Computer Science & Engineering</a></li>
+                                       <li><a href="#">Digital Media Engineering & Technology</a></li>
+                                   </ul>
 
-<style>
+                               </div>
+                               </li>
+                               <li id="IET"><Label>Information Engineering and Technology</Label><div class="coll" id="IETContent">
+                                   <ul>
+                                       <li><a href="#">Electronics</a></li>
+                                       <li><a href="#">Communication</a></li>
+                                       <li><a href="#">Networking</a></li>
+                                   </ul>
 
-</style>
+                               </div></li>
+                               <li id="EMS"><Label>Material Science and Engineering</Label><div class="coll" id="EMSContent">
+                                   <ul>
+                                       <li><a href="#">Mechatronics</a></li>
+                                       <li><a href="#">Materials</a></li>
+                                       <li><a href="#">Production</a></li>
+                                   </ul>
+
+                               </div></li>
+                               <li id="MGT"><a href="#">Management Technology</a></li>
+                           </ul>
+
+                       </div>
+
+                   </li>
+               </ul>
+               
         </div>
             <img src="./images/coursePageImages/VbarCourses.svg" alt="Alternate Text" class="vbar" />
     <div class="semesters">
@@ -110,6 +140,62 @@
         </div>
         </div>
 <script>
+
+    var gatalouge = document.getElementById("CourseCatalouge");
+    var grad = document.getElementById("gradCourses");
+    var under = document.getElementById("underCourses");
+    var underContent = document.getElementById("underGradContent");
+    var met = document.getElementById("MET");
+    var METContent = document.getElementById("METContent");
+    var iet = document.getElementById("IET");
+    var IETContent = document.getElementById("IETContent");
+    var ems = document.getElementById("EMS");
+    var EMSContent = document.getElementById("EMSContent");
+    var cont = document.getElementsByClassName("coll");
+    var j;
+    gatalouge.addEventListener("click", function () {
+        this.style.cssText = 'font-weight:bold';
+        grad.style.cssText = 'font-weight:400';
+        under.style.cssText = 'font-weight:400';
+        underContent.style.cssText = 'display : none';
+        for (j = 0; j < coll.length; j++){
+        cont[j].style.cssText = 'display: none';
+    }
+        
+    });
+    grad.addEventListener("click", function () {
+        this.style.cssText = 'font-weight:bold';
+        gatalouge.style.cssText = 'font-weight:400';
+        under.style.cssText = 'font-weight:400';
+        underContent.style.cssText = 'display : none';
+        for (j = 0; j < coll.length; j++) {
+            cont[j].style.cssText = 'display: none';
+        }
+    });
+    under.addEventListener("click", function () {
+        this.style.cssText = 'font-weight:bold';
+        gatalouge.style.cssText = 'font-weight:400';
+        grad.style.cssText = 'font-weight:400';
+        underContent.style.cssText = 'display : block';
+
+    });
+    met.addEventListener("click", function () {
+        METContent.style.cssText = 'display:block';
+        IETContent.style.cssText = 'display:none';
+        EMSContent.style.cssText = 'display:none; ';
+    });
+    iet.addEventListener("click", function () {
+        IETContent.style.cssText = 'display:block';
+        METContent.style.cssText = 'display:none; ';
+        EMSContent.style.cssText = 'display:none; ';
+    });
+    ems.addEventListener("click", function () {
+        EMSContent.style.cssText = 'display:block';
+        METContent.style.cssText = 'display:none; ';
+        IETContent.style.cssText = 'display:none; ';
+
+    });
+    
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
