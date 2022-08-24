@@ -114,7 +114,7 @@ body {
 }
 
 .itemDiv {
-    height: 1.6103059581320451vw;
+    line-height: 1.5em;
 }
 
     .itemDiv:hover {
@@ -276,3 +276,7 @@ span {
         font-size: 1.6vw;
         cursor: pointer;
     }
+
+li {
+    line-height: 1.5em;
+}
