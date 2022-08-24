@@ -346,7 +346,7 @@ OCTYPE html>
                     var btnText = document.getElementById("myBtn");
 
                     if (space.style.display === "none") {
-                        
+                        space.style.display = "inline";
                         btnText.value = "Show More";
                         moreText.style.display = "none";
                     } else {
