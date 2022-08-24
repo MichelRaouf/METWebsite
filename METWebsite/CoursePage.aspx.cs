@@ -49,10 +49,6 @@ namespace METWebsite
 
         }
 
-        protected void showMore_Click(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }

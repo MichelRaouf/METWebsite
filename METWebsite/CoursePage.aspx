@@ -5,48 +5,48 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Course Page</title>
-    <link rel="icon" href="./images/gucLogo.png"/>
+    <link rel="icon" href="./images/gucLogo.png" />
     <link rel="stylesheet" href="./StyleSheets/HomeStyles.css" />
     <link rel="stylesheet" href="./StyleSheets/CoursePage.css" />
 
 </head>
 <body>
     <form id="form1" runat="server">
-       <div class="header">
-           <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
-           <img class="bar" src="./images/topBarImages/bar.svg"/>
-           <label class="label1">Faculty of Media Engineering & Technology</label>
-            <asp:Button ID="Button2" CssClass="login" runat="server" Text="Login"  />
-            
+        <div class="header">
+            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+            <img class="bar" src="./images/topBarImages/bar.svg" />
+            <label class="label1">Faculty of Media Engineering & Technology</label>
+            <asp:Button ID="Button2" CssClass="login" runat="server" Text="Login" />
+
         </div>
         <div class="navbar">
-            <div >
+            <div>
                 <img src="images/topBarImages/home.svg" alt="Alternate Text" class="navimg" />
                 <asp:Button Text="Home" runat="server" CssClass="navbtn" />
             </div>
-                <div>
-                <img src="images/coursePageImages/coursesopen.svg" alt="Alternate Text"class="navimg3"/>
+            <div>
+                <img src="images/coursePageImages/coursesopen.svg" alt="Alternate Text" class="navimg3" />
                 <asp:Button Text="Courses" runat="server" CssClass="navbtn" />
             </div>
             <div>
-                <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg"/>
+                <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg" />
                 <asp:Button Text="Staff" runat="server" CssClass="navbtn" />
             </div>
             <div>
-                <img src="images/topBarImages/studactiv.svg" alt="Alternate Text"class="navimg" />
+                <img src="images/topBarImages/studactiv.svg" alt="Alternate Text" class="navimg" />
                 <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" />
             </div>
             <div>
-                <img src="images/topBarImages/Alumni.svg" alt="Alternate Text"class="navimg" />
+                <img src="images/topBarImages/Alumni.svg" alt="Alternate Text" class="navimg" />
                 <asp:Button Text="Alumni" runat="server" CssClass="navbtn" />
             </div>
             <div>
                 <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg" />
                 <asp:Button Text="About Us" runat="server" CssClass="navbtn" />
             </div>
-           
+
         </div>
-    
+
         <div class="flex-container-1">
             <div class="flex-child-1">
                 (CSEN301) Data Structures and Algorithms
@@ -95,7 +95,7 @@
         </div>
         <div class="line" id="updates">
         </div>
-        
+
 
         <div class="title">
             <p>Course Updates</p>
@@ -109,9 +109,9 @@
         </div>
         <div class="line2 centerdiv" id="description">
         </div>
-     
 
-        <div class="title" >
+
+        <div class="title">
             <p>Description</p>
         </div>
         <div class="description">
@@ -129,9 +129,9 @@
         </div>
         <div class="line2 centerdiv" id="prerequisites">
         </div>
-    
 
-        <div class="title" >
+
+        <div class="title">
             <p>Prerequisites</p>
         </div>
         <div>
@@ -145,7 +145,7 @@
         <div class="line2 centerdiv" id="syllabus">
         </div>
 
-        <div class="title" >
+        <div class="title">
             <p>Syllabus</p>
         </div>
         <div class="flex-container-2">
@@ -195,15 +195,69 @@
                 </p>
             </div>
         </div>
+
+        <span id="space"></span>
+        <span id="more7">
+            <div class="flex-container-2">
+                <div class="flex-child">
+                    <p class="syllabus-title">Week</p>
+                    <p class="week-number">4</p>
+
+                </div>
+                <div class="flex-child">
+                    <p class="syllabus-title">Arrays</p>
+                    <p class="syllabus-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.
+                    </p>
+                </div>
+            </div>
+            <img class="syllabus-line" src="./images/coursePageImages/line.svg" />
+
+
+            <div class="flex-container-2">
+                <div class="flex-child">
+                    <p class="syllabus-title">Week</p>
+                    <p class="week-number">5</p>
+
+                </div>
+                <div class="flex-child">
+                    <p class="syllabus-title">Arrays</p>
+                    <p class="syllabus-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.
+                    </p>
+                </div>
+            </div>
+        </span>
+        <script>
+            document.documentElement.style.scrollBehavior = "smooth";
+            function myFunction() {
+                var space = document.getElementById("space");
+                var moreText = document.getElementById("more7");
+                var btnText = document.getElementById("mybtn7");
+
+                if (space.style.display === "none") {
+                    space.style.display = "inline";
+                    btnText.value = "Show More";
+                    moreText.style.display = "none";
+                } else {
+                    space.style.display = "none";
+                    btnText.value = "Show Less";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
+
         <div class="show-moreDiv">
-            <asp:Button ID="Button1" CssClass="show-more" runat="server" Text="Show More" OnClick="showMore_Click" />
+            <asp:Button ID="mybtn7" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
         </div>
 
         <div class="line2 centerdiv" id="instructors">
         </div>
 
 
-        <div class="title" >
+        <div class="title">
             <p>Instructors</p>
         </div>
         <div>
@@ -225,9 +279,9 @@
 
         <div class="line2 centerdiv" id="resources">
         </div>
- 
 
-        <div class="title" >
+
+        <div class="title">
             <p>Resources</p>
         </div>
         <div class="margin-bottom margin-left">

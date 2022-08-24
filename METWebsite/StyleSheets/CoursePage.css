@@ -284,3 +284,7 @@ span {
 li {
     line-height: 1.5em;
 }
+
+#more7 {
+    display: none;
+}
