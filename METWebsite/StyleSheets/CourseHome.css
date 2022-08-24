@@ -223,9 +223,30 @@
 input[type="radio"]:checked + span {
     font-weight: bold;
 }
+input[type="radio"]:checked + label {
+    font-weight: bold;
+}
 .custom_radio {
    
     position: absolute;
     opacity: 0;
     cursor: pointer;
+}
+div[for=textarea-a],
+#textarea-a {
+    display: none;
+}
+
+#radio-mini-2:checked ~ div[for=textarea-a],
+#radio-mini-2:checked ~ #textarea-a {
+    display: block;
+}
+#underGradContent{
+    font-weight : 400;
+    display : none;
+}
+
+.coll{
+    font-weight :400;
+    display : none;
 }
