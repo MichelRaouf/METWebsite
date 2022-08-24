@@ -10,7 +10,7 @@ OCTYPE html>
     <form id="form1" runat="server">
         <div class="header">
 
-            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg"/>
 
 
             <img class="bar" src="./images/topBarImages/bar.svg" />
@@ -94,6 +94,9 @@ OCTYPE html>
             </div>
         </div>
 
+           <div></div>
+        <div id="PersonalInfo"></div>
+
         <div id="navbar2" class="navbar2">
             <div class="AboutNav">
                 <asp:Label Text="Personal Info" runat="server" onClick="funcPersonalInfo()"/>
@@ -113,9 +116,12 @@ OCTYPE html>
         </div>
 
         <script>
+            document.documentElement.style.scrollBehavior = "smooth";
+
             function funcPersonalInfo() {
                 const element = document.getElementById("PersonalInfo");
                 element.scrollIntoView();
+               
             }
             function funcTeaching() {
                 const element = document.getElementById("Teaching");
@@ -135,8 +141,7 @@ OCTYPE html>
             };
         </script>
 
-        <div id="PersonalInfo">
-        </div>
+        
         <section class="PersonalInfo">
             <div class="infoTitleDiv">
                 <label class="infoTitle">Personal Info</label>
@@ -306,10 +311,121 @@ OCTYPE html>
                     </div>
                 </div>
             </div>
-            <div class="showMoreDiv">
-                <asp:Button ID="Button2" CssClass="showMore" runat="server" Text="Show More" />
+
+            <span id="space"></span>
+            <span id="more">
+                <div class="section">
+                    <div class="dateDiv">
+                        <label class="date">September, 2005 to June, 2011</label>
+                    </div>
+                    <div>
+                        <div class="vertical"></div>
+                    </div>
+
+                    <div class="titles">
+                        <div class="title1Div">
+                            <label style="font-size: 1.7713365539452497vw;">Assistant Professor</label>
+                        </div>
+                        <div class="title2Div">
+                            <label style="font-size: 1.3687600644122384vw;">German University in Cairo</label>
+                        </div>
+                        <div class="title3Div">
+                            <label style="font-size: 1.3687600644122384vw;">Computer Science Department</label>
+                        </div>
+                        <div style="padding-top: 0.8051529790660226vw;">
+                            <hr style="height: 0.024154589371980676vw; border-width: 0; color: gray; background-color: gray; opacity: 0.3">
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <script>
+                document.documentElement.style.scrollBehavior = "smooth";
+                function myFunction() {
+                    var space = document.getElementById("space");
+                    var moreText = document.getElementById("more");
+                    var btnText = document.getElementById("myBtn");
+
+                    if (space.style.display === "none") {
+                        
+                        btnText.value = "Show More";
+                        moreText.style.display = "none";
+                    } else {
+                        space.style.display = "none";
+                        btnText.value = "Show Less";
+                        moreText.style.display = "inline";
+                    }
+                }
+
+                function myFunction2() {
+                    var space = document.getElementById("space2");
+                    var moreText = document.getElementById("more2");
+                    var btnText = document.getElementById("mybtn2");
+
+                    if (space.style.display === "none") {
+                        space.style.display = "inline";
+                        btnText.value = "Show More";
+                        moreText.style.display = "none";
+                    } else {
+                        space.style.display = "none";
+                        btnText.value = "Show Less";
+                        moreText.style.display = "inline";
+                    }
+                }
+
+                function myFunction3() {
+                    var space = document.getElementById("space3");
+                    var moreText = document.getElementById("more3");
+                    var btnText = document.getElementById("mybtn3");
+
+                    if (space.style.display === "none") {
+                        space.style.display = "inline";
+                        btnText.value = "Show More";
+                        moreText.style.display = "none";
+                    } else {
+                        space.style.display = "none";
+                        btnText.value = "Show Less";
+                        moreText.style.display = "inline";
+                    }
+                }
+
+                function myFunction4() {
+                    var space = document.getElementById("space4");
+                    var moreText = document.getElementById("more4");
+                    var btnText = document.getElementById("mybtn4");
+
+                    if (space.style.display === "none") {
+                        space.style.display = "inline";
+                        btnText.value = "Show More";
+                        moreText.style.display = "none";
+                    } else {
+                        space.style.display = "none";
+                        btnText.value = "Show Less";
+                        moreText.style.display = "inline";
+                    }
+                }
+
+                function myFunction5() {
+                    var space = document.getElementById("space5");
+                    var moreText = document.getElementById("more5");
+                    var btnText = document.getElementById("mybtn5");
+
+                    if (space.style.display === "none") {
+                        space.style.display = "inline";
+                        btnText.value = "Show More";
+                        moreText.style.display = "none";
+                    } else {
+                        space.style.display = "none";
+                        btnText.value = "Show Less";
+                        moreText.style.display = "inline";
+                    }
+                }
+            </script>
+
+            <div class="showMoreDiv" >
+                <asp:Button ID="myBtn" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
             </div>
-            <div class="gradientbar" id="Teaching">
+            <div class="x" id="Teaching"></div>
+            <div class="gradientbar" >
                 <img class="center" src="./images/profile/gradientBar.svg" />
             </div>
         </section>
@@ -410,16 +526,50 @@ OCTYPE html>
                     </div>
                 </div>
             </div>
+            <span id="space2"></span>
+            <span id="more2">
+                <div class="section">
+                <div class="dateDiv">
+                    <label class="date">September, 2005 to June, 2011</label>
+                </div>
+                <div>
+                    <div class="vertical"></div>
+                </div>
 
-            <div class="showMoreDiv">
-                <asp:Button ID="Button3" CssClass="showMore" runat="server" Text="Show More" />
+                <div class="list">
+                    <div class="itemDiv">
+                        <ul style="margin-top: 0;font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>  
+                     </div>
+                     <div class="itemDiv">
+                        <ul style="margin-top: 0; font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>
+                     </div>
+                    <div class="itemDiv">
+                        <ul style="margin-top: 0; font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>
+                    </div>
+                    <div style="padding-top: 0.8051529790660226vw;">
+                        <hr style="height: 0.024154589371980676vw; border-width: 0; color: gray; background-color: gray; opacity: 0.3">
+                    </div>
+                </div>
             </div>
-            <div class="gradientbar" id="Research">
+            </span>
+
+            
+            <div class="showMoreDiv" >
+                <asp:Button ID="mybtn2" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction2();return false;" />
+            </div>
+            <div class="x" id="Research"></div>
+            <div class="gradientbar" >
                 <img class="center" src="./images/profile/gradientBar.svg" />
             </div>
         </section>
 
-        <div></div>
+       
         <section  class="Research">
             <div class="infoTitleDiv">
                 <label class="infoTitle">Research</label>
@@ -521,10 +671,38 @@ OCTYPE html>
                 </div>
             </div>
 
-            <div class="showMoreDiv">
-                <asp:Button ID="Button4" CssClass="showMore" runat="server" Text="Show More" />
+            <span id="space3"></span>
+            <span id="more3">
+                <div class="section">
+                    <div class="dateDiv">
+                        <label class="date">Septemper, 2001</label>
+                    </div>
+                    <div>
+                        <div class="vertical"></div>
+                    </div>
+
+                    <div class="titles">
+                        <div class="title1Div">
+                            <label style="font-size: 1.7713365539452497vw;">Ph.D.</label>
+                        </div>
+                        <div class="title2Div">
+                            <label style="font-size: 1.3687600644122384vw;">State University of New York at Buffalo</label>
+                        </div>
+                        <div class="title3Div">
+                            <label style="font-size: 1.3687600644122384vw;">(Computer Science and Engineering, Linguistics Minor, Cognitive Science Ph.D. Track)</label>
+                        </div>
+                        <div style="padding-top: 0.8051529790660226vw;">
+                            <hr style="height: 0.040257648953301126vw; border-width: 0; color: gray; background-color: gray; opacity: 0.3">
+                        </div>
+                    </div>
+                </div>
+            </span>
+
+            <div class="showMoreDiv" >
+                <asp:Button ID="mybtn3" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction3();return false;" />
             </div>
-            <div class="gradientbar" id="Publications">
+            <div class="x" id="Publications"></div>
+            <div class="gradientbar">
                 <img class="center" src="./images/profile/gradientBar.svg" />
             </div>
         </section>
@@ -603,10 +781,38 @@ OCTYPE html>
                 </div>
             </div>
 
-            <div class="showMoreDiv">
-                <asp:Button ID="Button5" CssClass="showMore" runat="server" Text="Show More" />
+            <span id="space4"></span>
+            <span id="more4">
+                <div class="section">
+                    <div class="dateDiv">
+                        <label class="date">Septemper, 2001</label>
+                    </div>
+                    <div>
+                        <div class="vertical"></div>
+                    </div>
+
+                    <div class="titles">
+                        <div class="title1Div">
+                            <label style="font-size: 1.7713365539452497vw;">Ph.D.</label>
+                        </div>
+                        <div class="title2Div">
+                            <label style="font-size: 1.3687600644122384vw;">State University of New York at Buffalo</label>
+                        </div>
+                        <div class="title3Div">
+                            <label style="font-size: 1.3687600644122384vw;">(Computer Science and Engineering, Linguistics Minor, Cognitive Science Ph.D. Track)</label>
+                        </div>
+                        <div style="padding-top: 0.8051529790660226vw;">
+                            <hr style="height: 0.040257648953301126vw; border-width: 0; color: gray; background-color: gray; opacity: 0.3">
+                        </div>
+                    </div>
+                </div>
+            </span>
+
+            <div class="showMoreDiv" >
+                <asp:Button ID="mybtn4" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction4();return false;" />
             </div>
-            <div class="gradientbar" id="Activities">
+            <div class="x" id="Activities"></div>
+            <div class="gradientbar" >
                 <img class="center" src="./images/profile/gradientBar.svg" />
             </div>
         </section>
@@ -649,6 +855,7 @@ OCTYPE html>
                     </div>
                 </div>
             </div>
+
             <div class="section">
                 <div class="dateDiv">
                     <label class="date">9/13/2016 to 9/14/2016</label>
@@ -668,12 +875,31 @@ OCTYPE html>
                 </div>
             </div>
 
+            <span id="space5"></span>
+            <span id="more5">
+                <div class="section">
+                    <div class="dateDiv">
+                        <label class="date">9/13/2016 to 9/14/2016</label>
+                    </div>
+                    <div>
+                        <div class="vertical"></div>
+                    </div>
+
+                    <div class="titles">
+                        <div class="title1Div">
+                            <label style="font-size: 1.3687600644122384vw;">Program Committee Member for DEXA 2016: 27th International Conference on Database and Expert Systems Applications, Porto, Portugal</label>
+                        </div>
+
+                        <div style="padding-top: 0.8051529790660226vw;">
+                            <hr style="height: 0.040257648953301126vw; border-width: 0; color: gray; background-color: gray; opacity: 0.3">
+                        </div>
+                    </div>
+                </div>
+            </span>
             <div class="showMoreDiv">
-                <asp:Button ID="Button6" CssClass="showMore" runat="server" Text="Show More" />
+                <asp:Button ID="mybtn5" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction5();return false;" />
             </div>
-            <div class="gradientbar">
-                <img class="center" src="./images/profile/gradientBar.svg" />
-            </div>
+            
         </section>
     </form>
 </body>

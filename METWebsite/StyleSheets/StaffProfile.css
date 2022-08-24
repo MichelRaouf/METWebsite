@@ -180,6 +180,9 @@ body {
     align-items: center;
     justify-content: space-around;
     background-image: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 1),rgba(255, 203, 5, 0.8));
+    z-index: 10000;
+    position: sticky;
+    top: 0px;
 }
 
     .navbar2 > div {
@@ -224,6 +227,9 @@ body {
     font-weight: 300;
     margin-left: 1.7vw;
     line-height: 1.5em;
+}
+.x {
+    padding-bottom: 35px;
 }
 
 
@@ -322,7 +328,7 @@ body {
     height: 1.6103059581320451vw;
 }
     .itemDiv:hover {
-        color: blue;
+        color: rgba(51, 101, 187, 1);
         text-decoration: underline;
     }
 
@@ -335,4 +341,7 @@ body {
 }
 .itemDiv2 {
     height: 1.6103059581320451vw;
+}
+#more, #more2, #more3, #more4, #more5 {
+    display: none;
 }

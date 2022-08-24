@@ -13,8 +13,9 @@
                             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                             <img class="bar" src="./images/topBarImages/bar.svg"/>
                             <label class="label1">Faculty of Media Engineering & Technology</label>
-            
-                    <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
+            <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
+          
+                    
             
         </div>
         <div class="navbar">
