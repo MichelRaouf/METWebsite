@@ -261,7 +261,9 @@
     <Content Include="StyleSheets\Savvy.css" />
     <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StyleSheets\studentActivities.css" />
+    <Content Include="StyleSheets\Try.css" />
     <Content Include="TAsProfiles.aspx" />
+    <Content Include="Try.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -389,6 +391,13 @@
     </Compile>
     <Compile Include="TAsProfiles.aspx.designer.cs">
       <DependentUpon>TAsProfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Try.aspx.cs">
+      <DependentUpon>Try.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Try.aspx.designer.cs">
+      <DependentUpon>Try.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
