@@ -52,7 +52,7 @@ body {
         border-right: none;
         border-bottom: solid;
         border-color: red;
-        border-width: 3px;
+        border-width: 0.24154589371980675vw;
         cursor: pointer;
     }
 
@@ -223,6 +223,7 @@ body {
     font-size: 1.6103059581320451vw;
     font-weight: 300;
     margin-left: 1.7vw;
+    line-height: 1.5em;
 }
 
 
@@ -324,11 +325,13 @@ body {
         color: blue;
         text-decoration: underline;
     }
+
 .list {
     display: flex;
     flex-direction: column;
     row-gap: 0;
     width: 64.4122383252818vw;
+    row-gap: 0.1610305958132045vw;
 }
 .itemDiv2 {
     height: 1.6103059581320451vw;
