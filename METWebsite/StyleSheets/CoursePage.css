@@ -61,6 +61,9 @@ body {
     height: 0.06510416666666667vw;
     background-color: #D9D9D9;
     display: flex;
+    z-index: 10000;
+    position: sticky;
+    top: 3.1901041666666665vw;
 }
 
 .title {
@@ -244,6 +247,9 @@ span {
     align-items: center;
     justify-content: space-around;
     background-color: white;
+    z-index: 10000;
+    position: sticky;
+    top: 0px;
 }
 
     .navbar2 > div {
