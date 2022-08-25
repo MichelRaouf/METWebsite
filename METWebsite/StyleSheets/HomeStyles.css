@@ -13,6 +13,8 @@ html,body {
     align-items: center;
     flex-direction: row;
     justify-content: start;
+    top:0px;
+
 }
 
 .header > div {
@@ -23,7 +25,12 @@ html,body {
     font-size: 2vw;
     top: 0px;
 }
-
+/*.scrollable{
+    top:0px;
+    position:fixed;
+    background-color:white;
+    width:100%;
+}*/
 .login {
     position: relative;
     width: 10.590494791666666vw;
@@ -42,6 +49,21 @@ html,body {
         transition: 0.5s;
         cursor:pointer;
     }
+.navbtnin {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: default;
+}
 .navbtn {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5625vw;
@@ -50,15 +72,16 @@ html,body {
     color: white;
     vertical-align: middle;
 }
-.navbtn:hover{
-    border-top:none;
-    border-left:none;
-    border-right:none;
-    border-bottom:solid;
-    border-color:red;
-    border-width:3px;
-    cursor:pointer;
-}
+    .navbtn:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid;
+        border-color: red;
+        border-width: 3px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
 .navbar {
     background-color: black;
     height: 4.5vw;
@@ -66,6 +89,7 @@ html,body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    
     justify-content: space-around;
 }
 
@@ -455,7 +479,7 @@ html,body {
     text-align: center;
     color: white;
     position: relative;
-    left: 2vw;
+    left: 3vw;
 }
 
 .name {
@@ -485,6 +509,7 @@ html,body {
     right: 1vw;
     font-weight: bold;
     color: #ED1C24;
+    margin-bottom:1vw;
     font-family: 'Montserrat', sans-serif;
 }
 .showmore:hover {

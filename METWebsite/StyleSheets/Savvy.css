@@ -260,3 +260,19 @@ li {
     border-image: linear-gradient(to bottom, rgba(51, 102, 187, 1),rgba(51, 102, 187, 1),rgba(37, 175, 68, 1));
     margin-left: 0px;
 }
+.login:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.navbtn:hover {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}

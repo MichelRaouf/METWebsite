@@ -288,3 +288,19 @@ li {
 #more7 {
     display: none;
 }
+.login:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.navbtn:hover {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}

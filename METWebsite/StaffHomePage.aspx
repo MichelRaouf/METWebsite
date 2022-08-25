@@ -20,27 +20,27 @@
         <div class="navbar">
             <div >
                 <img src="images/staff/home.png" alt="Alternate Text" class="navimg" />
-                                    <asp:Button Text="Home" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Home" runat="server" CssClass="navbtn" OnClick="toHome" />
             </div>
                 <div>
                 <img src="images/staff/book.png" alt="Alternate Text"class="navimg"/>
-                                    <asp:Button Text="Courses" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Courses" runat="server" CssClass="navbtn" OnClick="toCourses" />
             </div>
                 <div>
                 <img src="images/staff/group.png" alt="Alternate Text" class="navimg2"/>
-                                    <asp:Button Text="Staff" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Staff" runat="server" CssClass="navbtnin" OnClick="toStaff" />
             </div>
                 <div >
                 <img src="images/staff/headphones.png" alt="Alternate Text"class="navimg" />
-                                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" OnClick="toStudentActiv" />
             </div>
                 <div >
                 <img src="images/staff/graduated.png" alt="Alternate Text"class="navimg3" />
-                                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" OnClick="toAlumni" />
             </div>
                 <div >
                 <img src="images/staff/info.png" alt="Info" class="navimg4" />
-                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" OnClick="toAbout" />
             </div>
           
              
@@ -50,12 +50,12 @@
           <div class="meetLecturers">
              
                 <img class="lecturersImg" src="images/staff/class 1.png" style="width:100%" />
-                  <span class="imageTxt">Meet Your Lectures </span>
+                 <a href="LecturersProfiles.aspx" class="imageTxt">  <span >Meet Your Lectures </span></a>
 
             </div>
          <div class="meetTAs">
                 <img  class="TAsImg" src="images/staff/TA .png" style="width:100%"/>
-             <span class="imageTxt">Meet Your TAs </span>
+            <a href="TAsProfiles.aspx" class="imageTxt"> <span >Meet Your TAs </span> </a>
 
 
             </div>

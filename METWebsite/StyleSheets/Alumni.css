@@ -236,3 +236,33 @@ border-color:green;*/
     width: 0.20833333333333334vw;
     margin-right: 1.3020833333333333vw;
 }
+.login:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.navbtn:hover {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.navbtnin {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: default;
