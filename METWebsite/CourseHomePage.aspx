@@ -63,7 +63,10 @@
                   
                    <li id="gradCourses" class="catalougebtn"><Label class="catalougebtn" >Graduate Courses</Label></li>
                     <br />
-                   <li id="underCourses" class="catalougebtn"><Label class="catalougebtn">Undergraduate Courses</Label>
+                       <div id="underCourses" class="catalougebtn">
+                           <img class="changeimage" src="./images/plusicon.svg" />
+                           <Label class="catalougebtn4">Undergraduate Courses</Label>
+                   
                        <div id="underGradContent">
                            <ul>
                                <li id="MET" class="catalougebtn2"><Label class="catalougebtn2">Media Engineering and Technology</Label><div class="coll" id="METContent">
@@ -74,6 +77,7 @@
 
                                </div>
                                </li>
+                               
                                <li id="IET" class="catalougebtn2"><Label class="catalougebtn2">Information Engineering and Technology</Label><div class="coll" id="IETContent">
                                    <ul>
                                        <li class="catalougebtn3"><a href="#" class="catalougebtn3">Electronics</a></li>
@@ -82,6 +86,7 @@
                                    </ul>
 
                                </div></li>
+                             
                                <li id="EMS" class="catalougebtn2"><Label class="catalougebtn2">Material Science and Engineering</Label><div class="coll" id="EMSContent">
                                    <ul>
                                        <li class="catalougebtn3"><a href="#" class="catalougebtn3">Mechatronics</a></li>
@@ -90,12 +95,13 @@
                                    </ul>
 
                                </div></li>
+                               
                                <li id="MGT" class="catalougebtn2"><a href="#" class="catalougebtn2">Management Technology</a></li>
                            </ul>
 
                        </div>
 
-                   </li>
+                   </div>
                </ul>
                
         </div>
@@ -145,8 +151,10 @@
 <script>
 
     var gatalouge = document.getElementById("CourseCatalouge");
+    var x = document.getElementsByClassName("catalougebtn4");
     var grad = document.getElementById("gradCourses");
     var under = document.getElementById("underCourses");
+    var img = document.getElementsByClassName("changeimage");
     var underContent = document.getElementById("underGradContent");
     var met = document.getElementById("MET");
     var METContent = document.getElementById("METContent");
@@ -157,16 +165,21 @@
     var cont = document.getElementsByClassName("coll");
     var j;
     gatalouge.addEventListener("click", function () {
+        x[0].style.cssText = 'font-size:2.34375vw';
+        img[0].setAttribute("src", "./images/plusicon.svg");
         this.style.cssText = 'font-weight:bold';
         grad.style.cssText = 'font-weight:400';
         under.style.cssText = 'font-weight:400';
         underContent.style.cssText = 'display : none';
         for (j = 0; j < coll.length; j++){
         cont[j].style.cssText = 'display: none';
-    }
+        }
+        
         
     });
     grad.addEventListener("click", function () {
+        img[0].setAttribute("src", "./images/plusicon.svg");
+        x[0].style.cssText = 'font-size:2.34375vw';
         this.style.cssText = 'font-weight:bold';
         gatalouge.style.cssText = 'font-weight:400';
         under.style.cssText = 'font-weight:400';
@@ -180,6 +193,8 @@
         gatalouge.style.cssText = 'font-weight:400';
         grad.style.cssText = 'font-weight:400';
         underContent.style.cssText = 'display : block';
+        x[0].style.cssText = 'font-size:2.13vw';
+        img[0].setAttribute("src", "./images/upicon.svg");
 
     });
     met.addEventListener("click", function () {

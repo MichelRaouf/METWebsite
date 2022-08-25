@@ -150,6 +150,7 @@
     <Content Include="images\homePageImages\studentActivities.svg" />
     <Content Include="images\homePageImages\verticalBar.svg" />
     <Content Include="images\homePageImages\verticalbarwhite.svg" />
+    <Content Include="images\plusicon.svg" />
     <Content Include="images\Profile\emailIcon.svg" />
     <Content Include="images\Profile\faxIcon.svg" />
     <Content Include="images\Profile\gradientBar.svg" />
@@ -211,6 +212,7 @@
     <Content Include="images\stActivitiesPageImages\incubatorN.svg" />
     <Content Include="images\stActivitiesPageImages\svyN.svg" />
     <Content Include="images\topBarImages\studactive-red.svg" />
+    <Content Include="images\upicon.svg" />
     <Content Include="Incubator.aspx" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="StaffProfile.aspx" />

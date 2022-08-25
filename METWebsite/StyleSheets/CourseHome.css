@@ -287,6 +287,7 @@ div[for=textarea-a],
     line-height: 2.8645833333333335vw;
     letter-spacing: 0.045em;
     text-align: left;
+    width:26.693vw;
 }
 .catalougebtn:hover {
     cursor: pointer;
@@ -314,3 +315,22 @@ div[for=textarea-a],
 .catalougebtn3:hover {
     cursor: pointer;
 }
+.changeimage{
+    position:relative;
+    left:-8%;
+    top:30%;
+    
+}
+.catalougebtn4 {
+    font-family: Montserrat;
+    font-size: 2.34375vw;
+    letter-spacing: 0.045em;
+    width: 26.693vw;
+    position:relative;
+    overflow:hidden;
+    left:-7%;
+}
+
+    .catalougebtn4:hover {
+        cursor: pointer;
+    }
