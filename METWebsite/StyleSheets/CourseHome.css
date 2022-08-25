@@ -279,3 +279,7 @@ div[for=textarea-a],
     border-color: red;
     border-width: 3px;
     cursor: default;
+}
+.catalougebtn:hover{
+                 cursor:pointer;
+}
