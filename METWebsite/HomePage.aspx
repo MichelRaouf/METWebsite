@@ -68,23 +68,23 @@
             </div>
                 <div>
                 <img src="images/topBarImages/course.svg" alt="Alternate Text"class="navimg"/>
-                                    <asp:Button Text="Courses" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Courses" runat="server" CssClass="navbtn" OnClick="toCourses" />
             </div>
                 <div>
                 <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg"/>
-                                    <asp:Button Text="Staff" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Staff" runat="server" CssClass="navbtn" OnClick="toStaff" />
             </div>
                 <div >
                 <img src="images/topBarImages/studactiv.svg" alt="Alternate Text"class="navimg" />
-                                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" OnClick="toStudentActiv" />
             </div>
                 <div >
                 <img src="images/topBarImages/Alumni.svg" alt="Alternate Text"class="navimg2" />
-                                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" OnClick="toAlumni" />
             </div>
                 <div >
                 <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg4" />
-                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" OnClick="toAbout" />
             </div>
            
             
