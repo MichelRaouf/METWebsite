@@ -74,7 +74,7 @@
 
             <div>
                     <label class="subTitle">MET Related Tracks</label>
-                    <ul class"list" style="margin-top:0;font-family: 'Montserrat', sans-serif;font-size:2.1739130434782608vw;margin-left:0;">
+                    <ul class"list" style="margin-top:0;font-family: 'Montserrat', sans-serif;font-size:1.9vw;margin-left:0;">
                       <li class"item">Student Plan</li>
                       <li class"item">Specialist Plan</li>
                      </ul>
