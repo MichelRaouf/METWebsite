@@ -47,7 +47,8 @@
     </script>
 <body>
     <form id="form1" runat="server">
-        <div class="header">
+        <div class="scrollable">
+            <div class="header">
             
                             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
            
@@ -87,6 +88,7 @@
             </div>
            
             
+        </div>
         </div>
 
         

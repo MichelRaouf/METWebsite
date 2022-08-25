@@ -236,3 +236,18 @@ border-color:green;*/
     width: 0.20833333333333334vw;
     margin-right: 1.3020833333333333vw;
 }
+.login:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.navbtn:hover {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: pointer;
+}

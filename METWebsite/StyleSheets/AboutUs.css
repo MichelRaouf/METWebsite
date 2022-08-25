@@ -38,6 +38,11 @@ html, body {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+    .login:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
 .navbtn {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5625vw;
@@ -46,6 +51,15 @@ html, body {
     color: white;
     vertical-align: middle;
 }
+    .navbtn:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid;
+        border-color: red;
+        border-width: 3px;
+        cursor: pointer;
+    }
 .navbar {
     background-color: black;
     height: 4.5vw;
@@ -225,3 +239,4 @@ li {
     margin-right: auto;
     width: 50%;
 }
+
