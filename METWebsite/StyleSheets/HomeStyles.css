@@ -72,15 +72,16 @@ html,body {
     color: white;
     vertical-align: middle;
 }
-.navbtn:hover{
-    border-top:none;
-    border-left:none;
-    border-right:none;
-    border-bottom:solid;
-    border-color:red;
-    border-width:3px;
-    cursor:pointer;
-}
+    .navbtn:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid;
+        border-color: red;
+        border-width: 3px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
 .navbar {
     background-color: black;
     height: 4.5vw;

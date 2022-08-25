@@ -264,6 +264,7 @@ div[for=textarea-a],
     border-color: red;
     border-width: 3px;
     cursor: pointer;
+    transition: 0.5s;
 }
 .navbtnin {
     font-family: 'Montserrat', sans-serif;
@@ -280,6 +281,36 @@ div[for=textarea-a],
     border-width: 3px;
     cursor: default;
 }
-.catalougebtn:hover{
-                 cursor:pointer;
+.catalougebtn {
+    font-family: Montserrat;
+    font-size: 2.34375vw;
+    line-height: 2.8645833333333335vw;
+    letter-spacing: 0.045em;
+    text-align: left;
+}
+.catalougebtn:hover {
+    cursor: pointer;
+}
+.catalougebtn2 {
+    font-family: Montserrat;
+    font-size: 1.6276041666666667vw;
+    font-weight: 400;
+    line-height: 1.953125vw;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+.catalougebtn2:hover {
+    cursor: pointer;
+}
+.catalougebtn3 {
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-weight: 300;
+    line-height: 1.5625vw;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #4B8FEA;
+}
+.catalougebtn3:hover {
+    cursor: pointer;
 }

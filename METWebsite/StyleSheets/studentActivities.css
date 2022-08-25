@@ -157,6 +157,7 @@ body {
     border-color: red;
     border-width: 3px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 

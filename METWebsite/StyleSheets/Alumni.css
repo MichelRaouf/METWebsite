@@ -250,6 +250,7 @@ border-color:green;*/
     border-color: red;
     border-width: 3px;
     cursor: pointer;
+    transition: 0.5s;
 }
 .navbtnin {
     font-family: 'Montserrat', sans-serif;

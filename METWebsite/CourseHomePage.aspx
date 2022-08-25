@@ -59,35 +59,38 @@
                         <div class="hierarchyTitle"> <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
                <ul>
                    <li id="CourseCatalouge" class="catalougebtn"><Label class="catalougebtn" >Course Catalouge</Label> </li>
+                   <br />
+                  
                    <li id="gradCourses" class="catalougebtn"><Label class="catalougebtn" >Graduate Courses</Label></li>
+                    <br />
                    <li id="underCourses" class="catalougebtn"><Label class="catalougebtn">Undergraduate Courses</Label>
                        <div id="underGradContent">
                            <ul>
-                               <li id="MET" class="catalougebtn"><Label class="catalougebtn">Media Engineering and Technology</Label><div class="coll" id="METContent">
+                               <li id="MET" class="catalougebtn2"><Label class="catalougebtn2">Media Engineering and Technology</Label><div class="coll" id="METContent">
                                    <ul>
-                                       <li class="catalougebtn"><a href="#" class="catalougebtn">Computer Science & Engineering</a></li>
-                                       <li class="catalougebtn"><a href="#" class="catalougebtn">Digital Media Engineering & Technology</a></li>
+                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Computer Science & Engineering</a></li>
+                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Digital Media Engineering & Technology</a></li>
                                    </ul>
 
                                </div>
                                </li>
-                               <li id="IET" class="catalougebtn"><Label class="catalougebtn">Information Engineering and Technology</Label><div class="coll" id="IETContent">
+                               <li id="IET" class="catalougebtn2"><Label class="catalougebtn2">Information Engineering and Technology</Label><div class="coll" id="IETContent">
                                    <ul>
-                                       <li class="catalougebtn"><a href="#" class="catalougebtn">Electronics</a></li>
-                                       <li class="catalougebtn"><a href="#" class="catalougebtn">Communication</a></li>
-                                       <li class="catalougebtn"><a href="#" class="catalougebtn">Networking</a></li>
+                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Electronics</a></li>
+                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Communication</a></li>
+                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Networking</a></li>
                                    </ul>
 
                                </div></li>
-                               <li id="EMS" class="catalougebtn"><Label class="catalougebtn">Material Science and Engineering</Label><div class="coll" id="EMSContent">
+                               <li id="EMS" class="catalougebtn2"><Label class="catalougebtn2">Material Science and Engineering</Label><div class="coll" id="EMSContent">
                                    <ul>
-                                       <li class="catalougebtn"><a href="#" class="catalougebtn">Mechatronics</a></li>
-                                       <li class="catalougebtn"><a href="#" class="catalougebtn">Materials</a></li>
-                                       <li class="catalougebtn"><a href="#" class="catalougebtn">Production</a></li>
+                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Mechatronics</a></li>
+                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Materials</a></li>
+                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Production</a></li>
                                    </ul>
 
                                </div></li>
-                               <li id="MGT" class="catalougebtn"><a href="#" class="catalougebtn">Management Technology</a></li>
+                               <li id="MGT" class="catalougebtn2"><a href="#" class="catalougebtn2">Management Technology</a></li>
                            </ul>
 
                        </div>

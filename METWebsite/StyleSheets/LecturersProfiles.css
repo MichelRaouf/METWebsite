@@ -256,6 +256,8 @@ html, body {
 }
 .viewProfile:hover{
     background-color:black;
+    transition:0.5s;
+    cursor:pointer;
 }
 
 .separatingBar2 {
@@ -277,4 +279,5 @@ html, body {
     border-color: red;
     border-width: 3px;
     cursor: pointer;
+    transition: 0.5s;
 }
