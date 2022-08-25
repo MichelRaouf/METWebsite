@@ -49,6 +49,21 @@ html,body {
         transition: 0.5s;
         cursor:pointer;
     }
+.navbtnin {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: default;
+}
 .navbtn {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5625vw;

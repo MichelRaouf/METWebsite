@@ -64,7 +64,7 @@
         <div class="navbar">
             <div >
                 <img src="images/topBarImages/home-red.svg" alt="Alternate Text" class="navimg3" />
-                                    <asp:Button Text="Home" runat="server" CssClass="navbtn" />
+                                    <asp:Button Text="Home" runat="server" CssClass="navbtnin" />
             </div>
                 <div>
                 <img src="images/topBarImages/course.svg" alt="Alternate Text"class="navimg"/>

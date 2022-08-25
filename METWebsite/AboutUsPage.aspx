@@ -46,7 +46,7 @@
             </div>
                 <div >
                 <img src="images/topBarImages/about_red.svg" alt="Alternate Text" class="navimg3" />
-                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn"  />
+                                    <asp:Button Text="About Us" runat="server" CssClass="navbtnin"  />
             </div>
            
             

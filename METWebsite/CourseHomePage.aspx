@@ -31,7 +31,7 @@
             </div>
                 <div>
                 <img src="images/topBarImages/course.svg" alt="Alternate Text"class="navimg"/>
-                                    <asp:Button Text="Courses" runat="server" CssClass="navbtn"  />
+                                    <asp:Button Text="Courses" runat="server" CssClass="navbtnin"  />
             </div>
                 <div>
                 <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg"/>

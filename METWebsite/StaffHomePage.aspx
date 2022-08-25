@@ -28,7 +28,7 @@
             </div>
                 <div>
                 <img src="images/staff/group.png" alt="Alternate Text" class="navimg2"/>
-                                    <asp:Button Text="Staff" runat="server" CssClass="navbtn" OnClick="toStaff" />
+                                    <asp:Button Text="Staff" runat="server" CssClass="navbtnin" OnClick="toStaff" />
             </div>
                 <div >
                 <img src="images/staff/headphones.png" alt="Alternate Text"class="navimg" />
