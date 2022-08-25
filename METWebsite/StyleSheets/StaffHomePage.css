@@ -155,6 +155,12 @@ html, body {
     font-size: 3vw;
     font-weight: 700;
     color:white;
+    text-decoration:none;
+}
+.imageTxt:hover{
+    cursor:pointer;
+    text-decoration:underline;
+    text-decoration-color:white;
 }
 
 .lecturersImg:hover,.TAsImg:hover {

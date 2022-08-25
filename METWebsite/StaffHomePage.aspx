@@ -50,12 +50,12 @@
           <div class="meetLecturers">
              
                 <img class="lecturersImg" src="images/staff/class 1.png" style="width:100%" />
-                  <span class="imageTxt">Meet Your Lectures </span>
+                 <a href="LecturersProfiles.aspx" class="imageTxt">  <span >Meet Your Lectures </span></a>
 
             </div>
          <div class="meetTAs">
                 <img  class="TAsImg" src="images/staff/TA .png" style="width:100%"/>
-             <span class="imageTxt">Meet Your TAs </span>
+            <a href="TAsProfiles.aspx" class="imageTxt"> <span >Meet Your TAs </span> </a>
 
 
             </div>
