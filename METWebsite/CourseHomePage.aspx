@@ -10,7 +10,7 @@
 </style>
 </head>
 <body>
-    <form action="/" method="post" runat="server">
+    <form id="form1" runat="server">
             <div class="header">
             
                             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
