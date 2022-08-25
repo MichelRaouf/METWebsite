@@ -215,10 +215,6 @@
     <Content Include="images\upicon.svg" />
     <Content Include="Incubator.aspx" />
     <Content Include="LecturersProfiles.aspx" />
-    <Content Include="METWebsite.mdf" />
-    <Content Include="METWebsite_log.ldf">
-      <DependentUpon>METWebsite.mdf</DependentUpon>
-    </Content>
     <Content Include="StaffProfile.aspx" />
     <Content Include="Savvy.aspx" />
     <Content Include="StudentActivities.aspx" />
