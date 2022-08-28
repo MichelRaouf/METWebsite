@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace METWebsite
@@ -11,7 +13,37 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            //create new sqlconnection and connection to database by using connection string from web.config file  
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select * from News",con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            int count = 0;
+            while (count<3 && reader.Read())
+            {
+                String description = reader.GetValue(2).ToString();
+                String title = reader.GetValue(1).ToString();
+                String url = reader.GetValue(4).ToString();
+                var div = new HtmlGenericControl("div");
+                var section = new HtmlGenericControl("section");
+                section.Attributes.Add("class", "whitebox");
+                var label = new HtmlGenericControl("label");
+                label.Attributes.Add("class", "newsitemlabel");
+                label.InnerHtml = title;
+                section.Controls.Add(label);
+                var img = new HtmlGenericControl("img");
+                img.Attributes.Add("class", "newsimage");
+                img.Attributes.Add("description", description);
+                img.Attributes.Add("onmouseenter", "ShowHover()");
+                img.Attributes.Add("src", url);
+                div.Controls.Add(section);
+                div.Controls.Add(img);
+                newsdiv.Controls.Add(div);
+                count++;
+            }
+           
+            con.Close();
         }
 
         protected void loginButton_Click(object sender, EventArgs e)

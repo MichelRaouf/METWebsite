@@ -113,27 +113,7 @@
             <div class="news" >
             <div> <label class="newslabel">Latest News</label> </div>
             <div class="newsitem" id="newsdiv" runat="server" >
-                <div>
-                    <section class="whitebox" id="image11" >
-                        <label class="newsitemlabel">Job Fair 2022</label>
-                    </section>
-                    <img class="newsimage" onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
-                    
-                </div>
-                <div>
-                    <section class="whitebox">
-                        <label class="newsitemlabel">Job Fair 2022</label>
-                    </section>
-                    <img class="newsimage"  onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
-
-                </div>
-                <div>
-                    <section class="whitebox">
-                        <label class="newsitemlabel">Job Fair 2022</label>
-                    </section>
-                    <img class="newsimage"  onmouseenter="ShowHover()"    src="./images/homePageImages/news1.svg" title="Job Fair 2022" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in."  />
-
-                </div>
+                
                 
             </div>
             
