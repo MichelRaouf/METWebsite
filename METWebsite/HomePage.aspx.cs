@@ -13,7 +13,7 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET1"].ConnectionString;
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
@@ -49,6 +49,7 @@ namespace METWebsite
             count = 0;
             reader.Close();
             SqlDataReader reader2 = cmd2.ExecuteReader();
+            int x = reader2.RecordsAffected;
             while (count<3 && reader2.Read())
             {
                 String name = reader2.GetValue(1).ToString();
@@ -58,6 +59,7 @@ namespace METWebsite
                 var div = new HtmlGenericControl("div");
                 var profimg = new HtmlGenericControl("img");
                 profimg.Attributes.Add("class", "alumniImage");
+                
                 profimg.Attributes.Add("src", url);
                 var div2 = new HtmlGenericControl("div");
                 div2.Attributes.Add("class", "alumniinfo");
@@ -75,6 +77,15 @@ namespace METWebsite
                 div2.Controls.Add(label2);
                 div.Controls.Add(div2);
                 gucianinfodiv.Controls.Add(div);
+                var imgdiv = new HtmlGenericControl("div");
+                var bar = new HtmlGenericControl("img");
+                bar.Attributes.Add("class", "whiteVerBar");
+                bar.Attributes.Add("src", "./images/homePageImages/verticalbarwhite.svg");
+                imgdiv.Controls.Add(bar);
+                if(count!=2 || count!=x-1)
+                {
+                    gucianinfodiv.Controls.Add(imgdiv);
+                }
                 count++;
             }
 
