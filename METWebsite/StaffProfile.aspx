@@ -48,8 +48,8 @@ OCTYPE html>
             </div>
         </div>
 
-        <div class="ProfileHeader">
-            <div class="profileImageDiv">
+        <div class="ProfileHeader" id="ProfileHeader" runat="server">
+    <!--        <div class="profileImageDiv">
                 <img class="profileImage" src="images/profile/Haythem.svg" alt="Alternate Text" />
             </div>
             <div>
@@ -91,7 +91,7 @@ OCTYPE html>
                         <label class="iconLabel">20-2-7589990</label>
                     </div>
                 </div>
-            </div>
+            </div>  -->
         </div>
 
            <div></div>
@@ -121,7 +121,7 @@ OCTYPE html>
             function funcPersonalInfo() {
                 const element = document.getElementById("PersonalInfo");
                 element.scrollIntoView();
-               
+
             }
             function funcTeaching() {
                 const element = document.getElementById("Teaching");
