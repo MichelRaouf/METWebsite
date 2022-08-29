@@ -109,10 +109,6 @@
     <Content Include="AboutUsPage.aspx" />
     <Content Include="ACM.aspx" />
     <Content Include="AlumniPage.aspx" />
-    <Content Include="App_Data\Database1.mdf" />
-    <Content Include="App_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -422,6 +418,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="images\alumniPageImages\" />
     <Folder Include="images\coursesPageImages\" />
     <Folder Include="images\staffPageImages\" />
