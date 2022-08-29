@@ -4,6 +4,7 @@
 html, body {
     margin: 0;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -38,11 +39,13 @@ html, body {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+
     .login:hover {
         background-color: black;
         transition: 0.5s;
         cursor: pointer;
     }
+
 .navbtn {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5625vw;
@@ -51,6 +54,7 @@ html, body {
     color: white;
     vertical-align: middle;
 }
+
     .navbtn:hover {
         border-top: none;
         border-left: none;
@@ -59,8 +63,9 @@ html, body {
         border-color: red;
         border-width: 3px;
         cursor: pointer;
-        transition:0.5s;
+        transition: 0.5s;
     }
+
 .navbar {
     background-color: black;
     height: 4.5vw;
@@ -78,14 +83,17 @@ html, body {
         padding: 1.3vw;
         top: 0px;
     }
+
 .logo {
     width: 20.57vw;
     height: 5.315104166666667vw;
 }
+
 .bar {
     width: 2.57vw;
     height: 5.315104166666667vw;
 }
+
 .navimg {
     width: 1.8229166666666667vw;
     height: 1.8229166666666667vw;
@@ -120,8 +128,8 @@ html, body {
     top: 0px;
     left: 0px;
     position: relative;
-
 }
+
 .label3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5vw;
@@ -131,13 +139,14 @@ html, body {
     margin-left: auto;
     width: 100%;
 }
+
 .aboutH {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.45vw;
     font-weight: 600;
     position: relative;
     padding-left: 40px;
-    color:#000000; 
+    color: #000000;
 }
 
 .infodiv {
@@ -146,12 +155,12 @@ html, body {
     margin-left: 10px;
     margin-top: 10px;
 }
+
 .qoutediv {
     display: block;
     margin-left: auto;
     padding-right: 50px;
-    padding-left:50px;
-    
+    padding-left: 50px;
 }
 
 .whyMETimg {
@@ -184,18 +193,40 @@ html, body {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size :1.5vw;
+    font-size: 1.5vw;
     line-height: 49px;
+    text-decoration: none;
 }
+
     .AboutNav :hover {
         font-weight: 900;
         text-decoration: underline;
         font-size: 1.6vw;
+        cursor: pointer;
     }
-.flex-container{
-    display: flex;
-    flex-direction:column;
+
+.hover-underline-animation {
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    text-decoration: none;
+    line-height: 3.9452495974235107vw;
 }
+
+    .hover-underline-animation:hover {
+        font-weight: 900;
+        text-decoration: underline;
+        font-size: 1.6vw;
+        cursor: pointer;
+    }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .p1 {
     text-align: left;
     font-family: 'Montserrat';
@@ -203,16 +234,18 @@ html, body {
     font-weight: 400;
     font-size: 1.65vw;
     padding-left: 40px;
-    padding-right:40px;
+    padding-right: 40px;
 }
+
 .p2 {
     font-size: 2vw;
     text-align: left;
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight:500;
+    font-weight: 500;
     padding-left: 40px;
 }
+
 .listItem {
     list-style: none;
     text-align: left;
@@ -222,14 +255,16 @@ html, body {
     font-size: 1.65vw;
     padding-left: 65px;
 }
-.listItem li::before {
-    content: "\2022";
-    color: #F5D243;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
+
+    .listItem li::before {
+        content: "\2022";
+        color: #F5D243;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
 li {
     margin: 15px 0;
 }
