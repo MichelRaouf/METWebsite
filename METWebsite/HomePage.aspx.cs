@@ -17,7 +17,10 @@ namespace METWebsite
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-
+            SqlCommand cmd3 = new SqlCommand("select title from News where id=@id",con);
+            cmd3.Parameters.Add(new SqlParameter("id",3));
+            String s = cmd3.ExecuteScalar().ToString();
+            
             SqlCommand cmd = new SqlCommand("Select * from News",con);
             SqlCommand cmd2 = new SqlCommand("Select * from Honors", con);
 
