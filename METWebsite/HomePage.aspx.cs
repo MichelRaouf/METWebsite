@@ -17,8 +17,12 @@ namespace METWebsite
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
+
             SqlCommand cmd = new SqlCommand("Select * from News",con);
+            SqlCommand cmd2 = new SqlCommand("Select * from Honors", con);
+
             SqlDataReader reader = cmd.ExecuteReader();
+            
             int count = 0;
             while (count<3 && reader.Read())
             {
@@ -42,6 +46,49 @@ namespace METWebsite
                 newsdiv.Controls.Add(div);
                 count++;
             }
+            count = 0;
+            reader.Close();
+            SqlDataReader reader2 = cmd2.ExecuteReader();
+            int x = reader2.RecordsAffected;
+            while (count<3 && reader2.Read())
+            {
+                String name = reader2.GetValue(1).ToString();
+                String description = reader2.GetValue(2).ToString();
+                String url = reader2.GetValue(3).ToString();
+
+                var div = new HtmlGenericControl("div");
+                var profimg = new HtmlGenericControl("img");
+                profimg.Attributes.Add("class", "alumniImage");
+                
+                profimg.Attributes.Add("src", url);
+                var div2 = new HtmlGenericControl("div");
+                div2.Attributes.Add("class", "alumniinfo");
+                var label = new HtmlGenericControl("label");
+                label.InnerHtml = name;
+                label.Attributes.Add("class", "name");
+                var br = new HtmlGenericControl("br");
+
+                var label2 = new HtmlGenericControl("label");
+                label2.InnerHtml = description;
+                label2.Attributes.Add("class", "description");
+                div.Controls.Add(profimg);
+                div2.Controls.Add(label);
+                div2.Controls.Add(br);
+                div2.Controls.Add(label2);
+                div.Controls.Add(div2);
+                gucianinfodiv.Controls.Add(div);
+                var imgdiv = new HtmlGenericControl("div");
+                var bar = new HtmlGenericControl("img");
+                bar.Attributes.Add("class", "whiteVerBar");
+                bar.Attributes.Add("src", "./images/homePageImages/verticalbarwhite.svg");
+                imgdiv.Controls.Add(bar);
+                if(count!=2 || count!=x-1)
+                {
+                    gucianinfodiv.Controls.Add(imgdiv);
+                }
+                count++;
+            }
+
            
             con.Close();
         }
