@@ -13,6 +13,7 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Write(Session["instructorid"]);
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
@@ -107,7 +108,7 @@ namespace METWebsite
             iconlabel3.Attributes.Add("class", "info");
             var img3 = new HtmlGenericControl("img");
             img3.Attributes.Add("class", "icon");
-            img3.Attributes.Add("src", src = "images/Profile/faxIcon.svg");
+            img3.Attributes.Add("src", "images/Profile/faxIcon.svg");
             var imagediv3 = new HtmlGenericControl("div");
             imagediv3.Controls.Add(img3);
             var label3 = new HtmlGenericControl("label");

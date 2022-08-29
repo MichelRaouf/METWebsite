@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace METWebsite
@@ -11,7 +13,61 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            //create new sqlconnection and connection to database by using connection string from web.config file  
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            SqlCommand cmd1 = new SqlCommand("getLecturerInfo",con);
+            cmd1.Parameters.Add(new SqlParameter("@position", "DEAN"));
+            cmd1.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlDataReader reader1 = cmd1.ExecuteReader();
+            reader1.Read();
+            String id = reader1.GetValue(0).ToString();
+            String name= reader1.GetValue(1).ToString();
+            String mail=reader1.GetValue(2).ToString();
+            String office=reader1.GetValue(3).ToString();
+            reader1.Close();
+            var div = new HtmlGenericControl("div");
+            div.Attributes.Add("class", "profileData");
+            var profimg = new HtmlGenericControl("img");
+            profimg.Attributes.Add("src", "images/staff/Haytham.png");
+            profimg.Attributes.Add("style", "width:16.276041666666668vw");
+            var br = new HtmlGenericControl("br");
+            var namediv = new HtmlGenericControl("div");
+            namediv.Attributes.Add("class", "Name");
+            namediv.InnerHtml = name;
+            var maildiv = new HtmlGenericControl("div");
+            maildiv.Attributes.Add("class", "mailContainer");
+            var mailimg = new HtmlGenericControl("img");
+            mailimg.Attributes.Add("src", "./images/staff/email.png");
+            maildiv.InnerHtml = mail;
+            var officediv = new HtmlGenericControl("div");
+            officediv.Attributes.Add("class", "officeContainer");
+            var officeimg = new HtmlGenericControl("img");
+            officeimg.Attributes.Add("src", "images/staff/workplace.png");
+            officediv.InnerHtml = office;
+            Button b = new Button();
+            b.ID = id;
+           
+            b.Attributes.Add("class", "viewProfile");
+            b.Attributes.Add("runat", "server");
+            b.Text = "View Profile";
+            b.Attributes.Add("OnClick", "ViewProfileClick");
+            b.Click += ViewProfileClick;
+            div.Controls.Add(profimg);
+            div.Controls.Add(namediv);
+            div.Controls.Add(maildiv);
+            div.Controls.Add(officediv);
+            div.Controls.Add(b);
+            deandiv.Controls.Add(div);
 
+            
+
+        }
+        protected void ViewProfileClick(object sender,EventArgs e)
+        {
+            Session["instructorid"] = ((Control)sender).ID;
+            Response.Redirect("StaffProfile.aspx");
         }
         protected void toHome(object sender, EventArgs e)
         {
