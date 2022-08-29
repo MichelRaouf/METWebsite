@@ -20,11 +20,11 @@ namespace METWebsite
             SqlCommand cmd = new SqlCommand("Select * from Instructors", con);
             SqlDataReader reader = cmd.ExecuteReader();
             int c = 0;
-            string email = ""; string office = ""; string office_hours = "";
-            string name = ""; string tele = ""; string fax = ""; string country = ""; string city = ""; string dep = ""; string dob = "";
+            string email="";string office=""; string office_hours="";
+            string name=""; string tele = ""; string fax = "";string country=""; string city =""; string dep = ""; string dob = ""; 
             string nation = ""; string stat = ""; string lang = "";
 
-
+          
 
             while (reader.Read() & c < 1)
             {
@@ -122,7 +122,7 @@ namespace METWebsite
             iconlabel4.Attributes.Add("class", "info");
             var img4 = new HtmlGenericControl("img");
             img4.Attributes.Add("class", "icon");
-            img4.Attributes.Add("src", "images/Profile/phoneIcon.svg");
+            img4.Attributes.Add("src","images/Profile/phoneIcon.svg");
             var imagediv4 = new HtmlGenericControl("div");
             imagediv4.Controls.Add(img4);
             var label4 = new HtmlGenericControl("label");
