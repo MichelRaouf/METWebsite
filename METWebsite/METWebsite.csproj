@@ -15,7 +15,7 @@
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -108,6 +108,7 @@
   <ItemGroup>
     <Content Include="AboutUsPage.aspx" />
     <Content Include="ACM.aspx" />
+    <Content Include="AdminHomePage.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
@@ -138,6 +139,12 @@
     <Content Include="HomePage.aspx" />
     <Content Include="IEEE.aspx" />
     <Content Include="images\aboutUsPageImages\about.svg" />
+    <Content Include="images\adminImages\adminLogo.svg" />
+    <Content Include="images\adminImages\coursesIcon.svg" />
+    <Content Include="images\adminImages\dashboardIcon.svg" />
+    <Content Include="images\adminImages\homeIcon.svg" />
+    <Content Include="images\adminImages\otherIcon.svg" />
+    <Content Include="images\adminImages\stActivityIcon.svg" />
     <Content Include="images\homePageImages\aboutUs.svg" />
     <Content Include="images\homePageImages\alumni.svg" />
     <Content Include="images\homePageImages\callLogo.svg" />
@@ -255,6 +262,7 @@
     <Content Include="Site.Master" />
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\ACM.css" />
+    <Content Include="StyleSheets\AdminHome.css" />
     <Content Include="StyleSheets\Alumni.css" />
     <Content Include="StyleSheets\CourseHome.css" />
     <Content Include="StyleSheets\CoursePage.css" />
@@ -290,6 +298,13 @@
     </Compile>
     <Compile Include="ACM.aspx.designer.cs">
       <DependentUpon>ACM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHomePage.aspx.cs">
+      <DependentUpon>AdminHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHomePage.aspx.designer.cs">
+      <DependentUpon>AdminHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="AlumniPage.aspx.cs">
       <DependentUpon>AlumniPage.aspx</DependentUpon>
