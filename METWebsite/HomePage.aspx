@@ -144,8 +144,8 @@
             <div class="redlabel">
                 <label class="gucianlabel">#We_Gucians</label>
         </div>
-            <div class="gucianinfo">
-                <div>
+            <div class="gucianinfo" runat="server" id="gucianinfodiv">
+                <%--<div>
                 <img  class="alumniImage" src="./images/homePageImages/person1.svg"/>
                 <div class="alumniinfo">
                 <label class="name">Ahmed Sabah</label>
@@ -178,7 +178,7 @@
                 <label class="description"> Co-Founder & CTO  of Swvl Forbes Middle East ARAB 30 UNDER 30: Class of 2018 Category of Consumer Technology</label>
 
                 </div>
-            </div>
+            </div>--%>
 
             </div>
         

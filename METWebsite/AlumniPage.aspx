@@ -47,12 +47,12 @@
             
         </div>
 
-        <div class="honors"> 
+        <div class="honors" id="honordiv" runat="server"> 
             <div style="width:100%;display:flex;flex-direction:row;justify-content:center;margin-top:-1.953125vw">
             <h4 class="honorsTitle">#we_<span style="font-size:3.7760416666666665vw;">GUC</span>inas</h4>
                 </div>
 
-            <div class="honorsProfile">
+            <%--<div class="honorsProfile">
                 <img src="images/alumniPageImages/image 6.png" class="img"/>
                 <div class="profileTextContainer">
                     <h4 class="honorName"> Ahmed Sabah</h4>
@@ -102,7 +102,7 @@
                     <h4 class="honorName">Yomna Abdelrahman</h4>
                     <p class="honorParagraph">Talented Worldwide Music Composer Won  the Young Talent Award Game Music composition competition in Hamburg, Germany, 2016</p>
                 </div>
-            </div>
+            </div>--%>
 
         </div>
 
