@@ -11,6 +11,21 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["id"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+        }
+        protected void logOut_click(object sender, EventArgs e)
+        {
+            Session["id"] = null;
+            Response.Redirect("Login.aspx");
+
+
+        }
+        protected void viewProfile_click(object sender, EventArgs e)
+        {
 
         }
     }

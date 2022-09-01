@@ -155,6 +155,7 @@
     <Content Include="images\homePageImages\verticalBar.svg" />
     <Content Include="images\homePageImages\verticalbarwhite.svg" />
     <Content Include="images\InstructorHome\logout.svg" />
+    <Content Include="images\InstructorHome\profile.svg" />
     <Content Include="images\plusicon.svg" />
     <Content Include="images\Profile\emailIcon.svg" />
     <Content Include="images\Profile\faxIcon.svg" />

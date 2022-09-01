@@ -18,17 +18,19 @@
 
 
             <label class="label1">Faculty of Media Engineering & Technology</label>
-
-             <button class="logout">
-                 <img id="logoutIcon" src="./images/InstructorHome/logout.svg" /><span id="logoutlabel">Log Out</span></></button>
+             <button class="logout" runat="server" onserverclick="logOut_click">
+                 <img class="logoutIcon" src="./images/InstructorHome/logout.svg" /><span id="logoutlabel">Log Out</span></></button>
         </div>
         <div id="Welcome_div">
             
                  <label class="title"> Welcome, Hytham!</label>
+            <button id="viewProfile" runat="server" onserverclick="viewProfile_click">
+            <img class="logoutIcon"  src="./images/InstructorHome/profile.svg" /> View Profile </button>
         </div>
         <div id="semesterTitleDiv">
             <label class="semesterTitle">Spring 2022</label>
         </div>
+        
         <table>
             <tr>
                 <td><label class="courseTitle">CSEN101 Introduction to computer scienece</label></td>

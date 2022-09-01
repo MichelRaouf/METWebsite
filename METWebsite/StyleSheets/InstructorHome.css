@@ -26,63 +26,8 @@ html, body {
     }
 
 
-.login {
-    position: relative;
-    width: 10.590494791666666vw;
-    height: 3.7109375vw;
-    border-radius: 0.32552vw;
-    background-color: #FFCB05;
-    border: none;
-    font-size: 1.5625vw;
-    margin-left: 22vw;
-    font-weight: bold;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-}
 
-    .login:hover {
-        background-color: black;
-        transition: 0.5s;
-        cursor: pointer;
-    }
 
-.navbtn {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5625vw;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    vertical-align: middle;
-}
-
-    .navbtn:hover {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: solid;
-        border-color: red;
-        border-width: 3px;
-        cursor: pointer;
-        transition: 0.5s;
-    }
-
-.navbar {
-    background-color: black;
-    height: 4.5vw;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-    .navbar > div {
-        margin-left: 10px;
-        flex-grow: 1 1 0;
-        display: flex;
-        padding: 1.3vw;
-        top: 0px;
-    }
 
 .logo {
     width: 20.57vw;
@@ -100,31 +45,6 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8vw;
 }
-
-.label2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.65vw;
-    top: 0px;
-    left: 0px;
-    position: relative;
-}
-
-.label3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5vw;
-    font-weight: 300;
-    position: relative;
-    display: block;
-    margin-left: auto;
-    width: 100%;
-}
-
-
-
-
-
-
-
 
 #Welcome_div {
     background-image: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 1),rgba(255, 203, 5, 0.8));
@@ -217,13 +137,27 @@ tr:nth-child(even) {
     font-family: 'Montserrat', sans-serif;
     cursor : pointer;
 }
-#logoutIcon {
+.logoutIcon {
     vertical-align: middle;
+    padding-right: 10px;
+    justify-content:start;
 }
 #logoutlabel {
     font-family: 'Montserrat', sans-serif;
     vertical-align: middle;
     font-size:25px;
-    padding-left:5px;
-    padding-right : 5px;
+
+}
+#viewProfile {
+    vertical-align: middle;
+    background-color: black;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    vertical-align: middle;
+    font-size: 25px;
+    border-radius:5px;
+    width: 283px;
 }

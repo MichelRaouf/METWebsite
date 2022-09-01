@@ -25,7 +25,7 @@ namespace METWebsite
             String emailInput = username.Text;
             String pass = password.Text;
 
-            SqlCommand UsersCred = new SqlCommand("select email,password,id from Users", con);
+            SqlCommand UsersCred = new SqlCommand("select email,password,id from Instructors", con);
             SqlDataReader reader = UsersCred.ExecuteReader();
             while (reader.Read())
             {
@@ -37,7 +37,7 @@ namespace METWebsite
                     if (password== pass)
                     {
                         Session["id"] = reader.GetValue(2);
-                        Response.Redirect("StaffHomePage.aspx");
+                        Response.Redirect("InstructorHome.aspx");
 
                     }
                 }
