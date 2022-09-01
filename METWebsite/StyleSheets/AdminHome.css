@@ -1,0 +1,105 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+}
+
+.header {
+    height: 7.6171875vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    top: 0px;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.adminLogo {
+    width: 3.875vw;
+    height: 7.67920133vh;
+    margin-left: 20vw;
+}
+
+.adminLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.56vw;
+    font-weight: 600;
+    margin-left: 1vw;
+}
+
+.dashboardIcon {
+    width: 5.625vw;
+    height: 11.9800333vh;
+    vertical-align: middle;
+    margin-right: 0.5vw;
+}
+
+.dashboardLabel {
+    font-size: 2.97vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    vertical-align: middle;
+    margin-left: 0.5vw;
+}
+
+.dashboard {
+    text-align: center;
+}
+
+.cardsDiv {
+    margin-right: 24.739583vw;
+    margin-left: 24.739583vw;
+    margin-top: 5vh;
+    display: grid;
+    grid-column-gap: 3.64583333vw;
+    grid-row-gap: 3.64583333vw;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cards {
+    height: 27.222222222vh;
+    border-radius: 0.32552vw;
+    text-align: center;
+    background: linear-gradient(to bottom right, #FFE171, #FFC3C6);
+    justify-content: center;
+}
+
+.cardLabel {
+    font-size: 2.51vw;
+    font-family: 'Montserrat', sans-serif;
+    vertical-align: middle;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    margin: 1vw;
+    margin-top: 4vh;
+    justify-content:center;
+}
+
+.homeIcon, .coursesIcon, .stActivityIcon, .otherIcon {
+    vertical-align: middle;
+    margin-top: 5.5vh;
+}
