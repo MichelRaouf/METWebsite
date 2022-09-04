@@ -65,6 +65,8 @@
             </div>
             <div class="column2">
                 <label class="majorsLabel">Majors Involved:</label>
+                <br />
+                <br />
                 <div class="majors">
                     <div class="met">
                         <label class="metLabel">MET: </label>
@@ -113,10 +115,17 @@
                         </div> 
                     </div>
                 </div>
+                <br />
                 <label class="description" for="descriptionInput">Course Description: </label>
+                <br />
                 <br />
                 <input type="text" id="descriptionInput" name="descriptionInput" />
             </div>
+            <br />
+            <br />
+        </div>
+        <div class="buttonDiv">
+            <asp:Button ID="Button1" CssClass="addCourse" runat="server" Text="Add Course"  />
         </div>
     </form>
 </body>
