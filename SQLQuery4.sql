@@ -9,6 +9,13 @@ insert into Employment values (1,'Associate Professor','Cairo University','Septe
 insert into Employment values (1,'Associate Professor','Cairo University','September,2001','february 2023',
 'Computer Science and Engineering, Linguistics Minor, Cognitive Science Ph.D. Track') ;
 
+
+
+
+
+
+
+
 insert into Instructor_ResearchInterest values (1,1);
 insert into Instructor_ResearchInterest values (1,2);
 insert into Instructor_ResearchInterest values (1,3);
