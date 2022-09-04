@@ -108,6 +108,7 @@
   <ItemGroup>
     <Content Include="AboutUsPage.aspx" />
     <Content Include="ACM.aspx" />
+    <Content Include="AdminAddCourse.aspx" />
     <Content Include="AdminHomePage.aspx" />
     <Content Include="AdminStudentActivity.aspx" />
     <Content Include="AlumniPage.aspx" />
@@ -142,6 +143,7 @@
     <Content Include="images\aboutUsPageImages\about.svg" />
     <Content Include="images\adminImages\adminLogo.svg" />
     <Content Include="images\adminImages\coursesIcon.svg" />
+    <Content Include="images\adminImages\dashboardIcon-white.svg" />
     <Content Include="images\adminImages\dashboardIcon.svg" />
     <Content Include="images\adminImages\homeIcon.svg" />
     <Content Include="images\adminImages\otherIcon.svg" />
@@ -267,6 +269,7 @@
     <Content Include="Site.Master" />
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\ACM.css" />
+    <Content Include="StyleSheets\AdminAddCourse.css" />
     <Content Include="StyleSheets\AdminHome.css" />
     <Content Include="StyleSheets\AdminStudentActivity.css" />
     <Content Include="StyleSheets\Alumni.css" />
@@ -305,6 +308,13 @@
     </Compile>
     <Compile Include="ACM.aspx.designer.cs">
       <DependentUpon>ACM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddCourse.aspx.cs">
+      <DependentUpon>AdminAddCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddCourse.aspx.designer.cs">
+      <DependentUpon>AdminAddCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminHomePage.aspx.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
