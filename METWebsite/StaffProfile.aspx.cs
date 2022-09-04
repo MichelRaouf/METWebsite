@@ -13,12 +13,15 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+         //   int id =(int) Session["instructorid"];
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd = new SqlCommand("Select * from Instructors", con);
+            SqlCommand cmd = new SqlCommand("getInstructor", con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlParameter inst = new SqlParameter("@instID", 1);
+            cmd.Parameters.Add(inst);
             SqlDataReader reader = cmd.ExecuteReader();
             string email="";string office=""; string office_hours="";
             string name=""; string tele = ""; string fax = "";string country=""; string city =""; string dep = ""; string dob = ""; 
@@ -317,16 +320,117 @@ namespace METWebsite
                 }
             }
             if (count == 0  || count > 0 )
-                employmentSection.Controls.Remove(buttonMore1);
+                employmentSection.Controls.Remove(buttonTeach);
 
             if (count < 0)
             {
-                employmentSection.Controls.Add(buttonMore1);
+                employmentSection.Controls.Add(buttonTeach);
 
             }
             con.Close();
             ///////////////////////////////////////////////////////////////
-            
+           con.Open();
+            SqlCommand cmd3 = new SqlCommand("getInstSemester", con);
+            cmd3.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlParameter instrT = new SqlParameter("@instID", 1);
+            cmd3.Parameters.Add(instrT);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            List<int> SerT = new List<int>();
+            List<string> YearT = new List<string>();
+            List<string> SeasonT = new List<string>();
+             int  semesterSerial = 0; string semesterYear = ""; string semesterSeason = "";
+            while (reader3.Read())
+            {
+                semesterSerial= reader3.GetInt32(0);
+                semesterYear= reader3.GetValue(1).ToString();
+                semesterSeason= reader3.GetString(2);
+                SerT.Add(semesterSerial);
+                YearT.Add(semesterYear);
+                SeasonT.Add(semesterSeason);
+
+            }
+
+            con.Close();
+            int countH = 3;
+            int j = 0;
+            while (j < SerT.Count) {
+                con.Open();
+                SqlCommand cmd33 = new SqlCommand("getInstCourses", con);
+                cmd33.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlParameter instrH = new SqlParameter("@instID", 1);
+                SqlParameter serialH = new SqlParameter("@semesterSerial",SerT.ElementAt(j));
+                cmd33.Parameters.Add(instrH);
+                cmd33.Parameters.Add(serialH);
+                SqlDataReader reader33 = cmd33.ExecuteReader();
+              
+                var TeaDiv1 = new HtmlGenericControl("div");
+                var TeaDiv2 = new HtmlGenericControl("div");
+                var TeaDiv3 = new HtmlGenericControl("div");
+
+                var TeaDate = new HtmlGenericControl("label");
+                TeaDate.Attributes.Add("class", "date");
+                TeaDate.InnerHtml = SeasonT.ElementAt(j) + "\n" + " , " + "\n" + YearT.ElementAt(j);
+                TeaDiv1.Attributes.Add("class", "dateDiv");
+                TeaDiv1.Controls.Add(TeaDate);
+
+                TeaDiv2.Attributes.Add("class", "vertical");
+                TeaDiv3.Attributes.Add("class", "titles");
+
+                var TeaTitleDiv = new HtmlGenericControl("div");
+
+                while (reader33.Read())
+                {
+                  
+
+                  
+                    TeaTitleDiv.Attributes.Add("class", "title1Div");
+                    var TeachTitle = new HtmlGenericControl("label");
+                    TeachTitle.InnerHtml = reader33.GetString(0);
+                    TeaTitleDiv.Style.Add("font-size", "1.7713365539452497vw");
+                    TeaTitleDiv.Controls.Add(TeachTitle);
+
+                }   
+
+                    var TeaHorizBar = new HtmlGenericControl("hr");
+                    TeaHorizBar.Style.Add("height", "0.040257648953301126vw");
+                    TeaHorizBar.Style.Add("border-width", "0");
+                    TeaHorizBar.Style.Add("color", "gray");
+                    TeaHorizBar.Style.Add("background-color", "gray");
+                    TeaHorizBar.Style.Add("opacity", "0.3");
+
+                    var TeaHorizBarDiv = new HtmlGenericControl("div");
+                    TeaHorizBarDiv.Style.Add("padding-top", "0.8051529790660226vw;");
+                    TeaHorizBarDiv.Controls.Add(TeaHorizBar);
+
+                    TeaDiv3.Controls.Add(TeaTitleDiv);
+                    TeaDiv3.Controls.Add(TeaHorizBarDiv);
+
+
+                var Teachall = new HtmlGenericControl("div");
+                Teachall.Attributes.Add("class", "section");
+                Teachall.Controls.Add(TeaDiv1);
+                Teachall.Controls.Add(TeaDiv2);
+                Teachall.Controls.Add(TeaDiv3);
+                    if (countH > 0)
+                        TeachingSection.Controls.Add(Teachall);
+                    else
+                    {
+                        more2.Controls.Add(Teachall);
+                        TeachingSection.Controls.Add(more2);
+
+                    }
+                countH--;
+                j++;
+                con.Close();
+            }
+            if (countH == 0 || countH > 0)
+                TeachingSection.Controls.Remove(buttonTeach);
+
+            if (countH < 0)
+            {
+                TeachingSection.Controls.Add(buttonTeach);
+
+            }
 
 
 

@@ -96,6 +96,33 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button myBtn;
 
         /// <summary>
+        /// TeachingSection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TeachingSection;
+
+        /// <summary>
+        /// more2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl more2;
+
+        /// <summary>
+        /// buttonTeach control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl buttonTeach;
+
+        /// <summary>
         /// mybtn2 control.
         /// </summary>
         /// <remarks>
