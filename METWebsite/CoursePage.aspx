@@ -48,26 +48,25 @@
         </div>
 
         <div class="flex-container-1">
-            <div class="flex-child-1">
-                (CSEN301) Data Structures and Algorithms
+            <div id="ctitle" class="flex-child-1" runat="server">
             </div>
 
             <div class="flex-child-1 center">
                 <div class="margin-bottom">
                     <img class="nav2-img" src="./images/coursePageImages/credit.svg" />
-                    <span>&nbsp;&nbsp;6 Credits Hours</span>
+                    <span id="ccredits" runat="server"></span>
                 </div>
                 <div class="margin-bottom">
                     <img class="nav2-img" src="./images/coursePageImages/lecture.svg" />
-                    <span>&nbsp;&nbsp;12 Lectures</span>
+                    <span id="clecs" runat="server"></span>
                 </div>
                 <div class="margin-bottom">
                     <img class="nav2-img" src="./images/coursePageImages/tutorial.svg" />
-                    <span>&nbsp;&nbsp;11 Tutorials</span>
+                    <span id="ctuts" runat="server"></span>
                 </div>
                 <div class="margin-bottom">
                     <img class="nav2-img" src="./images/coursePageImages/lab.svg" />
-                    <span>&nbsp;&nbsp;6 Labs</span>
+                    <span id="clabs" runat="server"></span>
                 </div>
             </div>
 
@@ -101,10 +100,7 @@
             <p>Course Updates</p>
         </div>
         <div>
-            <ul class="updates">
-                <li>Quiz 2 is set to be on Tuesday 2/12/2022 at 2:00 PM. Personalized seats will be sent via mail.</li>
-                <li>Milestone deadline is extended for 2 more weeks.</li>
-                <li>The midterm will contain only the first five lectures, their labs and tutorials.</li>
+            <ul id="cupdates" runat="server" class="updates">
             </ul>
         </div>
         <div class="line2 centerdiv" id="description">
@@ -114,18 +110,7 @@
         <div class="title">
             <p>Description</p>
         </div>
-        <div class="description">
-            The Computer Programming Lab is about:
-                <ul>
-                    <li>Working within a team
-                    </li>
-                    <li>Learning the basics of Object-Oriented software development
-                    </li>
-                    <li>Establishing a deeper understanding of the Java programming language</li>
-                    <li>Planning and implementing a software project in a small team</li>
-                </ul>
-            Contrary to the previous courses you have encountered, the Computer Programming Lab is
-            a course that leaves it up to the students to identify and obtain the required knowledge to complete the course tasks.
+        <div class="description" id="cdescription" runat="server">
         </div>
         <div class="line2 centerdiv" id="prerequisites">
         </div>
@@ -135,11 +120,7 @@
             <p>Prerequisites</p>
         </div>
         <div>
-            <ul class="prerequisites">
-                <li class="itemDiv">CSEN101 Introduction to Computer Science
-                </li>
-                <li class="itemDiv">CSEN201 Introduction to Java Programming
-                </li>
+            <ul id="cpre" runat="server" class="prerequisites">
             </ul>
         </div>
         <div class="line2 centerdiv" id="syllabus">
@@ -148,86 +129,12 @@
         <div class="title">
             <p>Syllabus</p>
         </div>
-        <div class="flex-container-2">
-            <div class="flex-child">
-                <p class="syllabus-title">Week</p>
-                <p class="week-number">1</p>
-
-            </div>
-            <div class="flex-child">
-                <p class="syllabus-title">Arrays</p>
-                <p class="syllabus-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.
-                </p>
-            </div>
-        </div>
-        <img class="syllabus-line" src="./images/coursePageImages/line.svg" />
-
-        <div class="flex-container-2">
-            <div class="flex-child">
-                <p class="syllabus-title">Week</p>
-                <p class="week-number">2</p>
-
-            </div>
-            <div class="flex-child">
-                <p class="syllabus-title">Arrays</p>
-                <p class="syllabus-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.
-                </p>
-            </div>
-        </div>
-        <img class="syllabus-line" src="./images/coursePageImages/line.svg" />
-
-
-        <div class="flex-container-2">
-            <div class="flex-child">
-                <p class="syllabus-title">Week</p>
-                <p class="week-number">3</p>
-
-            </div>
-            <div class="flex-child">
-                <p class="syllabus-title">Arrays</p>
-                <p class="syllabus-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.
-                </p>
-            </div>
+        <div id="csyllabus" runat="server">
         </div>
 
         <span id="space"></span>
         <span id="more7">
-            <div class="flex-container-2">
-                <div class="flex-child">
-                    <p class="syllabus-title">Week</p>
-                    <p class="week-number">4</p>
-
-                </div>
-                <div class="flex-child">
-                    <p class="syllabus-title">Arrays</p>
-                    <p class="syllabus-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.
-                    </p>
-                </div>
-            </div>
-            <img class="syllabus-line" src="./images/coursePageImages/line.svg" />
-
-
-            <div class="flex-container-2">
-                <div class="flex-child">
-                    <p class="syllabus-title">Week</p>
-                    <p class="week-number">5</p>
-
-                </div>
-                <div class="flex-child">
-                    <p class="syllabus-title">Arrays</p>
-                    <p class="syllabus-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.
-                    </p>
-                </div>
+            <div id="csyllabus2" runat="server">
             </div>
         </span>
         <script>
@@ -262,18 +169,12 @@
         </div>
         <div>
             <p class="instructors-title">Lecturers :</p>
-            <ul class="instructors-names">
-                <li>Assoc. Prof. Haythem Ismail</li>
+            <ul class="instructors-names" id="cprof" runat="server">
             </ul>
         </div>
         <div>
             <p class="instructors-title">Teaching Assistants :</p>
-            <ul class="instructors-names">
-                <li>Assoc. Prof. Haythem Ismail</li>
-                <li>Assoc. Prof. Haythem Ismail</li>
-                <li>Assoc. Prof. Haythem Ismail</li>
-                <li>Assoc. Prof. Haythem Ismail</li>
-
+            <ul class="instructors-names" id="cta" runat="server">
             </ul>
         </div>
 
@@ -284,14 +185,8 @@
         <div class="title">
             <p>Resources</p>
         </div>
-        <div class="margin-bottom margin-left">
-            <img class="navimg" src="./images/coursePageImages/book.svg" />
-            <span class="resources">&nbsp;&nbsp;Data Structures And Algorithms By Shi-Kuo</span>
-        </div>
-        <div class="margin-bottom margin-left">
-            <img class="navimg" src="./images/coursePageImages/link.svg" />
-            <span class="resources">&nbsp;&nbsp;<a href="https://www.w3schools.in/data-structures/intro#:~:text=A%20data%20structure%20is%20said,using%20a%20linear%20memory%20location." style="direction: ltr">
-                W3 Schools Lesson</a></span>
+
+        <div class="margin-bottom margin-left" id="cres" runat="server">
         </div>
     </form>
 </body>
