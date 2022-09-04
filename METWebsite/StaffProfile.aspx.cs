@@ -13,6 +13,7 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);

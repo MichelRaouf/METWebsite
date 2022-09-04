@@ -79,7 +79,7 @@ OCTYPE html>
             function funcPersonalInfo() {
                 const element = document.getElementById("PersonalInfo");
                 element.scrollIntoView();
-               
+
             }
             function funcTeaching() {
                 const element = document.getElementById("Teaching");

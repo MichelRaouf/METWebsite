@@ -48,11 +48,11 @@
 
 
 
-          <div class="profileContainer" >
+          <div class="profileContainer" id="tadiv" runat="server" >
 
             <div class="hierarchyTitle">TEACHING ASSISTANT TEAM <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
 
-              <div class="profileData">
+              <%--<div class="profileData">
 
                 <img src="images/staff/TA1.png" style="width:16.276041666666668vw"/><br />
                     <div class="Name"> Assoc. Prof. Haytham Ismail</div>
@@ -221,7 +221,7 @@
 
                     <asp:Button ID="Button10" CssClass="viewProfile" runat="server" Text="View Profile"  />
 
-            </div>
+            </div>--%>
  
 
         </div>
