@@ -5,27 +5,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link  rel="stylesheet" href="./StyleSheets/AdminAddCourse.css"/>
+    <link rel="stylesheet" href="./StyleSheets/AdminAddCourse.css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="scrollable">
             <div class="header">
-            
-                            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
-           
-           
-                            <img class="bar" src="./images/topBarImages/bar.svg"/>
-            
-          
-                            <label class="label1">Faculty of Media Engineering & Technology</label>
-            
+
+                <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+
+
+                <img class="bar" src="./images/topBarImages/bar.svg" />
+
+
+                <label class="label1">Faculty of Media Engineering & Technology</label>
+
                 <img class="adminLogo" src="./images/adminImages/adminLogo.svg" />
                 <label class="adminLabel">Admin</label>
-            
+
+            </div>
         </div>
-        </div>
-        
+
         <div class="navBar">
             <div class="dashIconLabel">
                 <img class="dashboardIcon" src="./images/adminImages/dashboardIcon-white.svg" />
@@ -44,32 +44,34 @@
             <div class="column1">
                 <div class="title">
                     <label class="titleLabel" for="titleInput">Course Title: </label>
-                    <input type="text" id="titleInput" name="titleInput" placeholder="title"/>
+                    <input type="text" id="titleInput" runat="server" name="titleInput" placeholder="title" />
                 </div>
                 <div class="code">
                     <label class="courseLabel" for="codeInput">Course Code: </label>
-                    <input type="text" id="codeInput" name="codeInput" placeholder="code"/>
+                    <input type="text" id="codeInput" runat="server" name="codeInput" placeholder="code" />
                 </div>
                 <div class="lectures">
                     <label class="lecturesLabel" for="lectureInput">No. of Lectures: </label>
-                    <input type="text" id="lectureInput" name="lectureInput" placeholder="lectures"/>
+                    <input type="text" id="lectureInput" runat="server" name="lectureInput" placeholder="lectures" />
                 </div>
                 <div class="tuts">
                     <label class="tutsLabel" for="tutorialInput">No. of Tutorials: </label>
-                    <input type="text" id="tutorialInput" name="tutorialInput" placeholder="tutorials"/>
+                    <input type="text" id="tutorialInput" runat="server" name="tutorialInput" placeholder="tutorials" />
                 </div>
                 <div class="labs">
                     <label class="labsLabel" for="labsInput">No. of Labs: </label>
-                    <input type="text" id="labsInput" name="labsInput" placeholder="labs"/>
+                    <input type="text" id="labsInput" runat="server" name="labsInput" placeholder="labs" />
                 </div>
             </div>
             <div class="column2">
                 <label class="majorsLabel">Majors Involved:</label>
+                <br />
+                <br />
                 <div class="majors">
                     <div class="met">
                         <label class="metLabel">MET: </label>
                         <br />
-                        <input type="checkbox" id="csen" />
+                        <input type="checkbox" id="csen" runat="server" />
                         <label class="subMajor">CSEN</label>
                         <br />
                         <input type="checkbox" id="dmet" />
@@ -110,13 +112,20 @@
                                 <input type="checkbox" id="graduate" />
                                 <label class="subMajor">Graduate</label>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
+                <br />
                 <label class="description" for="descriptionInput">Course Description: </label>
                 <br />
-                <input type="text" id="descriptionInput" name="descriptionInput" />
+                <br />
+                <input type="text" id="descriptionInput" runat="server" name="descriptionInput" />
             </div>
+            <br />
+            <br />
+        </div>
+        <div class="buttonDiv">
+            <asp:Button ID="Button1" CssClass="addCourse" runat="server" Text="Add Course" OnClick="addCourse_Click" />
         </div>
     </form>
 </body>

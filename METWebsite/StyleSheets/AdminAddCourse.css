@@ -3,6 +3,10 @@
 body {
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .header {
     height: 7.6171875vw;
     width: 100%;
@@ -103,18 +107,19 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: dashed green;
     row-gap: 50px;
 }
 
 .column1 {
     width: fit-content;
-    border: dashed red;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .column2 {
     width: 45%;
-    border: dashed yellow;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .title, .code, .lectures, .tuts, .labs {
@@ -157,5 +162,64 @@ body {
 .majors {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: space-between;
+}
+
+.majorsLabel {
+    font-size: 1.62vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.metLabel, .ietLabel, .otherLabel {
+    font-size: 1.35vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subMajor {
+    font-size: 1.08vw;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subColumns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.description {
+    font-size: 1.62vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#descriptionInput {
+    border: solid #FFD0A1 2px;
+    border-radius: 5px;
+    height: 20vh;
+    width: 33.489vw;
+}
+
+.addCourse {
+    color: white;
+    background-color: #FFD0A1;
+    font-size: 1.296vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    width: 10.46875vw;
+    height: 6.296vh;
+    border-radius: 5px;
+    border: none;
+    align-items: center;
+}
+
+
+.buttonDiv {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5vh;
+    margin-left: 44.765625vw;
+    margin-right: 44.765625vw;
 }
