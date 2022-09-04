@@ -109,6 +109,7 @@
     <Content Include="AboutUsPage.aspx" />
     <Content Include="ACM.aspx" />
     <Content Include="AdminHomePage.aspx" />
+    <Content Include="AdminStudentActivity.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
@@ -267,6 +268,7 @@
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\ACM.css" />
     <Content Include="StyleSheets\AdminHome.css" />
+    <Content Include="StyleSheets\AdminStudentActivity.css" />
     <Content Include="StyleSheets\Alumni.css" />
     <Content Include="StyleSheets\CourseHome.css" />
     <Content Include="StyleSheets\CoursePage.css" />
@@ -310,6 +312,13 @@
     </Compile>
     <Compile Include="AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminStudentActivity.aspx.cs">
+      <DependentUpon>AdminStudentActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminStudentActivity.aspx.designer.cs">
+      <DependentUpon>AdminStudentActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="AlumniPage.aspx.cs">
       <DependentUpon>AlumniPage.aspx</DependentUpon>
