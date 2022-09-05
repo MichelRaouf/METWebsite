@@ -45,15 +45,15 @@
             <div class="column1">
                 <div class="section">
                     <label class="label">Title</label>
-                    <input class="input" type="text" />
+                    <input id="title" class="input" type="text" />
                 </div>
                 <div class="section">
                     <label class="label">Type</label>
-                    <input class="input" type="text" />
+                    <input id="type" type="text" />
                 </div>
                 <div class="section">
                     <label class="label">Icon</label>
-                    <input type="file" accept="image/*" name="image" id="file" class="addIcon"/>
+                    <input id="icon" type="file" accept="image/*" name="image" id="file" class="addIcon" />
                     
                 </div>
                 <div class="section">
@@ -68,7 +68,7 @@
                 </div>
                 <div class="section">
                     <label class="label">About</label>
-                    <input class="inputAbout" type="text" />
+                    <input id="about" class="inputAbout" type="text" />
                 </div>
             </div>
 
@@ -97,11 +97,11 @@
                 </div>
                 <div class="section">
                     <label class="label">Facebook Page Link</label>
-                    <input class="input" type="text" />
+                    <input id="facebook" class="input" type="text" />
                 </div>
                 <div class="section">
                     <label class="label">Instagram Page Link</label>
-                    <input class="input" type="text" />
+                    <input id="instagram" class="input" type="text" />
                 </div>
             </div>
         </div>
