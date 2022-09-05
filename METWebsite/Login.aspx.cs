@@ -12,7 +12,7 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-         
+            
 
         }
 
@@ -42,7 +42,8 @@ namespace METWebsite
                     }
                 }
             }
-
+            reader.Close();
+            con.Close();
 
         }
     }
