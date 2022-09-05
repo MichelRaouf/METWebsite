@@ -109,7 +109,9 @@
     <Content Include="AboutUsPage.aspx" />
     <Content Include="ACM.aspx" />
     <Content Include="AdminAddCourse.aspx" />
+    <Content Include="AdminAddInstructor.aspx" />
     <Content Include="AdminHomePage.aspx" />
+    <Content Include="AdminStudentActivity.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
@@ -270,7 +272,9 @@
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\ACM.css" />
     <Content Include="StyleSheets\AdminAddCourse.css" />
+    <Content Include="StyleSheets\AdminAddInstructor.css" />
     <Content Include="StyleSheets\AdminHome.css" />
+    <Content Include="StyleSheets\AdminStudentActivity.css" />
     <Content Include="StyleSheets\Alumni.css" />
     <Content Include="StyleSheets\CourseHome.css" />
     <Content Include="StyleSheets\CoursePage.css" />
@@ -315,12 +319,26 @@
     <Compile Include="AdminAddCourse.aspx.designer.cs">
       <DependentUpon>AdminAddCourse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminAddInstructor.aspx.cs">
+      <DependentUpon>AdminAddInstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddInstructor.aspx.designer.cs">
+      <DependentUpon>AdminAddInstructor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminHomePage.aspx.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminStudentActivity.aspx.cs">
+      <DependentUpon>AdminStudentActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminStudentActivity.aspx.designer.cs">
+      <DependentUpon>AdminStudentActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="AlumniPage.aspx.cs">
       <DependentUpon>AlumniPage.aspx</DependentUpon>
