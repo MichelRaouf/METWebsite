@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class InstructorHome
+    public partial class AdminAddInstructor
     {
 
         /// <summary>
@@ -24,48 +24,39 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Welcome_div control.
+        /// nameInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Welcome_div;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nameInput;
 
         /// <summary>
-        /// Welcome_label control.
+        /// passwordInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Welcome_label;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText passwordInput;
 
         /// <summary>
-        /// viewProfile control.
+        /// emailInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton viewProfile;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText emailInput;
 
         /// <summary>
-        /// currentSemester control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl currentSemester;
-
-        /// <summary>
-        /// coursesTable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable coursesTable;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
