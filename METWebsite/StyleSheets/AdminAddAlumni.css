@@ -273,3 +273,14 @@ body {
     text-transform: capitalize;
     color: #FFFFFF;
 }
+.navdiv {
+    width: auto;
+    background: linear-gradient(109.99deg, #FFE172 -31.48%, #FFE173 -31.47%, #FFC5C2 100%);
+    height:auto;
+}
+.dropitem {
+    cursor: pointer;
+    color: white;
+    font-size: 1vw;
+    font-family: 'Montserrat';
+}
