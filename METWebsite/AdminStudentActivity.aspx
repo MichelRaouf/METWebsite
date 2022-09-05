@@ -53,15 +53,17 @@
                 </div>
                 <div class="section">
                     <label class="label">Icon</label>
-                    <asp:Button  CssClass="addIcon" runat="server" Text="Choose Image" />
+                    <input type="file" accept="image/*" name="image" id="file" class="addIcon"/>
+                    
                 </div>
                 <div class="section">
                     <label class="label">Background-Color</label>
                     <div class="colors">
-                        <div class="color1"></div>
-                        <div class="color2"></div>
-                        <div class="color3"></div>
-                        <div class="color4"></div>
+                        <div id="color1" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color2" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color3" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color4" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color5" class="gradients" onclick=selectGradient(id);></div>
                     </div>
                 </div>
                 <div class="section">
@@ -69,6 +71,22 @@
                     <input class="inputAbout" type="text" />
                 </div>
             </div>
+
+            <script>
+                function selectGradient(id) {
+          
+                    var x = document.getElementsByClassName("gradients");
+                    for (var i = 0; i < x.length; i++) {
+                       
+                        x[i].style.width = '20px';
+                        x[i].style.height = '20px';
+                    }
+                    var color = document.getElementById(id);
+                    color.style.width = '25px';
+                    color.style.height = '25px';
+                    
+                }
+            </script>
 
             <div class="column2">
                 <div class="section">
@@ -88,7 +106,7 @@
             </div>
         </div>
         <div class="addDiv">
-            <asp:Button CssClass="add" runat="server" Text="Add" />
+            <asp:Button CssClass="add" runat="server" Text="Add" OnClick="addStudentActivity"/>
         </div>
 
         <script>
