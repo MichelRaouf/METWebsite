@@ -1,20 +1,26 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
-* {
-    box-sizing: border-box;
-}
+/*form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3.2552083333333335vw;
+}*/
 
 .header {
-    height: 7.6171875vw;
+    
+    left: 0;
+    height: 5.5vw;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: start;
-    top: 0px;
 }
 
     .header > div {
@@ -27,13 +33,13 @@ body {
     }
 
 .logo {
-    width: 20.57vw;
-    height: 5.315104166666667vw;
+    width: 14vw;
+    height: 4vw;
 }
 
 .bar {
     width: 2.57vw;
-    height: 5.315104166666667vw;
+    height: 4vw;
 }
 
 .label1 {
@@ -42,9 +48,8 @@ body {
 }
 
 .adminLogo {
-    width: 3.875vw;
-    height: 7.67920133vh;
-    margin-left: 20vw;
+    width: 2.8vw;
+    margin-left: 28vw;
 }
 
 .adminLabel {
@@ -53,27 +58,28 @@ body {
     font-weight: 600;
     margin-left: 1vw;
 }
-
 .navBar {
     display: flex;
+    height:3.5vw;
     flex-direction: row;
     align-items: center;
     margin-left: 17.03125vw;
     margin-right: 17.03125vw;
     background: linear-gradient(to right, #FFE171, #FFC3C6);
     border-radius: 40px;
-    vertical-align: middle;
     justify-content: space-around;
 }
 
 .dashboard {
-    vertical-align: middle;
+
+    display:flex;
+    align-items:center;
     color: white;
     text-decoration: none;
     font-size: 1.62vw;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 1.8vh;
+   
     margin-left: 1vw;
 }
 
@@ -92,21 +98,24 @@ body {
 }
 
 .dashboardIcon {
-    vertical-align: middle;
+    width:3vw;
+   
 }
 
 .addAlumniDiv {
     font-size: 2.43vw;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 3vh;
-    text-align: center;
+    margin-top: 3vw;
+    display:flex;
+    justify-content:center;
 }
 
 .inputs {
     margin-left: 36.8229167vw;
     margin-right: 36.8229167vw;
     width: 26.3541667vw;
+    
 }
 
 .name, .profile, .about {
@@ -127,6 +136,7 @@ body {
     float: left;
     margin-top: 2vh;
     margin-bottom: 3vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #aboutInput {
@@ -137,6 +147,7 @@ body {
     float: left;
     margin-top: 2vh;
     margin-bottom: 3vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .profilePicture {

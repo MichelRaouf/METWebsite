@@ -42,9 +42,9 @@
 
         <div class="inputs">
             <div class="name">
-                <label class="nameLabel" for="nameInput">Name: </label>
+                <label class="nameLabel" for="nameInput">Name </label>
                 <br />
-                <input type="text" id="nameInput" required runat="server" name="nameInput" placeholder="name" />
+                <input type="text" id="nameInput" required runat="server" name="nameInput" placeholder="Alumni Name" />
             </div>
             <div class="profile">
                 <label class="profileLabel">Profile Picture: </label>
