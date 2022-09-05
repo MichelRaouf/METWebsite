@@ -168,7 +168,10 @@ namespace METWebsite
 
             //////////////////////////////////////////////////////////////////////
             con.Open();
-            SqlCommand cmd1 = new SqlCommand("Select * from Education ", con);
+            SqlCommand cmd1 = new SqlCommand("getEducation", con);
+            cmd1.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlParameter instEd = new SqlParameter("@instID", 1);
+            cmd1.Parameters.Add(instEd);
             SqlDataReader reader1 = cmd1.ExecuteReader();
             string educDate=""; string educPlace=""; string educTitle = ""; string educField = "";
 
@@ -241,7 +244,10 @@ namespace METWebsite
             con.Close();
             //////////////////////////////////////////////////////////////////////
              con.Open();
-            SqlCommand cmd2 = new SqlCommand("Select * from Employment ", con);
+            SqlCommand cmd2 = new SqlCommand("getEmployment", con);
+            cmd2.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlParameter instEm = new SqlParameter("@instID", 1);
+            cmd2.Parameters.Add(instEm);
             SqlDataReader reader2 = cmd2.ExecuteReader();
             string empStartDate = ""; string empEndDate = ""; string empTitle = ""; string empField = ""; string empPlace = "";
             int count = 3;
@@ -320,11 +326,11 @@ namespace METWebsite
                 }
             }
             if (count == 0  || count > 0 )
-                employmentSection.Controls.Remove(buttonTeach);
+                employmentSection.Controls.Remove(buttonMore1);
 
             if (count < 0)
             {
-                employmentSection.Controls.Add(buttonTeach);
+                employmentSection.Controls.Add(buttonMore1);
 
             }
             con.Close();
@@ -377,20 +383,22 @@ namespace METWebsite
                 TeaDiv3.Attributes.Add("class", "titles");
 
                 var TeaTitleDiv = new HtmlGenericControl("div");
+                TeaTitleDiv.Attributes.Add("class", "title1Div");
+                TeaTitleDiv.Style.Add("font-size", "1.7713365539452497vw");
+                var List = new HtmlGenericControl("ul");
 
                 while (reader33.Read())
                 {
                   
 
                   
-                    TeaTitleDiv.Attributes.Add("class", "title1Div");
-                    var TeachTitle = new HtmlGenericControl("label");
-                    TeachTitle.InnerHtml = reader33.GetString(0);
-                    TeaTitleDiv.Style.Add("font-size", "1.7713365539452497vw");
-                    TeaTitleDiv.Controls.Add(TeachTitle);
+                    
+                    var item = new HtmlGenericControl("li");
+                    item.InnerHtml = reader33.GetString(0);
+                    List.Controls.Add(item);
 
-                }   
-
+                }
+                    TeaTitleDiv.Controls.Add(List);
                     var TeaHorizBar = new HtmlGenericControl("hr");
                     TeaHorizBar.Style.Add("height", "0.040257648953301126vw");
                     TeaHorizBar.Style.Add("border-width", "0");
@@ -424,11 +432,11 @@ namespace METWebsite
                 con.Close();
             }
             if (countH == 0 || countH > 0)
-                TeachingSection.Controls.Remove(buttonTeach);
+                TeachingSection.Controls.Remove(buttonMore2);
 
             if (countH < 0)
             {
-                TeachingSection.Controls.Add(buttonTeach);
+                TeachingSection.Controls.Add(buttonMore2);
 
             }
 
@@ -439,8 +447,8 @@ namespace METWebsite
             con.Open();
             SqlCommand cmd4 = new SqlCommand("getInterests", con);
             cmd4.CommandType = System.Data.CommandType.StoredProcedure;
-            SqlParameter instr = new SqlParameter("@instID", 1);
-            cmd4.Parameters.Add(instr);
+            SqlParameter instI = new SqlParameter("@instID", 1);
+            cmd4.Parameters.Add(instI);
             SqlDataReader reader4 = cmd4.ExecuteReader();
 
             while (reader4.Read())
