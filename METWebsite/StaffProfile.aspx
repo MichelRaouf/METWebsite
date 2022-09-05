@@ -213,22 +213,16 @@ OCTYPE html>
             <div class="x" id="Teaching"></div>
             
         </section>
-        <br />
-        <br />
         <div  class="gradientbar" >
                 <img class="center" src="./images/profile/gradientBar.svg" />
             </div>
         
-        <section  class="Teaching" id ="TeachingSection" runat="server">
+        <section  class="Teaching">
             <div class="infoTitleDiv">
                 <label class="infoTitle">Teaching</label>
             </div>
 
-
-
-            <span id="space2"></span>
-            <span id="more2" runat="server">
-   <!--             <div class="section">
+            <div class="section">
                 <div class="dateDiv">
                     <label class="date">September, 2005 to June, 2011</label>
                 </div>
@@ -256,21 +250,110 @@ OCTYPE html>
                         <hr style="height: 0.024154589371980676vw; border-width: 0; color: gray; background-color: gray; opacity: 0.3">
                     </div>
                 </div>
-            </div>  -->
+            </div>
+
+            <div class="section">
+                <div class="dateDiv">
+                    <label class="date">September, 2005 to June, 2011</label>
+                </div>
+                <div>
+                    <div class="vertical"></div>
+                </div>
+
+                <div class="list">
+                    <div class="itemDiv">
+                        <ul style="margin-top: 0;font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>  
+                     </div>
+                     <div class="itemDiv">
+                        <ul style="margin-top: 0; font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>
+                     </div>
+                    <div class="itemDiv">
+                        <ul style="margin-top: 0; font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>
+                    </div>
+                    <div style="padding-top: 0.8051529790660226vw;">
+                        <hr style="height: 0.024154589371980676vw; border-width: 0; color: gray; background-color: gray; opacity: 0.3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="dateDiv">
+                    <label class="date">September, 2005 to June, 2011</label>
+                </div>
+                <div>
+                    <div class="vertical"></div>
+                </div>  
+
+                <div class="list">
+                    <div class="itemDiv">
+                        <ul style="margin-top: 0;font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>  
+                     </div>
+                     <div class="itemDiv">
+                        <ul style="margin-top: 0; font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>
+                     </div>
+                    <div class="itemDiv">
+                        <ul style="margin-top: 0; font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>
+                    </div>
+                    <div style="padding-top: 0.8051529790660226vw;">
+                        <hr style="height: 0.024154589371980676vw; border-width: 0; color: gray; background-color: gray; opacity: 0.3">
+                    </div>
+                </div>
+            </div>
+            <span id="space2"></span>
+            <span id="more2">
+                <div class="section">
+                <div class="dateDiv">
+                    <label class="date">September, 2005 to June, 2011</label>
+                </div>
+                <div>
+                    <div class="vertical"></div>
+                </div>
+
+                <div class="list">
+                    <div class="itemDiv">
+                        <ul style="margin-top: 0;font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>  
+                     </div>
+                     <div class="itemDiv">
+                        <ul style="margin-top: 0; font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>
+                     </div>
+                    <div class="itemDiv">
+                        <ul style="margin-top: 0; font-family: 'Montserrat', sans-serif; font-size: 1.3687600644122384vw; font-weight: 600; margin-left: 0;">
+                            <li class"item">(MATH 203) Mathematics I</li>
+                        </ul>
+                    </div>
+                    <div style="padding-top: 0.8051529790660226vw;">
+                        <hr style="height: 0.024154589371980676vw; border-width: 0; color: gray; background-color: gray; opacity: 0.3">
+                    </div>
+                </div>
+            </div>
             </span>
 
             
-            <div id="buttonMore2" class="showMoreDiv" runat="server" >
+            <div class="showMoreDiv" >
                 <asp:Button ID="mybtn2" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction2();return false;" />
             </div>
             <div class="x" id="Research"></div>
-           
-        </section>
-        <br />
-        <br />
-         <div class="gradientbar" >
+            <div class="gradientbar" >
                 <img class="center" src="./images/profile/gradientBar.svg" />
             </div>
+        </section>
+
        
         <section  class="Research">
             <div class="infoTitleDiv">
