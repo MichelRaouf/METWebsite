@@ -64,6 +64,14 @@
                 </div>
             </div>
             <div class="column2">
+                <div class="met">
+                    <br />
+                    <input type="checkbox" id="iselective" runat="server" />
+                    <label class="majorsLabel">Is Elective</label>
+                    <br />
+                </div>
+                <br />
+
                 <label class="majorsLabel">Majors Involved:</label>
                 <br />
                 <br />

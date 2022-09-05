@@ -142,6 +142,8 @@ tr:nth-child(even) {
     font-family: 'Montserrat', sans-serif;
     vertical-align: middle;
     font-size: 1.302vw;
+    color : black;
+    font-weight : 400;
 }
 
 
