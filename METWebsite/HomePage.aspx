@@ -284,6 +284,14 @@
         </div>
     </form>
     <script>
+        window.addEventListener("resize", (event) => {
+            var labels = document.getElementsByClassName("newsitemlabel")
+            for (var i = 0; i < labels.length; i++) {
+                var x = labels[i].parentElement.offsetLeft
+                
+                labels[i].style.left = (labels[i].parentElement.clientWidth - labels[i].clientWidth) / 2 + "px";
+            }
+        })
         function SeeMore() {
             alert(12);
         }
@@ -321,19 +329,16 @@
         }
         var box = document.getElementsByClassName("whitebox");
         
-        for (var i = 0; i < box.length; i++) {
+        //for (var i = 0; i < box.length; i++) {
             
-            var x = box[i].parentElement.offsetTop;
-            box[i].style.position = "absolute";
-            box[i].style.top = x+ 422 + "px";
-            box[i].style.left = box[i].parentElement.offsetLeft + 16 + "px";
-            box[i].style.width = box[i].parentElement.offsetWidth-32+"px"
+        //    var x = box[i].parentElement.offsetTop;
+        //    box[i].style.position = "absolute";
+        //    box[i].style.top = x + box[i].parentElement.offsetHeight  + "px";
+        //    box[i].style.left = box[i].parentElement.offsetLeft + 16 + "px";
+        //    box[i].style.width = box[i].parentElement.offsetWidth-32+"px"
            
-        }
-        var labels = document.getElementsByClassName("newsitemlabel")
-        for (var i = 0; i < labels.length; i++) {
-            labels[i].style.left = (labels[i].parentElement.offsetWidth - labels[i].offsetWidth-32) / 2 + "px";
-        }
+        //}
+        
     </script>
 </body>
 </html>

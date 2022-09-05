@@ -33,15 +33,6 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlInputText nameInput;
 
         /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
         /// aboutInput control.
         /// </summary>
         /// <remarks>
@@ -51,12 +42,30 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlInputText aboutInput;
 
         /// <summary>
-        /// Button3 control.
+        /// button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button button1;
+
+        /// <summary>
+        /// button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button button2;
+
+        /// <summary>
+        /// button3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button button3;
     }
 }

@@ -231,6 +231,8 @@
     <Content Include="images\stActivitiesPageImages\svyN.svg" />
     <Content Include="images\topBarImages\studactive-red.svg" />
     <Content Include="images\upicon.svg" />
+    <Content Include="images\xbutton.svg" />
+    <Content Include="images\yes.svg" />
     <Content Include="Incubator.aspx" />
     <Content Include="InstructorHome.aspx" />
     <Content Include="InstructorViewCourse.aspx" />

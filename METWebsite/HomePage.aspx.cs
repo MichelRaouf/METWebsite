@@ -87,7 +87,7 @@ namespace METWebsite
                 bar.Attributes.Add("class", "whiteVerBar");
                 bar.Attributes.Add("src", "./images/homePageImages/verticalbarwhite.svg");
                 imgdiv.Controls.Add(bar);
-                if(count!=2 || count!=x-1)
+                if(count!=2)
                 {
                     gucianinfodiv.Controls.Add(imgdiv);
                 }
