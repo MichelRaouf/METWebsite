@@ -21,29 +21,18 @@
              <button class="logout" runat="server" onserverclick="logOut_click">
                  <img class="logoutIcon" src="./images/InstructorHome/logout.svg" /><span id="logoutlabel">Log Out</span></></button>
         </div>
-        <div id="Welcome_div">
+        <div id="Welcome_div" runat="server">
             
-                 <label class="title"> Welcome, Hytham!</label>
+                 <label class="title" id="Welcome_label" runat="server" > Welcome!</label>
             <button id="viewProfile" runat="server" onserverclick="viewProfile_click">
             <img class="logoutIcon"  src="./images/InstructorHome/profile.svg" /> View Profile </button>
         </div>
         <div id="semesterTitleDiv">
-            <label class="semesterTitle">Spring 2022</label>
+            <label id="currentSemester" class="semesterTitle" runat="server"></label>
         </div>
         
-        <table>
-            <tr>
-                <td><label class="courseTitle">CSEN101 Introduction to computer scienece</label></td>
-                <td><asp:Button  CssClass="viewCourse" runat="server" Text="View Course" /></td>
-            </tr>
-            <tr>
-                <td><label class="courseTitle">CSEN101 Introduction to computer scienece</label></td>
-                <td><asp:Button  CssClass="viewCourse" runat="server" Text="View Course" /></td>
-            </tr>
-            <tr>
-                <td><label class="courseTitle">CSEN101 Introduction to computer scienece</label></td>
-                <td><asp:Button  CssClass="viewCourse" runat="server" Text="View Course" /></td>
-            </tr>
+        <table id="coursesTable" runat="server">
+           
         </table>
     </form>
 </body>
