@@ -13,5 +13,10 @@ namespace METWebsite
         {
 
         }
+
+        protected void addStudentActivity(object sender, EventArgs e)
+        {
+
+        }
     }
 }

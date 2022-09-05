@@ -45,30 +45,48 @@
             <div class="column1">
                 <div class="section">
                     <label class="label">Title</label>
-                    <input class="input" type="text" />
+                    <input id="title" class="input" type="text" />
                 </div>
                 <div class="section">
                     <label class="label">Type</label>
-                    <input class="input" type="text" />
+                    <input id="type" type="text" />
                 </div>
                 <div class="section">
                     <label class="label">Icon</label>
-                    <asp:Button  CssClass="addIcon" runat="server" Text="Choose Image" />
+                    <input id="icon" type="file" accept="image/*" name="image" id="file" class="addIcon" />
+                    
                 </div>
                 <div class="section">
                     <label class="label">Background-Color</label>
                     <div class="colors">
-                        <div class="color1"></div>
-                        <div class="color2"></div>
-                        <div class="color3"></div>
-                        <div class="color4"></div>
+                        <div id="color1" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color2" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color3" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color4" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color5" class="gradients" onclick=selectGradient(id);></div>
                     </div>
                 </div>
                 <div class="section">
                     <label class="label">About</label>
-                    <input class="inputAbout" type="text" />
+                    <input id="about" class="inputAbout" type="text" />
                 </div>
             </div>
+
+            <script>
+                function selectGradient(id) {
+          
+                    var x = document.getElementsByClassName("gradients");
+                    for (var i = 0; i < x.length; i++) {
+                       
+                        x[i].style.width = '20px';
+                        x[i].style.height = '20px';
+                    }
+                    var color = document.getElementById(id);
+                    color.style.width = '25px';
+                    color.style.height = '25px';
+                    
+                }
+            </script>
 
             <div class="column2">
                 <div class="section">
@@ -79,16 +97,16 @@
                 </div>
                 <div class="section">
                     <label class="label">Facebook Page Link</label>
-                    <input class="input" type="text" />
+                    <input id="facebook" class="input" type="text" />
                 </div>
                 <div class="section">
                     <label class="label">Instagram Page Link</label>
-                    <input class="input" type="text" />
+                    <input id="instagram" class="input" type="text" />
                 </div>
             </div>
         </div>
         <div class="addDiv">
-            <asp:Button CssClass="add" runat="server" Text="Add" />
+            <asp:Button CssClass="add" runat="server" Text="Add" OnClick="addStudentActivity"/>
         </div>
 
         <script>
