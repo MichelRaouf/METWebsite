@@ -8,43 +8,7 @@
     <link rel="icon" href="./images/gucLogo.png">
     <link  rel="stylesheet" href="./StyleSheets/HomeStyles.css"/>
 </head>
-    <script>
-        function SeeMore(){
-            alert(12);
-        }
-        function ShowHover() {
-//
-            var x = document.createElement("div");
-            x.setAttribute("class", "whitebox");
-            x.setAttribute("id", "addeddiv");
-            x.style.width = event.srcElement.offsetWidth + "px";
-            x.style.height = event.srcElement.offsetHeight + "px";
-            x.style.position = "absolute";
-            x.style.left = event.srcElement.offsetLeft+"px";
-            x.style.top = event.srcElement.offsetTop + "px";
-            var label2 = document.createElement("label");
-            label2.innerHTML = event.srcElement.getAttribute("title")
-            label2.setAttribute("class", "newsitemlabel");
-            var label = document.createElement("label");
-            label.innerHTML = event.srcElement.getAttribute("description");
-            label.setAttribute("class", "newsinfo");
-            x.appendChild(label);
-            var button = document.createElement("button");
-            button.innerHTML = "See More";
-            button.setAttribute("class", "newsbtn");
-            button.setAttribute("onclick", "SeeMore()");
-            x.appendChild(button);
-            x.setAttribute("onmouseleave", "removeHover()");
-            document.querySelector("body").appendChild(x);
-            
-        }
-        function removeHover() {
-            
-            var x = document.getElementById("addeddiv");
-            document.querySelector("body").removeChild(x);
-
-        }
-    </script>
+    
 <body>
     <form id="form1" runat="server">
         <div class="scrollable">
@@ -319,5 +283,57 @@
 
         </div>
     </form>
+    <script>
+        function SeeMore() {
+            alert(12);
+        }
+        function ShowHover() {
+            //
+            var x = document.createElement("div");
+            x.setAttribute("class", "whitebox");
+            x.setAttribute("id", "addeddiv");
+            x.style.width = event.srcElement.offsetWidth + "px";
+            x.style.height = event.srcElement.offsetHeight + "px";
+            x.style.position = "absolute";
+            x.style.left = event.srcElement.offsetLeft + "px";
+            x.style.top = event.srcElement.offsetTop + "px";
+            var label2 = document.createElement("label");
+            label2.innerHTML = event.srcElement.getAttribute("title")
+            label2.setAttribute("class", "newsitemlabel");
+            var label = document.createElement("label");
+            label.innerHTML = event.srcElement.getAttribute("description");
+            label.setAttribute("class", "newsinfo");
+            x.appendChild(label);
+            var button = document.createElement("button");
+            button.innerHTML = "See More";
+            button.setAttribute("class", "newsbtn");
+            button.setAttribute("onclick", "SeeMore()");
+            x.appendChild(button);
+            x.setAttribute("onmouseleave", "removeHover()");
+            document.querySelector("body").appendChild(x);
+
+        }
+        function removeHover() {
+
+            var x = document.getElementById("addeddiv");
+            document.querySelector("body").removeChild(x);
+
+        }
+        var box = document.getElementsByClassName("whitebox");
+        
+        for (var i = 0; i < box.length; i++) {
+            
+            var x = box[i].parentElement.offsetTop;
+            box[i].style.position = "absolute";
+            box[i].style.top = x+ 422 + "px";
+            box[i].style.left = box[i].parentElement.offsetLeft + 16 + "px";
+            box[i].style.width = box[i].parentElement.offsetWidth-32+"px"
+           
+        }
+        var labels = document.getElementsByClassName("newsitemlabel")
+        for (var i = 0; i < labels.length; i++) {
+            labels[i].style.left = (labels[i].parentElement.offsetWidth - labels[i].offsetWidth-32) / 2 + "px";
+        }
+    </script>
 </body>
 </html>

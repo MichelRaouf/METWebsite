@@ -220,16 +220,17 @@ html,body {
 .whitebox {
     background-color: #FFFFFF;
     opacity: 70%;
-    width: 100%;
-    align-items: center;
-    position:relative ;
+    
+    align-items:center;
+    align-content:center;
+    position:inherit;
 
   
 }
 .whiteboxinfo {
     background-color: #FFFFFF;
     opacity: 70%;
-    width: 100%;
+    
     height:100%;
     align-items: center;
 }
@@ -263,7 +264,7 @@ html,body {
     letter-spacing: 0em;
     text-align: center;
     position: relative;
-    left: 25%;
+    left:30%;
     height:20vh;
 }
 .newsinfo {
