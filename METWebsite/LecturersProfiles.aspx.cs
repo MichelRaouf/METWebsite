@@ -90,7 +90,7 @@ namespace METWebsite
                 officeimg1.Attributes.Add("src", "images/staff/workplace.png");
                 officediv1.InnerHtml = office1;
                 Button b1 = new Button();
-                b1.ID = id;
+                b1.ID = id1;
 
                 b1.Attributes.Add("class", "viewProfile");
                 b1.Attributes.Add("runat", "server");
@@ -137,7 +137,7 @@ namespace METWebsite
                 officeimg2.Attributes.Add("src", "images/staff/workplace.png");
                 officediv2.InnerHtml = office2;
                 Button b2 = new Button();
-                b2.ID = id;
+                b2.ID = id2;
 
                 b2.Attributes.Add("class", "viewProfile");
                 b2.Attributes.Add("runat", "server");
