@@ -46,6 +46,7 @@ body {
     color: white;
     vertical-align: middle;
 }
+
     .navbtn:hover {
         border-top: none;
         border-left: none;
@@ -126,7 +127,6 @@ body {
 }
 
     .ProfileHeader > div {
-    
     }
 
 .profileImageDiv {
@@ -167,6 +167,7 @@ body {
     width: 2.4154589371980677vw;
     height: 3.2206119162640903vw;
 }
+
 .iconLabel {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2077294685990339vw;
@@ -207,7 +208,7 @@ body {
         font-weight: 900;
         text-decoration: underline;
         font-size: 1.6vw;
-        cursor:pointer;
+        cursor: pointer;
     }
 
 
@@ -229,6 +230,7 @@ body {
     margin-left: 1.7vw;
     line-height: 1.5em;
 }
+
 .x {
     padding-bottom: 35px;
 }
@@ -240,6 +242,7 @@ body {
     font-weight: 500;
     margin-left: 2.4154589371980677vw;
 }
+
 .infoSubTitleDiv {
     padding-top: 2.4154589371980677vw;
 }
@@ -310,25 +313,29 @@ body {
     display: grid;
     margin: auto;
 }
+
     .showMore:hover {
         background-color: #000000;
         transition: 0.5s;
-        cursor:pointer;
+        cursor: pointer;
     }
+
 .showMoreDiv {
     padding-bottom: 2.4154589371980677vw;
     padding-top: 1.2077294685990339vw;
-    
 }
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
+
 .itemDiv {
     height: 1.6103059581320451vw;
 }
+
     .itemDiv:hover {
         color: rgba(51, 101, 187, 1);
         text-decoration: underline;
@@ -341,12 +348,15 @@ body {
     width: 64.4122383252818vw;
     row-gap: 0.1610305958132045vw;
 }
+
 .itemDiv2 {
     height: 1.6103059581320451vw;
 }
-#more, #more2, #more3, #more4, #more5  {
+
+#more, #more2, #more3, #more4, #more5 {
     display: none;
 }
+
 .login:hover {
     background-color: black;
     transition: 0.5s;
@@ -363,6 +373,7 @@ body {
     cursor: pointer;
     transition: 0.5s;
 }
+
 .navbtnin {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5625vw;

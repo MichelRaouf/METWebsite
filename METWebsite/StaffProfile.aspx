@@ -260,7 +260,7 @@ OCTYPE html>
             </span>
 
             
-            <div id="buttonTeach" class="showMoreDiv" runat="server" >
+            <div id="buttonMore2" class="showMoreDiv" runat="server" >
                 <asp:Button ID="mybtn2" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction2();return false;" />
             </div>
             <div class="x" id="Research"></div>
