@@ -13,7 +13,7 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-         //   int id =(int) Session["instructorid"];
+            //   int id =(int) Session["instructorid"];
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
@@ -23,28 +23,28 @@ namespace METWebsite
             SqlParameter inst = new SqlParameter("@instID", 1);
             cmd.Parameters.Add(inst);
             SqlDataReader reader = cmd.ExecuteReader();
-            string email="";string office=""; string office_hours="";
-            string name=""; string tele = ""; string fax = "";string country=""; string city =""; string dep = ""; string dob = ""; 
+            string email = ""; string office = ""; string office_hours = "";
+            string name = ""; string tele = ""; string fax = ""; string country = ""; string city = ""; string dep = ""; string dob = "";
             string nation = ""; string stat = ""; string lang = "";
 
 
 
-                reader.Read(); 
-                email = reader.GetValue(1).ToString();
-                name = reader.GetValue(3).ToString();
-                office = reader.GetValue(4).ToString();
-                office_hours = reader.GetValue(5).ToString();
-                dep = reader.GetValue(6).ToString();
-                tele = reader.GetValue(7).ToString();
-                fax = reader.GetValue(8).ToString();
-                city = reader.GetValue(9).ToString();
-                country = reader.GetValue(10).ToString();
-                dob = reader.GetValue(11).ToString();
-                nation = reader.GetValue(12).ToString();
-                stat = reader.GetValue(13).ToString();
-                lang = reader.GetValue(14).ToString();
-               
-            
+            reader.Read();
+            email = reader.GetValue(1).ToString();
+            name = reader.GetValue(3).ToString();
+            office = reader.GetValue(4).ToString();
+            office_hours = reader.GetValue(5).ToString();
+            dep = reader.GetValue(6).ToString();
+            tele = reader.GetValue(7).ToString();
+            fax = reader.GetValue(8).ToString();
+            city = reader.GetValue(9).ToString();
+            country = reader.GetValue(10).ToString();
+            dob = reader.GetValue(11).ToString();
+            nation = reader.GetValue(12).ToString();
+            stat = reader.GetValue(13).ToString();
+            lang = reader.GetValue(14).ToString();
+
+
             con.Close();
 
 
@@ -110,7 +110,7 @@ namespace METWebsite
             iconlabel3.Attributes.Add("class", "info");
             var img3 = new HtmlGenericControl("img");
             img3.Attributes.Add("class", "icon");
-            img3.Attributes.Add("src","images/Profile/faxIcon.svg");
+            img3.Attributes.Add("src", "images/Profile/faxIcon.svg");
             var imagediv3 = new HtmlGenericControl("div");
             imagediv3.Controls.Add(img3);
             var label3 = new HtmlGenericControl("label");
@@ -125,7 +125,7 @@ namespace METWebsite
             iconlabel4.Attributes.Add("class", "info");
             var img4 = new HtmlGenericControl("img");
             img4.Attributes.Add("class", "icon");
-            img4.Attributes.Add("src","images/Profile/phoneIcon.svg");
+            img4.Attributes.Add("src", "images/Profile/phoneIcon.svg");
             var imagediv4 = new HtmlGenericControl("div");
             imagediv4.Controls.Add(img4);
             var label4 = new HtmlGenericControl("label");
@@ -146,20 +146,20 @@ namespace METWebsite
             ProfileHeader.Controls.Add(thirddiv);
 
             /////////////////////////////////////////////////////////////////
-  
+
             var listdiv = new HtmlGenericControl("div");
             listdiv.Attributes.Add("class", "listDiv");
             var ulpersonal = new HtmlGenericControl("ul");
-            var item1=  new HtmlGenericControl("li");
-            item1.InnerHtml ="Born in "+city+ ", " + country + " on  " + dob;
+            var item1 = new HtmlGenericControl("li");
+            item1.InnerHtml = "Born in " + city + ", " + country + " on  " + dob;
             var item2 = new HtmlGenericControl("li");
             item2.InnerHtml = "Nationality: " + nation;
             var item3 = new HtmlGenericControl("li");
             item3.InnerHtml = stat;
-             var item4 = new HtmlGenericControl("li");
+            var item4 = new HtmlGenericControl("li");
             item4.InnerHtml = "language(s): " + lang;
             ulpersonal.Controls.Add(item1);
-            ulpersonal.Controls.Add(item2); 
+            ulpersonal.Controls.Add(item2);
             ulpersonal.Controls.Add(item3);
             ulpersonal.Controls.Add(item4);
             listdiv.Controls.Add(ulpersonal);
@@ -168,12 +168,9 @@ namespace METWebsite
 
             //////////////////////////////////////////////////////////////////////
             con.Open();
-            SqlCommand cmd1 = new SqlCommand("getEducation", con);
-            cmd1.CommandType = System.Data.CommandType.StoredProcedure;
-            SqlParameter instEd = new SqlParameter("@instID", 1);
-            cmd1.Parameters.Add(instEd);
+            SqlCommand cmd1 = new SqlCommand("Select * from Education ", con);
             SqlDataReader reader1 = cmd1.ExecuteReader();
-            string educDate=""; string educPlace=""; string educTitle = ""; string educField = "";
+            string educDate = ""; string educPlace = ""; string educTitle = ""; string educField = "";
 
             while (reader1.Read())
             {
@@ -218,10 +215,10 @@ namespace METWebsite
 
                 var eduHorizBar = new HtmlGenericControl("hr");
                 eduHorizBar.Style.Add("height", "0.040257648953301126vw");
-                eduHorizBar.Style.Add("border-width","0");
-                eduHorizBar.Style.Add("color","gray");
-                eduHorizBar.Style.Add("background-color","gray");
-                eduHorizBar.Style.Add("opacity","0.3");
+                eduHorizBar.Style.Add("border-width", "0");
+                eduHorizBar.Style.Add("color", "gray");
+                eduHorizBar.Style.Add("background-color", "gray");
+                eduHorizBar.Style.Add("opacity", "0.3");
 
                 var eduHorizBarDiv = new HtmlGenericControl("div");
                 eduHorizBarDiv.Style.Add("padding-top", "0.8051529790660226vw;");
@@ -243,11 +240,8 @@ namespace METWebsite
             }
             con.Close();
             //////////////////////////////////////////////////////////////////////
-             con.Open();
-            SqlCommand cmd2 = new SqlCommand("getEmployment", con);
-            cmd2.CommandType = System.Data.CommandType.StoredProcedure;
-            SqlParameter instEm = new SqlParameter("@instID", 1);
-            cmd2.Parameters.Add(instEm);
+            con.Open();
+            SqlCommand cmd2 = new SqlCommand("Select * from Employment ", con);
             SqlDataReader reader2 = cmd2.ExecuteReader();
             string empStartDate = ""; string empEndDate = ""; string empTitle = ""; string empField = ""; string empPlace = "";
             int count = 3;
@@ -266,7 +260,7 @@ namespace METWebsite
 
                 var emplDate = new HtmlGenericControl("label");
                 emplDate.Attributes.Add("class", "date");
-                emplDate.InnerHtml = empStartDate + "\n" + " to "+ "\n" +empEndDate;
+                emplDate.InnerHtml = empStartDate + "\n" + " to " + "\n" + empEndDate;
                 empDiv1.Attributes.Add("class", "dateDiv");
                 empDiv1.Controls.Add(emplDate);
 
@@ -316,8 +310,8 @@ namespace METWebsite
                 empSection.Controls.Add(empDiv1);
                 empSection.Controls.Add(empDiv2);
                 empSection.Controls.Add(empDiv3);
-                if ( count>=0)
-                employmentSection.Controls.Add(empSection);
+                if (count >= 0)
+                    employmentSection.Controls.Add(empSection);
                 else
                 {
                     more.Controls.Add(empSection);
@@ -325,17 +319,17 @@ namespace METWebsite
 
                 }
             }
-            if (count == 0  || count > 0 )
-                employmentSection.Controls.Remove(buttonMore1);
+            if (count == 0 || count > 0)
+                employmentSection.Controls.Remove(buttonTeach);
 
             if (count < 0)
             {
-                employmentSection.Controls.Add(buttonMore1);
+                employmentSection.Controls.Add(buttonTeach);
 
             }
             con.Close();
             ///////////////////////////////////////////////////////////////
-           con.Open();
+            con.Open();
             SqlCommand cmd3 = new SqlCommand("getInstSemester", con);
             cmd3.CommandType = System.Data.CommandType.StoredProcedure;
             SqlParameter instrT = new SqlParameter("@instID", 1);
@@ -344,12 +338,12 @@ namespace METWebsite
             List<int> SerT = new List<int>();
             List<string> YearT = new List<string>();
             List<string> SeasonT = new List<string>();
-             int  semesterSerial = 0; string semesterYear = ""; string semesterSeason = "";
+            int semesterSerial = 0; string semesterYear = ""; string semesterSeason = "";
             while (reader3.Read())
             {
-                semesterSerial= reader3.GetInt32(0);
-                semesterYear= reader3.GetValue(1).ToString();
-                semesterSeason= reader3.GetString(2);
+                semesterSerial = reader3.GetInt32(0);
+                semesterYear = reader3.GetValue(1).ToString();
+                semesterSeason = reader3.GetString(2);
                 SerT.Add(semesterSerial);
                 YearT.Add(semesterYear);
                 SeasonT.Add(semesterSeason);
@@ -359,16 +353,17 @@ namespace METWebsite
             con.Close();
             int countH = 3;
             int j = 0;
-            while (j < SerT.Count) {
+            while (j < SerT.Count)
+            {
                 con.Open();
                 SqlCommand cmd33 = new SqlCommand("getInstCourses", con);
                 cmd33.CommandType = System.Data.CommandType.StoredProcedure;
                 SqlParameter instrH = new SqlParameter("@instID", 1);
-                SqlParameter serialH = new SqlParameter("@semesterSerial",SerT.ElementAt(j));
+                SqlParameter serialH = new SqlParameter("@semesterSerial", SerT.ElementAt(j));
                 cmd33.Parameters.Add(instrH);
                 cmd33.Parameters.Add(serialH);
                 SqlDataReader reader33 = cmd33.ExecuteReader();
-              
+
                 var TeaDiv1 = new HtmlGenericControl("div");
                 var TeaDiv2 = new HtmlGenericControl("div");
                 var TeaDiv3 = new HtmlGenericControl("div");
@@ -383,35 +378,33 @@ namespace METWebsite
                 TeaDiv3.Attributes.Add("class", "titles");
 
                 var TeaTitleDiv = new HtmlGenericControl("div");
-                TeaTitleDiv.Attributes.Add("class", "title1Div");
-                TeaTitleDiv.Style.Add("font-size", "1.7713365539452497vw");
-                var List = new HtmlGenericControl("ul");
 
                 while (reader33.Read())
                 {
-                  
 
-                  
-                    
-                    var item = new HtmlGenericControl("li");
-                    item.InnerHtml = reader33.GetString(0);
-                    List.Controls.Add(item);
+
+
+                    TeaTitleDiv.Attributes.Add("class", "title1Div");
+                    var TeachTitle = new HtmlGenericControl("label");
+                    TeachTitle.InnerHtml = reader33.GetString(0);
+                    TeaTitleDiv.Style.Add("font-size", "1.7713365539452497vw");
+                    TeaTitleDiv.Controls.Add(TeachTitle);
 
                 }
-                    TeaTitleDiv.Controls.Add(List);
-                    var TeaHorizBar = new HtmlGenericControl("hr");
-                    TeaHorizBar.Style.Add("height", "0.040257648953301126vw");
-                    TeaHorizBar.Style.Add("border-width", "0");
-                    TeaHorizBar.Style.Add("color", "gray");
-                    TeaHorizBar.Style.Add("background-color", "gray");
-                    TeaHorizBar.Style.Add("opacity", "0.3");
 
-                    var TeaHorizBarDiv = new HtmlGenericControl("div");
-                    TeaHorizBarDiv.Style.Add("padding-top", "0.8051529790660226vw;");
-                    TeaHorizBarDiv.Controls.Add(TeaHorizBar);
+                var TeaHorizBar = new HtmlGenericControl("hr");
+                TeaHorizBar.Style.Add("height", "0.040257648953301126vw");
+                TeaHorizBar.Style.Add("border-width", "0");
+                TeaHorizBar.Style.Add("color", "gray");
+                TeaHorizBar.Style.Add("background-color", "gray");
+                TeaHorizBar.Style.Add("opacity", "0.3");
 
-                    TeaDiv3.Controls.Add(TeaTitleDiv);
-                    TeaDiv3.Controls.Add(TeaHorizBarDiv);
+                var TeaHorizBarDiv = new HtmlGenericControl("div");
+                TeaHorizBarDiv.Style.Add("padding-top", "0.8051529790660226vw;");
+                TeaHorizBarDiv.Controls.Add(TeaHorizBar);
+
+                TeaDiv3.Controls.Add(TeaTitleDiv);
+                TeaDiv3.Controls.Add(TeaHorizBarDiv);
 
 
                 var Teachall = new HtmlGenericControl("div");
@@ -419,24 +412,24 @@ namespace METWebsite
                 Teachall.Controls.Add(TeaDiv1);
                 Teachall.Controls.Add(TeaDiv2);
                 Teachall.Controls.Add(TeaDiv3);
-                    if (countH > 0)
-                        TeachingSection.Controls.Add(Teachall);
-                    else
-                    {
-                        more2.Controls.Add(Teachall);
-                        TeachingSection.Controls.Add(more2);
+                if (countH > 0)
+                    TeachingSection.Controls.Add(Teachall);
+                else
+                {
+                    more2.Controls.Add(Teachall);
+                    TeachingSection.Controls.Add(more2);
 
-                    }
+                }
                 countH--;
                 j++;
                 con.Close();
             }
             if (countH == 0 || countH > 0)
-                TeachingSection.Controls.Remove(buttonMore2);
+                TeachingSection.Controls.Remove(buttonTeach);
 
             if (countH < 0)
             {
-                TeachingSection.Controls.Add(buttonMore2);
+                TeachingSection.Controls.Add(buttonTeach);
 
             }
 
@@ -447,8 +440,8 @@ namespace METWebsite
             con.Open();
             SqlCommand cmd4 = new SqlCommand("getInterests", con);
             cmd4.CommandType = System.Data.CommandType.StoredProcedure;
-            SqlParameter instI = new SqlParameter("@instID", 1);
-            cmd4.Parameters.Add(instI);
+            SqlParameter instr = new SqlParameter("@instID", 1);
+            cmd4.Parameters.Add(instr);
             SqlDataReader reader4 = cmd4.ExecuteReader();
 
             while (reader4.Read())
@@ -467,22 +460,22 @@ namespace METWebsite
             SqlParameter instrR = new SqlParameter("@instID", 1);
             cmd5.Parameters.Add(instrR);
             SqlDataReader reader5 = cmd5.ExecuteReader();
-            string LinkTitle = "";  string LinkUrl = "";
+            string LinkTitle = ""; string LinkUrl = "";
             int countr = 3;
             while (reader5.Read())
             {
                 countr--;
-                LinkTitle=reader5.GetValue(0).ToString();
-                LinkUrl=reader5.GetValue(1).ToString();
+                LinkTitle = reader5.GetValue(0).ToString();
+                LinkUrl = reader5.GetValue(1).ToString();
 
 
                 var LinkDiv1 = new HtmlGenericControl("div");
                 var LinkDiv2 = new HtmlGenericControl("div");
                 var LinkDiv3 = new HtmlGenericControl("div");
 
-            
+
                 LinkDiv1.Attributes.Add("class", "dateDiv");
-              
+
 
                 LinkDiv2.Attributes.Add("class", "vertical");
 
@@ -512,7 +505,7 @@ namespace METWebsite
                 linkall.Controls.Add(LinkDiv3);
 
                 if (countr >= 0)
-                   LinksSection.Controls.Add(linkall);
+                    LinksSection.Controls.Add(linkall);
                 else
                 {
                     more3.Controls.Add(linkall);
@@ -546,7 +539,7 @@ namespace METWebsite
                 pubYear = reader6.GetValue(1).ToString();
                 pubTitle = reader6.GetValue(2).ToString();
                 pubDescrip = reader6.GetValue(3).ToString();
-                pubLink= reader6.GetValue(4).ToString();
+                pubLink = reader6.GetValue(4).ToString();
 
                 var pubDiv1 = new HtmlGenericControl("div");
                 var pubDiv2 = new HtmlGenericControl("div");
@@ -614,7 +607,7 @@ namespace METWebsite
                 }
             }
             if (countP == 0 || countP > 0)
-               PublicationSection.Controls.Remove(buttonMore4);
+                PublicationSection.Controls.Remove(buttonMore4);
 
             if (countP < 0)
             {
@@ -629,7 +622,7 @@ namespace METWebsite
             SqlParameter instrA = new SqlParameter("@instID", 1);
             cmd7.Parameters.Add(instrA);
             SqlDataReader reader7 = cmd7.ExecuteReader();
-            string ActStart = ""; string ActEnd = ""; string ActDescrip = ""; string ActLoc= "";
+            string ActStart = ""; string ActEnd = ""; string ActDescrip = ""; string ActLoc = "";
             int countA = 3;
             while (reader7.Read())
             {
@@ -638,7 +631,7 @@ namespace METWebsite
                 ActEnd = reader7.GetValue(1).ToString();
                 ActDescrip = reader7.GetValue(2).ToString();
                 ActLoc = reader7.GetValue(3).ToString();
-             
+
 
                 var ActDiv1 = new HtmlGenericControl("div");
                 var ActDiv2 = new HtmlGenericControl("div");
@@ -656,7 +649,7 @@ namespace METWebsite
                 var ActLocDiv = new HtmlGenericControl("div");
                 ActLocDiv.Attributes.Add("class", "title1Div");
                 var ActLoco = new HtmlGenericControl("label");
-                ActLoco.InnerHtml = "Location : "+ActLoc;
+                ActLoco.InnerHtml = "Location : " + ActLoc;
                 ActLoco.Style.Add("font-size", "1.7713365539452497vw");
                 ActLocDiv.Controls.Add(ActLoco);
 
@@ -667,7 +660,7 @@ namespace METWebsite
                 ActDes.Style.Add("font-size", "1.3687600644122384vw");
                 ActdescDiv.Controls.Add(ActDes);
 
-           
+
                 var ActHorizBar = new HtmlGenericControl("hr");
                 ActHorizBar.Style.Add("height", "0.040257648953301126vw");
                 ActHorizBar.Style.Add("border-width", "0");
@@ -682,7 +675,7 @@ namespace METWebsite
                 ActDiv3.Controls.Add(ActLocDiv);
                 ActDiv3.Controls.Add(ActdescDiv);
                 ActDiv3.Controls.Add(ActHorizBarDiv);
-             
+
 
 
                 var ActAll = new HtmlGenericControl("div");
@@ -704,7 +697,7 @@ namespace METWebsite
 
             if (countA < 0)
             {
-               ActivitiesSec.Controls.Add(buttonMore5);
+                ActivitiesSec.Controls.Add(buttonMore5);
 
             }
             con.Close();

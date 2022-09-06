@@ -114,13 +114,13 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl more2;
 
         /// <summary>
-        /// buttonMore2 control.
+        /// buttonTeach control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl buttonMore2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl buttonTeach;
 
         /// <summary>
         /// mybtn2 control.
