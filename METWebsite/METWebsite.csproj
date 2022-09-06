@@ -112,6 +112,7 @@
     <Content Include="AdminAddCourse.aspx" />
     <Content Include="AdminAddInstructor.aspx" />
     <Content Include="AdminHomePage.aspx" />
+    <Content Include="AdminInstructorToCourse1.aspx" />
     <Content Include="AdminStudentActivity.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="App_Data\Database1.mdf" />
@@ -278,6 +279,7 @@
     <Content Include="StyleSheets\AdminAddCourse.css" />
     <Content Include="StyleSheets\AdminAddInstructor.css" />
     <Content Include="StyleSheets\AdminHome.css" />
+    <Content Include="StyleSheets\AdminInstructorToCourse1.css" />
     <Content Include="StyleSheets\AdminStudentActivity.css" />
     <Content Include="StyleSheets\Alumni.css" />
     <Content Include="StyleSheets\CourseHome.css" />
@@ -343,6 +345,13 @@
     </Compile>
     <Compile Include="AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInstructorToCourse1.aspx.cs">
+      <DependentUpon>AdminInstructorToCourse1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminInstructorToCourse1.aspx.designer.cs">
+      <DependentUpon>AdminInstructorToCourse1.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminStudentActivity.aspx.cs">
       <DependentUpon>AdminStudentActivity.aspx</DependentUpon>
