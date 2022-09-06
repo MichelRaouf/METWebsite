@@ -106,7 +106,9 @@
                
         </div>
             <img src="./images/coursePageImages/VbarCourses.svg" alt="Alternate Text" class="vbar" />
-    <div class="semesters">
+    <div id="Semesters" runat="server" clas="semesters">
+
+        <!--
 <button class="collapsible">Semester 1</button>
 <div class="content">
 <ul>
@@ -146,8 +148,9 @@
                 <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
             </ul></div>
        
+        </div> -->
         </div>
-        </div>
+    
 <script>
 
     var gatalouge = document.getElementById("CourseCatalouge");

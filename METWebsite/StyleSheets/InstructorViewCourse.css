@@ -19,11 +19,11 @@ html {
 }
 
 .flex-child-1 {
-    margin : auto;
+    margin: auto;
 }
 
     .flex-child-1:first-child {
-       padding-right : 4vw;
+        padding-right: 4vw;
         width: 38.393229166666666vw;
         overflow: hidden;
         font-family: Monda;
@@ -33,13 +33,9 @@ html {
         color: #FFFFFF;
         margin-left: 3.2552083333333335vw;
         position: relative;
-
-     
-     
     }
 
     .flex-child-1:last-child {
-       
     }
 
 .nav2-img {
@@ -287,6 +283,7 @@ li {
 #more7 {
     display: none;
 }
+
 .login:hover {
     background-color: black;
     transition: 0.5s;
@@ -303,3 +300,10 @@ li {
     cursor: pointer;
     transition: 0.5s;
 }
+.updatesTable {
+    border : none;
+    table-layout: auto;
+    width: 80%;
+    font-size : 35px;
+}
+
