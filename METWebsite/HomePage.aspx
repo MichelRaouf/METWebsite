@@ -284,12 +284,19 @@
         </div>
     </form>
     <script>
+        var labels = document.getElementsByClassName("newsitemlabel")
+        for (var i = 0; i < labels.length; i++) {
+            var x = labels[i].parentElement.offsetLeft
+            labels[i].style.left = (labels[i].parentElement.offsetWidth - labels[i].offsetWidth) / 2 + "px";
+
+        }
         window.addEventListener("resize", (event) => {
+            
             var labels = document.getElementsByClassName("newsitemlabel")
             for (var i = 0; i < labels.length; i++) {
                 var x = labels[i].parentElement.offsetLeft
                 
-                labels[i].style.left = (labels[i].parentElement.clientWidth - labels[i].clientWidth) / 2 + "px";
+                labels[i].style.left = (labels[i].parentElement.offsetWidth - labels[i].offsetWidth ) / 2 + "px";
             }
         })
         function SeeMore() {
