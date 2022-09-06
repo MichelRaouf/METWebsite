@@ -1,0 +1,286 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    height: 7.6171875vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    top: 0px;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.adminLogo {
+    width: 3.875vw;
+    height: 7.67920133vh;
+    margin-left: 20vw;
+}
+
+.adminLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.56vw;
+    font-weight: 600;
+    margin-left: 1vw;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 17.03125vw;
+    margin-right: 17.03125vw;
+    background: linear-gradient(to right, #FFE171, #FFC3C6);
+    border-radius: 40px;
+    vertical-align: middle;
+    justify-content: space-around;
+}
+
+.dashboard {
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+    font-size: 1.62vw;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.8vh;
+    margin-left: 1vw;
+}
+
+.navLabels {
+    vertical-align: middle;
+    color: white;
+    font-size: 1.62vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dashIconLabel {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboardIcon {
+    vertical-align: middle;
+}
+
+.addAlumniDiv {
+    font-size: 2.43vw;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.inputs {
+    margin-left: 36.8229167vw;
+    margin-right: 36.8229167vw;
+    width: 26.3541667vw;
+}
+
+.name, .profile, .about {
+    margin-top: 4vh;
+}
+
+.nameLabel, .profileLabel, .aboutLabel {
+    font-size: 1.62vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#nameInput {
+    border: solid #FFD0A1 2px;
+    border-radius: 5px;
+    height: 4.63vh;
+    width: 26.0416666vw;
+    float: left;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+#aboutInput {
+    border: solid #FFD0A1 2px;
+    border-radius: 5px;
+    height: 14.814814vh;
+    width: 26.0416666vw;
+    float: left;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+.profilePicture {
+    color: white;
+    background-color: #FFD0A1;
+    font-size: 1.3vw;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    width: 6.77083333vw;
+    height: 3.7037037vh;
+    border-radius: 5px;
+    border: none;
+    align-items: center;
+    margin-top: 1.8vw;
+    cursor:pointer;
+}
+
+.addAlumni {
+    color: white;
+    background-color: #FFD0A1;
+    font-size: 1.296vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    width: 15.625vw;
+    height: 6.296vh;
+    border-radius: 5px;
+    border: none;
+    align-items: center;
+}
+.addAlumni:hover{
+    background-color:black;
+    transition:0.5s;
+    cursor:pointer;
+}
+
+.buttonDiv {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5vh;
+    margin-left: 42.1875vw;
+    margin-right: 42.1875vw;
+}
+#input1 {
+   display:none;
+}
+.confirmdiv {
+    position: absolute;
+    left: 30%;
+    top: 45%;
+    width: 40%;
+    height: 20%;
+    background: linear-gradient(109.99deg, #FFE172 -31.48%, #FFE173 -31.47%, #FFC5C2 100%);
+    border-radius: 0.9765625vw;
+}
+.confirmlabel {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6276041666666667vw;
+    line-height: 1.953125vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.yesnobtn {
+    background: #FFFFFF;
+    border-radius: 0.325vw;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #806E6E;
+    cursor:pointer;
+}
+.yesnodiv{
+    flex-direction:row;
+    column-gap:3.3vw;
+    display:flex;
+    width:70%;
+    top:30%;
+    left:30%;
+    position:relative;
+    height:auto;
+}
+.yesnodiv > button{
+    flex-grow:1 1 0;
+    display:flex;
+}
+.successdiv {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    width: 40%;
+    height: 40%;
+    background: linear-gradient(109.99deg, #FFE172 -31.48%, #FFE173 -31.47%, #FFC5C2 100%);
+    border-radius: 0.9765625vw;
+}
+.img1{
+    top:10%;
+    left:35%;
+    position:relative;
+
+}
+.xbutton{
+    top:-45%;
+    
+    width:50px;
+    position:relative;
+    border-radius:2px;
+
+}
+.xbutton:hover{
+    background-color:red;
+}
+.confirmlabel2 {
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6276041666666667vw;
+    line-height: 1.953125vw;
+    top:20%;
+    left:-10%;
+    position:relative;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.navdiv {
+    width: auto;
+    background: linear-gradient(109.99deg, #FFE172 -31.48%, #FFE173 -31.47%, #FFC5C2 100%);
+    height:auto;
+}
+.dropitem {
+    cursor: pointer;
+    color: white;
+    font-size: 1vw;
+    font-family: 'Montserrat';
+}
