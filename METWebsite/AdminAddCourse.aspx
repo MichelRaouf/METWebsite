@@ -68,6 +68,10 @@
                 </div>
             </div>
             <div class="column2">
+                <div class="labs">
+                    <label class="labsLabel" for="semesterInput">Semester Number: </label>
+                    <input type="text" id="semesterInput" runat="server" name="semesterInput" placeholder="semester" />
+                </div>
                 <div class="met">
                     <br />
                     <input type="checkbox" id="iselective" runat="server" />
