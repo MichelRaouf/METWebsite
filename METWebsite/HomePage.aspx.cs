@@ -13,6 +13,7 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
@@ -34,6 +35,7 @@ namespace METWebsite
                 String url = reader.GetValue(4).ToString();
                 var div = new HtmlGenericControl("div");
                 var section = new HtmlGenericControl("section");
+                
                 section.Attributes.Add("class", "whitebox");
                 var label = new HtmlGenericControl("label");
                 label.Attributes.Add("class", "newsitemlabel");
@@ -85,7 +87,7 @@ namespace METWebsite
                 bar.Attributes.Add("class", "whiteVerBar");
                 bar.Attributes.Add("src", "./images/homePageImages/verticalbarwhite.svg");
                 imgdiv.Controls.Add(bar);
-                if(count!=2 || count!=x-1)
+                if(count!=2)
                 {
                     gucianinfodiv.Controls.Add(imgdiv);
                 }

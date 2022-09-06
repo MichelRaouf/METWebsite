@@ -152,7 +152,7 @@ body {
     margin-right: 3.75vw;
 }
 
-#titleInput, #codeInput, #lectureInput, #tutorialInput, #labsInput {
+#titleInput, #codeInput, #lectureInput, #tutorialInput, #labsInput, #credit {
     border: solid #FFD0A1 2px;
     border-radius: 5px;
     height: 4.63vh;

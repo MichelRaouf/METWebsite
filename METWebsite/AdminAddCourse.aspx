@@ -50,6 +50,10 @@
                     <label class="courseLabel" for="codeInput">Course Code: </label>
                     <input type="text" id="codeInput" runat="server" name="codeInput" placeholder="code" />
                 </div>
+                <div class="code">
+                    <label class="courseLabel" for="credit">Credits Hours: </label>
+                    <input type="text" id="credit" runat="server" name="codeInput" placeholder="credits hours" />
+                </div>
                 <div class="lectures">
                     <label class="lecturesLabel" for="lectureInput">No. of Lectures: </label>
                     <input type="text" id="lectureInput" runat="server" name="lectureInput" placeholder="lectures" />
@@ -82,42 +86,42 @@
                         <input type="checkbox" id="csen" runat="server" />
                         <label class="subMajor">CSEN</label>
                         <br />
-                        <input type="checkbox" id="dmet" />
+                        <input type="checkbox" id="dmet" runat="server" />
                         <label class="subMajor">DMET</label>
                     </div>
                     <div class="iet">
                         <label class="ietLabel">IET: </label>
                         <br />
-                        <input type="checkbox" id="networks" />
+                        <input type="checkbox" id="networks" runat="server" />
                         <label class="subMajor">Networks</label>
                         <br />
-                        <input type="checkbox" id="communications" />
+                        <input type="checkbox" id="communications" runat="server" />
                         <label class="subMajor">Communications</label>
                         <br />
-                        <input type="checkbox" id="electronics" />
+                        <input type="checkbox" id="electronics" runat="server" />
                         <label class="subMajor">Electronics</label>
                     </div>
                     <div class="otherMajors">
                         <label class="otherLabel">Other Majors: </label>
                         <div class="subColumns">
                             <div class="subColumn1">
-                                <input type="checkbox" id="bi" />
+                                <input type="checkbox" id="bi" runat="server" />
                                 <label class="subMajor">BI</label>
                                 <br />
-                                <input type="checkbox" id="management" />
+                                <input type="checkbox" id="management" runat="server" />
                                 <label class="subMajor">Management</label>
                                 <br />
-                                <input type="checkbox" id="pharmacy" />
+                                <input type="checkbox" id="pharmacy" runat="server" />
                                 <label class="subMajor">Pharmacy</label>
                             </div>
                             <div class="subColumn2">
-                                <input type="checkbox" id="ems" />
+                                <input type="checkbox" id="ems" runat="server" />
                                 <label class="subMajor">EMS</label>
                                 <br />
-                                <input type="checkbox" id="mctr" />
+                                <input type="checkbox" id="mctr" runat="server" />
                                 <label class="subMajor">MCTR</label>
                                 <br />
-                                <input type="checkbox" id="graduate" />
+                                <input type="checkbox" id="graduate" runat="server" />
                                 <label class="subMajor">Graduate</label>
                             </div>
                         </div>
