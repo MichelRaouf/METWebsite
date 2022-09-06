@@ -60,7 +60,7 @@ namespace METWebsite
                 var td2 = new HtmlTableCell();
                 var button = new Button { Text = "View Course" ,CssClass= "viewCourse" };
                 button.Click += (object sender1, EventArgs e1) => {
-                    Response.Redirect("HomePage.aspx");
+                    Response.Redirect("InstructorViewCourse.aspx?IdString=" + courseSerial.ToString());
                 };
                 td2.Controls.Add(button);
                 tr.Controls.Add(td1);

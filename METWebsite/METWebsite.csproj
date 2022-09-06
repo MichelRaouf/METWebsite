@@ -284,6 +284,7 @@
     <Content Include="StyleSheets\IEEE.css" />
     <Content Include="StyleSheets\Incubator.css" />
     <Content Include="StyleSheets\InstructorHome.css" />
+    <Content Include="StyleSheets\InstructorViewCourse.css" />
     <Content Include="StyleSheets\LecturersProfiles.css" />
     <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StyleSheets\Savvy.css" />

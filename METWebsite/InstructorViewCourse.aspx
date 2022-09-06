@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
         <link rel="stylesheet" href="./StyleSheets/InstructorHome.css" />
-    <link rel="stylesheet" href="./StyleSheets/CoursePage.css" />
+    <link rel="stylesheet" href="./StyleSheets/InstructorViewCourse.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -48,13 +48,39 @@
 
         </div>
 
+
+
+
+
+
+
+
+
+
         <div class="title">
             <p>Course Updates</p>
         </div>
-        <div>
-            <ul id="cupdates" runat="server" class="updates">
-            </ul>
-        </div>
+       
+            <table class="updatesTable">
+                <tr>
+                    <td> <li>Quiz 2 is set to be on Tuesday 2/12/2022 at 2:00 PM. Personalized seats will be sent via mail. </li> </td>
+                                     <td>
+                                    <asp:Button ID="Button3" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
+</td>
+                     <td>
+                                   <asp:Button ID="Button4" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
+</td>
+                </tr>
+                <tr>
+                    <td>The midterm will contain only the first five lectures, their labs and tutorials.</td>
+                    <td>
+                                    <asp:Button ID="Button1" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
+</td>
+                     <td>
+                                   <asp:Button ID="Button2" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
+</td>
+                </tr>
+            </table>
 
         <div class="line2 centerdiv" id="description">
         </div>
