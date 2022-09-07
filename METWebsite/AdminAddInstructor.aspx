@@ -41,22 +41,23 @@
         </div>
         <div class="inputs">
             <div class="name">
-            <label class="nameLabel" for="nameInput">Name: </label>
-            <input type="text" id="nameInput" runat="server" name="nameInput" placeholder="name" />
+                <label class="nameLabel" for="nameInput">Name: </label>
+                <input type="text" id="nameInput" runat="server" name="nameInput" placeholder="name" />
+            </div>
+            <div class="password">
+                <label class="passwordLabel" for="passwordInput">Password: </label>
+                <input type="text" id="passwordInput" runat="server" name="passwordInput" placeholder="password" />
+            </div>
+            <div class="email">
+                <label class="emailLabel" for="emailInput">E-mail: </label>
+                <input type="text" id="emailInput" runat="server" name="emailInput" placeholder="email" />
+            </div>
         </div>
-        <div class="password">
-            <label class="passwordLabel" for="passwordInput">Password: </label>
-            <input type="text" id="passwordInput" runat="server" name="passwordInput" placeholder="password" />
-        </div>
-        <div class="email">
-            <label class="emailLabel" for="emailInput">E-mail: </label>
-            <input type="text" id="emailInput" runat="server" name="emailInput" placeholder="email" />
-        </div>
-        </div>
-        
+
 
         <div class="buttonDiv">
-            <asp:Button ID="Button1" CssClass="sendInvite" runat="server" Text="Send Invitation Link" />
+            <asp:Button ID="Button1" CssClass="sendInvite" runat="server" Text="Send Invitation Link" OnClick="Button1_Click" />
+            <label class="email" id="mailmessage" runat="server"></label>
         </div>
     </form>
 </body>
