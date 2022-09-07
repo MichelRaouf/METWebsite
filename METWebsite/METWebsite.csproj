@@ -239,6 +239,7 @@
     <Content Include="InstructorViewCourse.aspx" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="sql files\Student Activity.sql" />
     <Content Include="StaffProfile.aspx" />
     <Content Include="Savvy.aspx" />
     <Content Include="StudentActivities.aspx" />
