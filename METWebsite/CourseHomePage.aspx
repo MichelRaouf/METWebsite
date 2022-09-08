@@ -106,8 +106,10 @@
                
         </div>
             <img src="./images/coursePageImages/VbarCourses.svg" alt="Alternate Text" class="vbar" />
-    <div class="semesters">
-<button class="collapsible">Semester 1</button>
+    <div id="Semesters" runat="server" class="semesters">
+        
+        
+<%--<button class="collapsible">Semester 1</button>
 <div class="content">
 <ul>
                 <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
@@ -115,6 +117,7 @@
             </ul>
 
 </div>
+        
 <button class="collapsible">Semester 2</button>
 <div class="content">
 <ul>
@@ -145,11 +148,16 @@
                 <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
                 <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
             </ul></div>
-       
-        </div>
-        </div>
+       --%>
+        </div> 
+        
+    
 <script>
-
+    function redirect() {
+        
+        Response.redirect("CoursePage.aspx");
+        
+    }
     var gatalouge = document.getElementById("CourseCatalouge");
     var x = document.getElementsByClassName("catalougebtn4");
     var grad = document.getElementById("gradCourses");

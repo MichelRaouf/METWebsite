@@ -18,7 +18,7 @@ namespace METWebsite
             yes.Click += Yes_Click;
         }
 
-        protected void button1_Click(object sender, EventArgs e)
+       protected void button1_Click(object sender, EventArgs e)
         {
             //var div = document.createElement("div");
             //var label = document.createElement("label");
@@ -27,8 +27,9 @@ namespace METWebsite
             //document.getElementById("form1").appendChild(div); 
 
             var div = new HtmlGenericControl("div");
-            var label = new HtmlGenericControl("label");
             var div2 = new HtmlGenericControl("div");
+            var label = new HtmlGenericControl("label");
+            var div3 = new HtmlGenericControl("div");
             
             yes.ID = "1";
             
@@ -39,19 +40,28 @@ namespace METWebsite
             no.Attributes.Add("class", "yesnobtn");
             yes.Click += Yes_Click;
 
-            div2.Attributes.Add("class", "yesnodiv");
-            div2.Controls.Add(button2);
-            div2.Controls.Add(button3);
+            div.Attributes.Add("class", "confirmationOverlay");
+            div2.Attributes.Add("class", "confirmationBox");
+            div3.Attributes.Add("class", "confirmationButtons");
+            label.Attributes.Add("class", "confirmationLabel"); 
+            string lol  = nameInput.Value;
+            div.Controls.Add(div2);
+            div2.Controls.Add(label);
+            div2.Controls.Add(div3);
+            div3.Controls.Add(button2);
+            div3.Controls.Add(button3);
+            label.InnerHtml = "Are You Sure That You Want To Add \"" + nameInput.Value + "\" As A New Alumni ?";
+            form1.Controls.Add(div);
             button2.Visible = true;
             button3.Visible = true;
 
-            label.InnerHtml = "Are you sure that you want to add" + nameInput.Value;
-            label.Attributes.Add("class", "confirmlabel");
-            div.Attributes.Add("class", "confirmdiv");
-            div.Controls.Add(label);
-            div.Controls.Add(div2);
-            form1.Controls.Add(div);
+
+
+
+
+
         }
+      
 
         protected void Yes_Click(object sender, EventArgs e)
         {
@@ -69,6 +79,32 @@ namespace METWebsite
             button2.Visible = false;
             button3.Visible = false;
             var div = new HtmlGenericControl("div");
+            var div2 = new HtmlGenericControl("div");
+            var div3 = new HtmlGenericControl("div");
+            var button = new HtmlGenericControl("button");
+            var img = new HtmlGenericControl("img");
+            var label = new HtmlGenericControl("label");
+            var span = new HtmlGenericControl("span");
+            div.Attributes.Add("class", "successOverlay");
+            div.Attributes.Add("id", "successOverlay");
+            div2.Attributes.Add("class", "successBox");
+            div3.Attributes.Add("class", "successMessage");
+            button.Attributes.Add("class", "closeButton");
+            button.Attributes.Add("onclick", "confirmAlumni()");
+            label.Attributes.Add("class", "successLabel");
+            span.InnerHtml = "x";
+            label.InnerHtml = "Alumni is Added Successfully";
+            img.Attributes.Add("src", "./images/yes.svg");
+            div3.Controls.Add(img);
+            div3.Controls.Add(label);
+            button.Controls.Add(span);
+            div2.Controls.Add(button);
+            div2.Controls.Add(div3);
+            div.Controls.Add(div2);
+            form1.Controls.Add(div);
+
+
+            /*var div = new HtmlGenericControl("div");
             var label = new HtmlGenericControl("label");
             var imgbtn = new ImageButton();
             imgbtn.Attributes.Add("src", "./images/xbutton.svg");
@@ -82,7 +118,7 @@ namespace METWebsite
             div.Controls.Add(img);
             div.Controls.Add(label);
             div.Controls.Add(imgbtn);
-            form1.Controls.Add(div);
+            form1.Controls.Add(div);*/
         }
 
         

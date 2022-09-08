@@ -20,19 +20,23 @@ namespace METWebsite
             SqlConnection con = new SqlConnection(strcon);
             SqlCommand course_title = new SqlCommand("courseTitle", con);
             course_title.CommandType = System.Data.CommandType.StoredProcedure;
-            course_title.Parameters.Add(new SqlParameter("@course_id", 3));
+            course_title.Parameters.Add(new SqlParameter("@course_id", 5));
             SqlParameter title = course_title.Parameters.Add("@course_title", System.Data.SqlDbType.VarChar, 100);
+            SqlParameter code = course_title.Parameters.Add("@course_code", System.Data.SqlDbType.VarChar, 100);
+
             title.Direction = ParameterDirection.Output;
+            code.Direction = ParameterDirection.Output;
+
 
             con.Open();
             course_title.ExecuteNonQuery();
             con.Close();
 
-            ctitle.InnerHtml = title.Value.ToString();
+            ctitle.InnerHtml = "("+ code.Value.ToString()+") "+ title.Value.ToString();
 
             SqlCommand course_details = new SqlCommand("coursedetails", con);
             course_details.CommandType = System.Data.CommandType.StoredProcedure;
-            course_details.Parameters.Add(new SqlParameter("@course_id", 2));
+            course_details.Parameters.Add(new SqlParameter("@course_id", 5));
             SqlParameter credits = course_details.Parameters.Add("@course_credits", System.Data.SqlDbType.Int);
             credits.Direction = ParameterDirection.Output;
             SqlParameter lectures = course_details.Parameters.Add("@courseLecs", System.Data.SqlDbType.Int);

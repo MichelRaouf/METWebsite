@@ -1,5 +1,6 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
 /*    border: 3px solid green;
 */
 body {
@@ -13,18 +14,17 @@ html {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 32.096354166666664vw;
+    height: 25.096354166666664vw;
     background: linear-gradient(to right, #000000, #ED1C24, #FFCB05);
 }
 
 .flex-child-1 {
+    margin : auto;
 }
 
     .flex-child-1:first-child {
-        margin-right: 24.994791666666668vw;
-        margin-left: 3.90625vw;
-        width: 11.393229166666666vw;
-        width: 46.77734375vw;
+       padding-right : 4vw;
+        width: 38.393229166666666vw;
         overflow: hidden;
         font-family: Monda;
         font-size: 3.5807291666666665vw;
@@ -33,15 +33,13 @@ html {
         color: #FFFFFF;
         margin-left: 3.2552083333333335vw;
         position: relative;
-        left: 25%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        padding: 0.6510416666666666vw;
-        padding-top: 13.020833333333334vw;
+
+     
+     
     }
 
     .flex-child-1:last-child {
-        padding-top: 5.208333333333333vw;
+       
     }
 
 .nav2-img {
@@ -75,6 +73,7 @@ html {
     font-size: 2.818035426731079vw;
     font-weight: 500;
     text-align: center;
+    color : black;
 }
 
 .updates {
