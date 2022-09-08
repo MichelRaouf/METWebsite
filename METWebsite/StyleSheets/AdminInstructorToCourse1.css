@@ -103,7 +103,7 @@ body {
     text-align: center;
 }
 
-/*.instructors {
+.instructors {
     margin-top: 4.629629vh;
     margin-left: 9.9479167vw;
     margin-right: 9.9479167vw;
@@ -148,5 +148,4 @@ body {
     color: white;
     border-radius: 5px;
     border: none;
-}*/
-
+}

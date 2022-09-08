@@ -40,7 +40,7 @@
             <label>Assign Instructor to Course</label>
         </div>
 
-        <%--<div class="instructors">
+        <div class="instructors">
             <label class="selectInstructorLabel">Select An Instructor To Assign</label>
             <br />
             <input type="text" id="instructorInput" runat="server" name="instructorInput" placeholder="search" />
@@ -70,10 +70,7 @@
                     <asp:Button ID="button6" CssClass="select" runat="server" Text="Select" />
                 </div>
             </div>
-        </div>--%>
-
-
-
+        </div>
     </form>
 </body>
 </html>
