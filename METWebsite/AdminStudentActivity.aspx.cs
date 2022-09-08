@@ -69,12 +69,7 @@ namespace METWebsite
             }
             
             cmd.ExecuteNonQuery();
-            
             con.Close();
-            
-
-
-            
 
             //foreach (TextBox c in hidden.Controls)
             //{
@@ -102,12 +97,9 @@ namespace METWebsite
                 t1.Attributes.Add("type", "text");
                 t1.Attributes.Add("class", "input");
 
-                
-
-
                 t1.Attributes.Add("runat", "server");
-              boxes.Add(t1);
-               hidden.Controls.Add(t1);
+                boxes.Add(t1);
+                hidden.Controls.Add(t1);
            
             
 
