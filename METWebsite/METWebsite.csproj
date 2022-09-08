@@ -111,7 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUsPage.aspx" />
-    <Content Include="ACM.aspx" />
     <Content Include="AdminAddAlumni.aspx" />
     <Content Include="AdminAddCourse.aspx" />
     <Content Include="AdminAddInstructor.aspx" />
@@ -324,13 +323,6 @@
     </Compile>
     <Compile Include="AboutUsPage.aspx.designer.cs">
       <DependentUpon>AboutUsPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ACM.aspx.cs">
-      <DependentUpon>ACM.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ACM.aspx.designer.cs">
-      <DependentUpon>ACM.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminAddAlumni.aspx.cs">
       <DependentUpon>AdminAddAlumni.aspx</DependentUpon>
