@@ -10,6 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+   
         <div class="header">
 
             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
@@ -20,7 +21,7 @@
 
             <label class="label1">Faculty of Media Engineering & Technology</label>
              <button class="logout" runat="server" onserverclick="logOut_click">
-                 <img class="logoutIcon" src="./images/InstructorHome/logout.svg" /><span id="logoutlabel">Log Out</span></></button>
+                 <img class="logoutIcon" src="./images/InstructorHome/logout.svg" /><span class="logoutlabel">Log Out</span></></button>
         </div>
 
         <div class="flex-container-1">
@@ -48,53 +49,48 @@
 
         </div>
 
-
-
-
-
-
-
-
-
-
         <div class="title">
             <p>Course Updates</p>
         </div>
        
-            <table class="updatesTable">
-                <tr>
-                    <td> <li>Quiz 2 is set to be on Tuesday 2/12/2022 at 2:00 PM. Personalized seats will be sent via mail. </li> </td>
-                                     <td>
-                                    <asp:Button ID="Button3" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
-</td>
-                     <td>
-                                   <asp:Button ID="Button4" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
-</td>
-                </tr>
-                <tr>
-                    <td>The midterm will contain only the first five lectures, their labs and tutorials.</td>
-                    <td>
-                                    <asp:Button ID="Button1" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
-</td>
-                     <td>
-                                   <asp:Button ID="Button2" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
-</td>
-                </tr>
+            <table id="updatesTable" runat="server">
             </table>
-
+        <button class="AddNew" runat="server">
+            <img class="editIcon" src="./images/InstructorHome/plusIcon.svg" />
+            <span class="innerSpan">Add Announcement</span>
+        </button>
         <div class="line2 centerdiv" id="description">
         </div>
-
-
-      
-
-
-        
 
         <div class="title">
             <p>Syllabus</p>
         </div>
         <div id="csyllabus" runat="server">
+
+            <div class="flex-container-2">
+                <div class="flex-child">
+                     <p class="syllabus-title">Week </p>
+                     <p class="week-number">15</p></div>
+                <div class="flex-child">
+                     <div>
+                         <span class="syllabus-title">Title</span>
+                         <asp:ImageButton  CssClass="weekEdit" ID="Image2" runat="server" ImageUrl="./images/InstructorHome/blackEdit.svg" onmouseover="this.src='./images/InstructorHome/redEdit.svg'" onmouseout="this.src='./images/InstructorHome/blackEdit.svg'"/>
+                      </div> 
+                    <p class="syllabus-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.</p>
+                    </div>
+                </div>  
+            <img class="syllabus-line" src="./images/coursePageImages/line.svg" />
+            <ul class="materialsUl">
+                <li class="materialsLi"><asp:ImageButton   ID="ImageButton3" runat="server" ImageUrl="./images/InstructorHome/blackDelete.svg" onmouseover="this.src='./images/InstructorHome/redDelete.svg'" onmouseout="this.src='./images/InstructorHome/blackDelete.svg'"/><a >Lecture 1</a></li>
+                <li class="materialsLi"><asp:ImageButton   ID="ImageButton4" runat="server" ImageUrl="./images/InstructorHome/blackDelete.svg" onmouseover="this.src='./images/InstructorHome/redDelete.svg'" onmouseout="this.src='./images/InstructorHome/blackDelete.svg'"/><a href="#">Lecture 1</a></li>
+            </ul>
+             <button class="AddNewMaterials" runat="server" >
+            <img class="editIcon" src="./images/InstructorHome/plusIcon.svg" />
+            <span class="innerSpan">Add Materials</span>
+        </button>
+
+            
+            
         </div>
 
         <span id="space"></span>
