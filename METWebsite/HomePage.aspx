@@ -5,51 +5,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>MET Website</title>
-    <link rel="icon" href="./images/gucLogo.png" />
-    <link rel="stylesheet" href="./StyleSheets/HomeStyles.css" />
+    <link rel="icon" href="./images/gucLogo.png"/>
+    <link  rel="stylesheet" href="./StyleSheets/HomeStyles.css"/>
 </head>
-
+    
 <body>
     <form id="form1" runat="server">
         <div class="scrollable">
-
             <div class="header">
-                <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
-                <img class="bar" src="./images/topBarImages/bar.svg" />
-                <label class="label1">Faculty of Media Engineering & Technology</label>
-                <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login" />
+            
+                            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+           
+           
+                            <img class="bar" src="./images/topBarImages/bar.svg"/>
+            
+          
+                            <label class="label1">Faculty of Media Engineering & Technology</label>
+            
+                    <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
+            
+        </div>
+        <div class="navbar">
+            <div >
+                <img src="images/topBarImages/home-red.svg" alt="Alternate Text" class="navimg3" />
+                                    <asp:Button Text="Home" runat="server" CssClass="navbtnin" />
             </div>
-
-            <div class="navbar">
                 <div>
-                    <img src="images/topBarImages/home-red.svg" alt="Alternate Text" class="navimg3" />
-                    <asp:Button Text="Home" runat="server" CssClass="navbtnin" />
-                </div>
-                <div>
-                    <img src="images/topBarImages/course.svg" alt="Alternate Text" class="navimg" />
-                    <asp:Button Text="Courses" runat="server" CssClass="navbtn" OnClick="toCourses" />
-                </div>
-                <div>
-                    <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg" />
-                    <asp:Button Text="Staff" runat="server" CssClass="navbtn" OnClick="toStaff" />
-                </div>
-                <div>
-                    <img src="images/topBarImages/studactiv.svg" alt="Alternate Text" class="navimg" />
-                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" OnClick="toStudentActiv" />
-                </div>
-                <div>
-                    <img src="images/topBarImages/Alumni.svg" alt="Alternate Text" class="navimg2" />
-                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" OnClick="toAlumni" />
-                </div>
-                <div>
-                    <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg4" />
-                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" OnClick="toAbout" />
-                </div>
-
+                <img src="images/topBarImages/course.svg" alt="Alternate Text"class="navimg"/>
+                                    <asp:Button Text="Courses" runat="server" CssClass="navbtn" OnClick="toCourses" />
             </div>
+                <div>
+                <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg"/>
+                                    <asp:Button Text="Staff" runat="server" CssClass="navbtn" OnClick="toStaff" />
+            </div>
+                <div >
+                <img src="images/topBarImages/studactiv.svg" alt="Alternate Text"class="navimg" />
+                                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" OnClick="toStudentActiv" />
+            </div>
+                <div >
+                <img src="images/topBarImages/Alumni.svg" alt="Alternate Text"class="navimg2" />
+                                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" OnClick="toAlumni" />
+            </div>
+                <div >
+                <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg4" />
+                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" OnClick="toAbout" />
+            </div>
+           
+            
+        </div>
         </div>
 
-        <img class="graduationImage" src="./images/homePageImages/graduation.svg" />
+        
+            <img class="graduationImage" src="./images/homePageImages/graduation.svg"/>
+        
 
         <div class="aboutParagraphDiv">
             <label class="aboutParagraph">
@@ -63,16 +71,17 @@
         </div>
 
         <div class="readMoreDiv">
-            <asp:Button ID="readMoreButton" CssClass="readMore" runat="server" Text="Read More" OnClick="readMoreButton_Click" />
+            <asp:Button ID="readMoreButton" CssClass="readMore" runat="server" Text="Read More" OnClick="readMoreButton_Click"/>
         </div>
 
-        <div class="news">
-            <div>
-                <label class="newslabel">Latest News</label>
+            <div class="news" >
+            <div> <label class="newslabel">Latest News</label> </div>
+            <div class="newsitem" id="newsdiv" runat="server" >
+                
+                
             </div>
-            <div class="newsitem" id="newsdiv" runat="server">
-            </div>
-
+            
+            
         </div>
 
         <div class="pathsDiv">
@@ -88,17 +97,17 @@
                     proident, sunt in.
                 </div>
                 <div class="pathsButton">
-                    <asp:Button ID="viewCoursesButton" CssClass="viewCourses" runat="server" Text="View Courses" OnClick="viewCoursesButton_Click" />
+                    <asp:Button ID="viewCoursesButton" CssClass="viewCourses" runat="server" Text="View Courses" OnClick="viewCoursesButton_Click"/>
                 </div>
             </div>
-
-            <img class="pathsPhoto" src="./images/homePageImages/pathsPhoto.svg" />
-
+          
+                <img class="pathsPhoto" src="./images/homePageImages/pathsPhoto.svg"/>
+        
         </div>
-        <div class="wegucians">
-            <div class="redLabel">
-                <label class="gucianlabel">#We_GUCians</label>
-            </div>
+<div class="wegucians">
+            <div class="redlabel">
+                <label class="gucianlabel">#We_Gucians</label>
+        </div>
             <div class="gucianinfo" runat="server" id="gucianinfodiv">
                 <%--<div>
                 <img  class="alumniImage" src="./images/homePageImages/person1.svg"/>
@@ -134,135 +143,136 @@
 
                 </div>
             </div>--%>
-            </div>
 
+            </div>
+        
             <div>
-                <asp:Button ID="button10" CssClass="showmore" runat="server" Text="Show More" />
+                <asp:button id="button10" cssclass="showmore" runat="server" text="Show More"   />
             </div>
 
         </div>
-
+        
         <div class="ContactUs">
             <br />
             <br />
-            <div class="contacttitle">
-                <label class="contactustext">Contact Us</label>
-            </div>
-            <div class="contactInfo">
-                <div class="hotlines">
-                    <div class="Iconandtitle">
-                        <img class="contactIcons" src="./images/homePageImages/callLogo.svg" />
-                        <label class="contactTitlesText">
-                            GUC Hotlines:
-                        </label>
-                    </div>
-                    <div class="info">
-                        <label class="contactText">
-                            16482
-                        </label>
-                        <br />
-                        <br />
-                        <label class="contactTitlesText">
-                            IT:
-                        </label>
-                        <br />
+           <div class="contacttitle">
+               <label class="contactustext">Contact Us</label>
+           </div>
+            <div class="contactInfo" >
+               <div class="hotlines">
+                  <div class ="Iconandtitle">
+                      <img class="contactIcons" src="./images/homePageImages/callLogo.svg"/>
+                      <label class="contactTitlesText">
+                          GUC Hotlines:
+                      </label>
+                  </div>
+                   <div class="info">
+                       <label class="contactText">
+                           16482
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           IT:
+                       </label>
+                       <br />
+                            <label class="contactText">
+                            +201006820746 
+                       </label>
+                       <br />
                         <label class="contactText">
                             +201006820746 
-                        </label>
-                        <br />
-                        <label class="contactText">
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           MET Coordinator:
+                       </label>
+                       <br />
+                       <label class="contactText">
                             +201006820746 
-                        </label>
-                        <br />
-                        <br />
-                        <label class="contactTitlesText">
-                            MET Coordinator:
-                        </label>
-                        <br />
-                        <label class="contactText">
+                       </label>
+                       <br />
+                       <label class="contactText">
                             +201006820746 
-                        </label>
-                        <br />
-                        <label class="contactText">
-                            +201006820746 
-                        </label>
-                        <br />
-                    </div>
-                </div>
+                       </label>
+                       <br />
+                   </div>
+               </div>
                 <div class="emails">
-                    <div class="Iconandtitle">
-                        <img class="contactIcons" src="./images/homePageImages/mailLogo.svg" />
-                        <label class="contactTitlesText">
-                            Admission:
-                        </label>
-                    </div>
-                    <div class="info">
+                    <div class ="Iconandtitle">
+                        <img class="contactIcons" src="./images/homePageImages/mailLogo.svg"/>
+                      <label class="contactTitlesText">
+                          Admission:
+                      </label>
+                  </div>
+                   <div class="info">
+                       <label class="contactText">
+                           admission@guc.edu.eg
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           IT:
+                       </label>
+                       <br />
+                            <label class="contactText">
+                             it1@guc.edu.eg
+                       </label>
                         <label class="contactText">
-                            admission@guc.edu.eg
-                        </label>
-                        <br />
-                        <br />
-                        <label class="contactTitlesText">
-                            IT:
-                        </label>
-                        <br />
-                        <label class="contactText">
-                            it1@guc.edu.eg
-                        </label>
-                        <label class="contactText">
-                            it2@guc.edu.eg 
-                        </label>
-                        <br />
-                        <br />
-                        <label class="contactTitlesText">
-                            MET Coordinator:
-                        </label>
-                        <br />
-                        <label class="contactText">
-                            coordinator1@guc.edu.eg 
-                        </label>
-                        <br />
-                        <label class="contactText">
-                            coordinator2@guc.edu.eg 
-                        </label>
-                        <br />
-                        <label class="contactText">
-                            coordinator3@guc.edu.eg 
-                        </label>
-                        <br />
-                    </div>
+                                    it2@guc.edu.eg 
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           MET Coordinator:
+                       </label>
+                       <br />
+                       <label class="contactText">
+                                     coordinator1@guc.edu.eg 
+                       </label>
+                       <br />
+                       <label class="contactText">
+                                     coordinator2@guc.edu.eg 
+                       </label>
+                       <br />
+                       <label class="contactText">
+                                     coordinator3@guc.edu.eg 
+                       </label>
+                       <br />
+                   </div>
 
                 </div>
                 <div class="office">
-                    <div class="Iconandtitle">
-                        <img class="contactIcons" src="./images/homePageImages/deskLogo.svg" />
-                        <label class="contactTitlesText">
-                            IT:
-                        </label>
+                      <div class ="Iconandtitle">
+                          <img class="contactIcons" src="./images/homePageImages/deskLogo.svg"/>
+                      <label class="contactTitlesText">
+                          IT:
+                      </label>
 
-                    </div>
-                    <div class="info">
-                        <label class="contactText">
+                  </div>
+                   <div class="info">
+                       <label class="contactText">
                             C6.123
-                        </label>
-                        <br />
-                        <label class="contactText">
+                       </label>
+                       <br />
+                       <label class="contactText">
                             C6.123
-                        </label>
-                        <br />
-                        <br />
-                        <label class="contactTitlesText">
-                            MET Coordinator:
-                        </label>
-                        <br />
+                       </label>
+                       <br />
+                       <br />
+                       <label class="contactTitlesText">
+                           MET Coordinator:
+                       </label>
+                       <br />
+                            <label class="contactText">
+                             C7.235
+                       </label>
+                       <br />
                         <label class="contactText">
-                            C7.235
-                        </label>
-                        <br />
-                        <label class="contactText">
-                            C7.235
-                        </label>
-                    </div>
+                             C7.235
+                       </label>
+                   </div>
                 </div>
 
             </div>
@@ -281,12 +291,12 @@
 
         }
         window.addEventListener("resize", (event) => {
-
+            
             var labels = document.getElementsByClassName("newsitemlabel")
             for (var i = 0; i < labels.length; i++) {
                 var x = labels[i].parentElement.offsetLeft
-
-                labels[i].style.left = (labels[i].parentElement.offsetWidth - labels[i].offsetWidth) / 2 + "px";
+                
+                labels[i].style.left = (labels[i].parentElement.offsetWidth - labels[i].offsetWidth ) / 2 + "px";
             }
         })
         function SeeMore() {
@@ -325,17 +335,17 @@
 
         }
         var box = document.getElementsByClassName("whitebox");
-
+        
         //for (var i = 0; i < box.length; i++) {
-
+            
         //    var x = box[i].parentElement.offsetTop;
         //    box[i].style.position = "absolute";
         //    box[i].style.top = x + box[i].parentElement.offsetHeight  + "px";
         //    box[i].style.left = box[i].parentElement.offsetLeft + 16 + "px";
         //    box[i].style.width = box[i].parentElement.offsetWidth-32+"px"
-
+           
         //}
-
+        
     </script>
 </body>
 </html>
