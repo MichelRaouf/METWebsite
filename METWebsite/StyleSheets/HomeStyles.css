@@ -448,13 +448,13 @@ html,body {
 }
 
     .wegucians > div {
-        margin-left: 1vw;
+        /*margin-left: 1vw;*/
         flex-grow: 1 1 0;
         
         display: flex;
     }
 
-.redlabel {
+.redLabel {
     margin-top: 3.9vh;
     background-color: #ED1C24B2;
     height: 4.5vw;
@@ -475,15 +475,10 @@ html,body {
     font-family: Montserrat;
     font-size: 3vw;
     font-weight: 600;
-    letter-spacing: 0em;
     text-align: center;
     font-family: Montserrat;
-    font-weight: 600;
-    letter-spacing: 0em;
-    text-align: center;
     color: white;
-    position: relative;
-    left: 3vw;
+    justify-content: center;
 }
 
 .name {
