@@ -146,7 +146,8 @@
 }
 
     .semesters > div {
-       
+       width:100%;
+       height:auto;
         display: flex;
         font-size: 2vw;
     
@@ -337,3 +338,15 @@ div[for=textarea-a],
 .aa{
 
 }
+.coursebtn {
+    border: none;
+    font-size: 2vw;
+    font-family: 'Montserrat';
+    background-color: transparent;
+    cursor: pointer;
+}
+
+    .coursebtn:hover {
+        text-decoration-color: blue;
+        text-decoration: underline;
+    }

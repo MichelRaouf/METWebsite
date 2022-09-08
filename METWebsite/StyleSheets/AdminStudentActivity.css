@@ -195,16 +195,23 @@ body {
 }
 .plus{
     color: #FFD0A1;
+    font-size:1.2vw;
+    border:none;
+    background-color:transparent;
+    cursor:pointer;
 }
 .plus:hover{
     cursor:pointer;
-    font-size:20px;
+    font-size:1.5vw;
 }
 .labelTrack {
     font-size: 1.2vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    column-gap:20px;
+    column-gap: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 #hidden{

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace METWebsite
@@ -11,36 +13,48 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            //create new sqlconnection and connection to database by using connection string from web.config file  
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("getIcon", con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
+            SqlDataReader reader = cmd.ExecuteReader();
+            string id = ""; string icon = ""; 
+            while (reader.Read())
+            {
+                id = reader.GetValue(0).ToString();
+                icon = reader.GetValue(1).ToString();
+
+                var clubDiv = new HtmlGenericControl("div");
+                clubDiv.Attributes.Add("class", "clubDiv");
+
+                ImageButton clubIcon = new ImageButton();
+                clubIcon.ID = id;
+                clubIcon.Attributes.Add("class", "image");
+                clubIcon.Attributes.Add("src", icon);
+                clubIcon.Attributes.Add("OnClick", "clubProfile");
+                clubIcon.Attributes.Add("runat", "server");
+                clubIcon.Click += clubProfile;
+                clubDiv.Controls.Add(clubIcon);
+
+                studentActivity.Controls.Add(clubDiv);
+            }
+            con.Close();
         }
+
         protected void ButtonLogin_Click(object sender, EventArgs e)
         {
             
         }
-        protected void incubator(object sender, EventArgs e)
+        protected void clubProfile(object sender, EventArgs e)
         {
-            Response.Redirect("Incubator.aspx");
+
+            Session["clubId"] = ((Control)sender).ID;
+            Response.Redirect("studentActivityProfile.aspx");
         }
-        protected void GucBrain(object sender, EventArgs e)
-        {
-            Response.Redirect("GucBrain.aspx");
-        }
-        protected void ACM(object sender, EventArgs e)
-        {
-            Response.Redirect("ACM.aspx");
-        }
-        protected void GDG(object sender, EventArgs e)
-        {
-            Response.Redirect("GDG.aspx");
-        }
-        protected void IEEE(object sender, EventArgs e)
-        {
-            Response.Redirect("IEEE.aspx");
-        }
-        protected void Savvy(object sender, EventArgs e)
-        {
-            Response.Redirect("Savvy.aspx");
-        }
+        
         protected void toHome(object sender, EventArgs e)
         {
             Response.Redirect("HomePage.aspx");

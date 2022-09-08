@@ -284,3 +284,15 @@ body {
     font-size: 1vw;
     font-family: 'Montserrat';
 }
+.coursebtn {
+    border: none;
+    font-size: 2vw;
+    font-family: 'Montserrat';
+    background-color:transparent;
+    cursor: pointer;
+}
+.coursebtn:hover {
+    text-decoration-color:blue;
+    text-decoration:underline;
+
+}

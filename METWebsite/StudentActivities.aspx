@@ -52,11 +52,11 @@
         </div>
 
         
-        <div class="studentActivity">
-            <div class="incuabator">
-                 <asp:ImageButton runat="server" class="image" src="./images/stActivitiesPageImages/incubatorN.svg" OnClick="incubator" />
-            </div>
-            <div class="brain">
+        <div class="studentActivity" id="studentActivity" runat="server">
+           <%--<div class="clubDiv" >
+                 <asp:ImageButton runat="server"  class="image" src="./images/stActivitiesPageImages/incubatorN.svg" OnClick="incubator" />
+            </div>--%>
+            <%--<div class="brain">
                  <asp:ImageButton runat="server" class="image" src="./images/stActivitiesPageImages/brainN.svg" OnClick="GucBrain" />
             </div>
             <div class="acm">
@@ -70,7 +70,7 @@
             </div>
             <div class="svy">
                    <asp:ImageButton runat="server" class="image" src="./images/stActivitiesPageImages/svyN.svg" OnClick="Savvy" />
-            </div>
+            </div>--%>
         </div>
     </form>
 </body>

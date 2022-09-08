@@ -152,11 +152,19 @@ body {
     margin-right: 3.75vw;
 }
 
-#titleInput, #codeInput, #lectureInput, #tutorialInput, #labsInput, #credit {
+#titleInput, #codeInput, #lectureInput, #tutorialInput, #labsInput, #credit, #semesterInput {
     border: solid #FFD0A1 2px;
     border-radius: 5px;
     height: 4.63vh;
     width: 26.0416666vw;
+}
+
+#semesterInput {
+    border: solid #FFD0A1 2px;
+    border-radius: 5px;
+    height: 4.63vh;
+    width: 10.0416666vw;
+    padding-left: 0;
 }
 
 .majors {

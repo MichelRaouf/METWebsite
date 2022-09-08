@@ -28,6 +28,7 @@ namespace METWebsite
             int ctuts = Int16.Parse(tutorialInput.Value);
             int clabs = Int16.Parse(labsInput.Value);
             int ccredits = Int16.Parse(credit.Value);
+            int csemesterNo = Int16.Parse(semesterInput.Value);
 
 
             string cdescription = descriptionInput.Value.ToString();
@@ -58,6 +59,8 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor1.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor1.Parameters.Add(new SqlParameter("@major_name", "csen"));
+                addCourseMajor1.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
+
                 addCourseMajor1.ExecuteNonQuery();
                 con.Close();
             }
@@ -69,6 +72,7 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor2.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor2.Parameters.Add(new SqlParameter("@major_name", "dmet"));
+                addCourseMajor2.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
                 addCourseMajor2.ExecuteNonQuery();
                 con.Close();
             }
@@ -80,6 +84,7 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor3.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor3.Parameters.Add(new SqlParameter("@major_name", "networks"));
+                addCourseMajor3.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
                 addCourseMajor3.ExecuteNonQuery();
                 con.Close();
             }
@@ -91,6 +96,7 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor4.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor4.Parameters.Add(new SqlParameter("@major_name", "communications"));
+                addCourseMajor4.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
                 addCourseMajor4.ExecuteNonQuery();
                 con.Close();
             }
@@ -102,6 +108,7 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor5.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor5.Parameters.Add(new SqlParameter("@major_name", "electronics"));
+                addCourseMajor5.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
                 addCourseMajor5.ExecuteNonQuery();
                 con.Close();
             }
@@ -113,6 +120,7 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor6.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor6.Parameters.Add(new SqlParameter("@major_name", "bi"));
+                addCourseMajor6.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
                 addCourseMajor6.ExecuteNonQuery();
                 con.Close();
             }
@@ -124,6 +132,7 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor7.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor7.Parameters.Add(new SqlParameter("@major_name", "management"));
+                addCourseMajor7.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
                 addCourseMajor7.ExecuteNonQuery();
                 con.Close();
             }
@@ -134,6 +143,7 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor8.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor8.Parameters.Add(new SqlParameter("@major_name", "pharmacy"));
+                addCourseMajor8.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
                 addCourseMajor8.ExecuteNonQuery();
                 con.Close();
             }
@@ -145,6 +155,7 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor9.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor9.Parameters.Add(new SqlParameter("@major_name", "ems"));
+                addCourseMajor9.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
                 addCourseMajor9.ExecuteNonQuery();
                 con.Close();
             }
@@ -156,6 +167,7 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor10.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor10.Parameters.Add(new SqlParameter("@major_name", "mctr"));
+                addCourseMajor10.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
                 addCourseMajor10.ExecuteNonQuery();
                 con.Close();
             }
@@ -167,6 +179,8 @@ namespace METWebsite
                 con.Open();
                 addCourseMajor11.Parameters.Add(new SqlParameter("@course_id", Int16.Parse(course_id.Value.ToString())));
                 addCourseMajor11.Parameters.Add(new SqlParameter("@major_name", "graduate"));
+                addCourseMajor11.Parameters.Add(new SqlParameter("@semesterNo", csemesterNo));
+
                 addCourseMajor11.ExecuteNonQuery();
                 con.Close();
             }
