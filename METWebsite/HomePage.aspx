@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>MET Website</title>
-    <link rel="icon" href="./images/gucLogo.png">
+    <link rel="icon" href="./images/gucLogo.png"/>
     <link  rel="stylesheet" href="./StyleSheets/HomeStyles.css"/>
 </head>
     

@@ -60,7 +60,7 @@
                 <div class="section">
                     <label class="label">Background-Color</label>
                     <div class="colors">
-                        <div id="color1" runat="server" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color1" runat="server" class="gradients" onclick="selectGradient(id);"></div>
                         <div id="color2" runat="server" class="gradients" onclick="selectGradient(id);"></div>
                         <div id="color3" runat="server" class="gradients" onclick="selectGradient(id);"></div>
                         <div id="color4" runat="server" class="gradients" onclick="selectGradient(id);"></div>
@@ -81,10 +81,12 @@
                        
                         x[i].style.width = '20px';
                         x[i].style.height = '20px';
+                        x[i].setAttribute("ok", "");
                     }
                     var color = document.getElementById(id);
                     color.style.width = '25px';
                     color.style.height = '25px';
+                    color.setAttribute("ok", "1");
                     
                 }
             </script>
@@ -93,6 +95,12 @@
                 <div class="section">
                     <label class="label">Tracks</label>
                     <span id="hidden" runat="server"></span>
+                    <%--<div>
+                         <asp:Button runat="server" Text="+" CssClass="plus" OnClick="Unnamed2_Click" />
+                        <asp:Button runat="server" Text="Add Track" CssClass="labelTrack" OnClick="Unnamed2_Click" />
+                    </div>--%>
+                    
+                    
                     <label name="labelTrackName" class="labelTrack"><span id="plus" class="plus" onclick="addTrack();return false;">+ </span> Add Track</label>
 
                 </div>
