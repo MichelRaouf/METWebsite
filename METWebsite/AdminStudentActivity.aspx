@@ -99,8 +99,7 @@
                          <asp:Button runat="server" Text="+" CssClass="plus" OnClick="Unnamed2_Click" />
                         <asp:Button runat="server" Text="Add Track" CssClass="labelTrack" OnClick="Unnamed2_Click" />
                     </div>--%>
-                    
-                    
+
                     <label name="labelTrackName" class="labelTrack"><span id="plus" class="plus" onclick="addTrack();return false;">+ </span> Add Track</label>
 
                 </div>

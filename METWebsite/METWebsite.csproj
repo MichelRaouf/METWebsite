@@ -247,6 +247,7 @@
     <Content Include="StaffProfile.aspx" />
     <Content Include="Savvy.aspx" />
     <Content Include="StudentActivities.aspx" />
+    <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AboutUs.css" />
     <Content Include="images\gucLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -301,6 +302,7 @@
     <Content Include="StyleSheets\Savvy.css" />
     <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StyleSheets\studentActivities.css" />
+    <Content Include="StyleSheets\StudentActivityProfile.css" />
     <Content Include="StyleSheets\Try.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="Try.aspx" />
@@ -480,6 +482,12 @@
     </Compile>
     <Compile Include="StudentActivities.aspx.designer.cs">
       <DependentUpon>StudentActivities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentActivityProfile.aspx.cs">
+      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentActivityProfile.aspx.designer.cs">
+      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="TAsProfiles.aspx.cs">
       <DependentUpon>TAsProfiles.aspx</DependentUpon>
