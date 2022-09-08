@@ -137,7 +137,7 @@ body {
     opacity: 0.5;
 }
 
-.incuabator:hover .image, .brain:hover .image, .acm:hover .image, .gdg:hover .image, .ieee:hover .image, .svy:hover .image {
+    .clubDiv:hover .image{
     opacity: 1;
     width: 34vw;
     height: 25.764895330112722vw;
