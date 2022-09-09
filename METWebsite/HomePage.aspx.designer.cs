@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class HomePage
+    public partial class temp
     {
 
         /// <summary>
@@ -42,13 +42,13 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button readMoreButton;
 
         /// <summary>
-        /// newsdiv control.
+        /// newsDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl newsdiv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl newsDiv;
 
         /// <summary>
         /// viewCoursesButton control.

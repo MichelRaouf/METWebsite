@@ -140,11 +140,12 @@
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
+    <Content Include="StyleSheets\HomePage.css" />
+    <Content Include="HomePage.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="GDG.aspx" />
     <Content Include="GucBrain.aspx" />
-    <Content Include="HomePage.aspx" />
     <Content Include="IEEE.aspx" />
     <Content Include="images\aboutUsPageImages\about.svg" />
     <Content Include="images\adminImages\adminLogo.svg" />
@@ -297,7 +298,6 @@
     <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\GDG.css" />
     <Content Include="StyleSheets\GucBrain.css" />
-    <Content Include="StyleSheets\HomeStyles.css" />
     <Content Include="StyleSheets\IEEE.css" />
     <Content Include="StyleSheets\Incubator.css" />
     <Content Include="StyleSheets\InstructorHome.css" />
@@ -388,13 +388,6 @@
     </Compile>
     <Compile Include="GucBrain.aspx.designer.cs">
       <DependentUpon>GucBrain.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="IEEE.aspx.cs">
       <DependentUpon>IEEE.aspx</DependentUpon>
@@ -494,6 +487,13 @@
     </Compile>
     <Compile Include="TAsProfiles.aspx.designer.cs">
       <DependentUpon>TAsProfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Try.aspx.cs">
       <DependentUpon>Try.aspx</DependentUpon>

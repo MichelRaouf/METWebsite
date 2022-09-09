@@ -1,10 +1,20 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-html,body {
-    margin:0px;
-    height:100%;
-    
+.* {
+    box-sizing: border-box;
 }
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+/*.scrollable{
+    top:0px;
+    position:fixed;
+    background-color:white;
+    width:100%;
+}*/
 
 .header {
     height: 7.6171875vw;
@@ -13,24 +23,33 @@ html,body {
     align-items: center;
     flex-direction: row;
     justify-content: start;
-    top:0px;
-
-}
-
-.header > div {
-    flex-grow: 1 1 0;
-    display: flex;
-    background-color: #ffff;
-    padding: 20px;
-    font-size: 2vw;
     top: 0px;
 }
-/*.scrollable{
-    top:0px;
-    position:fixed;
-    background-color:white;
-    width:100%;
-}*/
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.facultyLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
 .login {
     position: relative;
     width: 10.590494791666666vw;
@@ -44,11 +63,50 @@ html,body {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+
     .login:hover {
         background-color: black;
         transition: 0.5s;
-        cursor:pointer;
+        cursor: pointer;
     }
+
+.navbar {
+    background-color: black;
+    height: 4.3vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+    .navbar > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5vw;
+    }
+
+.navbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+}
+
+    .navbtn:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid;
+        border-color: red;
+        border-width: 3px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
 .navbtnin {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5625vw;
@@ -64,88 +122,25 @@ html,body {
     border-width: 3px;
     cursor: default;
 }
-.navbtn {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5625vw;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    vertical-align: middle;
-}
-    .navbtn:hover {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: solid;
-        border-color: red;
-        border-width: 3px;
-        cursor: pointer;
-        transition: 0.5s;
-    }
-.navbar {
-    background-color: black;
-    height: 4.5vw;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
-    justify-content: space-around;
+
+.navImgHomeBookHeadphones {
+    width: 1.6vw;
+    height: 1.6vw;
 }
 
-    .navbar > div {
-        margin-left: 1vw;
-        flex-grow: 1 1 0;
-        display: flex;
-        padding: 1.3vw;
-        top: 0px;
-    }
-
-.logo {
-    width: 20.57vw;
-    height: 5.315104166666667vw;
+.navImgGroup {
+    width: 1.9vw;
+    height: 2.2vw;
 }
 
-.bar {
-    width: 2.57vw;
-    height: 5.315104166666667vw;
+.navImgGrad {
+    width: 1.6vw;
+    height: 1.6vw;
 }
 
-.navimg {
-    width: 1.8229166666666667vw;
-    height: 1.8229166666666667vw;
-    padding-top: .27vw;
-    vertical-align: middle;
-}
-
-.navimg2 {
-    width: 2.5vw;
-    height: 2.5vw;
-    vertical-align: middle;
-    padding-top: .4vw;
-}
-
-.navimg3 {
-    width: 2.3vw;
-    height: 2.3vw;
-    padding-top: .4vw;
-    vertical-align: middle;
-}
-
-.navimg4 {
-    width: 2.3vw;
-    height: 2.3vw;
-    padding-top: .4vw;
-    vertical-align: middle;
-}
-
-.label1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8vw;
-}
-
-.graduationImageDiv {
-    width: 100%;
+.navImgAbout {
+    width: 2vw;
+    height: 2vw;
 }
 
 .graduationImage {
@@ -160,7 +155,7 @@ html,body {
 .aboutParagraph {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.7vw;
-    font-weight: 300;    
+    font-weight: 300;
 }
 
 .readMoreDiv {
@@ -178,24 +173,12 @@ html,body {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
-.readMore:hover{
-    background-color:black;
-    transition:0.5s;
-    cursor:pointer;
-}
-.latestNewsDiv {
-    background-color: #ECECEC;
-    width: 100%;
-}
 
-
-.newslabel {
-    font-family: Montserrat;
-    font-size: 2.8vw;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 1.6vw;
-}
+    .readMore:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
 
 .news {
     margin-top: 1.6vw;
@@ -212,52 +195,31 @@ html,body {
     .news > div {
         flex-grow: 1 1 0;
         display: flex;
-        height:auto;
-        width:auto;
+        height: auto;
+        width: auto;
         font-size: 2vw;
         top: 0px;
     }
 
-.whitebox {
-    background-color: #FFFFFF;
-    opacity: 70%;
-    align-items:center;
-    align-content:center;
-    position:inherit;
-    width:auto;
-
-  
-}
-.whiteboxinfo {
-    background-color: #FFFFFF;
-    opacity: 70%;
-    
-    height:100%;
-    align-items: center;
-}
-.newsimage{
-   width:26vw;
-
-
-}
-.newsbtn {
-    position: relative;
-    width: 50%;
-    font-size: 1.8vw;
-    background-color:transparent;
-    border:none;
+.newsLabel {
     font-family: Montserrat;
-    left:-40%;
-    top: 25%;
-   
-}
-.newsbtn:hover{
-    text-decoration-line:underline;
-    text-decoration-color:blue;
-    cursor:pointer;
+    font-size: 2.8vw;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1.6vw;
+    margin-bottom: -8vw;
 }
 
-.newsitemlabel {
+.whiteBox {
+    background-color: #FFFFFF;
+    opacity: 70%;
+    align-items: center;
+    align-content: center;
+    position: inherit;
+    width: auto;
+}
+
+.newsItemLabel {
     font-family: Montserrat;
     font-size: 1.8vw;
     font-weight: 500;
@@ -265,20 +227,48 @@ html,body {
     letter-spacing: 0em;
     text-align: center;
     position: relative;
-    width:auto;
-    height:20vh;
+    width: auto;
+    height: 20vh;
 }
+
+.newsImage {
+    width: 26vw;
+}
+
+.whiteboxinfo {
+    background-color: #FFFFFF;
+    opacity: 70%;
+    height: 100%;
+    align-items: center;
+}
+
+.newsbtn {
+    position: relative;
+    width: 50%;
+    font-size: 1.8vw;
+    background-color: transparent;
+    border: none;
+    font-family: Montserrat;
+    left: -40%;
+    top: 25%;
+}
+
+    .newsbtn:hover {
+        text-decoration-line: underline;
+        text-decoration-color: blue;
+        cursor: pointer;
+    }
+
 .newsinfo {
     font-family: Montserrat;
     font-size: 1.2vw;
     font-weight: 500;
-    top:7%;
-    left:5%;
-    position:relative;
-    
+    top: 7%;
+    left: 5%;
+    position: relative;
 }
 
-.newsitem {
+.newsItem {
     background-color: #ECECEC;
     width: 99%;
     display: flex;
@@ -289,13 +279,13 @@ html,body {
     justify-content: space-between;
 }
 
-    .newsitem > div {
+    .newsItem > div {
         margin-left: 1vw;
         flex-grow: 1 1 0;
         display: flex;
         flex-direction: column;
         padding: 1vw;
-        width:auto;
+        width: auto;
         top: 0px;
     }
 
@@ -310,11 +300,6 @@ html,body {
 
 .pathsTextDiv {
     width: 54.21418vw;
-}
-
-.pathsPhoto {
-    width:53vw;
-    height:100%;
 }
 
 .pathsLabel {
@@ -348,43 +333,147 @@ html,body {
     font-family: 'Montserrat', sans-serif;
     margin: 5%;
 }
+
     .viewCourses:hover {
         background-color: red;
         transition: 0.5s;
-        color:white;
-        cursor:pointer;
+        color: white;
+        cursor: pointer;
     }
-.weGucians{
-    background-color:#343434
 
+.pathsPhoto {
+    width: 53vw;
+    height: 100%;
 }
-.gucianstitle{
-    text-align:center;
-   
+
+.weGUCians {
+    background-color: #343434;
+    text-align: center;
 }
-.GuciansLabel {
+
+    .weGUCians > div {
+        margin-left: 1vw;
+        margin-right: 1vw;
+        /*flex-grow: 1 1 0;
+        display: flex;*/
+    }
+
+.redLabel {
+    background-color: rgba(237,28,36,0.7);
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    display: inline-block;
+    padding: 0.1% 4% 0.1% 4%;
+}
+
+.guciansLabel {
     color: white;
+    opacity: 100%;
     font-size: 3vw;
     font-weight: bold;
-    padding: 1% 3% 1% 3%;
-    border: 2px solid #ED1C24;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background-color: #ED1C24
 }
+
+.gucianinfo {
+    background-color: #343434;
+    width: 99%;
+    display: flex;
+    align-items: center;
+    column-gap: 2.2vw;
+    flex-direction: row;
+    justify-content: start;
+}
+
+    .gucianinfo > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        top: 0px;
+    }
+
+.alumniinfo {
+    background-color: #343434;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    row-gap: -2px;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.gucianlabel {
+    font-family: Montserrat;
+    font-size: 3vw;
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    position: relative;
+    left: 3vw;
+}
+
+.name {
+    font-family: Montserrat;
+    font-size: 1.8vw;
+    font-weight: 600;
+    color: white;
+    margin-bottom: -1.5vw;
+}
+
+.description {
+    color: white;
+    font-family: Montserrat;
+    position: relative;
+    font-size: 1vw;
+    font-weight: 600;
+    margin-left: 1.3vw;
+}
+
+.showMore {
+    width: 18vw;
+    height: 4vw;
+    border-radius: 0.5vw;
+    background-color: #FFFFFF;
+    border: none;
+    font-size: 1.7vw;
+    margin-top: 2vw;
+    right: 1vw;
+    font-weight: bold;
+    color: #ED1C24;
+    margin-bottom: 1vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .showMore:hover {
+        background-color: red;
+        transition: 0.5s;
+        color: white;
+        cursor: pointer;
+    }
+
+.alumniImage {
+    width: 10vw;
+    height: 17vh;
+}
+
+.whiteVerBar {
+    width: 0.2vw;
+    height: 23vh;
+}
+
 .ContactUs {
     background-color: black;
     font-family: 'Montserrat', sans-serif;
-    color:white;
-
+    color: white;
 }
-.contacttitle{
-  font-size:2.7vw;
-  font-weight:bold;
 
-
-
+.contacttitle {
+    font-size: 2.7vw;
+    font-weight: bold;
 }
+
 .contactustext {
     margin-top: 10%;
     margin-bottom: 10%;
@@ -418,117 +507,4 @@ html,body {
 .contactText {
     margin-left: 10%;
     font-weight: 300;
-}
-
-.gucianinfo {
-    background-color: #343434;
-    width: 99%;
-    display: flex;
-    align-items: center;
-    column-gap: 2.2vw;
-    flex-direction: row;
-    justify-content: start;
-}
-
-    .gucianinfo > div {
-        flex-grow: 1 1 0;
-        display: flex;
-        top: 0px;
-    }
-
-.wegucians {
-    background-color: #343434;
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    row-gap: 1.5vw;
-    flex-direction: column;
-    justify-content: start;
-}
-
-    .wegucians > div {
-        margin-left: 1vw;
-        flex-grow: 1 1 0;
-        
-        display: flex;
-    }
-
-.redlabel {
-    margin-top: 3.9vh;
-    background-color: #ED1C24B2;
-    height: 4.5vw;
-    width: 29.2vw;
-}
-
-.alumniinfo {
-    background-color: #343434;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    row-gap: -2px;
-    flex-direction: column;
-    justify-content: start;
-}
-
-.gucianlabel {
-    font-family: Montserrat;
-    font-size: 3vw;
-    font-weight: 600;
-    letter-spacing: 0em;
-    text-align: center;
-    font-family: Montserrat;
-    font-weight: 600;
-    letter-spacing: 0em;
-    text-align: center;
-    color: white;
-    position: relative;
-    left: 3vw;
-}
-
-.name {
-    font-family: Montserrat;
-    font-size: 1.8vw;
-    font-weight: 600;
-    color: white;
-}
-
-.description {
-    color: white;
-    font-family: Montserrat;
-    position: relative;
-    font-size: 1vw;
-    font-weight: 600;
-    margin-left: 1.3vw;
-}
-
-.showmore {
-    width: 18vw;
-    height: 4vw;
-    border-radius: 0.5vw;
-    background-color: #FFFFFF;
-    border: none;
-    font-size: 1.7vw;
-    margin-top: 2vw;
-    right: 1vw;
-    font-weight: bold;
-    color: #ED1C24;
-    margin-bottom:1vw;
-    font-family: 'Montserrat', sans-serif;
-}
-.showmore:hover {
-    background-color: red;
-    transition: 0.5s;
-    color:white;
-    cursor:pointer;
-}
-.alumniImage{
-    width:10vw;
-    height :17vh;
-
-
-}
-.whiteVerBar{
-    width:0.2vw ;
-    height:23vh;
 }
