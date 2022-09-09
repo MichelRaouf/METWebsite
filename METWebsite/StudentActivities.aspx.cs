@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace METWebsite
 {
-    public partial class StudentActivities : System.Web.UI.Page
+    public partial class temp6 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,15 +21,13 @@ namespace METWebsite
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
             SqlDataReader reader = cmd.ExecuteReader();
-            string id = ""; string icon = ""; 
+            string id = ""; string icon = "";
             while (reader.Read())
             {
                 id = reader.GetValue(0).ToString();
                 icon = reader.GetValue(1).ToString();
-
                 var clubDiv = new HtmlGenericControl("div");
                 clubDiv.Attributes.Add("class", "clubDiv");
-
                 ImageButton clubIcon = new ImageButton();
                 clubIcon.ID = id;
                 clubIcon.Attributes.Add("class", "image");
@@ -38,23 +36,19 @@ namespace METWebsite
                 clubIcon.Attributes.Add("runat", "server");
                 clubIcon.Click += clubProfile;
                 clubDiv.Controls.Add(clubIcon);
-
                 studentActivity.Controls.Add(clubDiv);
             }
             con.Close();
         }
-
-        protected void ButtonLogin_Click(object sender, EventArgs e)
-        {
-            
-        }
         protected void clubProfile(object sender, EventArgs e)
         {
-
             Session["clubId"] = ((Control)sender).ID;
             Response.Redirect("studentActivityProfile.aspx");
         }
-        
+        protected void toLogin(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
         protected void toHome(object sender, EventArgs e)
         {
             Response.Redirect("HomePage.aspx");

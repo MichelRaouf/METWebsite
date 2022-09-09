@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class StudentActivities
+    public partial class temp6
     {
 
         /// <summary>

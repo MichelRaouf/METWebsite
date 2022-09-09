@@ -66,7 +66,10 @@ namespace METWebsite
             Session["instructorid"] = ((Control)sender).ID;
             Response.Redirect("StaffProfile.aspx");
         }
-
+        protected void toLogin(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+        }
         protected void toHome(object sender, EventArgs e)
         {
             Response.Redirect("HomePage.aspx");
