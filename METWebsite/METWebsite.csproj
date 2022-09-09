@@ -114,6 +114,7 @@
     <Content Include="AdminAddCourse.aspx" />
     <Content Include="AdminAddInstructor.aspx" />
     <Content Include="AdminHomePage.aspx" />
+    <Content Include="AdminInstructorToCourse.aspx" />
     <Content Include="AdminStudentActivity.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
@@ -139,6 +140,8 @@
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
     <Content Include="LecturersProfiles.aspx" />
+    <Content Include="StudentActivityProfile.aspx" />
+    <Content Include="StyleSheets\AdminInstructorToCourse.css" />
     <Content Include="StyleSheets\HomePage.css" />
     <Content Include="HomePage.aspx" />
     <Content Include="StyleSheets\InstructorsProfiles.css" />
@@ -147,6 +150,7 @@
     <Content Include="StyleSheets\AlumniPage.css" />
     <Content Include="StyleSheets\AboutUsPage.css" />
     <Content Include="StyleSheets\StudentActivities.css" />
+    <Content Include="StyleSheets\StudentActivityProfile.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
@@ -330,6 +334,13 @@
     <Compile Include="AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminInstructorToCourse.aspx.cs">
+      <DependentUpon>AdminInstructorToCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminInstructorToCourse.aspx.designer.cs">
+      <DependentUpon>AdminInstructorToCourse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminStudentActivity.aspx.cs">
       <DependentUpon>AdminStudentActivity.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -409,6 +420,13 @@
     </Compile>
     <Compile Include="StaffHomePage.aspx.designer.cs">
       <DependentUpon>StaffHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentActivityProfile.aspx.cs">
+      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentActivityProfile.aspx.designer.cs">
+      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="TAsProfiles.aspx.cs">
       <DependentUpon>TAsProfiles.aspx</DependentUpon>
