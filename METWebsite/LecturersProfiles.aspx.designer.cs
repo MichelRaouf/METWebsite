@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class LecturersProfiles
+    public partial class temp2
     {
 
         /// <summary>
@@ -33,30 +33,30 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// deandiv control.
+        /// deanDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl deandiv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl deanDiv;
 
         /// <summary>
-        /// vicediv control.
+        /// viceDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl vicediv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl viceDiv;
 
         /// <summary>
-        /// lecturerdiv control.
+        /// lecturerDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lecturerdiv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lecturerDiv;
     }
 }

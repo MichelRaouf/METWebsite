@@ -140,8 +140,13 @@
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
+    <Content Include="LecturersProfiles.aspx" />
     <Content Include="StyleSheets\HomePage.css" />
     <Content Include="HomePage.aspx" />
+    <Content Include="StyleSheets\InstructorsProfiles.css" />
+    <Content Include="StyleSheets\StaffHomePage.css" />
+    <Content Include="StaffHomePage.aspx" />
+    <Content Include="TAsProfiles.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="GDG.aspx" />
@@ -250,7 +255,6 @@
     <Content Include="Incubator.aspx" />
     <Content Include="InstructorHome.aspx" />
     <Content Include="InstructorViewCourse.aspx" />
-    <Content Include="LecturersProfiles.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="StaffProfile.aspx" />
     <Content Include="Savvy.aspx" />
@@ -286,7 +290,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\ACM.css" />
     <Content Include="StyleSheets\AdminAddAlumni.css" />
     <Content Include="StyleSheets\AdminAddCourse.css" />
@@ -302,14 +305,11 @@
     <Content Include="StyleSheets\Incubator.css" />
     <Content Include="StyleSheets\InstructorHome.css" />
     <Content Include="StyleSheets\InstructorViewCourse.css" />
-    <Content Include="StyleSheets\LecturersProfiles.css" />
     <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StyleSheets\Savvy.css" />
-    <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StyleSheets\studentActivities.css" />
     <Content Include="StyleSheets\Try.css" />
     <Content Include="SubForm.aspx" />
-    <Content Include="TAsProfiles.aspx" />
     <Content Include="Try.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -460,13 +460,6 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="StaffHomePage.aspx.cs">
-      <DependentUpon>StaffHomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StaffHomePage.aspx.designer.cs">
-      <DependentUpon>StaffHomePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="StudentActivities.aspx.cs">
       <DependentUpon>StudentActivities.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -481,19 +474,26 @@
     <Compile Include="SubForm.aspx.designer.cs">
       <DependentUpon>SubForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TAsProfiles.aspx.cs">
-      <DependentUpon>TAsProfiles.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TAsProfiles.aspx.designer.cs">
-      <DependentUpon>TAsProfiles.aspx</DependentUpon>
-    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffHomePage.aspx.cs">
+      <DependentUpon>StaffHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffHomePage.aspx.designer.cs">
+      <DependentUpon>StaffHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TAsProfiles.aspx.cs">
+      <DependentUpon>TAsProfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TAsProfiles.aspx.designer.cs">
+      <DependentUpon>TAsProfiles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Try.aspx.cs">
       <DependentUpon>Try.aspx</DependentUpon>

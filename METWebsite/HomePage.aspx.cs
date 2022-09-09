@@ -111,7 +111,6 @@ namespace METWebsite
         {
             Response.Redirect("AboutUsPage.aspx");
         }
-
         protected void readMoreButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("AboutUsPage.aspx");
