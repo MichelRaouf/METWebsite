@@ -110,13 +110,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AboutUsPage.aspx" />
     <Content Include="AdminAddAlumni.aspx" />
     <Content Include="AdminAddCourse.aspx" />
     <Content Include="AdminAddInstructor.aspx" />
     <Content Include="AdminHomePage.aspx" />
     <Content Include="AdminStudentActivity.aspx" />
-    <Content Include="AlumniPage.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
@@ -146,7 +144,11 @@
     <Content Include="StyleSheets\InstructorsProfiles.css" />
     <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StaffHomePage.aspx" />
+    <Content Include="StyleSheets\AlumniPage.css" />
+    <Content Include="StyleSheets\AboutUsPage.css" />
     <Content Include="TAsProfiles.aspx" />
+    <Content Include="AlumniPage.aspx" />
+    <Content Include="AboutUsPage.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="GDG.aspx" />
@@ -259,7 +261,6 @@
     <Content Include="StaffProfile.aspx" />
     <Content Include="Savvy.aspx" />
     <Content Include="StudentActivities.aspx" />
-    <Content Include="StyleSheets\AboutUs.css" />
     <Content Include="images\gucLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -296,7 +297,6 @@
     <Content Include="StyleSheets\AdminAddInstructor.css" />
     <Content Include="StyleSheets\AdminHome.css" />
     <Content Include="StyleSheets\AdminStudentActivity.css" />
-    <Content Include="StyleSheets\Alumni.css" />
     <Content Include="StyleSheets\CourseHome.css" />
     <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\GDG.css" />
@@ -317,13 +317,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutUsPage.aspx.cs">
-      <DependentUpon>AboutUsPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AboutUsPage.aspx.designer.cs">
-      <DependentUpon>AboutUsPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AdminAddAlumni.aspx.cs">
       <DependentUpon>AdminAddAlumni.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -358,13 +351,6 @@
     </Compile>
     <Compile Include="AdminStudentActivity.aspx.designer.cs">
       <DependentUpon>AdminStudentActivity.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AlumniPage.aspx.cs">
-      <DependentUpon>AlumniPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AlumniPage.aspx.designer.cs">
-      <DependentUpon>AlumniPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -494,6 +480,20 @@
     </Compile>
     <Compile Include="TAsProfiles.aspx.designer.cs">
       <DependentUpon>TAsProfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AlumniPage.aspx.cs">
+      <DependentUpon>AlumniPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlumniPage.aspx.designer.cs">
+      <DependentUpon>AlumniPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUsPage.aspx.cs">
+      <DependentUpon>AboutUsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUsPage.aspx.designer.cs">
+      <DependentUpon>AboutUsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Try.aspx.cs">
       <DependentUpon>Try.aspx</DependentUpon>

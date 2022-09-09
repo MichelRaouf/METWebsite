@@ -7,13 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace METWebsite
 {
-    public partial class AboutUsPage : System.Web.UI.Page
+    public partial class temp5 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void toHome(object sender, EventArgs e)
         {
             Response.Redirect("HomePage.aspx");
