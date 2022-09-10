@@ -140,7 +140,6 @@
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
     <Content Include="LecturersProfiles.aspx" />
-    <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminInstructorToCourse.css" />
     <Content Include="StyleSheets\HomePage.css" />
     <Content Include="HomePage.aspx" />
@@ -300,6 +299,7 @@
     <Content Include="StyleSheets\InstructorHome.css" />
     <Content Include="StyleSheets\InstructorViewCourse.css" />
     <Content Include="StyleSheets\StaffProfile.css" />
+    <Content Include="StudentActivityProfile.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -421,13 +421,6 @@
     <Compile Include="StaffHomePage.aspx.designer.cs">
       <DependentUpon>StaffHomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StudentActivityProfile.aspx.cs">
-      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StudentActivityProfile.aspx.designer.cs">
-      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="TAsProfiles.aspx.cs">
       <DependentUpon>TAsProfiles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -455,6 +448,13 @@
     </Compile>
     <Compile Include="StudentActivities.aspx.designer.cs">
       <DependentUpon>StudentActivities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentActivityProfile.aspx.cs">
+      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentActivityProfile.aspx.designer.cs">
+      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
