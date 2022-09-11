@@ -44,7 +44,6 @@ namespace METWebsite
             div2.Attributes.Add("class", "confirmationBox");
             div3.Attributes.Add("class", "confirmationButtons");
             label.Attributes.Add("class", "confirmationLabel"); 
-            string lol  = nameInput.Value;
             div.Controls.Add(div2);
             div2.Controls.Add(label);
             div2.Controls.Add(div3);
