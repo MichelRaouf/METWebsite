@@ -151,7 +151,12 @@ namespace METWebsite
             }
             reader3.Close();
         }
-
+        protected void toSearchRes(object sender, EventArgs e)
+        {
+            String search = searchInput.Text;
+            Session["searchInput"] = search;
+            Response.Redirect("LecturersSearchRes.aspx");
+        }
         private void ViewProfileClick(object sender, EventArgs e)
         {
             Session["instructorid"] = ((Control)sender).ID;

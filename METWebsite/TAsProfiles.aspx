@@ -51,10 +51,8 @@
         <div class="profileContainer" id="taDiv" runat="server" >
             <div class="hierarchyTitle">Teaching Assistants Team 
                 <div>
-                    <a class="searchButton" href="instructorsSearchRes.aspx">
-                        <img class="searchIcon" src="images/staff/search.png" />
-                    </a>
-                    <input type="text" placeholder="Search.."/>
+                    <asp:ImageButton runat="server" ImageUrl="images/staff/search.png" CssClass="searchButton" OnClick="toSearchRes" />
+                    <asp:TextBox placeholder="Search.." id="searchInput" runat="server"/>
                 </div>
             </div>
         </div>
