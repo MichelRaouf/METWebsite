@@ -445,6 +445,7 @@
     </Compile>
     <Compile Include="StudentActivityProfile.aspx.cs">
       <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="StudentActivityProfile.aspx.designer.cs">
       <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
