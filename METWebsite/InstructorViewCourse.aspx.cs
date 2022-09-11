@@ -12,6 +12,7 @@ namespace METWebsite
 {
     public partial class InstructorViewCourse : System.Web.UI.Page
     {
+        int EditId = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -89,14 +90,18 @@ namespace METWebsite
                 editSpan.InnerHtml = "Edit";
                 editButton.Controls.Add(editSpan);
 
-              //////////////////////////////////////////////////////////////
+              
                 editButton.ServerClick += (object sender1, EventArgs e1) => {
-                };
+                    ClientScript.RegisterStartupScript(this.GetType(), "key", "openNav();", true);
+                    EditId = updateId;
+                    editText.Text = td1.InnerHtml;
+                
+                    };
 
                  var deleteButton = new HtmlButton();
                 deleteButton.Attributes.Add("class","Delete");
                 deleteButton.ServerClick += (object sender1, EventArgs e1) => {
-
+                    // write delete code here
                 };
                 var deleteImg = new HtmlGenericControl("img");
                 deleteImg.Attributes.Add("src", "./images/InstructorHome/whiteDelete.svg");
@@ -243,7 +248,24 @@ namespace METWebsite
             Session["id"] = null;
             Response.Redirect("Login.aspx");
         }
+        protected void EditConfirm(object sender,EventArgs e)
+        {
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            SqlConnection con = new SqlConnection(strcon);
+            String editedText = editText.Text;
+            SqlCommand EditUpdate = new SqlCommand("updatesEdit", con);
+            EditUpdate.CommandType = System.Data.CommandType.StoredProcedure;
+            EditUpdate.Parameters.Add(new SqlParameter("@newDescription", editedText));
+            EditUpdate.Parameters.Add(new SqlParameter("@updateID", EditId));
+            con.Open();
+            EditUpdate.ExecuteNonQuery();
+            con.Close();
 
-       
+
+
+        }
+
+
+
     }
 }

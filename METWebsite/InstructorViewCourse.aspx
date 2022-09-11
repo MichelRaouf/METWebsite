@@ -7,10 +7,28 @@
     <title></title>
         <link rel="stylesheet" href="./StyleSheets/InstructorHome.css" />
     <link rel="stylesheet" href="./StyleSheets/InstructorViewCourse.css" />
+
 </head>
 <body>
     <form id="form1" runat="server">
-   
+
+        <div id="myNav" class="overlay">
+  
+  <div class="overlay-content">
+      <asp:Label Text="Edit Announcement" runat="server" CssClass="overlayTitle" />
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <hr />
+      <asp:TextBox runat="server"  id="editText" class="AnnouncmentTextBox" />
+<%--      <textbox runat="server" id="editText" class="AnnouncmentTextBox" ></textbox>--%>
+      <%--<input runat="server" id="editText" class="AnnouncmentTextBox" type="text" />--%>
+      <div class="confirm_cancel_Buttons">
+          
+                      <asp:Button CssClass="show-more" runat="server" Text="Confirm" OnClick="EditConfirm" />
+                      <asp:Button ID="Button2" CssClass="cancel" runat="server" Text="Cancel" />
+
+      </div>
+  </div>
+</div>
         <div class="header">
 
             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
@@ -93,27 +111,14 @@
             
         </div>
 
-        <span id="space"></span>
-        <span id="more7">
-            <div id="csyllabus2" runat="server">
-            </div>
-        </span>
+        
         <script>
-            document.documentElement.style.scrollBehavior = "smooth";
-            function myFunction() {
-                var space = document.getElementById("space");
-                var moreText = document.getElementById("more7");
-                var btnText = document.getElementById("mybtn7");
+            function openNav() {
+                document.getElementById("myNav").style.display = "block";
+            }
 
-                if (space.style.display === "none") {
-                    space.style.display = "inline";
-                    btnText.value = "Show More";
-                    moreText.style.display = "none";
-                } else {
-                    space.style.display = "none";
-                    btnText.value = "Show Less";
-                    moreText.style.display = "inline";
-                }
+            function closeNav() {
+                document.getElementById("myNav").style.display = "none";
             }
         </script>
 
