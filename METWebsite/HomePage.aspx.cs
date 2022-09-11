@@ -87,6 +87,10 @@ namespace METWebsite
             con.Close();
 
         }
+        protected void toLogin(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
         protected void toHome(object sender, EventArgs e)
         {
             Response.Redirect("HomePage.aspx");

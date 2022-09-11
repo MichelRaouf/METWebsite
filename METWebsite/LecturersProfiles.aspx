@@ -16,7 +16,7 @@
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                 <img class="bar" src="./images/topBarImages/bar.svg"/>
                 <label class="facultyLabel">Faculty of Media Engineering & Technology</label>
-                <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
+                <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login" OnClick="toLogin" />
             </div>
 
             <div class="navbar">
@@ -48,14 +48,12 @@
 
         </div>
 
-        <div class="profileContainer" id="deanDiv" runat="server" > 
-            <div class="hierarchyTitle">Dean
+        <div class="profileContainer" id="deanDiv" runat="server" >
+            <div class="hierarchyTitle">Dean 
                 <div>
-                    <a class="searchButton" href="instructorsSearchRes.aspx">
-                        <img class="searchIcon" src="images/staff/search.png" />
-                    </a>
-                    <input type="text" placeholder="Search.."/>
-                </div> 
+                    <asp:ImageButton runat="server" ImageUrl="images/staff/search.png" CssClass="searchButton" OnClick="toSearchRes" />
+                    <asp:TextBox placeholder="Search.." id="searchInput" runat="server"/>
+                </div>
             </div>
         </div>
 

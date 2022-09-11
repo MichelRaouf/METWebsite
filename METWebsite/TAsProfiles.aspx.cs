@@ -60,13 +60,21 @@ namespace METWebsite
                 taDiv.Controls.Add(div);
             }
         }
-
+        protected void toSearchRes(object sender, EventArgs e)
+        {
+            String search = searchInput.Text;
+            Session["searchInput"] = search;
+            Response.Redirect("TAsSearchRes.aspx");
+        }
         private void ViewProfileClick(object sender, EventArgs e)
         {
             Session["instructorid"] = ((Control)sender).ID;
             Response.Redirect("StaffProfile.aspx");
         }
-
+        protected void toLogin(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+        }
         protected void toHome(object sender, EventArgs e)
         {
             Response.Redirect("HomePage.aspx");

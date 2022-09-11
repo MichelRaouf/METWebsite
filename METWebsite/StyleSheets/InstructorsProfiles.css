@@ -196,16 +196,6 @@ html, body {
             outline: none;
         }
 
-.searchButton {
-    height: 1vw;
-    margin-top: -4vw;
-}
-
-.searchIcon {
-    width: 1.6vw;
-    height: 1.4vw;
-}
-
 .separatingBarDiv {
     width: 100%;
     height: fit-content;
@@ -278,3 +268,8 @@ html, body {
         transition: 0.5s;
         cursor: pointer;
     }
+
+.searchButton {
+    width: 1.6vw;
+    height: 1.4vw;
+}
