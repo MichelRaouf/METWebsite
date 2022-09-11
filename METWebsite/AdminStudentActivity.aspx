@@ -46,15 +46,15 @@
             <div class="column1">
                 <div class="section">
                     <label class="label">Title</label>
-                    <input id="title" runat="server" class="input" type="text" />
+                    <input id="title" runat="server" class="input" type="text" required />
                 </div>
                 <div class="section">
                     <label class="label">Type</label>
-                    <input id="type" runat="server"  class="input" type="text" />
+                    <input id="type" runat="server" class="input" type="text" required />
                 </div>
                 <div class="section">
                     <label class="label">Icon</label>
-                    <input id="icon" type="file" accept="image/*" name="image" id="file" class="addIcon" />
+                    <input type="file" accept="image/*" name="file" id="fileUpload" runat="server" class="addIcon" />
                     
                 </div>
                 <div class="section">
@@ -69,7 +69,7 @@
                 </div>
                 <div class="section">
                     <label class="label">About</label>
-                    <input id="about" runat="server" class="inputAbout" type="text" />
+                    <input id="about" runat="server" class="inputAbout" type="text" required />
                 </div>
             </div>
 
@@ -78,29 +78,44 @@
           
                     var x = document.getElementsByClassName("gradients");
                     for (var i = 0; i < x.length; i++) {
-                       
                         x[i].style.width = '20px';
                         x[i].style.height = '20px';
-                        x[i].setAttribute("ok", "");
+                       
+                        document.getElementById("Hidden"+(i+1)).value = "2";
                     }
                     var color = document.getElementById(id);
                     color.style.width = '25px';
                     color.style.height = '25px';
-                    color.setAttribute("ok", "1");
-                    
+
+                    if (id === "color1")
+                        document.getElementById("Hidden1").value = "1";
+                    else if (id === "color2")
+                        document.getElementById("Hidden2").value = "1";
+                    else if (id == "color3")
+                        document.getElementById("Hidden3").value = "1";
+                    else if (id == "color4")
+                        document.getElementById("Hidden4").value = "1";
+                    else if (id == "color5")
+                        document.getElementById("Hidden5").value = "1";
                 }
             </script>
 
             <div class="column2">
                 <div class="section">
                     <label class="label">Tracks</label>
-                    <span id="hidden" runat="server"></span>
+                    <div id="tracks" runat="server">
+                        <input id="TextTrack1" runat="server" class="input" type="text" required />
+                        <input id="TextTrack2" runat="server" class="input" type="text" />
+                        <input id="TextTrack3" runat="server" class="input" type="text" />
+                        <input id="TextTrack4" runat="server" class="input" type="text" />
+                        <input id="TextTrack5" runat="server" class="input" type="text" />
+                    </div>
                     <%--<div>
-                         <asp:Button runat="server" Text="+" CssClass="plus" OnClick="Unnamed2_Click" />
-                        <asp:Button runat="server" Text="Add Track" CssClass="labelTrack" OnClick="Unnamed2_Click" />
+                        <asp:Button runat="server" Text="+" CssClass="plus" OnClick="addTextBox"  />
+                        <asp:Button runat="server" Text="add track" CssClass="labelTrack" OnClick="addTextBox"  />
                     </div>--%>
 
-                    <label name="labelTrackName" class="labelTrack"><span id="plus" class="plus" onclick="addTrack();return false;">+ </span> Add Track</label>
+                    <%--<label name="labelTrackName" class="labelTrack"><span id="plus" class="plus" onclick="addTrack();return false;">+ </span> Add Track</label>--%>
 
                 </div>
                 <div class="section">
@@ -118,6 +133,10 @@
         </div>
 
         <input id="Hidden1" type="hidden" runat="server" />
+        <input id="Hidden2" type="hidden" runat="server" />
+        <input id="Hidden3" type="hidden" runat="server" />
+        <input id="Hidden4" type="hidden" runat="server" />
+        <input id="Hidden5" type="hidden" runat="server" />
 
 
         <script>
@@ -130,7 +149,6 @@
                     textBox.setAttribute("runat", "server");
                     textBox.classList.add("labelTrackName");
                     document.getElementById("hidden").appendChild(textBox);
-                    document.getElementById("Hidden1").value = x;
             }
         </script>  
     </form>

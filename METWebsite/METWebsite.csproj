@@ -139,6 +139,7 @@
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
     <Content Include="LecturersProfiles.aspx" />
+    <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\HomePage.css" />
     <Content Include="HomePage.aspx" />
     <Content Include="StyleSheets\InstructorsProfiles.css" />
@@ -196,11 +197,6 @@
     <Content Include="images\Profile\Haythem.svg" />
     <Content Include="images\Profile\officeIcon.svg" />
     <Content Include="images\Profile\phoneIcon.svg" />
-    <Content Include="images\stActivitiesPageImages\ACMIcon.svg" />
-    <Content Include="images\stActivitiesPageImages\BrainIcon.svg" />
-    <Content Include="images\stActivitiesPageImages\GDGIcon.svg" />
-    <Content Include="images\stActivitiesPageImages\IEEEIcon.svg" />
-    <Content Include="images\stActivitiesPageImages\SavvyIcon.svg" />
     <Content Include="images\staff\AmrElmougy.png" />
     <Content Include="images\staff\blackBar.png" />
     <Content Include="images\staff\book.png" />
@@ -244,12 +240,6 @@
     <Content Include="images\topBarImages\studactiv.svg" />
     <Content Include="images\aboutUsPageImages\WhyMET.svg" />
     <Content Include="images\aboutUsPageImages\yellowbar.svg" />
-    <Content Include="images\stActivitiesPageImages\acmN.svg" />
-    <Content Include="images\stActivitiesPageImages\brainN.svg" />
-    <Content Include="images\stActivitiesPageImages\gdgN.svg" />
-    <Content Include="images\stActivitiesPageImages\ieeeN.svg" />
-    <Content Include="images\stActivitiesPageImages\incubatorN.svg" />
-    <Content Include="images\stActivitiesPageImages\svyN.svg" />
     <Content Include="images\topBarImages\studactive-red.svg" />
     <Content Include="images\upicon.svg" />
     <Content Include="images\xbutton.svg" />
@@ -452,6 +442,12 @@
     </Compile>
     <Compile Include="StudentActivities.aspx.designer.cs">
       <DependentUpon>StudentActivities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentActivityProfile.aspx.cs">
+      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentActivityProfile.aspx.designer.cs">
+      <DependentUpon>StudentActivityProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubForm.aspx.cs">
       <DependentUpon>SubForm.aspx</DependentUpon>
