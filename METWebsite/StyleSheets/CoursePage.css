@@ -10,6 +10,26 @@ html {
     scroll-behavior: smooth;
 }
 
+.materialsUl {
+    vertical-align: middle;
+    list-style-type: none;
+    padding-left: 14vw;
+    font-size: 2vw;
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+.materialsLi {
+    display: flex;
+    direction: initial;
+    grid-column-gap: 20px;
+}
+
+.syllabus-line {
+    margin-left: 13.671875vw;
+    width: 81.38020833333333vw;
+}
+
 .flex-container-1 {
     display: flex;
     flex-direction: row;
@@ -19,11 +39,11 @@ html {
 }
 
 .flex-child-1 {
-    margin : auto;
+    margin: auto;
 }
 
     .flex-child-1:first-child {
-       padding-right : 4vw;
+        padding-right: 4vw;
         width: 38.393229166666666vw;
         overflow: hidden;
         font-family: Monda;
@@ -33,13 +53,9 @@ html {
         color: #FFFFFF;
         margin-left: 3.2552083333333335vw;
         position: relative;
-
-     
-     
     }
 
     .flex-child-1:last-child {
-       
     }
 
 .nav2-img {
@@ -73,7 +89,7 @@ html {
     font-size: 2.818035426731079vw;
     font-weight: 500;
     text-align: center;
-    color : black;
+    color: black;
 }
 
 .updates {
@@ -220,6 +236,15 @@ html {
     margin-left: 3.90625vw;
 }
 
+.materials {
+    font-family: 'Montserrat';
+    font-size: 1.6103059581320451vw;
+    font-weight: 300;
+    color: #000000;
+    margin-bottom: 3.2552083333333335vw;
+    margin-left: 10.90625vw;
+}
+
 .resources {
     font-family: 'Montserrat';
     font-size: 1.6103059581320451vw;
@@ -287,6 +312,7 @@ li {
 #more7 {
     display: none;
 }
+
 .login:hover {
     background-color: black;
     transition: 0.5s;
