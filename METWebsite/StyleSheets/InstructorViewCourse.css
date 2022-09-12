@@ -300,10 +300,116 @@ li {
     cursor: pointer;
     transition: 0.5s;
 }
-.updatesTable {
+#updatesTable {
     border : none;
     table-layout: auto;
     width: 80%;
-    font-size : 35px;
+    font-size : 2vw;
+}
+.Edit {
+    background-color: #FFCB05;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 10vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    text-indent: -0.6510416666666666vw;
+}
+.editIcon {
+    vertical-align: middle;
+    justify-content: start;
+    margin-right: 1vw;
+    width: 2vw;
+    height: 2vw;
 }
 
+.Edit:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.Delete {
+    background-color: #ED1C24;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 10vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    text-indent: -0.6510416666666666vw;
+}
+.AddNew {
+    display : block;
+    background-color: black;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 20vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    margin : auto;
+    text-indent: -0.6510416666666666vw;
+    margin-bottom : 2vw;
+    margin-top : 2vw;
+    cursor : pointer;
+}
+
+.Delete:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.innerSpan {
+   vertical-align : middle;
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: white;
+    font-family: "Montserrat";
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+.weekEdit{
+    background: url(".images/InstructorHome/blackEdit.svg");
+    margin-left: 74vw;
+    width: 3.5%;
+    height: 3.5%;
+}
+.materialsUl {
+    vertical-align: middle;
+    list-style-type: none;
+    padding-left: 14vw;
+    font-size: 2vw;
+    display: grid;
+  
+    grid-row-gap: 10px;
+}
+.materialsLi {
+    display: flex;
+    direction :initial;
+    grid-column-gap:20px;
+}
+
+.AddNewMaterials {
+    display: block;
+    background-color: black;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 15vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    margin: auto;
+    text-indent: -0.6510416666666666vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    cursor: pointer;
+}
+    

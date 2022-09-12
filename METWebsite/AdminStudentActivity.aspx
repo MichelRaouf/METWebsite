@@ -9,6 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+       
         <div class="scrollable">
             <div class="header">
 
@@ -45,30 +46,30 @@
             <div class="column1">
                 <div class="section">
                     <label class="label">Title</label>
-                    <input id="title" class="input" type="text" />
+                    <input id="title" runat="server" class="input" type="text" required />
                 </div>
                 <div class="section">
                     <label class="label">Type</label>
-                    <input id="type" type="text" />
+                    <input id="type" runat="server" class="input" type="text" required />
                 </div>
                 <div class="section">
                     <label class="label">Icon</label>
-                    <input id="icon" type="file" accept="image/*" name="image" id="file" class="addIcon" />
+                    <input type="file" accept="image/*" name="file" id="fileUpload" runat="server" class="addIcon" />
                     
                 </div>
                 <div class="section">
                     <label class="label">Background-Color</label>
                     <div class="colors">
-                        <div id="color1" class="gradients" onclick=selectGradient(id);></div>
-                        <div id="color2" class="gradients" onclick=selectGradient(id);></div>
-                        <div id="color3" class="gradients" onclick=selectGradient(id);></div>
-                        <div id="color4" class="gradients" onclick=selectGradient(id);></div>
-                        <div id="color5" class="gradients" onclick=selectGradient(id);></div>
+                        <div id="color1" runat="server" class="gradients" onclick="selectGradient(id);"></div>
+                        <div id="color2" runat="server" class="gradients" onclick="selectGradient(id);"></div>
+                        <div id="color3" runat="server" class="gradients" onclick="selectGradient(id);"></div>
+                        <div id="color4" runat="server" class="gradients" onclick="selectGradient(id);"></div>
+                        <div id="color5" runat="server" class="gradients" onclick="selectGradient(id);"></div>
                     </div>
                 </div>
                 <div class="section">
                     <label class="label">About</label>
-                    <input id="about" class="inputAbout" type="text" />
+                    <input id="about" runat="server" class="inputAbout" type="text" required />
                 </div>
             </div>
 
@@ -77,31 +78,53 @@
           
                     var x = document.getElementsByClassName("gradients");
                     for (var i = 0; i < x.length; i++) {
-                       
                         x[i].style.width = '20px';
                         x[i].style.height = '20px';
+                       
+                        document.getElementById("Hidden"+(i+1)).value = "2";
                     }
                     var color = document.getElementById(id);
                     color.style.width = '25px';
                     color.style.height = '25px';
-                    
+
+                    if (id === "color1")
+                        document.getElementById("Hidden1").value = "1";
+                    else if (id === "color2")
+                        document.getElementById("Hidden2").value = "1";
+                    else if (id == "color3")
+                        document.getElementById("Hidden3").value = "1";
+                    else if (id == "color4")
+                        document.getElementById("Hidden4").value = "1";
+                    else if (id == "color5")
+                        document.getElementById("Hidden5").value = "1";
                 }
             </script>
 
             <div class="column2">
                 <div class="section">
                     <label class="label">Tracks</label>
-                    <span id="hidden"></span>
-                    <label name="labelTrackName" class="labelTrack"><span id="plus" class="plus" onclick="myFunction();return false;">+ </span> Add Track</label>
+                    <div id="tracks" runat="server">
+                        <input id="TextTrack1" runat="server" class="input" type="text" required />
+                        <input id="TextTrack2" runat="server" class="input" type="text" />
+                        <input id="TextTrack3" runat="server" class="input" type="text" />
+                        <input id="TextTrack4" runat="server" class="input" type="text" />
+                        <input id="TextTrack5" runat="server" class="input" type="text" />
+                    </div>
+                    <%--<div>
+                        <asp:Button runat="server" Text="+" CssClass="plus" OnClick="addTextBox"  />
+                        <asp:Button runat="server" Text="add track" CssClass="labelTrack" OnClick="addTextBox"  />
+                    </div>--%>
+
+                    <%--<label name="labelTrackName" class="labelTrack"><span id="plus" class="plus" onclick="addTrack();return false;">+ </span> Add Track</label>--%>
 
                 </div>
                 <div class="section">
                     <label class="label">Facebook Page Link</label>
-                    <input id="facebook" class="input" type="text" />
+                    <input id="facebook" runat="server" class="input" type="text" />
                 </div>
                 <div class="section">
                     <label class="label">Instagram Page Link</label>
-                    <input id="instagram" class="input" type="text" />
+                    <input id="instagram" runat="server" class="input" type="text" />
                 </div>
             </div>
         </div>
@@ -109,13 +132,23 @@
             <asp:Button CssClass="add" runat="server" Text="Add" OnClick="addStudentActivity"/>
         </div>
 
+        <input id="Hidden1" type="hidden" runat="server" />
+        <input id="Hidden2" type="hidden" runat="server" />
+        <input id="Hidden3" type="hidden" runat="server" />
+        <input id="Hidden4" type="hidden" runat="server" />
+        <input id="Hidden5" type="hidden" runat="server" />
+
+
         <script>
-            function myFunction() {
-                var textBox = document.createElement("input");
-                textBox.setAttribute("type", "text");
-                textBox.setAttribute("class", "input");
-                textBox.classList.add("labelTrackName");
-                document.getElementById("hidden").appendChild(textBox);
+            var x = 0;
+            function addTrack() {
+                    var textBox = document.createElement("input");
+                    textBox.setAttribute("type", "text");
+                    textBox.setAttribute("class", "input");
+                    textBox.setAttribute("id", "trackInput" + (++x));
+                    textBox.setAttribute("runat", "server");
+                    textBox.classList.add("labelTrackName");
+                    document.getElementById("hidden").appendChild(textBox);
             }
         </script>  
     </form>

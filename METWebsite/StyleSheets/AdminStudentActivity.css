@@ -176,7 +176,6 @@ body {
 .add {
     width: 110px;
     height: 35px;
-    background-color: #FFD0A1;
     color: white;
     border: none;
     border-radius: 5px;
@@ -184,6 +183,7 @@ body {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
+    background-color: #FFD0A1;
 }
 .add:hover{
     cursor:pointer;
@@ -195,20 +195,48 @@ body {
 }
 .plus{
     color: #FFD0A1;
+    font-size:1.2vw;
+    border:none;
+    background-color:transparent;
+    cursor:pointer;
 }
 .plus:hover{
     cursor:pointer;
-    font-size:20px;
+    font-size:1.5vw;
 }
 .labelTrack {
     font-size: 1.2vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    column-gap:20px;
+    column-gap: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
 }
-
+   
 #hidden{
     display:flex;
     flex-direction:column;
     row-gap:10px;
+}
+
+input[type=file]::file-selector-button {
+    border: 2px solid #FFD0A1;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: #FFD0A1;
+    transition: 1s;
+    color:white;
+}
+    input[type=file]::file-selector-button:hover {
+        background-color: black;
+        border: 2px solid black;
+        transition: 0.5s;
+        cursor:pointer;
+    }
+
+#tracks{
+    display:flex;
+    flex-direction:column;
+    row-gap:7px;
 }
