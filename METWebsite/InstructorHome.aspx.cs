@@ -42,7 +42,6 @@ namespace METWebsite
             
             SqlCommand getInstructorsCurrentCourses = new SqlCommand("getInstructorsCurrentCourses", con);
             getInstructorsCurrentCourses.CommandType = System.Data.CommandType.StoredProcedure;
-            //SqlDataAdapter da = new SqlDataAdapter(getInstructorsCurrentCourses);
             getInstructorsCurrentCourses.Parameters.Add(new SqlParameter("@InstructorID", InstructorID));
             SqlDataReader reader2 = getInstructorsCurrentCourses.ExecuteReader();
             while (reader2.Read())

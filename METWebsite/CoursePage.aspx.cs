@@ -32,7 +32,7 @@ namespace METWebsite
             course_title.ExecuteNonQuery();
             con.Close();
 
-            ctitle.InnerHtml = "("+ code.Value.ToString()+") "+ title.Value.ToString();
+            ctitle.InnerHtml = "(" + code.Value.ToString() + ") " + title.Value.ToString();
 
             SqlCommand course_details = new SqlCommand("coursedetails", con);
             course_details.CommandType = System.Data.CommandType.StoredProcedure;
@@ -158,41 +158,100 @@ namespace METWebsite
             course_syll.ExecuteNonQuery();
 
             SqlDataReader readersyll = course_syll.ExecuteReader();
+            List<List<String>> weeks = new List<List<String>>();
+            while (readersyll.Read())
+            {
+                List<String> list = new List<string>();
+                list.Add(readersyll.GetValue(0).ToString());
+                list.Add(readersyll.GetValue(1).ToString());
+                list.Add(readersyll.GetValue(2).ToString());
+                list.Add(readersyll.GetValue(3).ToString());
+                weeks.Add(list);
+            }
+            con.Close();
+
             csyllabus.InnerHtml = "";
             int c = 0;
-            while (c < 3 && readersyll.Read())
+            while (c < 3 && c < weeks.Count)
             {
                 csyllabus.InnerHtml += "<div class=\"flex-container-2\">\r\n" +
                     "<div class=\"flex-child\">\r\n" +
                     "<p class=\"syllabus-title\">Week</p>\r\n" +
-                    "<p class=\"week-number\">" + readersyll.GetValue(0).ToString() + "</p>\r\n\r\n</div>";
+                    "<p class=\"week-number\">" + weeks[c][0] + "</p>\r\n\r\n</div>";
                 csyllabus.InnerHtml += "   <div class=\"flex-child\">\r\n" +
-                    " <p class=\"syllabus-title\">" + readersyll.GetValue(1).ToString() + "</p>\r\n  " +
+                    " <p class=\"syllabus-title\">" + weeks[c][1] + "</p>\r\n  " +
                     " <p class=\"syllabus-description\">\r\n" +
-                    readersyll.GetValue(2).ToString() + "</p>\r\n </div>\r\n </div>";
+                    weeks[c][2] + "</p>\r\n </div>\r\n </div>";
+
+                //Materials
+                csyllabus.InnerHtml += "            <ul class=\"materials\">\r\n";
+
+                SqlCommand weekMaterials = new SqlCommand("weekMaterials", con);
+                weekMaterials.CommandType = System.Data.CommandType.StoredProcedure;
+                int temp = Int32.Parse(weeks[c][3]);
+                weekMaterials.Parameters.Add(new SqlParameter("@weekSerial", temp));
+                con.Open();
+                weekMaterials.ExecuteNonQuery();
+                SqlDataReader materialsReader = weekMaterials.ExecuteReader();
+
+                while (materialsReader.Read())
+                {
+                    csyllabus.InnerHtml += " <li>";
+                    csyllabus.InnerHtml += "<a href=\" " + materialsReader.GetValue(1).ToString() + "\">";
+                    csyllabus.InnerHtml += materialsReader.GetValue(0).ToString() + "</a></li>";
+
+                }
+                csyllabus.InnerHtml += "</ul>";
+                con.Close();
+
                 if (c < 2)
                 {
                     csyllabus.InnerHtml += "<img class=\"syllabus-line\" src=\"./images/coursePageImages/line.svg\" />\r\n";
                 }
+
                 c++;
             }
 
             csyllabus2.InnerHtml = "";
             csyllabus2.InnerHtml += "<img class=\"syllabus-line\" src=\"./images/coursePageImages/line.svg\" />\r\n";
 
-            while (readersyll.Read())
+            while (c < weeks.Count)
             {
                 csyllabus2.InnerHtml += "<div class=\"flex-container-2\">\r\n" +
                     "<div class=\"flex-child\">\r\n" +
                     "<p class=\"syllabus-title\">Week</p>\r\n" +
-                    "<p class=\"week-number\">" + readersyll.GetValue(0).ToString() + "</p>\r\n\r\n</div>";
+                    "<p class=\"week-number\">" + weeks[c][0] + "</p>\r\n\r\n</div>";
                 csyllabus2.InnerHtml += "   <div class=\"flex-child\">\r\n" +
-                    " <p class=\"syllabus-title\">" + readersyll.GetValue(1).ToString() + "</p>\r\n  " +
+                    " <p class=\"syllabus-title\">" + weeks[c][1] + "</p>\r\n  " +
                     " <p class=\"syllabus-description\">\r\n" +
-                    readersyll.GetValue(2).ToString() + "</p>\r\n </div>\r\n </div>";
+                    weeks[c][2] + "</p>\r\n </div>\r\n </div>";
+
+                //Materials
+                csyllabus2.InnerHtml += "            <ul class=\"materials\">\r\n";
+
+                SqlCommand weekMaterials = new SqlCommand("weekMaterials", con);
+                weekMaterials.CommandType = System.Data.CommandType.StoredProcedure;
+                int temp = Int32.Parse(weeks[c][3]);
+                weekMaterials.Parameters.Add(new SqlParameter("@weekSerial", temp));
+                con.Open();
+                weekMaterials.ExecuteNonQuery();
+                SqlDataReader materialsReader = weekMaterials.ExecuteReader();
+
+                while (materialsReader.Read())
+                {
+                    csyllabus2.InnerHtml += " <li>";
+                    csyllabus2.InnerHtml += "<a href=\" " + materialsReader.GetValue(1).ToString() + "\">";
+                    csyllabus2.InnerHtml += materialsReader.GetValue(0).ToString() + "</a></li>";
+
+                }
+                csyllabus2.InnerHtml += "</ul>";
+                con.Close();
+
                 csyllabus2.InnerHtml += "<img class=\"syllabus-line\" src=\"./images/coursePageImages/line.svg\" />\r\n";
+
+                c++;
             }
-            con.Close();
+
 
 
         }

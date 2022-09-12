@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace METWebsite
 {
-    public partial class TAsProfiles : System.Web.UI.Page
+    public partial class temp3 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,10 +30,10 @@ namespace METWebsite
                 div.Attributes.Add("class", "profileData");
                 var profimg = new HtmlGenericControl("img");
                 profimg.Attributes.Add("src", "images/staff/Haytham.png");
-                profimg.Attributes.Add("style", "width:16.276041666666668vw");
+                profimg.Attributes.Add("class", "profilePicture");
                 var br = new HtmlGenericControl("br");
                 var namediv = new HtmlGenericControl("div");
-                namediv.Attributes.Add("class", "Name");
+                namediv.Attributes.Add("class", "name");
                 namediv.InnerHtml = name;
                 var maildiv = new HtmlGenericControl("div");
                 maildiv.Attributes.Add("class", "mailContainer");
@@ -47,7 +47,6 @@ namespace METWebsite
                 officediv.InnerHtml = office;
                 Button b = new Button();
                 b.ID = id;
-
                 b.Attributes.Add("class", "viewProfile");
                 b.Attributes.Add("runat", "server");
                 b.Text = "View Profile";
@@ -58,17 +57,24 @@ namespace METWebsite
                 div.Controls.Add(maildiv);
                 div.Controls.Add(officediv);
                 div.Controls.Add(b);
-                tadiv.Controls.Add(div);
+                taDiv.Controls.Add(div);
             }
-
         }
-
+        protected void toSearchRes(object sender, EventArgs e)
+        {
+            String search = searchInput.Text;
+            Session["searchInput"] = search;
+            Response.Redirect("TAsSearchRes.aspx");
+        }
         private void ViewProfileClick(object sender, EventArgs e)
         {
             Session["instructorid"] = ((Control)sender).ID;
             Response.Redirect("StaffProfile.aspx");
         }
-
+        protected void toLogin(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+        }
         protected void toHome(object sender, EventArgs e)
         {
             Response.Redirect("HomePage.aspx");

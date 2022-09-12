@@ -138,7 +138,7 @@ tr:nth-child(even) {
     height : 2vw;
 
 }
-#logoutlabel {
+.logoutlabel {
     font-family: 'Montserrat', sans-serif;
     vertical-align: middle;
     font-size: 1.302vw;

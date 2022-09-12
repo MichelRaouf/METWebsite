@@ -1,18 +1,29 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-html, body {
-    margin: 0;
-    height: 100%;
-
+.* {
+    box-sizing: border-box;
 }
 
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+/*.scrollable{
+    top:0px;
+    position:fixed;
+    background-color:white;
+    width:100%;
+}*/
+
 .header {
-    height: 5.5vw;
+    height: 7.61716752vw;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: start;
+    top: 0px;
 }
 
     .header > div {
@@ -23,46 +34,43 @@ html, body {
         font-size: 2vw;
         top: 0px;
     }
+
 .logo {
-    width: 14vw;
-    height: 4vw;
+    width: 20.57vw;
+    height: 5.31510415vw;
 }
 
 .bar {
     width: 2.57vw;
-    height: 4vw;
+    height: 5.31510415vw;
+}
+
+.facultyLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
 }
 
 .login {
     position: relative;
-    width: 8.4vw;
-    height: 3.1vw;
+    width: 10.590494791666666vw;
+    height: 3.7109375vw;
     border-radius: 0.32552vw;
     background-color: #FFCB05;
     border: none;
-    font-size: 1.4vw;
-    margin-left: 33vw;
+    font-size: 1.5625vw;
+    margin-left: 22vw;
     font-weight: bold;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
-.navbtn {
-   /* border: solid;
-    border-color: green;*/
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4vw;
-    font-weight: 400;
-    background-color: black;
-    color: white;
-
-}
+    .login:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
 
 .navbar {
-    /*z-index: 10000;
-   position: fixed;
-   top: 0px;
-   width: 100%;*/
     background-color: black;
     height: 4.3vw;
     width: 100%;
@@ -73,116 +81,32 @@ html, body {
 }
 
     .navbar > div {
-      /*  border: solid;
-        border-color: green;*/
         display: flex;
-        flex-direction:row;
-        justify-content:center;
-        align-items:center;
-        margin:1.5vw;
-        
-        
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5vw;
     }
 
-
-
-.navimg {
-    /*border:solid;
-    border-color:green;*/
-    width: 1.6vw;
-    height: 1.6vw;
-    
-}
-
-.navimg2 {
-    /* border: solid;
-    border-color: green;*/
-    
-    width: 1.9vw;
-    height: 2.2vw;
-    
-}
-
-.navimg3 {
-    width: 1.6vw;
-    height: 1.6vw;
-    
-}
-
-.navimg4 {
-    width: 2vw;
-    height: 2vw;
-    
-}
-
-.label1 {
+.navbtn {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6vw;
-}
-
-.meetTAs {
-   /* border:solid;
-    border-color: red;
-    padding: 0;
-    margin: 0;*/
-}
-.meetLecturers, .meetTAs {
-    width: 100%;
-    padding: -5px;
-    height: 20vw;
-    margin-left: -1px;
-    margin-right: -1px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-}
-.lecturersImg, .TAsImg {
-    opacity:70%;
-    height: 20vw;
-    transition: all .3s ease-in-out;
-}
- 
-.meetTAs{
-    margin-top:-1px;
- 
-}
-.imageTxt {
-    position: absolute;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3vw;
-    font-weight: 700;
-    color:white;
-    text-decoration:none;
-}
-.imageTxt:hover{
-    cursor:pointer;
-    text-decoration:underline;
-    text-decoration-color:white;
-}
-
-.lecturersImg:hover,.TAsImg:hover {
-    opacity:90%;
-    transform: scale(1.3);
-}
-.login:hover {
+    font-size: 1.4vw;
+    font-weight: 400;
     background-color: black;
-    transition: 0.5s;
-    cursor: pointer;
+    color: white;
 }
 
-.navbtn:hover {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid;
-    border-color: red;
-    border-width: 3px;
-    cursor: pointer;
-    transition: 0.5s;
-}
+    .navbtn:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid;
+        border-color: red;
+        border-width: 3px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
 .navbtnin {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5625vw;
@@ -197,3 +121,66 @@ html, body {
     border-color: red;
     border-width: 3px;
     cursor: default;
+}
+
+.navImgHomeBookHeadphones {
+    width: 1.6vw;
+    height: 1.6vw;
+}
+
+.navImgGroup {
+    width: 1.9vw;
+    height: 2.2vw;
+}
+
+.navImgGrad {
+    width: 1.6vw;
+    height: 1.6vw;
+}
+
+.navImgAbout {
+    width: 2vw;
+    height: 2vw;
+}
+
+.meetLecturers, .meetTAs {
+    width: 100%;
+    padding: -5px;
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.meetTAs {
+    margin-top: -1px;
+}
+
+.lecturersImg, .TAsImg {
+    opacity: 70%;
+    height: 20vw;
+    transition: all .3s ease-in-out;
+    width: 100%;
+}
+
+    .lecturersImg:hover, .TAsImg:hover {
+        opacity: 90%;
+        transform: scale(1.3);
+    }
+
+.imageTxt {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vw;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+    .imageTxt:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: white;
+    }

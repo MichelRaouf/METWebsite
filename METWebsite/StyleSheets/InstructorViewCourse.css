@@ -177,28 +177,9 @@ html {
     margin-bottom: 3.2552083333333335vw;
 }
 
-.show-more {
-    background-color: #FFCB05;
-    align-content: center;
-    width: 10vw;
-    height: 3vw;
-    border-radius: 0.32552vw;
-    border: none;
-    font-size: 1.2vw;
-    font-weight: 600;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    align-items: center;
-    display: flex;
-    display: grid;
-    margin: auto;
-}
 
-    .show-more:hover {
-        background-color: black;
-        transition: 0.5s;
-        cursor: pointer;
-    }
+
+   
 
 .instructors-title {
     font-family: 'Montserrat';
@@ -300,10 +281,208 @@ li {
     cursor: pointer;
     transition: 0.5s;
 }
-.updatesTable {
+#updatesTable {
     border : none;
     table-layout: auto;
     width: 80%;
-    font-size : 35px;
+    font-size : 2vw;
 }
+.Edit {
+    background-color: #FFCB05;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 10vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    text-indent: -0.6510416666666666vw;
+}
+.editIcon {
+    vertical-align: middle;
+    justify-content: start;
+    margin-right: 1vw;
+    width: 2vw;
+    height: 2vw;
+}
+
+.Edit:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.Delete {
+    background-color: #ED1C24;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 10vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    text-indent: -0.6510416666666666vw;
+}
+.AddNew {
+    display : block;
+    background-color: black;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 20vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    margin : auto;
+    text-indent: -0.6510416666666666vw;
+    margin-bottom : 2vw;
+    margin-top : 2vw;
+    cursor : pointer;
+}
+
+.Delete:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.innerSpan {
+   vertical-align : middle;
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: white;
+    font-family: "Montserrat";
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+.weekEdit{
+    background: url(".images/InstructorHome/blackEdit.svg");
+    margin-left: 74vw;
+    width: 3.5%;
+    height: 3.5%;
+}
+.materialsUl {
+    vertical-align: middle;
+    list-style-type: none;
+    padding-left: 14vw;
+    font-size: 2vw;
+    display: grid;
+  
+    grid-row-gap: 10px;
+}
+.materialsLi {
+    display: flex;
+    direction :initial;
+    grid-column-gap:20px;
+}
+
+.AddNewMaterials {
+    display: block;
+    background-color: black;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 15vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    margin: auto;
+    text-indent: -0.6510416666666666vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    cursor: pointer;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.overlay-content {
+    background-color : white;
+    border: solid 1px;  
+    border-radius: 6px;
+    position: relative;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    
+    margin : auto;
+}
+
+
+ 
+
+.overlay .closebtn {
+    font-size: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+
+}
+.overlayTitle {
+    color: black;
+}
+.AnnouncmentTextBox{
+    width : 600px;
+    height: 216px;
+    font-size : 20px;
+    margin-top : 12px;
+}
+.confirm_cancel_Buttons{
+    display : flex;
+    flex-direction: row;
+    column-gap : 15px;
+    margin-left :360px;
+    margin-top: 16px;
+    margin-bottom : 16px;
+}
+.show-more {
+    background-color: #FFCB05;
+    align-content: center;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.32552vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+    .show-more:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+.cancel {
+    background-color: #E6E6E6;
+    align-content: center;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.32552vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #A3A3A3;
+    font-family: 'Montserrat', sans-serif;
+}
+    .cancel:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
 
