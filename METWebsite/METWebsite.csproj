@@ -142,6 +142,7 @@
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
+    <Content Include="images\ErrorIcon.png" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
@@ -161,7 +162,9 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="images\aboutUsPageImages\about.svg" />
     <Content Include="images\adminImages\adminLogo.svg" />
+    <Content Include="images\adminImages\close.png" />
     <Content Include="images\adminImages\coursesIcon.svg" />
+    <Content Include="images\adminImages\dashboard .png" />
     <Content Include="images\adminImages\dashboardIcon-white.svg" />
     <Content Include="images\adminImages\dashboardIcon.svg" />
     <Content Include="images\adminImages\homeIcon.svg" />
