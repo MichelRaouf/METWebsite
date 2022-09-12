@@ -156,6 +156,7 @@
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\AlumniPage.css" />
     <Content Include="StyleSheets\AboutUsPage.css" />
+    <Content Include="StyleSheets\StudentActivityProfile.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
