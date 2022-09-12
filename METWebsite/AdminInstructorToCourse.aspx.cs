@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace METWebsite
 {
-    public partial class AdminInstructorToCourse1 : System.Web.UI.Page
+    public partial class AdminInstructorToCourse : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -7,14 +7,57 @@
     <title></title>
         <link rel="stylesheet" href="./StyleSheets/InstructorHome.css" />
     <link rel="stylesheet" href="./StyleSheets/InstructorViewCourse.css" />
+
 </head>
 <body>
     <form id="form1" runat="server">
-   
+
+        <div id="EditOverlay" class="overlay">
+  
+  <div class="overlay-content">
+      <asp:Label Text="Edit Announcement" runat="server" CssClass="overlayTitle"  />
+    
+      <hr />
+      <input runat="server" id="editText" class="AnnouncmentTextBox" type="text"  autofocus />
+      <div class="confirm_cancel_Buttons">
+          
+                      <asp:Button CssClass="show-more" runat="server" Text="Confirm" OnClick="EditConfirm" />
+                      <asp:Button  CssClass="cancel" runat="server" Text="Cancel" />
+
+      </div>
+  </div>
+</div>
+        <div id="deleteOverlay" class="overlay">
+            <asp:Label Text="This Announcement will be deleted,Are you sure?" runat="server" />
+             <div class="confirm_cancel_Buttons">
+          
+                      <asp:Button CssClass="show-more" runat="server" Text="Yes" OnClick="DeleteYes" />
+                      <asp:Button  CssClass="cancel" runat="server" Text="No" />
+
+      </div>
+        </div>
+        
+        
+        <div id="AddAnnouncmentOverlay" class="overlay">
+  
+  <div class="overlay-content">
+      <asp:Label Text="Add Announcement" runat="server" CssClass="overlayTitle" />
+    
+      <hr />
+      <input runat="server" id="AddAnnText" class="AnnouncmentTextBox" type="text" oninput="TextBox2_TextChanged" />
+      <div class="confirm_cancel_Buttons">
+          
+
+                      <asp:Button ID="confirmAdd" CssClass="show-more" runat="server" Text="Confirm" OnClick="AddAnnConfirm" />
+                      <asp:Button  CssClass="cancel" runat="server" Text="Cancel" />
+
+      </div>
+  </div>
+</div>
+
         <div class="header">
 
             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
-
 
             <img class="bar" src="./images/topBarImages/bar.svg" />
 
@@ -48,14 +91,13 @@
             </div>
 
         </div>
-
         <div class="title">
             <p>Course Updates</p>
         </div>
        
             <table id="updatesTable" runat="server">
             </table>
-        <button class="AddNew" runat="server">
+        <button class="AddNew" runat="server" onserverclick="AddAnnouncment">
             <img class="editIcon" src="./images/InstructorHome/plusIcon.svg" />
             <span class="innerSpan">Add Announcement</span>
         </button>
@@ -93,28 +135,20 @@
             
         </div>
 
-        <span id="space"></span>
-        <span id="more7">
-            <div id="csyllabus2" runat="server">
-            </div>
-        </span>
+        
         <script>
-            document.documentElement.style.scrollBehavior = "smooth";
-            function myFunction() {
-                var space = document.getElementById("space");
-                var moreText = document.getElementById("more7");
-                var btnText = document.getElementById("mybtn7");
+            function openEditOverlay() {
+                document.getElementById("EditOverlay").style.display = "block";
 
-                if (space.style.display === "none") {
-                    space.style.display = "inline";
-                    btnText.value = "Show More";
-                    moreText.style.display = "none";
-                } else {
-                    space.style.display = "none";
-                    btnText.value = "Show Less";
-                    moreText.style.display = "inline";
-                }
             }
+            function openAddAnnOverlay() {
+                document.getElementById("AddAnnouncmentOverlay").style.display = "block";
+            }
+            function openDeleteOverlay() {
+                document.getElementById("deleteOverlay").style.display = "block";
+            }
+            
+            
         </script>
 
         <div class="show-moreDiv">
@@ -123,10 +157,6 @@
 
         <div class="line2 centerdiv" id="instructors">
         </div>
-
-
-      
-
         <div class="title">
             <p>Resources</p>
         </div>
