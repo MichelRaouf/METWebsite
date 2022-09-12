@@ -22,6 +22,7 @@ namespace METWebsite
             SqlParameter club = new SqlParameter("@id", Session["clubId"]);
             cmd.Parameters.Add(club);
             SqlDataReader reader = cmd.ExecuteReader();
+<<<<<<< HEAD
             string title = "";
             string type = "";
             string icon = "";
@@ -30,6 +31,11 @@ namespace METWebsite
             string facebook = "";
             string instagram = "";
             string track = "";
+=======
+            string title = ""; string type = ""; string icon = ""; string gradient = ""; string about = "";
+            string facebook = ""; string instagram = ""; string track = "";
+
+>>>>>>> 6ab0085a8602d52e26c0f7cf8071d50d4771ac17
             var trackUl = new HtmlGenericControl("ul");
             trackUl.Attributes.Add("class", "item");
             while (reader.Read())

@@ -10,6 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+<<<<<<< HEAD
         <div class="scrollable">
 
             <div class="header">
@@ -46,6 +47,59 @@
             </div> 
         </div>
 
+=======
+        <div class="header">
+
+            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+
+
+            <img class="bar" src="./images/topBarImages/bar.svg" />
+
+
+            <label class="label1">Faculty of Media Engineering & Technology</label>
+
+            <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login" />
+
+        </div>
+        <div class="navbar">
+            <div>
+                <img src="images/topBarImages/home.svg" alt="Alternate Text" class="navimg" />
+                <asp:Button Text="Home" runat="server" CssClass="navbtn" OnClick="toHome" />
+            </div>
+            <div>
+                <img src="images/topBarImages/course.svg" alt="Alternate Text" class="navimg" />
+                <asp:Button Text="Courses" runat="server" CssClass="navbtn" OnClick="toCourses" />
+            </div>
+            <div>
+                <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg" />
+                <asp:Button Text="Staff" runat="server" CssClass="navbtn" OnClick="toStaff" />
+            </div>
+            <div>
+                <img src="images/topBarImages/studactive-red.svg" alt="Alternate Text" class="navimg3" />
+                <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" OnClick="toStudentActiv" />
+            </div>
+            <div>
+                <img src="images/topBarImages/Alumni.svg" alt="Alternate Text" class="navimg2" />
+                <asp:Button Text="Alumni" runat="server" CssClass="navbtn" OnClick="toAlumni" />
+            </div>
+            <div>
+                <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg4" />
+                <asp:Button Text="About Us" runat="server" CssClass="navbtn" OnClick="toAbout" />
+            </div>
+
+
+        </div>
+
+        <div id="Header" class="Header" runat="server">
+            <div id="iconDiv" runat="server">
+            </div>
+
+            <div id="titleDiv" runat="server">
+            </div>
+
+            <div class="typeDiv" id="typeDiv" runat="server">
+            </div>
+>>>>>>> 6ab0085a8602d52e26c0f7cf8071d50d4771ac17
         </div>
 
         <div id="bigHeader" class="bigHeader"  runat="server">
@@ -67,12 +121,16 @@
             <div id="listDiv" runat="server">
                 <label class="subTitle" id="subTitleTracks" runat="server">MET Related Tracks</label>
             </div>
+<<<<<<< HEAD
             <div class="section">
+=======
+
+            <div class="section" style="width: 12%;">
+>>>>>>> 6ab0085a8602d52e26c0f7cf8071d50d4771ac17
                 <label class="subTitle" id="subTitleSocials" runat="server">Socials</label>
                 <div class="socialIcons" id="socialIcons" runat="server">
-                        
                 </div>
-           </div>
+            </div>
         </div>
 
     </form>

@@ -6,7 +6,11 @@
 <head runat="server">
     <title>Student Activity</title>
     <link rel="icon" href="./images/gucLogo.png"/>
+<<<<<<< HEAD
     <link  rel="stylesheet" href="./StyleSheets/StudentActivities.css"/>
+=======
+    <link  rel="stylesheet" href="./StyleSheets/studentActivities.css"/>
+>>>>>>> 6ab0085a8602d52e26c0f7cf8071d50d4771ac17
 </head>
 <body>
     <form id="form1" runat="server">
