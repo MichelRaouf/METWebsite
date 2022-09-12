@@ -156,10 +156,9 @@
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\AlumniPage.css" />
     <Content Include="StyleSheets\AboutUsPage.css" />
-<<<<<<< HEAD
-=======
+
     <Content Include="StyleSheets\StudentActivityProfile.css" />
->>>>>>> 6ab0085a8602d52e26c0f7cf8071d50d4771ac17
+
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
