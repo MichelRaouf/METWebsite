@@ -1,0 +1,170 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    height: 7.6171875vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    top: 0px;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 1.6vw;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.adminLogo {
+    width: 3.875vw;
+    height: 7.67920133vh;
+    margin-left: 20vw;
+}
+
+.adminLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.56vw;
+    font-weight: 600;
+    margin-left: 1vw;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 17.03125vw;
+    margin-right: 17.03125vw;
+    background: linear-gradient(to right, #FFE171, #FFC3C6);
+    border-radius: 40px;
+    vertical-align: middle;
+    justify-content: space-around;
+}
+
+.dashboard {
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+    font-size: 1.62vw;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.8vh;
+    margin-left: 1vw;
+}
+
+.navLabels {
+    vertical-align: middle;
+    color: white;
+    font-size: 1.62vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dashIconLabel {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboardIcon {
+    vertical-align: middle;
+}
+
+.assignDiv {
+    font-size: 2.43vw;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.alumni {
+    margin-top: 4.629629vh;
+    margin-left: 12.9479167vw;
+    margin-right: 12.9479167vw;
+    border-radius: 20px;
+    background: linear-gradient(to right, #FFE171, #FFC3C6);
+    padding-top: 3vh;
+    text-align: center;
+}
+
+.alumniList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2vw;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.7vw;
+    margin-top: 1.6vw;
+}
+
+.alumniItem {
+    background-color: white;
+    border-radius: 10px;
+    width: 62vw;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    column-gap: 14vw;
+    align-items: center;
+}
+
+.alumniLabelDiv {
+    width: 35vw;
+    margin-left: 3.2vw;
+    display: flex;
+}
+
+.alumniLabel {
+    font-size: 1.3vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0;
+}
+
+.delete {
+    background-color: #ED1C24;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border-radius: 0.4vw;
+    border: none;
+    font-size: 1vw;
+    font-weight: 500;
+    width: 6.4vw;
+    height: 2.2vw;
+}
+
+    .delete:hover {
+        background-color: black;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+.bottom {
+    height: 2.2vw;
+}
