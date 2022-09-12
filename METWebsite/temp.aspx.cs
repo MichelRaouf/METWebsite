@@ -9,8 +9,8 @@ using System.Web.UI.WebControls;
 
 namespace METWebsite
 {
-	public partial class temp7 : System.Web.UI.Page
-	{
+    public partial class temp8 : System.Web.UI.Page
+    {
         protected void Page_Load(object sender, EventArgs e)
         {
             //int id = (int) Session["instructorid"];
@@ -88,28 +88,22 @@ namespace METWebsite
             if (city != "" && country != "" && dob != "")
             {
                 li1 = "Born in " + city + ", " + country + "on " + dob;
-            }
-            else if (city != "" && country != "" && dob == "")
+            } else if (city != "" && country != "" && dob == "")
             {
                 li1 = "Born in " + city + ", " + country;
-            }
-            else if (city != "" && country == "" && dob != "")
+            } else if (city != "" && country == "" && dob != "")
             {
                 li1 = "Born in " + city + ", " + "on " + dob;
-            }
-            else if (city == "" && country != "" && dob != "")
+            } else if (city == "" && country != "" && dob != "")
             {
                 li1 = "Born in " + country + ", " + "on " + dob;
-            }
-            else if (city == "" && country == "" && dob != "")
+            } else if (city == "" && country == "" && dob != "")
             {
                 li1 = "Born on " + dob;
-            }
-            else if (city == "" && country != "" && dob == "")
+            } else if (city == "" && country != "" && dob == "")
             {
                 li1 = "Born in " + country;
-            }
-            else if (city != "" && country == "" && dob == "")
+            } else if (city != "" && country == "" && dob == "")
             {
                 li1 = "Born in " + city;
             }
@@ -228,8 +222,7 @@ namespace METWebsite
                 if (empEndMonth == "" && empEndYear == "")
                 {
                     endDate = "Still Running";
-                }
-                else
+                } else
                 {
                     endDate = empEndMonth + ", " + empEndYear;
                 }

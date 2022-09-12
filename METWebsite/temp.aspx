@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="temp.aspx.cs" Inherits="METWebsite.temp7" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="temp.aspx.cs" Inherits="METWebsite.temp8" %>
 
 <!DOCTYPE html>
 
@@ -51,10 +51,10 @@
         <div class="ProfileHeader" id="ProfileHeader" runat="server">
             <div class="profileName">
                 <div class="profileImageDiv" id="profileImageDiv" runat="server">
-                    
+
                 </div>
                 <div class="namePosition" id="namePosition" runat="server">
-                    
+                   
                 </div>
             </div>
             
@@ -124,7 +124,7 @@
                 <label class="infoTitle">Personal Info</label>
             </div>
             <div class="listDiv">
-                <ul id="personalList" runat="server">
+                <ul id ="personalList" runat="server">
                     
                 </ul>
             </div>
@@ -134,85 +134,12 @@
             <div class="infoSubTitleDiv">
                 <label class="infoSubTitle">Education</label>
             </div>
-
+            
         </section>
 
         <section id="employmentSection" class="Employment" runat="server">
             <div class="infoSubTitleDiv">
                 <label class="infoSubTitle">Employment</label>
-            </div>
-            <div class="infoItem">
-                <div class="dateDiv">
-                    <label class="date">July, 2011</label>
-                    <label class="date">to</label>
-                    <label class="date">Still running</label>
-                </div>
-                <div class="vertical">
-
-                </div>
-                <div class="text">
-                    <div class="degreeTitle">
-                        <label>Ph.D.</label>
-                    </div>
-                    <div class="university">
-                        <label>State University of New York at Buffalo</label>
-                    </div>
-                    <div class="description">
-                        <label class="description">(Computer Science and Engineering,
-                            Linguistics Minor, Cognitive Science Ph.D. Track)</label>
-                    </div>
-                    <div class="horizontal">
-
-                    </div>
-                </div>    
-            </div>
-            <div class="infoItem">
-                <div class="dateDiv">
-                    <label class="date">July, 2011</label>
-                    <label class="date">to</label>
-                    <label class="date">Still running</label>
-                </div>
-                <div class="vertical">
-
-                </div>
-                <div class="text">
-                    <div class="degreeTitle">
-                        <label>M.Sc.</label>
-                    </div>
-                    <div class="university">
-                        <label>Cairo University</label>
-                    </div>
-                    <div class="description">
-                        <label class="description">Engineering Mathematics/Computer Science</label>
-                    </div>
-                    <div class="horizontal">
-
-                    </div>
-                </div>
-            </div>
-            <div class="infoItem">
-                <div class="dateDiv">
-                    <label class="date"><label class="date">September, 2005</label>
-                    <label class="date">to</label>
-                    <label class="date">June, 2011</label></label>
-                </div>
-                <div class="vertical">
-
-                </div>
-                <div class="text">
-                    <div class="degreeTitle">
-                        <label>B.Sc.</label>
-                    </div>
-                    <div class="university">
-                        <label>Cairo University</label>
-                    </div>
-                    <div class="description">
-                        <label class="description">Communications and electronics</label>
-                    </div>
-                    <div class="horizontal">
-
-                    </div>
-                </div>
             </div>
             <div id="buttonMore1" class="showMoreDiv" runat="server">
                 <asp:Button ID="myBtn" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction();return false;"/>
