@@ -19,7 +19,6 @@ namespace METWebsite
             con.Open();
             SqlCommand cmd = new SqlCommand("getIcon", con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
             SqlDataReader reader = cmd.ExecuteReader();
             string id = ""; string icon = "";
             while (reader.Read())
