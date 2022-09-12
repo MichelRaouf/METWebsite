@@ -497,7 +497,7 @@ a:hover{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     justify-content: center;
@@ -541,8 +541,10 @@ a:hover{
     width: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap:wrap;
     align-items: center;
     row-gap: 2vw;
+   
 }
 .successMessage img {
     width: 22%
@@ -554,6 +556,7 @@ a:hover{
 }
 .successLabel {
     font-weight: 600;
-    font-size:1.5vw;
+    font-size: 1.5vw;
     text-align: center;
+    width: 80%;
 }
