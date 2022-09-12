@@ -11,6 +11,59 @@ html, body {
     align-items: center;
     padding-bottom: 3.2552083333333335vw;
 }*/
+
+
+.header {
+    left: 0;
+    height: 5.5vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 14vw;
+    height: 4vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 4vw;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.adminLogo {
+    width: 2.8vw;
+    margin-left: 28vw;
+}
+
+.adminLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.56vw;
+    font-weight: 600;
+    margin-left: 1vw;
+}
+
+
+
+
+
+
 nav {
     margin-top:2vw;
     display:flex;
@@ -120,76 +173,27 @@ a:hover{
     text-decoration:underline;
 
 }
-
-
-.header {
-    
-    left: 0;
-    height: 5.5vw;
-    width: 100%;
+.dashboard {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: start;
-}
-
-    .header > div {
-        flex-grow: 1 1 0;
-        display: flex;
-        background-color: #ffff;
-        padding: 20px;
-        font-size: 2vw;
-        top: 0px;
-    }
-
-.logo {
-    width: 14vw;
-    height: 4vw;
-}
-
-.bar {
-    width: 2.57vw;
-    height: 4vw;
-}
-
-.label1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8vw;
-}
-
-.adminLogo {
-    width: 2.8vw;
-    margin-left: 28vw;
-}
-
-.adminLabel {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.56vw;
-    font-weight: 600;
-    margin-left: 1vw;
-}
-
-
-
-
-.dashboard {
-
-    display:flex;
-    align-items:center;
     color: white;
     text-decoration: none;
     font-size: 1.62vw;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-   
     margin-left: 1vw;
 }
 
 .dashboardIcon {
-    margin-top:0.3vw;
-    width:2.5vw;
-   
+    margin-top: 0.3vw;
+    width: 2.5vw;
 }
+
+
+
+
+
+
 
 .addAlumniDiv {
    
