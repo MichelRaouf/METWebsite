@@ -52,9 +52,6 @@ OCTYPE html>
  
         </div>
 
-           <div></div>
-        <div id="PersonalInfo"></div>
-
         <div id="navbar2" class="navbar2">
             <div class="AboutNav">
                 <asp:Label Text="Personal Info" runat="server" onClick="funcPersonalInfo()"/>
