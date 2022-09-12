@@ -15,13 +15,14 @@
     align-content: center;
     margin: auto;
     padding-top: 150px;
+    margin:auto;
 }
 .course {
     border-radius: 20px;
     background-color: white;
     width: 63.6vw;
     height:80px;
-    
+    margin:auto;
 }
 .coursename {
     text-align: left;
@@ -29,4 +30,5 @@
     font-weight:500;
     font-family: 'Montserrat';
     padding-top:30px;
+    margin-left:20px;
 }

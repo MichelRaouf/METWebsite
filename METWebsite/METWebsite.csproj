@@ -15,7 +15,7 @@
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -117,6 +117,7 @@
     <Content Include="AdminHomePage.aspx" />
     <Content Include="AdminInstructorToCourse.aspx" />
     <Content Include="AdminRemoveAlumni.aspx" />
+    <Content Include="AdminRemoveCourse.aspx" />
     <Content Include="AdminRemoveStudentActivity.aspx" />
     <Content Include="AdminStudentActivity.aspx" />
     <Content Include="App_Data\Database1.mdf" />
@@ -148,6 +149,7 @@
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
     <Content Include="StyleSheets\AdminInstructorToCourse.css" />
     <Content Include="StyleSheets\AdminRemoveAlumni.css" />
+    <Content Include="StyleSheets\AdminRemoveCourse.css" />
     <Content Include="StyleSheets\AdminRemoveStudentActivity.css" />
     <Content Include="StyleSheets\HomePage.css" />
     <Content Include="HomePage.aspx" />
@@ -352,6 +354,13 @@
     </Compile>
     <Compile Include="AdminRemoveAlumni.aspx.designer.cs">
       <DependentUpon>AdminRemoveAlumni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRemoveCourse.aspx.cs">
+      <DependentUpon>AdminRemoveCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRemoveCourse.aspx.designer.cs">
+      <DependentUpon>AdminRemoveCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminRemoveStudentActivity.aspx.cs">
       <DependentUpon>AdminRemoveStudentActivity.aspx</DependentUpon>
