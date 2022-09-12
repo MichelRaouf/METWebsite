@@ -79,33 +79,57 @@
                 <div class="title">
                     <label class="titleLabel" for="titleInput">Course Title: </label>
                     <input type="text" required id="titleInput" runat="server" name="titleInput" placeholder="title" />
+
                 </div>
                 <div class="code">
                     <label class="courseLabel" for="codeInput">Course Code: </label>
                     <input type="text" required  id="codeInput" runat="server" name="codeInput" placeholder="code" />
                 </div>
+                <div class="validarotContainer">
+                    
                 <div class="code">
-                    <label class="courseLabel" for="credit">Credits Hours: </label>
-                    <input type="text" required  id="credit" runat="server" name="codeInput" placeholder="credits hours" />
+                    <label class="courseLabel" for="credit">Credits Hours: </label>                    
+                    <input type="number" min="1" max="10" required  id="credit" runat="server" name="codeInput" placeholder="credit hours" />
+                    </div>
+                   
                 </div>
+
+                <div class="validarotContainer">
                 <div class="lectures">
                     <label class="lecturesLabel" for="lectureInput">No. of Lectures: </label>
-                    <input type="text" required id="lectureInput" runat="server" name="lectureInput" placeholder="lectures" />
+                    <input type="number" min="1" max="30" required id ="lectureInput" runat="server" placeholder="lectures" name="lectureInput" />
+                    
                 </div>
+                    
+                    </div>
+
+                <div class="validarotContainer">
                 <div class="tuts">
                     <label class="tutsLabel" for="tutorialInput">No. of Tutorials: </label>
-                    <input type="text" required  id="tutorialInput" runat="server" name="tutorialInput" placeholder="tutorials" />
+                    <input type="number" min="1" max="30" required id ="tutorialInput" runat="server" placeholder="tutorials" name="tutorialInput" />
+                    
                 </div>
+                   
+                 </div>
+
+                <div class="validarotContainer">
                 <div class="labs">
                     <label class="labsLabel" for="labsInput">No. of Labs: </label>
-                    <input type="text" required id="labsInput" runat="server" name="labsInput" placeholder="labs" />
+                    <input type="number" required id="labsInput" runat="server" name="labsInput" placeholder="labs" />
                 </div>
+                   
+                    </div>
             </div>
             <div class="column2">
+
+                <div class="validarotContainer">
                 <div class="labs">
                     <label class="labsLabel" for="semesterInput">Semester Number: </label>
-                    <input type="text" required id="semesterInput" runat="server" name="semesterInput" placeholder="semester" />
+                    <input type="number" min="1" max="10" required id="semesterInput" runat="server" name="semesterInput" placeholder="semester" />
+
                 </div>
+                    <label class="validator2">(enter 0 for graduates)</label>
+                    </div>
                 <div class="elective">
                     
                     <input type="checkbox"  class="checkbox"  id="iselective" runat="server" />
@@ -114,11 +138,11 @@
                 </div>
                 
 
-                <label class="majorsLabel">Majors Involved:</label>
+                <label class="majorsLabel" id="majorLabel" runat="server"  >Majors Involved: </label>
                
                 <div class="majors">
                     <div class="met">
-                        <label class="metLabel">MET: </label>
+                        <label  class="metLabel" >MET: </label>
                         <div class="subMet">
                         <div>
                         <input type="checkbox"  class="checkbox" id="csen" runat="server" />
@@ -187,14 +211,28 @@
                 </div>
               <div class="courseDescription">
                 <label class="description" for="descriptionInput">Course Description: </label>
-                <input type="text" id="descriptionInput" runat="server" name="descriptionInput" />
+                <textarea  type="text" id="descriptionInput" runat="server" name="descriptionInput" required/>
                   </div>
             </div>
             
         </div>
         <div class="buttonDiv">
-            <asp:Button ID="Button1" CssClass="addCourse" runat="server" Text="Add Course" OnClick="addCourse_Click" />
+            <asp:Button ID="Button1" CssClass="addCourse" runat="server" Text="Add Course" OnClick="addCourse_Click"  />
+            <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click" Visible="false"  />
+            <asp:Button ID="button3" CssClass="yesnobtn" runat="server" Text="No" visible="false" />
         </div>
     </form>
+
+
+    <script>
+        function validate() {;
+            var count = 0;
+            var remember = document.getElementById("remember");
+            if (remember.checked) {
+                alert("checked");
+            } 
+        }
+    </script>
 </body>
+    
 </html>
