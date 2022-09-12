@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class temp7
+    public partial class ACM
     {
 
         /// <summary>
@@ -33,13 +33,13 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// bigHeader control.
+        /// Header control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl bigHeader;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Header;
 
         /// <summary>
         /// iconDiv control.
