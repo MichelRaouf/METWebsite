@@ -11,6 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <div id="rest">
             <div class="header">
             
                             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
@@ -52,9 +53,13 @@
            
             
         </div>
+        </div>
         </form>
-
+    <br />
     <div class="row_flex">
+        
+
+      
            <div class="Catalouge">
                         <div class="hierarchyTitle"> <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
                <ul>
@@ -71,7 +76,7 @@
                            <ul>
                                <li id="MET" class="catalougebtn2"><Label class="catalougebtn2">Media Engineering and Technology</Label><div class="coll" id="METContent">
                                    <ul>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Computer Science & Engineering</a></li>
+                                       <li class="catalougebtn3"><a href="" class="catalougebtn3">Computer Science & Engineering</a></li>
                                        <li class="catalougebtn3"><a href="#" class="catalougebtn3">Digital Media Engineering & Technology</a></li>
                                    </ul>
 
@@ -105,55 +110,34 @@
                </ul>
                
         </div>
+            
             <img src="./images/coursePageImages/VbarCourses.svg" alt="Alternate Text" class="vbar" />
+       
     <div id="Semesters" runat="server" class="semesters">
         
-        
-<%--<button class="collapsible">Semester 1</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul>
-
-</div>
-        
-<button class="collapsible">Semester 2</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-<button class="collapsible">Semester 3</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-        <button class="collapsible">Semester 4</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-        <button class="collapsible">Semester 5</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-        <button class="collapsible">Semester 6</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-       --%>
+       
         </div> 
+            
         
-    
+    </div>
 <script>
+    var img = document.getElementsByClassName("vbar");
+    img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50+ "px";
     
+    document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
+    window.addEventListener('scroll', (event) => {
+        
+        var scroll = document.getElementsByClassName("Scroll");
+        
+        
+    })
+    window.addEventListener('resize', (event) => {
+        
+        var img = document.getElementsByClassName("vbar");
+        img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50 + "px";
+        document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
+
+    })
     function redirect() {
 
         var serial = event.srcElement.getAttribute("id");

@@ -105,6 +105,7 @@
     display: flex;
     align-items:flex-start;
     flex-direction: row;
+    column-gap:2vw;
     justify-content: start;
 }
 
@@ -112,25 +113,28 @@
         flex-grow: 1 1 0;
         display: flex;
         background-color: #ffff;
-        padding: 20px;
+        padding: 1.3vw;
         font-size: 2vw;
         top: 0px;
     }
 
-
+.Scroll{
+    
+}
 .Catalouge {
 
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: start;
+    
 }
     .Catalouge > div {
       
         flex-grow: 1 1 0;
         display: flex;
         background-color: #ffff;
-        padding: 20px;
+        padding: 1.3vw;
         font-size: 2vw;
         top: 0px;
     }
@@ -142,6 +146,9 @@
     justify-content : space-between;
     row-gap : 1.7vh;
     width : 100%;
+    
+    overflow-y:scroll;
+    overflow-x:hidden;
   
 }
 
@@ -189,7 +196,7 @@
  
 }
 .vbar{
-    height : 100%;
+    
     margin-top : 1.3vw;
 }
 

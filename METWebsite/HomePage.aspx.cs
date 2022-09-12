@@ -39,6 +39,7 @@ namespace METWebsite
                 img.Attributes.Add("src", url);
                 div.Controls.Add(section);
                 div.Controls.Add(img);
+
                 newsDiv.Controls.Add(div);
                 count++;
             }
