@@ -178,8 +178,8 @@ namespace METWebsite
             while (reader1.Read())
             {
                 educDate = reader1.GetValue(4).ToString();
-                educPlace = reader1.GetValue(2).ToString();
                 educTitle = reader1.GetValue(3).ToString();
+                educPlace = reader1.GetValue(2).ToString();
                 educField = reader1.GetValue(5).ToString();
 
                 var eduDiv1 = new HtmlGenericControl("div");

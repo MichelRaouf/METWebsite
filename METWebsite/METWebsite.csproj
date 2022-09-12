@@ -151,6 +151,7 @@
     <Content Include="StyleSheets\AboutUsPage.css" />
     <Content Include="StyleSheets\StudentActivities.css" />
     <Content Include="StyleSheets\StudentActivityProfile.css" />
+    <Content Include="StyleSheets\temp.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
@@ -302,6 +303,7 @@
     <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="TAsSearchRes.aspx" />
+    <Content Include="temp.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -471,6 +473,13 @@
     </Compile>
     <Compile Include="TAsSearchRes.aspx.designer.cs">
       <DependentUpon>TAsSearchRes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="temp.aspx.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="temp.aspx.designer.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
