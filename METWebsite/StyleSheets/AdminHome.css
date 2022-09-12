@@ -1,16 +1,27 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
+html, body {
+    margin: 0;
+    height: 100%;
+    
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3.2552083333333335vw;
 }
 
 .header {
-    height: 7.6171875vw;
+    position:absolute;
+    left:0;
+    height: 5.5vw;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: start;
-    top: 0px;
 }
 
     .header > div {
@@ -23,13 +34,13 @@ body {
     }
 
 .logo {
-    width: 20.57vw;
-    height: 5.315104166666667vw;
+    width: 14vw;
+    height: 4vw;
 }
 
 .bar {
     width: 2.57vw;
-    height: 5.315104166666667vw;
+    height: 4vw;
 }
 
 .label1 {
@@ -38,9 +49,8 @@ body {
 }
 
 .adminLogo {
-    width: 3.875vw;
-    height: 7.67920133vh;
-    margin-left: 20vw;
+    width: 2.8vw;
+    margin-left: 28vw;
 }
 
 .adminLabel {
@@ -51,55 +61,137 @@ body {
 }
 
 .dashboardIcon {
-    width: 5.625vw;
-    height: 11.9800333vh;
+    width: 4.625vw; 
     vertical-align: middle;
     margin-right: 0.5vw;
 }
 
 .dashboardLabel {
-    font-size: 2.97vw;
+    font-size: 2.8vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
+    letter-spacing:1px;
     vertical-align: middle;
     margin-left: 0.5vw;
 }
 
 .dashboard {
+    margin-top:8.3vw;
     text-align: center;
 }
 
 .cardsDiv {
-    margin-right: 24.739583vw;
-    margin-left: 24.739583vw;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap:3.64583333vw;
+    column-gap: 3.64583333vw;
+    margin-top: 5vh;
+    justify-content:center;
+    /* margin-right: 25.739583vw;
+    margin-left: 25.739583vw;
     margin-top: 5vh;
     display: grid;
     grid-column-gap: 3.64583333vw;
     grid-row-gap: 3.64583333vw;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom:5vw;*/
 }
 
 .cards {
-    height: 27.222222222vh;
-    border-radius: 0.32552vw;
-    text-align: center;
+    width:23vw;
+    height: 15vw;
+    border-radius: 0.75vw;
     background: linear-gradient(to bottom right, #FFE171, #FFC3C6);
-    justify-content: center;
-}
-
-.cardLabel {
-    font-size: 2.51vw;
-    font-family: 'Montserrat', sans-serif;
-    vertical-align: middle;
-    font-weight: 600;
-    text-align: center;
-    color: white;
-    margin: 1vw;
-    margin-top: 4vh;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
     justify-content:center;
 }
 
-.homeIcon, .coursesIcon, .stActivityIcon, .otherIcon {
-    vertical-align: middle;
-    margin-top: 5.5vh;
+.cardLabel {
+    
+    font-size: 2.51vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: white;
 }
+#stuActivity {
+    width: 12.6vw;
+    
+}
+
+.homeIcon, .coursesIcon, .stActivityIcon, .otherIcon {
+    
+    width:4.5vw;
+    margin-right:1vw;
+}
+
+
+
+
+
+
+.hover {
+    display: none;
+}
+
+.wrapper {
+    width: auto;
+
+    
+}
+
+    .wrapper:hover .cards {
+        display: none;
+    }
+
+    .wrapper:hover .hover {
+        height: 15vw;
+        width: 23vw;
+        border-radius: 0.75vw;
+        background: linear-gradient(to bottom right, #FFE171, #FFC3C6);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+        .wrapper:hover .hover li {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size:1.5vw;
+            font-weight:500;
+            margin:1vw;
+
+        }
+    .wrapper:hover #hoverCourse li {
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.35vw;
+        font-weight: 500;
+        margin: 0.4vw;
+    }
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: white;
+    text-decoration:none;
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration:underline;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
