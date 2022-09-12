@@ -10,9 +10,10 @@ using System.Web.UI.WebControls;
 
 namespace METWebsite
 {
+    
     public partial class InstructorViewCourse : System.Web.UI.Page
     {
-        int EditId = 0;
+         public int EditId = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -92,16 +93,18 @@ namespace METWebsite
 
               
                 editButton.ServerClick += (object sender1, EventArgs e1) => {
-                    ClientScript.RegisterStartupScript(this.GetType(), "key", "openNav();", true);
-                    EditId = updateId;
-                    editText.Text = td1.InnerHtml;
-                
-                    };
+                    ClientScript.RegisterStartupScript(this.GetType(), "key", "openEditOverlay();", true);
+                    Session["editId"] = updateId;
+                    //Response.Write("<script>alert(" + Session["editId"] + ")</script>");
+
+
+                };
 
                  var deleteButton = new HtmlButton();
                 deleteButton.Attributes.Add("class","Delete");
                 deleteButton.ServerClick += (object sender1, EventArgs e1) => {
-                    // write delete code here
+                    ClientScript.RegisterStartupScript(this.GetType(), "key", "openDeleteOverlay();", true);
+                    Session["deleteId"] = updateId;
                 };
                 var deleteImg = new HtmlGenericControl("img");
                 deleteImg.Attributes.Add("src", "./images/InstructorHome/whiteDelete.svg");
@@ -252,19 +255,54 @@ namespace METWebsite
         {
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             SqlConnection con = new SqlConnection(strcon);
-            String editedText = editText.Text;
+            String editedText = editText.Value;
             SqlCommand EditUpdate = new SqlCommand("updatesEdit", con);
             EditUpdate.CommandType = System.Data.CommandType.StoredProcedure;
             EditUpdate.Parameters.Add(new SqlParameter("@newDescription", editedText));
-            EditUpdate.Parameters.Add(new SqlParameter("@updateID", EditId));
+            EditUpdate.Parameters.Add(new SqlParameter("@updateID", Session["editId"]));
+            //Response.Write("<script>alert("+ Session["editId"] + ")</script>");
             con.Open();
             EditUpdate.ExecuteNonQuery();
             con.Close();
-
-
+            String IdString = Request.QueryString["IdString"];
+            Response.Redirect("instructorViewCourse.aspx?IdString="+ IdString);
 
         }
+        protected void AddAnnouncment(object sender, EventArgs e)
+        {
+            ClientScript.RegisterStartupScript(this.GetType(), "key", "openAddAnnOverlay();", true);
 
+        }
+        protected void AddAnnConfirm(object sender, EventArgs e)
+        {
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            SqlConnection con = new SqlConnection(strcon);
+            SqlCommand confirmAddUpdates = new SqlCommand("AddUpdates", con);
+            confirmAddUpdates.CommandType = System.Data.CommandType.StoredProcedure;
+            int courseSerial = Int32.Parse(Request.QueryString["IdString"]);
+            confirmAddUpdates.Parameters.Add(new SqlParameter("@course_serial",courseSerial));
+            confirmAddUpdates.Parameters.Add(new SqlParameter("@description", AddAnnText.Value));
+            con.Open();
+            confirmAddUpdates.ExecuteNonQuery();
+            con.Close();
+            Response.Redirect("instructorViewCourse.aspx?IdString=" + courseSerial);
+
+        }
+        protected void DeleteYes(object sender,EventArgs e)
+        {
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            SqlConnection con = new SqlConnection(strcon);
+            SqlCommand deleteUpdate = new SqlCommand("deleteUpdate", con);
+            deleteUpdate.CommandType = CommandType.StoredProcedure;
+            deleteUpdate.Parameters.Add(new SqlParameter("@updateId", Session["deleteId"]));
+
+            con.Open();
+            deleteUpdate.ExecuteNonQuery();
+            con.Close();
+            int courseSerial = Int32.Parse(Request.QueryString["IdString"]);
+            Response.Redirect("instructorViewCourse.aspx?IdString=" + courseSerial);
+
+        }
 
 
     }
