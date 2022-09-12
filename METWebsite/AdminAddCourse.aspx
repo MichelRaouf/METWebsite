@@ -108,7 +108,7 @@
                 </div>
                 <div class="elective">
                     
-                    <input type="checkbox" id="iselective" runat="server" />
+                    <input type="checkbox"  class="checkbox"  id="iselective" runat="server" />
                     <label class="majorsLabel">Is Elective</label>
                     
                 </div>
@@ -121,11 +121,11 @@
                         <label class="metLabel">MET: </label>
                         <div class="subMet">
                         <div>
-                        <input type="checkbox" id="csen" runat="server" />
+                        <input type="checkbox"  class="checkbox" id="csen" runat="server" />
                         <label class="subMajor">CSEN</label>
                         </div>
                         <div>
-                        <input type="checkbox" id="dmet" runat="server" />
+                        <input type="checkbox"  class="checkbox" id="dmet" runat="server" />
                         <label class="subMajor">DMET</label>
                         </div>
                             </div>
@@ -137,16 +137,16 @@
                         <div class="subIet">
 
                         <div>
-                        <input type="checkbox" id="networks" runat="server" />
+                        <input type="checkbox"  class="checkbox" id="networks" runat="server" />
                         <label class="subMajor">Networks</label>
                         </div>
 
                         <div>
-                        <input type="checkbox" id="communications" runat="server" />
+                        <input type="checkbox"  class="checkbox" id="communications" runat="server" />
                         <label class="subMajor">Communications</label>
                         </div>
                         <div>
-                        <input type="checkbox" id="electronics" runat="server" />
+                        <input type="checkbox"  class="checkbox" id="electronics" runat="server" />
                         <label class="subMajor">Electronics</label>
                         </div>
                             </div>
@@ -156,29 +156,29 @@
                         <div class="subColumns">
                             <div class="subColumn1">
                                 <div>
-                                <input type="checkbox" id="bi" runat="server" />
+                                <input type="checkbox"  class="checkbox" id="bi" runat="server" />
                                 <label class="subMajor">BI</label>
                                </div>
                                 <div>
-                                <input type="checkbox" id="management" runat="server" />
+                                <input type="checkbox"  class="checkbox" id="management" runat="server" />
                                 <label class="subMajor">Management</label>
                                 </div>
                                 <div>
-                                <input type="checkbox" id="pharmacy" runat="server" />
+                                <input type="checkbox"  class="checkbox" id="pharmacy" runat="server" />
                                 <label class="subMajor">Pharmacy</label>
                                 </div>
                             </div>
                             <div class="subColumn2">
                                 <div>
-                                <input type="checkbox" id="ems" runat="server" />
+                                <input type="checkbox"  class="checkbox" id="ems" runat="server" />
                                 <label class="subMajor">EMS</label>
                                 </div>
                                 <div>
-                                <input type="checkbox" id="mctr" runat="server" />
+                                <input type="checkbox"  class="checkbox" id="mctr" runat="server" />
                                 <label class="subMajor">MCTR</label>
                                 </div>
                                 <div>
-                                <input type="checkbox" id="graduate" runat="server" />
+                                <input type="checkbox"  class="checkbox" id="graduate" runat="server" />
                                 <label class="subMajor">Graduate</label>
                                 </div>
                             </div>
@@ -190,8 +190,7 @@
                 <input type="text" id="descriptionInput" runat="server" name="descriptionInput" />
                   </div>
             </div>
-            <br />
-            <br />
+            
         </div>
         <div class="buttonDiv">
             <asp:Button ID="Button1" CssClass="addCourse" runat="server" Text="Add Course" OnClick="addCourse_Click" />

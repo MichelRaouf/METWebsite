@@ -17,8 +17,10 @@ namespace METWebsite
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd1 = new SqlCommand("select * from course", con);
-            SqlDataReader reader1 = cmd1.ExecuteReader();
+            //SqlCommand cmd1 = new SqlCommand("select * from course", con);
+            SqlCommand getCourses = new SqlCommand("getAllCourses", con);
+            getCourses.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlDataReader reader1 = getCourses.ExecuteReader();
             while (reader1.Read())
             {
                 var coursediv = new HtmlGenericControl("div");
@@ -26,7 +28,7 @@ namespace METWebsite
                 coursediv.Attributes.Add("class", "course");
                 var name = new HtmlGenericControl("p");
                 name.Attributes.Add("class", "coursename");
-                name.InnerHtml = reader1.GetValue(1).ToString() + " " + reader1.GetValue(2).ToString();
+                name.InnerHtml = reader1.GetValue(0).ToString() + " " + reader1.GetValue(1).ToString();
                 coursediv.Controls.Add(name);
                 courseremove.Controls.Add(coursediv);
                 courseremove.Controls.Add(line);

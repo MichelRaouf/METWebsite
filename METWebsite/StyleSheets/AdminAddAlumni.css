@@ -304,6 +304,7 @@ a:hover{
     border-radius: 5px;
     border: none;
     align-items: center;
+    -webkit-transition: all .3s;
 }
 .addAlumni:hover{
     background-color:black;

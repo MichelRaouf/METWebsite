@@ -336,14 +336,18 @@ input:focus {
 }
 
 #descriptionInput {
-    border: solid #FFD0A1 0.13020833333333334vw;
-    border-radius: 0.3255208333333333vw;
+    left: 1vw;
+    border: solid #dbdfe3 0.06510416666666667vw;
+    border-radius: 0.13020833333333334vw;
+    height: 2.4vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9vw;
+    -webkit-transition: all .2s;
     height: 8.8vw;
     width: 33.489vw;
 }
 
 .addCourse {
-   
     color: white;
     background-color: #FFD0A1;
     font-size: 1.296vw;
@@ -354,13 +358,24 @@ input:focus {
     border-radius: 0.3255208333333333vw;
     border: none;
     align-items: center;
+    -webkit-transition: all .3s;
 }
+    .addCourse:hover {
+        background-color: black;
+        cursor: pointer;
+    }
 
 
 .buttonDiv {
-    align-items: center;
-    justify-content: space-between;
+
+    display: flex;
+    justify-content:center;
     margin-top: 5vh;
-    margin-left: 44.765625vw;
-    margin-right: 44.765625vw;
+    padding:0 2vw 2vw 2vw;
+ 
+}
+
+
+input[type=checkbox]:focus {
+    outline:none;
 }
