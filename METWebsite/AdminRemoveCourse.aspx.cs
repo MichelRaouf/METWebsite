@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -17,10 +18,15 @@ namespace METWebsite
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
+<<<<<<< HEAD
+            SqlCommand cmd1 = new SqlCommand("select * from course", con);
+            SqlDataReader reader1 = cmd1.ExecuteReader();
+=======
             //SqlCommand cmd1 = new SqlCommand("select * from course", con);
             SqlCommand getCourses = new SqlCommand("getAllCourses", con);
             getCourses.CommandType = System.Data.CommandType.StoredProcedure;
             SqlDataReader reader1 = getCourses.ExecuteReader();
+>>>>>>> 6ab0085a8602d52e26c0f7cf8071d50d4771ac17
             while (reader1.Read())
             {
                 var coursediv = new HtmlGenericControl("div");
@@ -34,5 +40,6 @@ namespace METWebsite
                 courseremove.Controls.Add(line);
             }
         }
+
     }
 }
