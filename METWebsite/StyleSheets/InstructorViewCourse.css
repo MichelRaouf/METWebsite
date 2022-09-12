@@ -177,28 +177,9 @@ html {
     margin-bottom: 3.2552083333333335vw;
 }
 
-.show-more {
-    background-color: #FFCB05;
-    align-content: center;
-    width: 10vw;
-    height: 3vw;
-    border-radius: 0.32552vw;
-    border: none;
-    font-size: 1.2vw;
-    font-weight: 600;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    align-items: center;
-    display: flex;
-    display: grid;
-    margin: auto;
-}
 
-    .show-more:hover {
-        background-color: black;
-        transition: 0.5s;
-        cursor: pointer;
-    }
+
+   
 
 .instructors-title {
     font-family: 'Montserrat';
@@ -412,4 +393,96 @@ tr:nth-child(even) {
     margin-top: 2vw;
     cursor: pointer;
 }
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.overlay-content {
+    background-color : white;
+    border: solid 1px;  
+    border-radius: 6px;
+    position: relative;
+    top: 25%;
+    width: 50%;
+    text-align: center;
     
+    margin : auto;
+}
+
+
+ 
+
+.overlay .closebtn {
+    font-size: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+
+}
+.overlayTitle {
+    color: black;
+}
+.AnnouncmentTextBox{
+    width : 600px;
+    height: 216px;
+    font-size : 20px;
+    margin-top : 12px;
+}
+.confirm_cancel_Buttons{
+    display : flex;
+    flex-direction: row;
+    column-gap : 15px;
+    margin-left :360px;
+    margin-top: 16px;
+    margin-bottom : 16px;
+}
+.show-more {
+    background-color: #FFCB05;
+    align-content: center;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.32552vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+    .show-more:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+.cancel {
+    background-color: #E6E6E6;
+    align-content: center;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.32552vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #A3A3A3;
+    font-family: 'Montserrat', sans-serif;
+}
+    .cancel:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
