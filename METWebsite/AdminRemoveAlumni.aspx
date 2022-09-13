@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveAlumni.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminRemoveInstructor.css" />
+
     <title></title>
 </head>
 <body>
@@ -41,12 +43,18 @@
         </div>
 
         <div class="alumni" id="alumni">
-            
-            <div class="alumniList" id="alumniList" runat="server">
 
-             </div>
-             <div class="bottom"></div>
-          </div>
+            <div class="hierarchyTitle">
+                <div>
+                    <asp:ImageButton runat="server" ImageUrl="images/staff/search.png" CssClass="searchButton" OnClick="toSearchRes" />
+                    <asp:TextBox placeholder="Search.." ID="searchInput" runat="server" />
+                </div>
+            </div>
+
+            <div class="alumniList" id="alumniList" runat="server">
+            </div>
+            <div class="bottom"></div>
+        </div>
     </form>
 </body>
 </html>
