@@ -370,6 +370,7 @@
     </Compile>
     <Compile Include="AdminRemoveInstructor.aspx.cs">
       <DependentUpon>AdminRemoveInstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminRemoveInstructor.aspx.designer.cs">
       <DependentUpon>AdminRemoveInstructor.aspx</DependentUpon>
@@ -392,6 +393,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ARemoveC.aspx.cs">
       <DependentUpon>ARemoveC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ARemoveC.aspx.designer.cs">
       <DependentUpon>ARemoveC.aspx</DependentUpon>
