@@ -125,7 +125,7 @@
     var img = document.getElementsByClassName("vbar");
     img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50+ "px";
     
-    //document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
+    document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
     window.addEventListener('scroll', (event) => {
         
         var scroll = document.getElementsByClassName("Scroll");
@@ -136,7 +136,7 @@
         
         var img = document.getElementsByClassName("vbar");
         img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50 + "px";
-        //document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
+        document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
 
     })
     function redirect() {
@@ -250,13 +250,22 @@
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+    coll[i].addEventListener("click", function () {
+        
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
+        var content = this.nextElementSibling;
+        content.style.transition = "overflow 0.2s ease-out";
+        
+        if (content.style["overflow"] == "hidden" || content.style["overflow"] == "" ) {
+            
+            content.style.overflow = "unset"
+        }
+        else
+            content.style.overflow = "hidden"
     if (content.style.maxHeight){
-      content.style.maxHeight = null;
+     content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+        content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
 }
