@@ -18,7 +18,7 @@ namespace METWebsite
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
             SqlCommand cmd1 = new SqlCommand("getLecturerInfo", con);
-            cmd1.Parameters.Add(new SqlParameter("@position", "DEAN"));
+            cmd1.Parameters.Add(new SqlParameter("@position", "Dean"));
             cmd1.CommandType = System.Data.CommandType.StoredProcedure;
             SqlDataReader reader1 = cmd1.ExecuteReader();
             reader1.Read();
@@ -26,6 +26,7 @@ namespace METWebsite
             String name1 = reader1.GetValue(1).ToString();
             String mail1 = reader1.GetValue(2).ToString();
             String office1 = reader1.GetValue(3).ToString();
+            String title1 = reader1.GetValue(4).ToString();
             reader1.Close();
             var div1 = new HtmlGenericControl("div");
             div1.Attributes.Add("class", "profileData");
@@ -35,7 +36,7 @@ namespace METWebsite
             var br1 = new HtmlGenericControl("br");
             var namediv1 = new HtmlGenericControl("div");
             namediv1.Attributes.Add("class", "name");
-            namediv1.InnerHtml = name1;
+            namediv1.InnerHtml = title1 + " " + name1;
             var maildiv1 = new HtmlGenericControl("div");
             maildiv1.Attributes.Add("class", "mailContainer");
             var mailimg1 = new HtmlGenericControl("img");
@@ -70,6 +71,7 @@ namespace METWebsite
                 String name2 = reader2.GetValue(1).ToString();
                 String mail2 = reader2.GetValue(2).ToString();
                 String office2 = reader2.GetValue(3).ToString();
+                String title2 = reader1.GetValue(4).ToString();
                 var div2 = new HtmlGenericControl("div");
                 div2.Attributes.Add("class", "profileData");
                 var profimg2 = new HtmlGenericControl("img");
@@ -78,7 +80,7 @@ namespace METWebsite
                 var br2 = new HtmlGenericControl("br");
                 var namediv2 = new HtmlGenericControl("div");
                 namediv2.Attributes.Add("class", "name");
-                namediv2.InnerHtml = name2;
+                namediv2.InnerHtml = title2 + " " + name2;
                 var maildiv2 = new HtmlGenericControl("div");
                 maildiv2.Attributes.Add("class", "mailContainer");
                 var mailimg2 = new HtmlGenericControl("img");
@@ -116,6 +118,7 @@ namespace METWebsite
                 String name3 = reader3.GetValue(1).ToString();
                 String mail3 = reader3.GetValue(2).ToString();
                 String office3 = reader3.GetValue(3).ToString();
+                String title3 = reader1.GetValue(4).ToString();
                 var div3 = new HtmlGenericControl("div");
                 div3.Attributes.Add("class", "profileData");
                 var profimg3 = new HtmlGenericControl("img");
@@ -124,7 +127,7 @@ namespace METWebsite
                 var br3 = new HtmlGenericControl("br");
                 var namediv3 = new HtmlGenericControl("div");
                 namediv3.Attributes.Add("class", "name");
-                namediv3.InnerHtml = name3;
+                namediv3.InnerHtml = title3 + " " + name3;
                 var maildiv3 = new HtmlGenericControl("div");
                 maildiv3.Attributes.Add("class", "mailContainer");
                 var mailimg3 = new HtmlGenericControl("img");

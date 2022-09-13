@@ -94,7 +94,7 @@
 
         <div class="weGUCians">
             <div class="redLabel">
-                <label class="guciansLabel">#We_GUCians</label>
+                <label class="guciansLabel">#we_GUCians</label>
             </div>
             <div class="gucianinfo" runat="server" id="gucianinfodiv">
 
