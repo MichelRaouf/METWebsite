@@ -11,6 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <div id="rest">
             <div class="header">
             
                             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
@@ -52,13 +53,17 @@
            
             
         </div>
+        </div>
         </form>
-
+    <br />
     <div class="row_flex">
+        
+        <div class="Scroll">
+      
            <div class="Catalouge">
                         <div class="hierarchyTitle"> <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
                <ul>
-                   <li id="CourseCatalouge" class="catalougebtn"><Label class="catalougebtn" >Course Catalouge</Label> </li>
+                   <li id="CourseCatalouge" class="catalougebtn"><Label class="catalougebtnIN"  >Course Catalouge</Label> </li>
                    <br />
                   
                    <li id="gradCourses" class="catalougebtn"><Label class="catalougebtn" >Graduate Courses</Label></li>
@@ -71,8 +76,8 @@
                            <ul>
                                <li id="MET" class="catalougebtn2"><Label class="catalougebtn2">Media Engineering and Technology</Label><div class="coll" id="METContent">
                                    <ul>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Computer Science & Engineering</a></li>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Digital Media Engineering & Technology</a></li>
+                                       <li class="catalougebtn3"><a href="CourseHomePage.aspx?major=MET" class="catalougebtn3">Computer Science & Engineering</a></li>
+                                       <li class="catalougebtn3"><a href="CourseHomePage.aspx?major=MET" class="catalougebtn3">Digital Media Engineering & Technology</a></li>
                                    </ul>
 
                                </div>
@@ -105,61 +110,45 @@
                </ul>
                
         </div>
+            </div>
+            
             <img src="./images/coursePageImages/VbarCourses.svg" alt="Alternate Text" class="vbar" />
+       
     <div id="Semesters" runat="server" class="semesters">
         
-        
-<%--<button class="collapsible">Semester 1</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul>
-
-</div>
-        
-<button class="collapsible">Semester 2</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-<button class="collapsible">Semester 3</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-        <button class="collapsible">Semester 4</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-        <button class="collapsible">Semester 5</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-        <button class="collapsible">Semester 6</button>
-<div class="content">
-<ul>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-                <li><a href="#">CSEN102 Introduction to Computer Science</a></li>
-            </ul></div>
-       --%>
+       
         </div> 
+            
         
-    
+    </div>
 <script>
-    function redirect() {
+    var img = document.getElementsByClassName("vbar");
+    img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50+ "px";
+    
+    //document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
+    window.addEventListener('scroll', (event) => {
         
-        Response.redirect("CoursePage.aspx");
+        var scroll = document.getElementsByClassName("Scroll");
+        
+        
+    })
+    window.addEventListener('resize', (event) => {
+        
+        var img = document.getElementsByClassName("vbar");
+        img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50 + "px";
+        //document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
+
+    })
+    function redirect() {
+
+        var serial = event.srcElement.getAttribute("id");
+        location.href = "./CoursePage.aspx" + "?id=" + serial;
         
     }
     var gatalouge = document.getElementById("CourseCatalouge");
     var x = document.getElementsByClassName("catalougebtn4");
+
+    
     var grad = document.getElementById("gradCourses");
     var under = document.getElementById("underCourses");
     var img = document.getElementsByClassName("changeimage");
@@ -171,8 +160,24 @@
     var ems = document.getElementById("EMS");
     var EMSContent = document.getElementById("EMSContent");
     var cont = document.getElementsByClassName("coll");
+    var coll = document.getElementsByClassName("collapsible");
+    var querystring = location.search;
+    if (querystring != "") {
+        gatalouge.childNodes.item(0).setAttribute("class", "catalougebtn")
+        if (querystring == "?page=2") {
+            grad.childNodes.item(0).setAttribute("class", "catalougebtnIN")
+        }
+        if (querystring == "?page=3") {
+            under.childNodes.item(0).setAttribute("class", "catalougebtnIN")
+        }
+
+    } 
+
+    
     var j;
+    
     gatalouge.addEventListener("click", function () {
+        location.href = "./CourseHomePage.aspx";
         x[0].style.cssText = 'font-size:2.34375vw';
         img[0].setAttribute("src", "./images/plusicon.svg");
         this.style.cssText = 'font-weight:bold';
@@ -186,23 +191,42 @@
         
     });
     grad.addEventListener("click", function () {
+        gatalouge.childNodes.item(0).setAttribute("class", "catalougebtn")
         img[0].setAttribute("src", "./images/plusicon.svg");
         x[0].style.cssText = 'font-size:2.34375vw';
         this.style.cssText = 'font-weight:bold';
         gatalouge.style.cssText = 'font-weight:400';
         under.style.cssText = 'font-weight:400';
         underContent.style.cssText = 'display : none';
+        
+        var semesters = document.getElementById("Semesters");
+        
+        while (semesters.firstChild) {
+            semesters.removeChild(semesters.lastChild);
+        }
+        location.href = "CourseHomePage.aspx" + "?page=" + 2;
+
         for (j = 0; j < coll.length; j++) {
             cont[j].style.cssText = 'display: none';
+            alert(1);
         }
+        
+        
     });
     under.addEventListener("click", function () {
+        gatalouge.childNodes.item(0).setAttribute("class", "catalougebtn")
+       
+        grad.childNodes.item(0).setAttribute("class", "catalougebtn");
+
+
         this.style.cssText = 'font-weight:bold';
         gatalouge.style.cssText = 'font-weight:400';
         grad.style.cssText = 'font-weight:400';
         underContent.style.cssText = 'display : block';
         x[0].style.cssText = 'font-size:2.13vw';
         img[0].setAttribute("src", "./images/upicon.svg");
+        //location.href = "CourseHomePage.aspx" + "?page=" + 3;
+
 
     });
     met.addEventListener("click", function () {
@@ -222,7 +246,7 @@
 
     });
     
-var coll = document.getElementsByClassName("collapsible");
+    
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -236,6 +260,7 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+    
 </script>
 
 </body>

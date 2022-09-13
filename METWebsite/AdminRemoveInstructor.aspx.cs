@@ -9,15 +9,17 @@ using System.Web.UI.WebControls;
 
 namespace METWebsite
 {
-    public partial class AdminRemoveAlumni : System.Web.UI.Page
+    public partial class AdminRemoveInstructor : System.Web.UI.Page
     {
+        string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            //string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd = new SqlCommand("getAlumniName", con);
+            SqlCommand cmd = new SqlCommand("getInstructorName", con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
             SqlDataReader reader = cmd.ExecuteReader();
@@ -45,6 +47,8 @@ namespace METWebsite
                 delete.Text = "Delete";
                 delete.Attributes.Add("runat", "server");
                 delete.Click += deleteAlumni;
+
+                //search bar
 
                 item.Controls.Add(labelDiv);
                 item.Controls.Add(delete);
@@ -60,27 +64,26 @@ namespace METWebsite
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd2 = new SqlCommand("deleteAlumni", con);
+            SqlCommand cmd2 = new SqlCommand("deleteInstructor", con);
             cmd2.CommandType = System.Data.CommandType.StoredProcedure;
             cmd2.Parameters.Add(new SqlParameter("@id", ((Control)sender).ID));
             cmd2.ExecuteNonQuery();
             con.Close();
 
-            Response.Redirect("AdminRemoveAlumni.aspx");
+            Response.Redirect("AdminRemoveInstructor.aspx");
         }
 
         protected void toSearchRes(object sender, ImageClickEventArgs e)
         {
             alumniList.InnerHtml = "";
-
-            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd = new SqlCommand("searchAlumni", con);
+            SqlCommand cmd = new SqlCommand("searchInstructor", con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             String search = searchInput.Text;
             cmd.Parameters.Add(new SqlParameter("@name", search));
+
 
             SqlDataReader reader = cmd.ExecuteReader();
             string id = ""; string name = "";
@@ -107,6 +110,8 @@ namespace METWebsite
                 delete.Text = "Delete";
                 delete.Attributes.Add("runat", "server");
                 delete.Click += deleteAlumni;
+
+                //search bar
 
                 item.Controls.Add(labelDiv);
                 item.Controls.Add(delete);

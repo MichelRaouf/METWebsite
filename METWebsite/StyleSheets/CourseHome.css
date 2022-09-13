@@ -105,6 +105,7 @@
     display: flex;
     align-items:flex-start;
     flex-direction: row;
+    column-gap:2vw;
     justify-content: start;
 }
 
@@ -112,25 +113,30 @@
         flex-grow: 1 1 0;
         display: flex;
         background-color: #ffff;
-        padding: 20px;
+        padding: 1.3vw;
         font-size: 2vw;
         top: 0px;
     }
 
-
+.Scroll{
+    /*position:fixed;
+    margin-top:205px;
+    height:100%;*/
+}
 .Catalouge {
 
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: start;
+    
 }
     .Catalouge > div {
       
         flex-grow: 1 1 0;
         display: flex;
         background-color: #ffff;
-        padding: 20px;
+        padding: 1.3vw;
         font-size: 2vw;
         top: 0px;
     }
@@ -142,6 +148,9 @@
     justify-content : space-between;
     row-gap : 1.7vh;
     width : 100%;
+    
+   /* overflow-y:scroll;*/
+   /* overflow-x:hidden;*/
   
 }
 
@@ -189,7 +198,7 @@
  
 }
 .vbar{
-    height : 100%;
+    
     margin-top : 1.3vw;
 }
 
@@ -346,7 +355,68 @@ div[for=textarea-a],
     cursor: pointer;
 }
 
-    .coursebtn:hover {
-        text-decoration-color: blue;
-        text-decoration: underline;
+.catalougebtnIN {
+    font-family: Montserrat;
+    font-size: 2.34vw;
+    display:block;
+    font-weight:bold;
+    
+    line-height: 2.8645833333333335vw;
+    letter-spacing: 0.045em;
+    text-align: left;
+    width: 26.693vw;
+}
+
+    .catalougebtnIN:hover {
+        cursor: pointer;
+    }
+.coursebtn:hover {
+    text-decoration: underline;
+    text-decoration-color: #4B8FEA;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    border: 0.052083333333333336vw solid #dddddd;
+    margin: auto;
+    margin-top: 1.04vw;
+}
+
+td, th {
+    border: none;
+    text-align: left;
+    padding: 0.4166666666666667vw;
+    padding-left: 2.6041666666666665vw;
+}
+.courseTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.302vw;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.viewCourse {
+    background-color: #FFCB05;
+    align-content: center;
+    width: 8.5vw;
+    height: 2.5vw;
+    border-radius: 0.32552vw;
+    border: none;
+    font-size: 1.1vw;
+    font-weight: 600;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    display: flex;
+    display: grid;
+    margin: auto;
+}
+
+    .viewCourse:hover {
+        background-color: #000000;
+        transition: 0.5s;
+        cursor: pointer;
     }

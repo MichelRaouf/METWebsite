@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class AdminRemoveAlumni
+    public partial class AdminRemoveInstructor
     {
 
         /// <summary>

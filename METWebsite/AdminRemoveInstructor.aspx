@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminRemoveAlumni.aspx.cs" Inherits="METWebsite.AdminRemoveAlumni" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminRemoveInstructor.aspx.cs" Inherits="METWebsite.AdminRemoveInstructor" %>
 
 <!DOCTYPE html>
 
@@ -39,7 +39,7 @@
             <div class="navLabels" onmouseover="otherDiv()">Other</div>
         </div>
         <div class="assignDiv">
-            <label>Remove Alumni</label>
+            <label>Remove Instructor</label>
         </div>
 
         <div class="alumni" id="alumni">
