@@ -119,7 +119,9 @@
     }
 
 .Scroll{
-    
+    /*position:fixed;
+    margin-top:205px;
+    height:100%;*/
 }
 .Catalouge {
 
@@ -136,6 +138,7 @@
         background-color: #ffff;
         padding: 1.3vw;
         font-size: 2vw;
+
         top: 0px;
     }
 .semesters {
@@ -190,9 +193,10 @@
 
 .content {
     padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    
+    overflow:hidden;
+   
+    transition: overflow 0.2s ease-out;
  
 }
 .vbar{

@@ -63,7 +63,7 @@
                     media design, information retrieval and representation concepts.❞
                 </label>
             </div>
-            <div class="hansDiv">
+            <div class="hansDiv" id="csen">
                 <label class="hansLabel">
                     <br />
                     Prof. Dr. Hans Peter Grossmann
@@ -75,21 +75,43 @@
                     <br />
                 </label>
             </div>
-            <div class="yellowNav">
-                <div>
-                    <a class="hover-underline-animation" href="#csen">CSEN Program</a>
+            <div id="yellowNav" class="yellowNav">
+                <div class="aboutNav" >
+                    <asp:Label Text="CSEN Program" runat="server" onClick="funcCsenProgram()"/>
                 </div>
-                <div>
-                    <a class="hover-underline-animation" href="#dmet">DMET Program</a>
+                <div class="aboutNav" >
+                    <asp:Label Text="DMET Program" runat="server" onClick="funcDmetProgram()"/>
                 </div>
-                <div>
-                    <a class="hover-underline-animation" href="#degrees">Degrees</a>
+                <div class="aboutNav" >
+                    <asp:Label Text="Degrees" runat="server" onClick="funcDegrees()"/>
                 </div>
-                <div>
-                    <a class="hover-underline-animation" href="#career">Career Paths</a>
+                <div class="aboutNav" >
+                    <asp:Label Text="Career Paths" runat="server" onClick="funcCareerPaths()"/>
                 </div>
             </div>
-            <div id="csen">
+            <script>
+                document.documentElement.style.scrollBehavior = "smooth";
+
+                function funcCsenProgram() {
+                    const element = document.getElementById("csen");
+                    element.scrollIntoView();
+
+                }
+                function funcDmetProgram() {
+                    const element = document.getElementById("dmet");
+                    element.scrollIntoView();
+                }
+                function funcDegrees() {
+                    const element = document.getElementById("degrees");
+                    element.scrollIntoView();
+                }
+                function funcCareerPaths() {
+                    const element = document.getElementById("career");
+                    element.scrollIntoView();
+                };
+            </script>
+            
+            <div>
                 <p class="aboutH">Computer Science and Engineering
                     <span class="brackets">
                         (
@@ -130,9 +152,9 @@
                 </ul>
             </div>
             <div>
-                <img class="center" src="./images/aboutUsPageImages/yellowbar.svg" />
+                <img id="dmet" class="center" src="./images/aboutUsPageImages/yellowbar.svg" />
             </div>
-            <div id="dmet">
+            <div>
                 <p class="aboutH">
                     Digital Media Engineering and Technology 
                     <span class="brackets">
@@ -180,10 +202,10 @@
                 </ul>
             </div>
             <div>
-                <img class="center" src="./images/aboutUsPageImages/yellowbar.svg" />
+                <img id="degrees" class="center" src="./images/aboutUsPageImages/yellowbar.svg" />
             </div>
             <div>
-                <p class="aboutH" id="degrees">
+                <p class="aboutH">
                     Degrees
                 </p>
             </div>
@@ -213,10 +235,10 @@
                 </p>
             </div>
             <div>
-                <img class="center" src="./images/aboutUsPageImages/yellowbar.svg" />
+                <img id="career" class="center" src="./images/aboutUsPageImages/yellowbar.svg" />
             </div>
             <div>
-                <p class="aboutH" id="career">
+                <p class="aboutH">
                     Career Paths
                 </p>
             </div>

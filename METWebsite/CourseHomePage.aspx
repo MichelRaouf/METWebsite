@@ -58,7 +58,7 @@
     <br />
     <div class="row_flex">
         
-
+        <div class="Scroll">
       
            <div class="Catalouge">
                         <div class="hierarchyTitle"> <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
@@ -76,8 +76,8 @@
                            <ul>
                                <li id="MET" class="catalougebtn2"><Label class="catalougebtn2">Media Engineering and Technology</Label><div class="coll" id="METContent">
                                    <ul>
-                                       <li class="catalougebtn3"><a href="" class="catalougebtn3">Computer Science & Engineering</a></li>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Digital Media Engineering & Technology</a></li>
+                                       <li class="catalougebtn3"><a href="CourseHomePage.aspx?major=MET" class="catalougebtn3">Computer Science & Engineering</a></li>
+                                       <li class="catalougebtn3"><a href="CourseHomePage.aspx?major=MET" class="catalougebtn3">Digital Media Engineering & Technology</a></li>
                                    </ul>
 
                                </div>
@@ -110,6 +110,7 @@
                </ul>
                
         </div>
+            </div>
             
             <img src="./images/coursePageImages/VbarCourses.svg" alt="Alternate Text" class="vbar" />
        
@@ -249,13 +250,22 @@
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+    coll[i].addEventListener("click", function () {
+        
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
+        var content = this.nextElementSibling;
+        content.style.transition = "overflow 0.2s ease-out";
+        
+        if (content.style["overflow"] == "hidden" || content.style["overflow"] == "" ) {
+            
+            content.style.overflow = "unset"
+        }
+        else
+            content.style.overflow = "hidden"
     if (content.style.maxHeight){
-      content.style.maxHeight = null;
+     content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+        content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
 }
