@@ -68,18 +68,7 @@
         </nav>
 
 
-<!-- Write your comments here 
-        <div class="navBar">
-            <div class="dashIconLabel">
-                <img class="dashboardIcon" src="./images/adminImages/dashboardIcon-white.svg" />
-                <a class="dashboard" href="AdminHomePage.aspx">Admin Dashboard</a>
-            </div>
-            <div class="navLabels" onmouseover="homeDiv()">Home</div>
-            <div class="navLabels" onmouseover="courseDiv()">Courses</div>
-            <div class="navLabels" onmouseover="activDiv()">Student Activity</div>
-            <div class="navLabels" onmouseover="otherDiv()">Other</div>
-        </div>
-    -->
+
         <div class="addAlumniDiv">
             <label>Add Alumni</label>
         </div>

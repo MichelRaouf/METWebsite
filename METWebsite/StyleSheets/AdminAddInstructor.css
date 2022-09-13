@@ -1,18 +1,17 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
-* {
-    box-sizing: border-box;
-}
+
 
 .header {
     left: 0;
     height: 5.5vw;
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: flex;align-items: center;
     flex-direction: row;
     justify-content: start;
 }
@@ -188,6 +187,7 @@ nav > a:hover {
 
 
 
+
 .addInstructorDiv {
     font-size: 2.43vw;
     font-weight: bold;
@@ -211,17 +211,17 @@ nav > a:hover {
     justify-content: flex-start;
 }
 
-.name, .password, .email {
+.name, .role, .email {
     margin-top: 2vw;
 }
 
-.nameLabel, .passwordLabel, .emailLabel {
+.nameLabel, .roleLabel, .emailLabel {
     font-size: 1.62vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
 
-#nameInput, #passwordInput, #emailInput {
+#nameInput, #roleInput, #emailInput {
     border: solid #dbdfe3 1px;
     border-radius: 2px;
     height: 2.4vw;
@@ -233,7 +233,7 @@ nav > a:hover {
     font-size: 0.9vw;
     -webkit-transition: all .2s;
 }
-    #nameInput:focus, #passwordInput:focus, #emailInput:focus {
+    #nameInput:focus, #roleInput:focus, #emailInput:focus {
         outline: solid;
         border-color: #FFBF80;
         outline-color: #FFDFC8;
@@ -249,6 +249,7 @@ nav > a:hover {
     border-radius: 5px;
     border: none;
     align-items: center;
+   
     -webkit-transition: all .3s;
 }
     .sendInvite:hover {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAddInstructor.aspx.cs" Inherits="METWebsite.AdminAddInstructor" %>
+﻿    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAddInstructor.aspx.cs" Inherits="METWebsite.AdminAddInstructor" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="header">
+       <div class="header">
              
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
 
@@ -23,7 +23,9 @@
                 <label class="adminLabel">Admin</label>
 
             </div>
- <nav>
+
+
+        <nav>
            
             <ul class="navUl">
                 <li><img class="dashboardIcon" src="./images/adminImages/dashboardIcon-white.svg" /></li>
@@ -76,11 +78,20 @@
                 <br />
                 <input type="text" id="nameInput" runat="server" name="nameInput" placeholder="name" />
             </div>
-            <div class="password">
-                <label class="passwordLabel" for="passwordInput">Password </label>
+             <div class="role">
+                <label class="roleLabel" for="nameInput">Role </label>
                 <br />
-                <input type="text" id="passwordInput" runat="server" name="passwordInput" placeholder="password" />
+                <select required name="languages" id="roleInput">
+                  <option value="" disabled selected>Select a Role</option>
+                  <option class="ddOption" value="Dean">Dean</option>
+                  <option class="ddOption" value="ViceDean">Vice Dean</option>
+                  <option class="ddOption" value="lecturer">Lecturer</option>
+                  <option class="ddOption"  value="ta">Teaching Assistant</option>
+                 
+                </select>
+      
             </div>
+            
             <div class="email">
                 <label class="emailLabel" for="emailInput">E-mail </label>
                 <br />
@@ -91,7 +102,11 @@
 
         <div class="buttonDiv">
             <asp:Button ID="Button1" CssClass="sendInvite" runat="server" Text="Send Invitation Link" OnClick="Button1_Click" />
+            <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click" Visible="false" />
+            <asp:Button ID="button3" CssClass="yesnobtn" runat="server" Text="No" visible="false" />
             <label class="email" id="mailmessage" runat="server"></label>
+
+            
         </div>
             </div>
     </form>
