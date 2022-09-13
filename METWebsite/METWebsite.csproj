@@ -118,6 +118,7 @@
     <Content Include="AdminInstructorToCourse.aspx" />
     <Content Include="AdminRemoveAlumni.aspx" />
     <Content Include="AdminRemoveCourse.aspx" />
+    <Content Include="AdminRemoveInstructor.aspx" />
     <Content Include="AdminRemoveStudentActivity.aspx" />
     <Content Include="AdminStudentActivity.aspx" />
     <Content Include="App_Data\Database1.mdf" />
@@ -366,6 +367,12 @@
     </Compile>
     <Compile Include="AdminRemoveCourse.aspx.designer.cs">
       <DependentUpon>AdminRemoveCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRemoveInstructor.aspx.cs">
+      <DependentUpon>AdminRemoveInstructor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRemoveInstructor.aspx.designer.cs">
+      <DependentUpon>AdminRemoveInstructor.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminRemoveStudentActivity.aspx.cs">
       <DependentUpon>AdminRemoveStudentActivity.aspx</DependentUpon>

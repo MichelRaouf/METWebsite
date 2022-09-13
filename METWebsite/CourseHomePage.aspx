@@ -58,7 +58,7 @@
     <br />
     <div class="row_flex">
         
-
+        <div class="Scroll">
       
            <div class="Catalouge">
                         <div class="hierarchyTitle"> <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
@@ -76,8 +76,8 @@
                            <ul>
                                <li id="MET" class="catalougebtn2"><Label class="catalougebtn2">Media Engineering and Technology</Label><div class="coll" id="METContent">
                                    <ul>
-                                       <li class="catalougebtn3"><a href="" class="catalougebtn3">Computer Science & Engineering</a></li>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Digital Media Engineering & Technology</a></li>
+                                       <li class="catalougebtn3"><a href="CourseHomePage.aspx?major=MET" class="catalougebtn3">Computer Science & Engineering</a></li>
+                                       <li class="catalougebtn3"><a href="CourseHomePage.aspx?major=MET" class="catalougebtn3">Digital Media Engineering & Technology</a></li>
                                    </ul>
 
                                </div>
@@ -110,6 +110,7 @@
                </ul>
                
         </div>
+            </div>
             
             <img src="./images/coursePageImages/VbarCourses.svg" alt="Alternate Text" class="vbar" />
        
@@ -124,7 +125,7 @@
     var img = document.getElementsByClassName("vbar");
     img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50+ "px";
     
-    document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
+    //document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
     window.addEventListener('scroll', (event) => {
         
         var scroll = document.getElementsByClassName("Scroll");
@@ -135,7 +136,7 @@
         
         var img = document.getElementsByClassName("vbar");
         img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50 + "px";
-        document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
+        //document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
 
     })
     function redirect() {
