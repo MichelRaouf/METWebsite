@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./StyleSheets/AdminAddAlumni.css" />
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveCourse.css" />
     <link rel="stylesheet" href="./StyleSheets/InstructorsProfiles.css" />
-        <link rel="stylesheet" href="./StyleSheets/AdminRemoveAlumni.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminRemoveAlumni.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminRemoveInstructor.css" />
+
 
 
 
@@ -76,13 +78,19 @@
         <div>
             <p class="title">Remove Course</p>
         </div>
-       <div class="alumni" id="alumni">
-            
-            <div class="alumniList" id="alumniList" runat="server">
+        <div class="alumni" id="alumni">
 
-             </div>
-             <div class="bottom"></div>
-          </div>
+            <div class="hierarchyTitle">
+                <div>
+                    <asp:ImageButton runat="server" ImageUrl="images/staff/search.png" CssClass="searchButton" OnClick="toSearchRes" />
+                    <asp:TextBox placeholder="Search.." ID="searchInput" runat="server" />
+                </div>
+            </div>
+
+            <div class="alumniList" id="alumniList" runat="server">
+            </div>
+            <div class="bottom"></div>
+        </div>
     </form>
 
 </body>
