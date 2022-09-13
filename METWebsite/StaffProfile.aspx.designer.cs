@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class StaffProfile
+    public partial class temp7
     {
 
         /// <summary>
@@ -42,6 +42,60 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProfileHeader;
 
         /// <summary>
+        /// profileImageDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl profileImageDiv;
+
+        /// <summary>
+        /// namePosition control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl namePosition;
+
+        /// <summary>
+        /// officeDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl officeDiv;
+
+        /// <summary>
+        /// emailDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emailDiv;
+
+        /// <summary>
+        /// faxDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl faxDiv;
+
+        /// <summary>
+        /// phoneDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl phoneDiv;
+
+        /// <summary>
         /// PersonalInfo control.
         /// </summary>
         /// <remarks>
@@ -49,6 +103,15 @@ namespace METWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl PersonalInfo;
+
+        /// <summary>
+        /// personalList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl personalList;
 
         /// <summary>
         /// educationSection control.
@@ -96,13 +159,13 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button myBtn;
 
         /// <summary>
-        /// TeachingSection control.
+        /// teachingSection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TeachingSection;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl teachingSection;
 
         /// <summary>
         /// more2 control.
@@ -132,22 +195,13 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button mybtn2;
 
         /// <summary>
-        /// research_interests control.
+        /// researchSection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl research_interests;
-
-        /// <summary>
-        /// LinksSection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LinksSection;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl researchSection;
 
         /// <summary>
         /// more3 control.
@@ -177,13 +231,13 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button mybtn3;
 
         /// <summary>
-        /// PublicationSection control.
+        /// publicationsSection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PublicationSection;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl publicationsSection;
 
         /// <summary>
         /// more4 control.
@@ -213,13 +267,13 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button mybtn4;
 
         /// <summary>
-        /// ActivitiesSec control.
+        /// activitySection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ActivitiesSec;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl activitySection;
 
         /// <summary>
         /// more5 control.
