@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveInstructorFromCourse.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminRemoveInstructor.css" />
+
     <title></title>
 </head>
 <body>
@@ -43,8 +45,12 @@
         <div class="instructor" id="instructor" runat="server">
             <label class="selectInstructorLabel">Select an Instructor To Remove</label>
             <br />
-            <input type="text" id="instructorSearch" runat="server" name="instructorSearch" placeholder="search" />
-
+            <div class="hierarchyTitle">
+                <div>
+                    <asp:ImageButton runat="server" ImageUrl="images/staff/search.png" CssClass="searchButton" OnClick="toSearchRes" />
+                    <asp:TextBox placeholder="Search.." ID="searchInput" runat="server" />
+                </div>
+            </div>
             <div class="instructorList" id="instructorList" runat="server">
                 <%--<div class="instructorItem">
                     <div class="instructorLabelDiv">
@@ -52,9 +58,9 @@
                     </div>
                     <asp:Button ID="button1" CssClass="select" runat="server" Text="Select" OnClientClick="selectInstructor();return false;" />
                 </div>--%>
-             </div>
-                <div class="bottom"></div>
             </div>
+            <div class="bottom"></div>
+        </div>
 
         <script>
             function deselectInstructor() {
@@ -75,13 +81,13 @@
 
                 document.getElementById("courseLabel").innerHTML = event.srcElement.getAttribute("courseLabel");
                 document.getElementById("assignedCourse").value = event.srcElement.getAttribute("courseSerial");
-            } 
+            }
 
             function deselectCourse() {
                 document.getElementById("selectedCourse").style.display = "none";
                 document.getElementById("course").style.display = "block";
                 document.getElementById("remove").style.display = "none";
-                document.getElementById("noSelectedCourse").style.display = "none"; 
+                document.getElementById("noSelectedCourse").style.display = "none";
             }
         </script>
 
@@ -97,7 +103,7 @@
         <div class="course" id="course" runat="server">
             <label class="selectCourseLabel" id="selectCourseLabel" runat="server">Courses Assigned to Instructor</label>
             <br />
-            
+
             <div class="courseList" id="courseList" runat="server">
                 <%--<div class="courseItem">
                     <div class="courseLabelDiv">

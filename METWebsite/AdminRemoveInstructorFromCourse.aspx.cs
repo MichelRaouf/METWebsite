@@ -38,7 +38,7 @@ namespace METWebsite
 
                 var instLabel = new HtmlGenericControl("label");
                 instLabel.Attributes.Add("class", "instructorLabel");
-                instLabel.InnerHtml = instTitle+" "+instName;
+                instLabel.InnerHtml = instTitle + " " + instName;
 
                 instLabelDiv.Controls.Add(instLabel);
 
@@ -46,7 +46,7 @@ namespace METWebsite
                 select.ID = instId;
                 select.Attributes.Add("Class", "select");
                 select.Text = "Select";
-                select.Click += selectInstructor;   
+                select.Click += selectInstructor;
 
                 itemInst.Controls.Add(instLabelDiv);
                 itemInst.Controls.Add(select);
@@ -76,8 +76,8 @@ namespace METWebsite
             instructor_id = Int32.Parse(((Control)sender).ID);
             SqlDataReader reader2 = cmd2.ExecuteReader();
             reader2.Read();
-            string instTitle = reader2.GetValue(0).ToString(); ; 
-            string instName = reader2.GetValue(1).ToString(); ; 
+            string instTitle = reader2.GetValue(0).ToString(); ;
+            string instName = reader2.GetValue(1).ToString(); ;
             con.Close();
 
             var instItem = new HtmlGenericControl("div");
@@ -88,16 +88,16 @@ namespace METWebsite
 
             var instLabel = new HtmlGenericControl("label");
             instLabel.Attributes.Add("class", "instructorLabel");
-            instLabel.InnerHtml = instTitle+ " "+instName;
+            instLabel.InnerHtml = instTitle + " " + instName;
 
             instLabelDiv.Controls.Add(instLabel);
 
             var unselect = new HtmlGenericControl("button");
             unselect.Attributes.Add("Class", "Unselect");
             unselect.Attributes.Add("runat", "server");
-            unselect.InnerHtml="Unselect";
+            unselect.InnerHtml = "Unselect";
             unselect.Attributes.Add("OnClick", "deselectInstructor();return false;");
-            
+
             instItem.Controls.Add(instLabelDiv);
             instItem.Controls.Add(unselect);
 
@@ -127,7 +127,7 @@ namespace METWebsite
 
                 var courseLabel = new HtmlGenericControl("label");
                 courseLabel.Attributes.Add("class", "courseLabel");
-                courseLabel.InnerHtml="("+courseCode+")"+" "+courseName;
+                courseLabel.InnerHtml = "(" + courseCode + ")" + " " + courseName;
 
                 courseLabelDiv.Controls.Add(courseLabel);
 
@@ -135,7 +135,7 @@ namespace METWebsite
                 selectCourse.Attributes.Add("Class", "select");
                 selectCourse.InnerHtml = "select";
                 selectCourse.Attributes.Add("onclick", "selectCourse();return false;");
-                selectCourse.Attributes.Add("courseLabel", "("+courseCode+")"+" "+courseName);
+                selectCourse.Attributes.Add("courseLabel", "(" + courseCode + ")" + " " + courseName);
                 selectCourse.Attributes.Add("courseSerial", courseSerial);
 
                 courseItem.Controls.Add(courseLabelDiv);
@@ -180,6 +180,11 @@ namespace METWebsite
             cmd4.ExecuteNonQuery();
             con.Close();
             //Response.Redirect("AdminRemoveInstructorFromCourse.aspx");
+        }
+
+        protected void toSearchRes(object sender, ImageClickEventArgs e)
+        {
+
         }
 
     }
