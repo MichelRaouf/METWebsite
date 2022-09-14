@@ -63,6 +63,7 @@ namespace METWebsite
             course.Style.Add("display", "block");
             selectedCourse.Style.Add("display", "none");
             remove.Style.Add("display", "none");
+            noSelectedCourse.Style.Add("display", "none");
 
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
@@ -110,9 +111,10 @@ namespace METWebsite
             cmd3.Parameters.Add(new SqlParameter("@instructor_id", ((Control)sender).ID));
             SqlDataReader reader3 = cmd3.ExecuteReader();
             string courseSerial = ""; string courseCode = ""; string courseName = "";
-
+            Boolean hasCourse = false;
             while (reader3.Read())
             {
+                hasCourse = true;
                 courseSerial = reader3.GetValue(0).ToString();
                 courseCode = reader3.GetValue(1).ToString();
                 courseName = reader3.GetValue(2).ToString();
@@ -141,6 +143,22 @@ namespace METWebsite
 
                 courseList.Controls.Add(courseItem);
 
+            }
+            if (!hasCourse)
+            {
+                // selectCourseLabel.Style.Add("display", "none");
+                //courseList.Style.Add("display", "none");
+                //bottom.Style.Add("display", "none");
+
+                //var noCourseLabel = new HtmlGenericControl("label");
+                //noCourseLabel.Attributes.Add("class", "selectCourseLabel");
+                //noCourseLabel.InnerHtml = "No Courses Assigned To This Instructor";
+                //course.Controls.Add(noCourseLabel);
+                //course.Controls.Add(bottom);
+                //bottom.Style.Add("display", "block");
+                noSelectedCourse.Style.Add("display", "block");
+                selectedCourse.Style.Add("display", "none");
+                course.Style.Add("display", "none");
             }
             con.Close();
         }

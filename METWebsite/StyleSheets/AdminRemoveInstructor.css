@@ -23,7 +23,7 @@
 }
 
     .hierarchyTitle div {
-        background-color: #ECECEC;
+        background-color: white;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -35,7 +35,7 @@
     .hierarchyTitle input[type=text] {
         height: 2.5vw;
         width: 20vw;
-        background-color: #ECECEC;
+        background-color: white;
         font-family: 'Montserrat', sans-serif;
         border: none;
         padding-left: 0.3255208333333333vw;
