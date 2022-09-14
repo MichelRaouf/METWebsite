@@ -15,6 +15,7 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
             int ser=Int32.Parse(Request.QueryString["id"]);
             Response.Write(ser);
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
