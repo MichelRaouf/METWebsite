@@ -182,11 +182,12 @@
         </div>
 
 
-        <div class="title">
-            <p>Resources</p>
-        </div>
+   
+            <p class="title">Resources</p>
+    
 
         <div class="margin-bottom margin-left" id="cres" runat="server">
+
         </div>
 
     </form>
