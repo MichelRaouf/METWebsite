@@ -94,7 +94,7 @@
 
         <div class="weGUCians">
             <div class="redLabel">
-                <label class="guciansLabel">#We_GUCians</label>
+                <label class="guciansLabel">#we_GUCians</label>
             </div>
             <div class="gucianinfo" runat="server" id="gucianinfodiv">
 
@@ -186,15 +186,23 @@
     </form>
 
     <script>
-        var labels = document.getElementsByClassName("newsitemlabel")
+        var sections = document.getElementsByClassName("whiteBox");
+        for (var i = 0; i < sections.length; i++) {
+            //alert(sections[i].offsetTop + " " + sections[i].parentElement.offsetTop);
+            sections[i].style.top = "90%";
+           // sections[i].style.top = sections[i].parentElement.offsetTop + sections[i].parentElement.offsetHeight - sections[i].offsetHeight + "px";
+            //alert(sections[i].offsetTop + " " + sections[i].parentElement.offsetTop);
+        }
+        var labels = document.getElementsByClassName("newsItemLabel")
         for (var i = 0; i < labels.length; i++) {
+            
             var x = labels[i].parentElement.offsetLeft
             labels[i].style.left = (labels[i].parentElement.offsetWidth - labels[i].offsetWidth) / 2 + "px";
 
         }
         window.addEventListener("resize", (event) => {
 
-            var labels = document.getElementsByClassName("newsitemlabel")
+            var labels = document.getElementsByClassName("newsItemLabel")
             for (var i = 0; i < labels.length; i++) {
                 var x = labels[i].parentElement.offsetLeft
 

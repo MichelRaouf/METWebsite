@@ -215,7 +215,6 @@ html, body {
     opacity: 70%;
     align-items: center;
     align-content: center;
-    position: inherit;
     width: auto;
 }
 
@@ -371,6 +370,7 @@ html, body {
     opacity: 100%;
     font-size: 3vw;
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .gucianinfo {
@@ -401,12 +401,11 @@ html, body {
 
 .gucianlabel {
     font-family: Montserrat;
-    font-size: 3vw;
-    font-weight: 600;
+    font-size: 3.5807291666666665vw;
     letter-spacing: 0em;
     text-align: center;
     font-family: Montserrat;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0em;
     text-align: center;
     color: white;

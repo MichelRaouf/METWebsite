@@ -1,18 +1,19 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
-body {
-    width: 100%;
-    margin-left: -1px;
+html, body {
+    margin: 0px;
+    height: 100%;
 }
 
 .header {
-    height: 7.6171875vw;
+    height: 7.61716752vw;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: start;
+    top: 0px;
 }
 
     .header > div {
@@ -23,6 +24,21 @@ body {
         font-size: 2vw;
         top: 0px;
     }
+
+.logo {
+    width: 20.57vw;
+    height: 5.31510415vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.31510415vw;
+}
+
+.facultyLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
 
 .login {
     position: relative;
@@ -38,13 +54,36 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+    .login:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+.navbar {
+    background-color: black;
+    height: 4.3vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+    .navbar > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5vw;
+    }
+
 .navbtn {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5625vw;
-    font-weight: 500;
+    font-size: 1.4vw;
+    font-weight: 400;
     background-color: black;
     color: white;
-    vertical-align: middle;
 }
 
     .navbtn:hover {
@@ -58,66 +97,40 @@ body {
         transition: 0.5s;
     }
 
-.navbar {
-    background-color: black;
-    height: 4.5vw;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-    .navbar > div {
-        margin-left: 10px;
-        flex-grow: 1 1 0;
-        display: flex;
-        padding: 1.3vw;
-        top: 0px;
-    }
-
-.logo {
-    width: 20.57vw;
-    height: 5.315104166666667vw;
-}
-
-.bar {
-    width: 2.57vw;
-    height: 5.315104166666667vw;
-}
-
-.navimg {
-    width: 1.8229166666666667vw;
-    height: 1.8229166666666667vw;
-    padding-top: .27vw;
-    vertical-align: middle;
-}
-
-.navimg2 {
-    width: 2.5vw;
-    height: 2.5vw;
-    vertical-align: middle;
-    padding-top: .4vw;
-}
-
-.navimg3 {
-    width: 3vw;
-    height: 3vw;
-    padding-top: .4vw;
-    vertical-align: middle;
-}
-
-.navimg4 {
-    width: 2.3vw;
-    height: 2.3vw;
-    padding-top: .4vw;
-    vertical-align: middle;
-}
-
-
-.label1 {
+.navbtnin {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8vw;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: default;
+}
+
+.navImgHomeBookHeadphones {
+    width: 1.6vw;
+    height: 1.6vw;
+}
+
+.navImgGroup {
+    width: 1.9vw;
+    height: 2.2vw;
+}
+
+.navImgGrad {
+    width: 1.6vw;
+    height: 1.6vw;
+}
+
+.navImgAbout {
+    width: 2vw;
+    height: 2vw;
 }
 
 .Header {

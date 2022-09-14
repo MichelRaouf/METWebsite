@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveStudentActivity.css" />
+        <link rel="stylesheet" href="./StyleSheets/AdminRemoveInstructor.css" />
+
     <title></title>
 </head>
 <body>
@@ -39,9 +41,14 @@
         <div class="assignDiv">
             <label>Remove Student Activity</label>
         </div>
-
+        
         <div class="studentActivity" >
-
+             <div class="hierarchyTitle">
+                <div>
+                    <asp:ImageButton runat="server" ImageUrl="images/staff/search.png" CssClass="searchButton" OnClick="toSearchRes" />
+                    <asp:TextBox placeholder="Search.." ID="searchInput" runat="server" />
+                </div>
+            </div>
             <div class="studentActivityList" id="studentActivityList" runat="server">
                 <%--<div class="studentActivityItem">
                     <div class="studentActivityLabelDiv">
