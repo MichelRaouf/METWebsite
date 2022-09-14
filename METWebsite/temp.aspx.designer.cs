@@ -33,48 +33,84 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// ctitle control.
+        /// creditDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ctitle;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl creditDiv;
 
         /// <summary>
-        /// ccredits control.
+        /// lectureDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ccredits;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lectureDiv;
 
         /// <summary>
-        /// clecs control.
+        /// tutDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl clecs;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tutDiv;
 
         /// <summary>
-        /// ctuts control.
+        /// phoneDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ctuts;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl phoneDiv;
 
         /// <summary>
-        /// clabs control.
+        /// courseUpdates control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl clabs;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl courseUpdates;
+
+        /// <summary>
+        /// updatesList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl updatesList;
+
+        /// <summary>
+        /// description control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl description;
+
+        /// <summary>
+        /// prerequisites control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl prerequisites;
+
+        /// <summary>
+        /// prereqList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl prereqList;
     }
 }

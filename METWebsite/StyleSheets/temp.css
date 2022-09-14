@@ -1,4 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
 
 .* {
     box-sizing: border-box;
@@ -141,4 +142,182 @@ html, body {
 .navImgAbout {
     width: 2vw;
     height: 2vw;
+}
+
+.flex-container-1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25.6770833vw;
+    background: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 1),rgba(255, 203, 5, 0.8));
+    column-gap: 35vw;
+    justify-content: center;
+}
+
+.iconLineDiv {
+    margin-bottom: 1.5vw;
+}
+
+.iconNoTut {
+    vertical-align: middle;
+    width: 2.6vw;
+    height: 2.6vw;
+}
+
+.iconTut {
+    vertical-align: middle;
+    width: 3.25520833vw;
+    height: 2.6vw;
+}
+
+.iconLabelNoTut {
+    vertical-align: middle;
+    font-size: 1.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-left: 3.64583333vw;
+    color: white;
+}
+
+.iconLabelTut {
+    vertical-align: middle;
+    font-size: 1.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-left: 2.9166666666vw;
+    color: white;
+}
+
+.courseTitleDiv {
+    width: 34.2708333vw;
+    margin-top: 6vw;
+}
+
+.courseTitle {
+    font-family: Monda;
+    font-weight: bolder;
+    font-size: 3vw;
+    color: white;
+}
+
+.iconsValues {
+    margin-top: 5.15625vw;
+    margin-bottom: 5vw;
+}
+
+.navbar2 {
+    height: 3.1901041666666665vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    z-index: 10000;
+    position: sticky;
+    top: 0px;
+    border: solid 1px #D9D9D9;
+}
+
+    .navbar2 > div {
+        margin-left: 0.8051529790660226vw;
+        flex-grow: 1 1 0;
+        display: flex;
+        padding: 1.3vw;
+        top: 0vw;
+    }
+
+
+.AboutNav {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5vw;
+    line-height: 3.9452495974235107vw;
+}
+
+    .AboutNav:hover {
+        font-weight: 700;
+        text-decoration: underline;
+        font-size: 1.6vw;
+        cursor: pointer;
+    }
+
+ul {
+    list-style: none;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+    ul li.updateItem::before {
+        content: "\2022";
+        color: #ED1C24;
+        font-weight: 800;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        opacity: 80%;
+    }
+
+li.updateItem {
+    margin-bottom: 1vw;
+    color: #ED1C24;
+    margin-left: 4.296875vw;
+    font-size: 1.8vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.infoTitleDiv {
+    text-align: center;
+    margin-top: 3.5vw;
+}
+
+.infoTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.9vw;
+    font-weight: 500;
+}
+
+.gradientBar {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(237, 28, 36, 0.9), rgba(255, 203, 5, 0.8));
+    width: 52.08333333333333vw;
+    height: 0.5729166666666667vw;
+    margin-left: 23.95833333333333vw;
+    margin-top: 3vw;
+}
+
+.textDiv {
+    margin-left: 4.296875vw;
+    margin-top: 3vw;
+}
+
+.descriptionText {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+
+ul.listDiv {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.8vw;
+}
+
+    ul li.courseItem::before {
+        content: "\2022";
+        color: black;
+        font-weight: 800;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        opacity: 80%;
+    }
+
+li.courseItem {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.8vw;
+    margin-bottom: 1vw;
+    margin-left: 4.296875vw;
 }
