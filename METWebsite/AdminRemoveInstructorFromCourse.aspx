@@ -63,6 +63,7 @@
                 document.getElementById("course").style.display = "none";
                 document.getElementById("selectedCourse").style.display = "none";
                 document.getElementById("remove").style.display = "none";
+                document.getElementById("noSelectedCourse").style.display = "none";
             }
 
             function selectCourse() {
@@ -70,7 +71,8 @@
                 document.getElementById("selectedCourse").style.display = "block";
                 document.getElementById("remove").style.display = "block";
                 document.getElementById("course").style.display = "none";
-                
+                document.getElementById("noSelectedCourse").style.display = "none";
+
                 document.getElementById("courseLabel").innerHTML = event.srcElement.getAttribute("courseLabel");
                 document.getElementById("assignedCourse").value = event.srcElement.getAttribute("courseSerial");
             } 
@@ -79,6 +81,7 @@
                 document.getElementById("selectedCourse").style.display = "none";
                 document.getElementById("course").style.display = "block";
                 document.getElementById("remove").style.display = "none";
+                document.getElementById("noSelectedCourse").style.display = "none"; 
             }
         </script>
 
@@ -92,10 +95,9 @@
         </div>
 
         <div class="course" id="course" runat="server">
-            <label class="selectCourseLabel">Courses Assigned to Instructor</label>
+            <label class="selectCourseLabel" id="selectCourseLabel" runat="server">Courses Assigned to Instructor</label>
             <br />
-            <input type="text" id="courseSearch" runat="server" name="courseSearch" placeholder="search" />
-
+            
             <div class="courseList" id="courseList" runat="server">
                 <%--<div class="courseItem">
                     <div class="courseLabelDiv">
@@ -104,7 +106,7 @@
                     <asp:Button ID="button6" CssClass="select" runat="server" Text="Select" OnClientClick="selectCourse();retuen false;"/>
                 </div>--%>
             </div>
-            <div class="bottom"></div>
+            <div class="bottom" id="bottom" runat="server"></div>
         </div>
 
         <div class="selectedCourse" id="selectedCourse" runat="server">
@@ -116,8 +118,12 @@
             </div>
         </div>
 
+        <div class="noSelectedCourse" id="noSelectedCourse" runat="server">
+            <label class="noSelectCourseLabel" id="Label1" runat="server">No Courses Assigned to this Instructor</label>
+        </div>
+
         <div class="removeDiv" id="remove" runat="server">
-            <asp:Button CssClass="remove" runat="server" Text="Remove Instructor" runat="server" OnClick="unassignInstructorFromCourse" />
+            <asp:Button CssClass="remove" runat="server" Text="Remove" runat="server" OnClick="unassignInstructorFromCourse" />
         </div>
 
         <input id="assignedCourse" type="hidden" runat="server" />

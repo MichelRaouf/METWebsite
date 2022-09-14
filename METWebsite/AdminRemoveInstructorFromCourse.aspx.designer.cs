@@ -69,13 +69,13 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl course;
 
         /// <summary>
-        /// courseSearch control.
+        /// selectCourseLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText courseSearch;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl selectCourseLabel;
 
         /// <summary>
         /// courseList control.
@@ -85,6 +85,15 @@ namespace METWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl courseList;
+
+        /// <summary>
+        /// bottom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl bottom;
 
         /// <summary>
         /// selectedCourse control.
@@ -112,6 +121,24 @@ namespace METWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button button5;
+
+        /// <summary>
+        /// noSelectedCourse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl noSelectedCourse;
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label1;
 
         /// <summary>
         /// remove control.
