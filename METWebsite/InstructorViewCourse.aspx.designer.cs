@@ -33,6 +33,51 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlInputText editText;
 
         /// <summary>
+        /// weekTitleEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText weekTitleEdit;
+
+        /// <summary>
+        /// weekDescriptionEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText weekDescriptionEdit;
+
+        /// <summary>
+        /// dropdownWeeks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropdownWeeks;
+
+        /// <summary>
+        /// weekTitleAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText weekTitleAdd;
+
+        /// <summary>
+        /// weekDescriptionAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText weekDescriptionAdd;
+
+        /// <summary>
         /// AddAnnText control.
         /// </summary>
         /// <remarks>
@@ -123,39 +168,21 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.ImageButton Image2;
 
         /// <summary>
-        /// ImageButton3 control.
+        /// resourcesTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton3;
+        protected global::System.Web.UI.HtmlControls.HtmlTable resourcesTable;
 
         /// <summary>
-        /// ImageButton4 control.
+        /// AddResourceDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
-
-        /// <summary>
-        /// mybtn7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button mybtn7;
-
-        /// <summary>
-        /// cres control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cres;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddResourceDiv;
     }
 }

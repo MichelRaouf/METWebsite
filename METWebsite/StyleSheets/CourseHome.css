@@ -138,6 +138,7 @@
         background-color: #ffff;
         padding: 1.3vw;
         font-size: 2vw;
+
         top: 0px;
     }
 .semesters {
@@ -149,8 +150,8 @@
     row-gap : 1.7vh;
     width : 100%;
     
-   /* overflow-y:scroll;*/
-   /* overflow-x:hidden;*/
+    overflow-y:scroll;
+    overflow-x:hidden;
   
 }
 
@@ -192,9 +193,10 @@
 
 .content {
     padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    
+    overflow:hidden;
+   
+    transition: overflow 0.2s ease-out;
  
 }
 .vbar{

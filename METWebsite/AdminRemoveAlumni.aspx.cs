@@ -45,7 +45,7 @@ namespace METWebsite
                 Button delete = new Button();
                 delete.ID = id;
                 delete.Attributes.Add("Class", "delete");
-                delete.Text = "Delete";
+                delete.Text = "Select";
                 delete.Attributes.Add("runat", "server");
                 delete.Click += deleteAlumni;
 
