@@ -15,6 +15,7 @@ namespace METWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
             int ser=Int32.Parse(Request.QueryString["id"]);
             Response.Write(ser);
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
@@ -291,6 +292,10 @@ namespace METWebsite
         protected void aboutUsButton_Click(object sender, EventArgs e)
         {
 
+        }
+        protected void toLogin(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
         protected void toHome(object sender, EventArgs e)
         {

@@ -25,7 +25,7 @@ namespace METWebsite
             String emailInput = username.Text;
             String pass = password.Text;
 
-            SqlCommand UsersCred = new SqlCommand("select email,password,id from Instructors", con);
+            SqlCommand UsersCred = new SqlCommand("select email,password,id from Users", con);
             SqlDataReader reader = UsersCred.ExecuteReader();
             while (reader.Read())
             {

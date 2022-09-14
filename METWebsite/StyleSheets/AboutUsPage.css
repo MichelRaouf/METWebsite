@@ -194,27 +194,29 @@ html, body {
     align-items: center;
     justify-content: space-around;
     background-color: #F5D243;
+    z-index: 10000;
+    position: sticky;
+    top: 0px;
 }
 
     .yellowNav > div {
-        margin-left: 10px;
+        margin-left: 0.8051529790660226vw;
         flex-grow: 1 1 0;
         display: flex;
         padding: 1.3vw;
-        top: 0px;
+        top: 0vw;
     }
 
-.hover-underline-animation {
+.aboutNav {
     color: white;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 1.5vw;
-    text-decoration: none;
     line-height: 3.9452495974235107vw;
 }
 
-    .hover-underline-animation:hover {
+    .aboutNav:hover {
         font-weight: 900;
         text-decoration: underline;
         font-size: 1.6vw;
@@ -285,4 +287,5 @@ li {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    margin-bottom: 1vw;
 }

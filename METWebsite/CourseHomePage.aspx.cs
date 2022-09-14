@@ -130,7 +130,7 @@ namespace METWebsite
             }
             else
             {
-                Response.Write(123);
+               
                 string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
                 //create new sqlconnection and connection to database by using connection string from web.config file  
                 SqlConnection con = new SqlConnection(strcon);

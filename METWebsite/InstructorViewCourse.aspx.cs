@@ -95,7 +95,6 @@ namespace METWebsite
                 editButton.ServerClick += (object sender1, EventArgs e1) => {
                     ClientScript.RegisterStartupScript(this.GetType(), "key", "openEditOverlay();", true);
                     Session["editId"] = updateId;
-                    //Response.Write("<script>alert(" + Session["editId"] + ")</script>");
 
 
                 };
@@ -145,8 +144,10 @@ namespace METWebsite
                 weeks.Add(list);
             }
             con.Close();
+            int i=1;
             foreach (var eachWeek in weeks)
             {
+               
                 var divFlex = new HtmlGenericControl("div");
                 divFlex.Attributes.Add("class", "flex-container-2");
                 var FlexChild = new HtmlGenericControl("div");
@@ -157,26 +158,37 @@ namespace METWebsite
                 weekNo.Attributes.Add("class", "week-number");
                 var FlexChild2 = new HtmlGenericControl("div");
                 FlexChild2.Attributes.Add("class", "flex-child");
-                var TitleP = new HtmlGenericControl("p");
+                var TitleP = new HtmlGenericControl("span");
                 TitleP.Attributes.Add("class", "syllabus-title");
                 var divTitle = new HtmlGenericControl("div");
+                divTitle.Attributes.Add("class", "divTitle");
+                var editbuttonContainer = new HtmlButton();
                 var EditButton = new ImageButton();
-                EditButton.CssClass = "weekEdit ";
+                var x = new HtmlInputImage();
+               
+                EditButton.CssClass = "weekEdit";
                 EditButton.ImageUrl = "./images/InstructorHome/blackEdit.svg";
                 EditButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redEdit.svg'");
-                EditButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackDelete.svg'");
+                EditButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackEdit.svg'");
+                editbuttonContainer.Controls.Add(EditButton);
+                EditButton.Click += (object sender1, ImageClickEventArgs e1) => {
+                    ClientScript.RegisterStartupScript(this.GetType(), "key", "openEditWeekOverlay();", true);
+                    Session["weekeditSerial"] = eachWeek[3];
+                };
+                
                 var weekDescription = new HtmlGenericControl("p");
                 weekDescription.Attributes.Add("class", "syllabus-description");
-                var grayLine = new HtmlImage();
-                grayLine.Src = "./images/coursePageImages/line.svg";
-                grayLine.Attributes.Add("calss", "syllabus-line");
+                var grayLine = new HtmlGenericControl("hr");
+                grayLine.Attributes.Add("style", "width: 82%; margin-left :13vw; border-left:none;border-right:none; border-bottom:none; opacity:40%;");
+               
+           
                 var materialsList = new HtmlGenericControl("ul");
                 materialsList.Attributes.Add("class", "materialsUl");
                
                 FlexChild.Controls.Add(week);
                 FlexChild.Controls.Add(weekNo);
                 week.InnerHtml = "Week";
-                weekNo.InnerHtml = eachWeek[0];
+                weekNo.InnerHtml = (i++).ToString();
                 divTitle.Controls.Add(TitleP);
                 divTitle.Controls.Add(EditButton);
                 weekDescription.InnerHtml = eachWeek[2];
@@ -205,12 +217,19 @@ namespace METWebsite
                     DelteButton.ImageUrl = "./images/InstructorHome/blackDelete.svg";
                     DelteButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redDelete.svg'");
                     DelteButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackDelete.svg'");
+                    DelteButton.Attributes.Add("style", "width : 2vw; height:2.4vw");
                     li.Controls.Add(DelteButton);
                     var materialLink = new HtmlAnchor();
                     materialLink.HRef = materialsReader.GetValue(1).ToString();
                     materialLink.InnerHtml = materialsReader.GetValue(0).ToString();
                     li.Controls.Add(materialLink);
                     materialsList.Controls.Add(li);
+                    
+                    int xd = Int32.Parse(materialsReader.GetValue(2).ToString());
+                    DelteButton.Click += (object sender1, ImageClickEventArgs e1) => {
+                        ClientScript.RegisterStartupScript(this.GetType(), "key", "openDeleteMaterialsOverlay();", true);
+                        Session["deleteMaterials"] = xd;
+                    };
 
 
 
@@ -220,25 +239,147 @@ namespace METWebsite
                 con.Close();
                 var addNewMaterialsButton = new HtmlButton();
                 addNewMaterialsButton.ServerClick += (object sender1, EventArgs e1) => {
-                    //////////////////////////////////////////////////////////////////////////
+                    // Write Add Matrials syntax here
                 };
                 addNewMaterialsButton.Attributes.Add("class", "AddNewMaterials");
-                var addImg = new HtmlImage();
-                addImg.Attributes.Add("class", "editIcon");
-                addImg.Src = "./images/InstructorHome/plusIcon.svg";
-                var span = new HtmlGenericControl("span");
-                span.Attributes.Add("class", "innerSpan");
-                span.InnerHtml = "Add Materials";
-                addNewMaterialsButton.Controls.Add(addImg);
-                addNewMaterialsButton.Controls.Add(span);
+                var addImg1 = new HtmlImage();
+                addImg1.Attributes.Add("class", "editIcon");
+                addImg1.Src = "./images/InstructorHome/plusIcon.svg";
+                var span1 = new HtmlGenericControl("span");
+                span1.Attributes.Add("class", "innerSpan");
+                span1.InnerHtml = "Add Materials";
+                addNewMaterialsButton.Controls.Add(addImg1);
+                addNewMaterialsButton.Controls.Add(span1);
                 csyllabus.Controls.Add(addNewMaterialsButton);
+                var blackLine = new HtmlGenericControl("hr");
+                blackLine.Attributes.Add("style", "width: 90%;  border-left:none;border-right:none; border-bottom:none;");
+
+                csyllabus.Controls.Add(blackLine);
 
 
 
 
 
             }
+            var addNewWeekButton = new HtmlButton();
+            addNewWeekButton.ServerClick += (object sender1, EventArgs e1) => {
+                ClientScript.RegisterStartupScript(this.GetType(), "key", "openAddWeekOverlay();", true);
          
+                con.Open();
+                SqlCommand getAvailableWeeks = new SqlCommand("getAvailableWeeks", con);
+                getAvailableWeeks.CommandType = CommandType.StoredProcedure;
+                getAvailableWeeks.Parameters.Add(new SqlParameter("@courseSerial", IdString));
+                SqlDataReader getAvailableWeeksReader = getAvailableWeeks.ExecuteReader();
+                while (getAvailableWeeksReader.Read())
+                {
+                    int weekNo = Int32.Parse(getAvailableWeeksReader.GetValue(0).ToString());
+                    String[] start_date = (getAvailableWeeksReader.GetValue(1).ToString()).Split(' ');
+                    ListItem optionWeek = new ListItem(start_date[0], weekNo.ToString());
+                    dropdownWeeks.Items.Add(optionWeek);
+                }
+
+
+
+            };
+            addNewWeekButton.Attributes.Add("class", "AddNewWeek");
+            var addImg = new HtmlImage();
+            addImg.Attributes.Add("class", "editIcon");
+            addImg.Src = "./images/InstructorHome/plusIcon.svg";
+            var span = new HtmlGenericControl("span");
+            span.Attributes.Add("class", "innerSpan");
+            span.InnerHtml = "Add Week";
+            addNewWeekButton.Controls.Add(addImg);
+            addNewWeekButton.Controls.Add(span);
+            csyllabus.Controls.Add(addNewWeekButton);
+            con.Open();
+            con.Close();
+
+            SqlCommand course_res = new SqlCommand("courseResources", con);
+            course_res.CommandType = System.Data.CommandType.StoredProcedure;
+            course_res.Parameters.Add(new SqlParameter("@course_id", Int32.Parse(IdString)));
+
+            con.Open();
+            course_res.ExecuteNonQuery();
+
+            SqlDataReader courseResourcesReader = course_res.ExecuteReader();
+
+            while (courseResourcesReader.Read())
+            {
+                var tr = new HtmlTableRow();
+                var td1 = new HtmlTableCell();
+                var img = new HtmlImage();
+                img.Src = "./images/coursePageImages/link.svg";
+                img.Attributes.Add("class", "navimg");
+                var a = new HtmlAnchor();
+                a.HRef = courseResourcesReader.GetValue(1).ToString();
+                a.InnerHtml = courseResourcesReader.GetValue(0).ToString();
+                a.Attributes.Add("class", "resources");
+                td1.Controls.Add(img);
+                td1.Controls.Add(a);
+                var td2 = new HtmlTableCell();
+                var ResourceDeleteButton = new HtmlButton();
+                ResourceDeleteButton.Attributes.Add("class", "Delete");
+                ResourceDeleteButton.ServerClick += (object sender1, EventArgs e1) => {
+                    ClientScript.RegisterStartupScript(this.GetType(), "key", "openDeleteOverlay();", true);
+                    ////////////////////////////////////////////////////////////////////////////
+                    ///////////////////////////////////////////////////////////////////////////
+                    //////////////////////////////////////////////////////////////////
+                };
+                var deleteImg = new HtmlGenericControl("img");
+                deleteImg.Attributes.Add("src", "./images/InstructorHome/whiteDelete.svg");
+                deleteImg.Attributes.Add("class", "editIcon");
+                var deleteSpan = new HtmlGenericControl("span");
+                deleteSpan.Attributes.Add("class", "innerSpan");
+                deleteSpan.InnerHtml = "Delete";
+                ResourceDeleteButton.Controls.Add(deleteImg);
+                ResourceDeleteButton.Controls.Add(deleteSpan);
+                td2.Controls.Add(ResourceDeleteButton);
+                tr.Controls.Add(td1);
+                tr.Controls.Add(td2);
+
+                resourcesTable.Controls.Add(tr);
+            }
+            con.Close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            var addNewResourceButton = new HtmlButton();
+            addNewWeekButton.ServerClick += (object sender1, EventArgs e1) => {
+              
+
+            };
+            addNewResourceButton.Attributes.Add("class", "AddNewWeek");
+            addNewResourceButton.Attributes.Add("style", "width :15vw");
+            var addResourceImg = new HtmlImage();
+            addResourceImg.Attributes.Add("class", "editIcon");
+            addResourceImg.Src = "./images/InstructorHome/plusIcon.svg";
+            var Resourcespan = new HtmlGenericControl("span");
+            Resourcespan.Attributes.Add("class", "innerSpan");
+            Resourcespan.InnerHtml = "Add Resource";
+            addNewResourceButton.Controls.Add(addResourceImg);
+            addNewResourceButton.Controls.Add(Resourcespan);
+
+            AddResourceDiv.Controls.Add(addNewResourceButton);
+
+
+
+
+
+
+
+
 
 
 
@@ -251,8 +392,9 @@ namespace METWebsite
             Session["id"] = null;
             Response.Redirect("Login.aspx");
         }
-        protected void EditConfirm(object sender,EventArgs e)
+        protected void EditConfirm(object sender, EventArgs e)
         {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             SqlConnection con = new SqlConnection(strcon);
             String editedText = editText.Value;
@@ -260,9 +402,14 @@ namespace METWebsite
             EditUpdate.CommandType = System.Data.CommandType.StoredProcedure;
             EditUpdate.Parameters.Add(new SqlParameter("@newDescription", editedText));
             EditUpdate.Parameters.Add(new SqlParameter("@updateID", Session["editId"]));
-            //Response.Write("<script>alert("+ Session["editId"] + ")</script>");
             con.Open();
+            try { 
             EditUpdate.ExecuteNonQuery();
+        }
+            catch
+            {
+                AddAnnConfirm(sender, e);
+            }
             con.Close();
             String IdString = Request.QueryString["IdString"];
             Response.Redirect("instructorViewCourse.aspx?IdString="+ IdString);
@@ -275,8 +422,11 @@ namespace METWebsite
         }
         protected void AddAnnConfirm(object sender, EventArgs e)
         {
+
+            Response.Write("<script>alert(" + "Hi" + ")</script>");
+
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
-            SqlConnection con = new SqlConnection(strcon);
+            SqlConnection con = new SqlConnection(strcon);  
             SqlCommand confirmAddUpdates = new SqlCommand("AddUpdates", con);
             confirmAddUpdates.CommandType = System.Data.CommandType.StoredProcedure;
             int courseSerial = Int32.Parse(Request.QueryString["IdString"]);
@@ -303,6 +453,61 @@ namespace METWebsite
             Response.Redirect("instructorViewCourse.aspx?IdString=" + courseSerial);
 
         }
+   
+        protected void EditWeekConfirm(object sender,EventArgs e)
+        {
+            String IdString = Request.QueryString["IdString"];
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            SqlConnection con = new SqlConnection(strcon);
+            SqlCommand editWeekDetails = new SqlCommand("editWeekDetails", con);
+            editWeekDetails.CommandType = CommandType.StoredProcedure;
+            editWeekDetails.Parameters.Add(new SqlParameter("@CourseWeekSerial", Session["weekeditSerial"]));
+            editWeekDetails.Parameters.Add(new SqlParameter("@weekTitle", weekTitleEdit.Value));
+            editWeekDetails.Parameters.Add(new SqlParameter("@weekDescription", weekDescriptionEdit.Value));
+            con.Open();
+            editWeekDetails.ExecuteNonQuery();
+            con.Close();
+            Response.Redirect("instructorViewCourse.aspx?IdString=" + IdString);
+
+
+        }
+        protected void DeleteMaterialYes(object sender,EventArgs e)
+        {
+            String IdString = Request.QueryString["IdString"];
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            SqlConnection con = new SqlConnection(strcon);
+            SqlCommand delteMaterial = new SqlCommand("deleteMaterial", con);
+            delteMaterial.CommandType = CommandType.StoredProcedure;
+            delteMaterial.Parameters.Add(new SqlParameter("@MaterialId", Session["deleteMaterials"]));
+            con.Open();
+            delteMaterial.ExecuteNonQuery();
+            con.Close();
+            Response.Redirect("instructorViewCourse.aspx?IdString=" + IdString);
+
+        }
+        protected void AddNewweekConfirm(object sender, EventArgs e)
+        {
+            int weekId = Int32.Parse(dropdownWeeks.SelectedValue);
+            String Title = weekTitleAdd.Value;
+            String description = weekDescriptionAdd.Value;
+            String IdString = Request.QueryString["IdString"];
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            SqlConnection con = new SqlConnection(strcon);
+            SqlCommand addNewWeek = new SqlCommand("addNewWeek", con);
+            addNewWeek.CommandType = CommandType.StoredProcedure;
+            addNewWeek.Parameters.Add(new SqlParameter("@courseSerial",IdString));
+            addNewWeek.Parameters.Add(new SqlParameter("@weekTitle", Title));
+            addNewWeek.Parameters.Add(new SqlParameter("@weekDescription", description));
+            addNewWeek.Parameters.Add(new SqlParameter("@weekNo", weekId));
+            con.Open();
+            addNewWeek.ExecuteNonQuery();
+            con.Close();
+            Response.Redirect("instructorViewCourse.aspx?IdString=" + IdString);
+
+
+        }
+
+
 
 
     }
