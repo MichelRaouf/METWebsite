@@ -15,7 +15,7 @@
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -504,6 +504,7 @@
     </Compile>
     <Compile Include="temp.aspx.cs">
       <DependentUpon>temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="temp.aspx.designer.cs">
       <DependentUpon>temp.aspx</DependentUpon>
