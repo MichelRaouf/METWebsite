@@ -61,7 +61,7 @@ body {
     margin-left: 17.03125vw;
     margin-right: 17.03125vw;
     background: linear-gradient(to right, #FFE171, #FFC3C6);
-    border-radius: 40px;
+    border-radius: 3.2vw;
     vertical-align: middle;
     justify-content: space-around;
 }
@@ -99,17 +99,17 @@ body {
     font-size: 2.43vw;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 3vh;
+    margin-top: 1.4vw;
     text-align: center;
 }
 
 .alumni {
-    margin-top: 4.629629vh;
+    margin-top: 2.2vw;
     margin-left: 12.9479167vw;
     margin-right: 12.9479167vw;
-    border-radius: 20px;
+    border-radius: 1.6vw;
     background: linear-gradient(to right, #FFE171, #FFC3C6);
-    padding-top: 3vh;
+    padding-top: 1.44vw;
     text-align: center;
 }
 
@@ -125,9 +125,9 @@ body {
 
 .alumniItem {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 0.8vw;
     width: 62vw;
-    height: 8vh;
+    height: 3.84vw;
     display: flex;
     flex-direction: row;
     column-gap: 14vw;

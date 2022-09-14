@@ -39,7 +39,7 @@ body {
 
 .adminLogo {
     width: 3.875vw;
-    height: 7.67920133vh;
+    height: 3.7vw;
     margin-left: 20vw;
 }
 
@@ -69,7 +69,7 @@ body {
     font-size: 1.62vw;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 1.8vh;
+    margin-top: 0.86vw;
     margin-left: 1vw;
 }
 
@@ -95,7 +95,7 @@ body {
     font-size: 2.43vw;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 3vh;
+    margin-top: 1.44vw;
     text-align: center;
 }
 .twoColumns{
@@ -105,17 +105,17 @@ body {
 }
 .column1,.column2 {
     width: 30%;
-    margin-left: 120px;
-    margin-top: 30px;
+    margin-left: 9.6vw;
+    margin-top: 2.4vw;
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: 0.8vw;
 }
 
 .section{
     display:flex;
     flex-direction:column;
-    row-gap:10px;
+    row-gap:0.8vw;
 }
 .label {
     font-size: 1.5vw;
@@ -123,7 +123,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 .addIcon {
-    font-size: 13px;
+    font-size: 1vw;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -132,31 +132,31 @@ body {
 }
 
 .input {
-    border: 1.5px solid #FFC3C6;
-    width:270px;
-    height:25px;
-    border-radius:5px;
+    border: 0.1vw solid #FFC3C6;
+    width:21.7vw;
+    height:2vw;
+    border-radius:0.4vw;
 }
 .inputAbout {
-    border: 1.5px solid #FFC3C6;
-    width: 270px;
-    height: 100px;
-    border-radius: 5px;
+    border: 0.1vw solid #FFC3C6;
+    width: 21.7vw;
+    height: 8vw;
+    border-radius: 0.4vw;
 }
-#color1, #color2, #color3, #color4 ,#color5{
-    width: 20px;
-    height: 20px;
+#color1, #color2, #color3, #color4, #color5 {
+    width: 1.6vw;
+    height: 1.6vw;
 }
     #color1:hover, #color2:hover, #color3:hover, #color4:hover, #color5:hover {
-        width: 25px;
-        height: 25px;
-        cursor:pointer;
+        width: 2vw;
+        height: 2vw;
+        cursor: pointer;
     }
         
 .colors{
     display:flex;
     flex-direction:row;
-    column-gap:10px;
+    column-gap:0.8vw;
 }
 #color1 {
     background-image: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 0.9));
@@ -174,15 +174,15 @@ body {
     background-image: linear-gradient(to right,rgba(51, 102, 187, 1),rgba(51, 102, 187, 1),rgba(37, 175, 68, 1));
 }
 .add {
-    width: 110px;
-    height: 35px;
+    width: 8.85vw;
+    height: 2.8vw;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 0.4vw;
+    font-size: 1.28vw;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 20px;
+    margin-top: 1.6vw;
     background-color: #FFD0A1;
 }
 .add:hover{
@@ -208,7 +208,7 @@ body {
     font-size: 1.2vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    column-gap: 20px;
+    column-gap: 1.6vw;
     border: none;
     background-color: white;
     cursor: pointer;
@@ -217,11 +217,11 @@ body {
 #hidden{
     display:flex;
     flex-direction:column;
-    row-gap:10px;
+    row-gap:0.8vw;
 }
 
 input[type=file]::file-selector-button {
-    border: 2px solid #FFD0A1;
+    border: 0.16vw solid #FFD0A1;
     padding: .2em .4em;
     border-radius: .2em;
     background-color: #FFD0A1;
@@ -230,7 +230,7 @@ input[type=file]::file-selector-button {
 }
     input[type=file]::file-selector-button:hover {
         background-color: black;
-        border: 2px solid black;
+        border: 0.16vw solid black;
         transition: 0.5s;
         cursor:pointer;
     }
@@ -238,5 +238,5 @@ input[type=file]::file-selector-button {
 #tracks{
     display:flex;
     flex-direction:column;
-    row-gap:7px;
+    row-gap:0.56vw;
 }
