@@ -15,7 +15,7 @@
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -118,12 +118,14 @@
     <Content Include="AdminInstructorToCourse.aspx" />
     <Content Include="AdminRemoveAlumni.aspx" />
     <Content Include="AdminRemoveCourse.aspx" />
+    <Content Include="AdminRemoveInstructor.aspx" />
     <Content Include="AdminRemoveStudentActivity.aspx" />
     <Content Include="AdminStudentActivity.aspx" />
     <Content Include="App_Data\database2.mdf" />
     <Content Include="App_Data\database2_log.ldf">
       <DependentUpon>database2.mdf</DependentUpon>
     </Content>
+    <Content Include="ARemoveC.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -159,6 +161,8 @@
     <Content Include="StyleSheets\AlumniPage.css" />
     <Content Include="StyleSheets\AboutUsPage.css" />
     <Content Include="StyleSheets\StudentActivityProfile.css" />
+    <Content Include="StyleSheets\StaffProfile.css" />
+    <Content Include="StyleSheets\temp.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
@@ -257,7 +261,6 @@
     <Content Include="InstructorHome.aspx" />
     <Content Include="InstructorViewCourse.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="StaffProfile.aspx" />
     <Content Include="StudentActivities.aspx" />
     <Content Include="images\gucLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -298,8 +301,9 @@
     <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\InstructorHome.css" />
     <Content Include="StyleSheets\InstructorViewCourse.css" />
-    <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StyleSheets\studentActivities.css" />
+    <Content Include="StaffProfile.aspx" />
+    <Content Include="temp.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -362,6 +366,13 @@
     <Compile Include="AdminRemoveCourse.aspx.designer.cs">
       <DependentUpon>AdminRemoveCourse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminRemoveInstructor.aspx.cs">
+      <DependentUpon>AdminRemoveInstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRemoveInstructor.aspx.designer.cs">
+      <DependentUpon>AdminRemoveInstructor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminRemoveStudentActivity.aspx.cs">
       <DependentUpon>AdminRemoveStudentActivity.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -378,6 +389,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ARemoveC.aspx.cs">
+      <DependentUpon>ARemoveC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ARemoveC.aspx.designer.cs">
+      <DependentUpon>ARemoveC.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CoursePage.aspx.cs">
       <DependentUpon>CoursePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -412,13 +430,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="StaffProfile.aspx.cs">
-      <DependentUpon>StaffProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StaffProfile.aspx.designer.cs">
-      <DependentUpon>StaffProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -483,6 +494,19 @@
     </Compile>
     <Compile Include="AboutUsPage.aspx.designer.cs">
       <DependentUpon>AboutUsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffProfile.aspx.cs">
+      <DependentUpon>StaffProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffProfile.aspx.designer.cs">
+      <DependentUpon>StaffProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="temp.aspx.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="temp.aspx.designer.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

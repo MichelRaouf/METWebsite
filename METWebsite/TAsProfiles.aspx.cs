@@ -26,6 +26,7 @@ namespace METWebsite
                 String name = reader.GetValue(1).ToString();
                 String mail = reader.GetValue(2).ToString();
                 String office = reader.GetValue(3).ToString();
+                String title = reader.GetValue(4).ToString();
                 var div = new HtmlGenericControl("div");
                 div.Attributes.Add("class", "profileData");
                 var profimg = new HtmlGenericControl("img");
@@ -34,7 +35,7 @@ namespace METWebsite
                 var br = new HtmlGenericControl("br");
                 var namediv = new HtmlGenericControl("div");
                 namediv.Attributes.Add("class", "name");
-                namediv.InnerHtml = name;
+                namediv.InnerHtml = title + " " + name;
                 var maildiv = new HtmlGenericControl("div");
                 maildiv.Attributes.Add("class", "mailContainer");
                 var mailimg = new HtmlGenericControl("img");
