@@ -6,6 +6,8 @@
 <head runat="server">
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveAlumni.css" />
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveInstructor.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminAddAlumni.css" />
+
 
     <title></title>
 </head>
@@ -54,7 +56,20 @@
             <div class="alumniList" id="alumniList" runat="server">
             </div>
             <div class="bottom"></div>
+            <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click" Visible="false" />
+            <asp:Button ID="button3" CssClass="yesnobtn" runat="server" Text="No" Visible="false" />
+
         </div>
     </form>
+    <%-- <script>
+
+        function confirmAlumni() {
+            const element = document.getElementById("successOverlay");
+            element.remove();
+            redirect("AdminRemoveAlumni.aspx");
+
+        }
+
+    </script>--%>
 </body>
 </html>
