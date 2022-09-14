@@ -184,7 +184,48 @@ namespace METWebsite
 
         protected void toSearchRes(object sender, ImageClickEventArgs e)
         {
+            instructorList.InnerHtml = "";
+            string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+            //create new sqlconnection and connection to database by using connection string from web.config file  
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("searchInstructor", con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            String search = searchInput.Text;
+            cmd.Parameters.Add(new SqlParameter("@name", search));
+            SqlDataReader reader = cmd.ExecuteReader();
+            string instName = ""; string instId = ""; string instTitle = "";
 
+            while (reader.Read())
+            {
+                instId = reader.GetValue(0).ToString();
+                instTitle = reader.GetValue(1).ToString();
+                instName = reader.GetValue(2).ToString();
+
+                var itemInst = new HtmlGenericControl("div");
+                itemInst.Attributes.Add("class", "instructorItem");
+
+                var instLabelDiv = new HtmlGenericControl("div");
+                instLabelDiv.Attributes.Add("class", "instructorLabelDiv");
+
+                var instLabel = new HtmlGenericControl("label");
+                instLabel.Attributes.Add("class", "instructorLabel");
+                instLabel.InnerHtml = instTitle + " " + instName;
+
+                instLabelDiv.Controls.Add(instLabel);
+
+                Button select = new Button();
+                select.ID = instId;
+                select.Attributes.Add("Class", "select");
+                select.Text = "Select";
+                select.Click += selectInstructor;
+
+                itemInst.Controls.Add(instLabelDiv);
+                itemInst.Controls.Add(select);
+
+                instructorList.Controls.Add(itemInst);
+            }
+            con.Close();
         }
 
     }

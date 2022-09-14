@@ -45,6 +45,7 @@
         <div class="instructor" id="instructor" runat="server">
             <label class="selectInstructorLabel">Select an Instructor To Remove</label>
             <br />
+            <br />
             <div class="hierarchyTitle">
                 <div>
                     <asp:ImageButton runat="server" ImageUrl="images/staff/search.png" CssClass="searchButton" OnClick="toSearchRes" />
