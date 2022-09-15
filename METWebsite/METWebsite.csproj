@@ -147,6 +147,7 @@
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
     <Content Include="images\ErrorIcon.png" />
+    <Content Include="images\InstructorHome\MET.svg" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
@@ -202,8 +203,6 @@
     <Content Include="images\InstructorHome\logout.svg" />
     <Content Include="images\InstructorHome\plusIcon.svg" />
     <Content Include="images\InstructorHome\profile.svg" />
-    <Content Include="images\InstructorHome\red.svg" />
-    <Content Include="images\InstructorHome\red1.png" />
     <Content Include="images\InstructorHome\redDelete.svg" />
     <Content Include="images\InstructorHome\redEdit.svg" />
     <Content Include="images\InstructorHome\whiteDelete.svg" />
@@ -378,6 +377,7 @@
     </Compile>
     <Compile Include="AdminRemoveInstructorFromCourse.aspx.cs">
       <DependentUpon>AdminRemoveInstructorFromCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminRemoveInstructorFromCourse.aspx.designer.cs">
       <DependentUpon>AdminRemoveInstructorFromCourse.aspx</DependentUpon>
