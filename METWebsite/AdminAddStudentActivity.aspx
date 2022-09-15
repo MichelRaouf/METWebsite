@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminStudentActivity.aspx.cs" Inherits="METWebsite.AdminStudentActivity" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAddStudentActivity.aspx.cs" Inherits="METWebsite.AdminAddStudentActivity" %>
 
 <!DOCTYPE html>
 
@@ -6,10 +6,12 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" href="./StyleSheets/AdminStudentActivity.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminNavbar.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminOverlay.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-       
+
         <div class="scrollable">
             <div class="header">
 
@@ -55,7 +57,7 @@
                 <div class="section">
                     <label class="label">Icon</label>
                     <input type="file" accept="image/*" name="file" id="fileUpload" runat="server" class="addIcon" />
-                    
+
                 </div>
                 <div class="section">
                     <label class="label">Background-Color</label>
@@ -75,13 +77,13 @@
 
             <script>
                 function selectGradient(id) {
-          
+
                     var x = document.getElementsByClassName("gradients");
                     for (var i = 0; i < x.length; i++) {
                         x[i].style.width = '20px';
                         x[i].style.height = '20px';
-                       
-                        document.getElementById("Hidden"+(i+1)).value = "2";
+
+                        document.getElementById("Hidden" + (i + 1)).value = "2";
                     }
                     var color = document.getElementById(id);
                     color.style.width = '25px';
@@ -98,6 +100,9 @@
                     else if (id == "color5")
                         document.getElementById("Hidden5").value = "1";
                 }
+                //window.onloadstart = function () {
+                //    document.getElementById('title').value = '';
+                //}
             </script>
 
             <div class="column2">
@@ -116,7 +121,6 @@
                     </div>--%>
 
                     <%--<label name="labelTrackName" class="labelTrack"><span id="plus" class="plus" onclick="addTrack();return false;">+ </span> Add Track</label>--%>
-
                 </div>
                 <div class="section">
                     <label class="label">Facebook Page Link</label>
@@ -129,8 +133,10 @@
             </div>
         </div>
         <div class="addDiv">
-            <asp:Button CssClass="add" runat="server" Text="Add" OnClick="addStudentActivity"/>
+            <asp:Button CssClass="add" runat="server" Text="Add" OnClick="addStudentActivity" />
         </div>
+        <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click" Visible="false" />
+        <asp:Button ID="button3" CssClass="yesnobtn" runat="server" Text="No" Visible="false" />
 
         <input id="Hidden1" type="hidden" runat="server" />
         <input id="Hidden2" type="hidden" runat="server" />
@@ -142,15 +148,15 @@
         <script>
             var x = 0;
             function addTrack() {
-                    var textBox = document.createElement("input");
-                    textBox.setAttribute("type", "text");
-                    textBox.setAttribute("class", "input");
-                    textBox.setAttribute("id", "trackInput" + (++x));
-                    textBox.setAttribute("runat", "server");
-                    textBox.classList.add("labelTrackName");
-                    document.getElementById("hidden").appendChild(textBox);
+                var textBox = document.createElement("input");
+                textBox.setAttribute("type", "text");
+                textBox.setAttribute("class", "input");
+                textBox.setAttribute("id", "trackInput" + (++x));
+                textBox.setAttribute("runat", "server");
+                textBox.classList.add("labelTrackName");
+                document.getElementById("hidden").appendChild(textBox);
             }
-        </script>  
+        </script>
     </form>
 </body>
 </html>
