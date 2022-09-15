@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" href="./StyleSheets/AdminAddInstructor.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminAddAlumni.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -78,11 +79,11 @@
                 <br />
                 <input type="text" id="nameInput" runat="server" name="nameInput" placeholder="name" />
             </div>
-             <div class="role">
-                <label class="roleLabel" for="nameInput">Role </label>
+             <div class="position">
+                <label class="positionLabel" for="nameInput">Position </label>
                 <br />
-                <select required name="languages" id="roleInput">
-                  <option value="" disabled selected>Select a Role</option>
+                <select required name="languages" id="positionInput" runat="server">
+                  <option value="" disabled selected>Select a Position</option>
                   <option class="ddOption" value="Dean">Dean</option>
                   <option class="ddOption" value="ViceDean">Vice Dean</option>
                   <option class="ddOption" value="lecturer">Lecturer</option>

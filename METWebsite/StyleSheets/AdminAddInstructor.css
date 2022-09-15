@@ -211,17 +211,17 @@ nav > a:hover {
     justify-content: flex-start;
 }
 
-.name, .role, .email {
+.name, .position, .email {
     margin-top: 2vw;
 }
 
-.nameLabel, .roleLabel, .emailLabel {
+.nameLabel, .positionLabel, .emailLabel {
     font-size: 1.62vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
 
-#nameInput, #roleInput, #emailInput {
+#nameInput, #positionInput, #emailInput {
     border: solid #dbdfe3 1px;
     border-radius: 2px;
     height: 2.4vw;
@@ -233,7 +233,7 @@ nav > a:hover {
     font-size: 0.9vw;
     -webkit-transition: all .2s;
 }
-    #nameInput:focus, #roleInput:focus, #emailInput:focus {
+    #nameInput:focus, #positionInput:focus, #emailInput:focus {
         outline: solid;
         border-color: #FFBF80;
         outline-color: #FFDFC8;

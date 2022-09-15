@@ -106,25 +106,13 @@
         </div>
         <div class="buttonDiv">
             <asp:Button ID="button1" CssClass="addAlumni" runat="server" Text="Add Alumni" OnClick="button1_Click" />
-
-           <%--   <button  class="addAlumni" onclick="confirmAlumni()" > Add Alumni</button>--%>
         </div>
             <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click" Visible="false" />
             <asp:Button ID="button3" CssClass="yesnobtn" runat="server" Text="No" visible="false" />
             </div> 
         
 
-   <%--    <div class="successOverlay" id="successOverlay">
-            <div class="successBox">
-                <button class="closeButton"  onclick="confirmAlumni()">
-                    <span>x</span>
-                </button>
-                <div class="successMessage">
-                         <img src="./images/yes.svg"/>
-                         <label class="successLabel">Alumni is Added Successfully</label>
-                </div>
-            </div>
-        </div>--%>
+ 
     </form>
     <script>
       
