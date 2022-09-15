@@ -198,3 +198,26 @@ ALTER TABLE Instructor_ResearchTopic
 ADD CONSTRAINT deleteInstructor2
 FOREIGN KEY(instructor_id) REFERENCES Instructors(id)
 ON DELETE CASCADE
+
+go
+
+create proc getWeeks
+as
+select number,CONVERT(VARCHAR(10),start_date,101),CONVERT(VARCHAR(10),end_date,101)
+from Week
+
+go
+create proc deleteWeek
+@week_number int
+as
+delete
+from Week
+where number=@week_number
+
+alter table CourseWeek
+add constraint CourseWeek_week foreign key(week_number) references Week(number)
+on delete cascade
+
+alter table Material
+add constraint Material_week foreign key(course_week) references CourseWeek(serial)
+on delete cascade
