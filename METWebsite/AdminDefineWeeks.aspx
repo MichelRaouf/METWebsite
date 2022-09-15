@@ -92,37 +92,37 @@
           
         </div>
 
-        <div class="definedWeeksContainer">
+        <div class="definedWeeksContainer" id="definedWeeksContainer" runat="server">
             <div class="definedLabel">
                 <img src="images/adminImages/DefinedWeeksLabel.PNG" style="width:18%" />
             </div>
-            <div class="definedWeekDiv">
-            <div class="definedWeekNoContainer">
-                <label class="definedWeekLabel">Week</label>
-                <label class="definedWeekNoLabel">1</label>
-            </div>
-            <div class="definedStartDiv">
-                <label class="definedStartLabel" >Starts at</label>
-                <label class="definedStartDate" >1/1/2001</label>
-            </div>
-            <div class="&">
-                &
-            </div>
-            <div class="definedEndDiv">
-                <label class="definedEndLabel" >Ends at</label>
-                <label class="definedEndDate" >1/1/2001</label>
-            </div>
-            <asp:LinkButton ID="deleteWeekButton" CssClass="trashButton" runat="server">
-                <span class="trash" runat="server">
-    	            <span class="innerSpan"></span>
-    	            <i></i>
-                </span>
-            </asp:LinkButton>
-	            
-            </div>
-            <span class="separatingBar"></span>
-           
 
+
+
+            <%--<div class="definedWeekDiv">
+                <div class="definedWeekNoContainer">
+                    <label class="definedWeekLabel">Week</label>
+                    <label class="definedWeekNoLabel">1</label>
+                </div>
+                <div class="definedStartDiv">
+                    <label class="definedStartLabel" >Starts at</label>
+                    <label class="definedStartDate" >1/1/2001</label>
+                </div>
+                <div class="&">
+                    &
+                </div>
+                <div class="definedEndDiv">
+                    <label class="definedEndLabel" >Ends at</label>
+                    <label class="definedEndDate" >1/1/2001</label>
+                </div>
+                <asp:LinkButton ID="deleteWeekButton" CssClass="trashButton" runat="server">
+                    <span class="trash" runat="server">
+    	                <span class="innerSpan"></span>
+    	                <i></i>
+                    </span>
+                </asp:LinkButton>
+            </div>
+            <span class="separatingBar"></span>--%>
         </div>  
 
     </form>

@@ -323,11 +323,12 @@ nav > a:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.definedStartDiv, .definedEndDiv{
-    display:flex;
-    flex-direction:row;
-    column-gap:1vw;
-    align-items:center;
+.definedStartDiv, .definedEndDiv {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+    align-items: center;
+    width:17vw;
 }
 .definedStartLabel, .definedEndLabel{
     font-weight:500;
