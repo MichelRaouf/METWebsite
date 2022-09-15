@@ -90,7 +90,7 @@ namespace METWebsite
             while (reader.Read())
             {
                 id = reader.GetValue(0).ToString();
-                name = reader.GetValue(1).ToString();
+                name = reader.GetValue(2).ToString();
 
                 var item = new HtmlGenericControl("div");
                 item.Attributes.Add("class", "alumniItem");
