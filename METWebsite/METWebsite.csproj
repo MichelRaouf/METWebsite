@@ -135,7 +135,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CoursePage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -149,6 +148,7 @@
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
+    <Content Include="images\coursesPageImages\link.svg" />
     <Content Include="images\ErrorIcon.png" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
@@ -166,7 +166,7 @@
     <Content Include="StyleSheets\AboutUsPage.css" />
     <Content Include="StyleSheets\StudentActivityProfile.css" />
     <Content Include="StyleSheets\StaffProfile.css" />
-    <Content Include="StyleSheets\temp.css" />
+    <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
@@ -302,12 +302,11 @@
     <Content Include="StyleSheets\AdminHome.css" />
     <Content Include="StyleSheets\AdminStudentActivity.css" />
     <Content Include="StyleSheets\CourseHome.css" />
-    <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\InstructorHome.css" />
     <Content Include="StyleSheets\InstructorViewCourse.css" />
     <Content Include="StyleSheets\studentActivities.css" />
     <Content Include="StaffProfile.aspx" />
-    <Content Include="temp.aspx" />
+    <Content Include="CoursePage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -399,13 +398,6 @@
     </Compile>
     <Compile Include="ARemoveC.aspx.designer.cs">
       <DependentUpon>ARemoveC.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CoursePage.aspx.cs">
-      <DependentUpon>CoursePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CoursePage.aspx.designer.cs">
-      <DependentUpon>CoursePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="InstructorHome.aspx.cs">
       <DependentUpon>InstructorHome.aspx</DependentUpon>
@@ -506,11 +498,12 @@
     <Compile Include="StaffProfile.aspx.designer.cs">
       <DependentUpon>StaffProfile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="temp.aspx.cs">
-      <DependentUpon>temp.aspx</DependentUpon>
+    <Compile Include="CoursePage.aspx.cs">
+      <DependentUpon>CoursePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="temp.aspx.designer.cs">
-      <DependentUpon>temp.aspx</DependentUpon>
+    <Compile Include="CoursePage.aspx.designer.cs">
+      <DependentUpon>CoursePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -529,7 +522,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\alumniPageImages\" />
-    <Folder Include="images\coursesPageImages\" />
     <Folder Include="images\staffPageImages\" />
   </ItemGroup>
   <ItemGroup>
