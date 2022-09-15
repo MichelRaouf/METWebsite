@@ -7,18 +7,16 @@
 }
 
 .hierarchyTitle {
-    width: 100%;
-    margin-top: 1.8vw;
-    margin-left: 3.5vw;
+    = margin-top: 1.8vw;
     font-family: Tanseek,sans-serif;
     font-size: 3.1vw;
     font-weight: 400;
     letter-spacing: 0.2vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-left: 350px;
+    margin-left: 50px;
     margin-bottom: 50px;
 }
 

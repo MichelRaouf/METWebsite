@@ -233,7 +233,7 @@ a:hover{
     font-family: 'Montserrat', sans-serif;
 }
 
-#titleInput, #codeInput, #lectureInput, #tutorialInput, #labsInput, #credit, #semesterInput {
+#titleInput, #codeInput, #lectureInput1, #tutorialInput1, #labsInput1, #credit1, #semesterInput1 {
     position: relative;
     border: solid #dbdfe3 0.06510416666666667vw;
     border-radius: 0.13020833333333334vw;
@@ -243,7 +243,7 @@ a:hover{
     font-size: 0.9vw;
     -webkit-transition: all .2s;
 }
-input:focus, #descriptionInput:focus {
+input:focus, #descriptionInput1:focus {
     outline: solid;
     border-color: #FFBF80;
     outline-color: #FFDFC8;
@@ -336,7 +336,7 @@ input:focus, #descriptionInput:focus {
     font-family: 'Montserrat', sans-serif;
 }
 
-#descriptionInput {
+#descriptionInput1 {
     left: 1vw;
     border: solid #dbdfe3 0.06510416666666667vw;
     border-radius: 0.13020833333333334vw;

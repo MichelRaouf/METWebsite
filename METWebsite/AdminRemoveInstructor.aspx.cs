@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace METWebsite
 {
@@ -46,7 +48,7 @@ namespace METWebsite
                 delete.Attributes.Add("Class", "delete");
                 delete.Text = "Delete";
                 delete.Attributes.Add("runat", "server");
-                delete.Click += deleteAlumni;
+                delete.Click += deleteInstructor;
 
                 //search bar
 
@@ -58,21 +60,123 @@ namespace METWebsite
             con.Close();
         }
 
-        protected void deleteAlumni(object sender, EventArgs e)
+        protected void deleteInstructor(object sender, EventArgs e)
         {
+            var div = new HtmlGenericControl("div");
+            var div2 = new HtmlGenericControl("div");
+            var label = new HtmlGenericControl("label");
+            var div3 = new HtmlGenericControl("div");
+
+            div.Attributes.Add("class", "confirmationOverlay");
+            div2.Attributes.Add("class", "confirmationBox");
+            div3.Attributes.Add("class", "confirmationButtons");
+            label.Attributes.Add("class", "confirmationLabel");
+            div.Controls.Add(div2);
+            div2.Controls.Add(label);
+            div2.Controls.Add(div3);
+            div3.Controls.Add(button2);
+            div3.Controls.Add(button3);
+
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd2 = new SqlCommand("deleteInstructor", con);
-            cmd2.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd2.Parameters.Add(new SqlParameter("@id", ((Control)sender).ID));
-            cmd2.ExecuteNonQuery();
+            SqlCommand InstructorName = new SqlCommand("getInstructorById", con);
+            InstructorName.CommandType = System.Data.CommandType.StoredProcedure;
+            InstructorName.Parameters.Add(new SqlParameter("@instructor_id", ((Control)sender).ID));
+            SqlDataReader reader = InstructorName.ExecuteReader();
+
+
+
+            reader.Read();
+            label.InnerHtml = "Are You Sure That You Want To delete \"" + reader.GetValue(1).ToString() + "\" from Instructors Table ?";
+            form1.Controls.Add(div);
+            button2.Visible = true;
+            button3.Visible = true;
+            Session["id"] = ((Control)sender).ID;
             con.Close();
+            //Response.Redirect("AdminRemoveInstructor.aspx");
+        }
+
+        protected void x_click(object sender, EventArgs e)
+        {
 
             Response.Redirect("AdminRemoveInstructor.aspx");
         }
+        protected void Yes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+                //create new sqlconnection and connection to database by using connection string from web.config file  
+                SqlConnection con = new SqlConnection(strcon);
+                con.Open();
+                SqlCommand cmd2 = new SqlCommand("deleteInstructor", con);
+                cmd2.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd2.Parameters.Add(new SqlParameter("@id", Session["id"]));
+                cmd2.ExecuteNonQuery();
+                con.Close();
 
+                button2.Visible = false;
+                button3.Visible = false;
+                var div = new HtmlGenericControl("div");
+                var div2 = new HtmlGenericControl("div");
+                var div3 = new HtmlGenericControl("div");
+                Button button = new Button();
+                button.Click += x_click;
+                button.Attributes.Add("runat", "server");
+                button.Text = "X";
+
+                var img = new HtmlGenericControl("img");
+                var label = new HtmlGenericControl("label");
+                div.Attributes.Add("class", "successOverlay");
+                div.Attributes.Add("id", "successOverlay");
+                div2.Attributes.Add("class", "successBox");
+                div3.Attributes.Add("class", "successMessage");
+                button.Attributes.Add("class", "closeButton");
+                label.Attributes.Add("class", "successLabel");
+                label.InnerHtml = "Instructor Is Deleted Successfully";
+                img.Attributes.Add("src", "./images/yes.svg");
+                div3.Controls.Add(img);
+                div3.Controls.Add(label);
+                div2.Controls.Add(button);
+                div2.Controls.Add(div3);
+                div.Controls.Add(div2);
+                form1.Controls.Add(div);
+            }
+            catch (Exception ex)
+            {
+                button2.Visible = false;
+                button3.Visible = false;
+                var div = new HtmlGenericControl("div");
+                var div2 = new HtmlGenericControl("div");
+                var div3 = new HtmlGenericControl("div");
+
+                Button button = new Button();
+                button.Click += x_click;
+                button.Attributes.Add("runat", "server");
+                button.Text = "x";
+
+                var img = new HtmlGenericControl("img");
+                var label = new HtmlGenericControl("label");
+                var span = new HtmlGenericControl("span");
+                div.Attributes.Add("class", "successOverlay");
+                div.Attributes.Add("id", "successOverlay");
+                div2.Attributes.Add("class", "successBox");
+                div3.Attributes.Add("class", "successMessage");
+                button.Attributes.Add("class", "closeButton");
+                label.Attributes.Add("class", "successLabel");
+                label.InnerHtml = "Error Deleting The Instructor From The Database!";
+                img.Attributes.Add("src", "./images/ErrorIcon.png");
+                div3.Controls.Add(img);
+                div3.Controls.Add(label);
+                div2.Controls.Add(button);
+                div2.Controls.Add(div3);
+                div.Controls.Add(div2);
+                form1.Controls.Add(div);
+
+            }
+        }
         protected void toSearchRes(object sender, ImageClickEventArgs e)
         {
             alumniList.InnerHtml = "";
@@ -90,7 +194,7 @@ namespace METWebsite
             while (reader.Read())
             {
                 id = reader.GetValue(0).ToString();
-                name = reader.GetValue(1).ToString();
+                name = reader.GetValue(2).ToString();
 
                 var item = new HtmlGenericControl("div");
                 item.Attributes.Add("class", "alumniItem");
@@ -109,7 +213,7 @@ namespace METWebsite
                 delete.Attributes.Add("Class", "delete");
                 delete.Text = "Delete";
                 delete.Attributes.Add("runat", "server");
-                delete.Click += deleteAlumni;
+                delete.Click += deleteInstructor;
 
                 //search bar
 

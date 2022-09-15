@@ -89,7 +89,7 @@
                     
                 <div class="code">
                     <label class="courseLabel" for="credit">Credits Hours: </label>                    
-                    <input type="number" min="1" max="10" required  id="credit" runat="server" name="codeInput" placeholder="credit hours" />
+                    <input type="number" min="1" max="10" required  id="credit1" runat="server" name="codeInput" placeholder="credit hours" />
                     </div>
                    
                 </div>
@@ -97,7 +97,7 @@
                 <div class="validarotContainer">
                 <div class="lectures">
                     <label class="lecturesLabel" for="lectureInput">No. of Lectures: </label>
-                    <input type="number" min="1" max="30" required id ="lectureInput" runat="server" placeholder="lectures" name="lectureInput" />
+                    <input type="number" min="1" max="30" required id ="lectureInput1" runat="server" placeholder="lectures" name="lectureInput" />
                     
                 </div>
                     
@@ -106,7 +106,7 @@
                 <div class="validarotContainer">
                 <div class="tuts">
                     <label class="tutsLabel" for="tutorialInput">No. of Tutorials: </label>
-                    <input type="number" min="1" max="30" required id ="tutorialInput" runat="server" placeholder="tutorials" name="tutorialInput" />
+                    <input type="number" min="1" max="30" required id ="tutorialInput1" runat="server" placeholder="tutorials" name="tutorialInput" />
                     
                 </div>
                    
@@ -115,7 +115,7 @@
                 <div class="validarotContainer">
                 <div class="labs">
                     <label class="labsLabel" for="labsInput">No. of Labs: </label>
-                    <input type="number" required id="labsInput" runat="server" name="labsInput" placeholder="labs" />
+                    <input type="number" required id="labsInput1" runat="server" name="labsInput" placeholder="labs" />
                 </div>
                    
                     </div>
@@ -125,7 +125,7 @@
                 <div class="validarotContainer">
                 <div class="labs">
                     <label class="labsLabel" for="semesterInput">Semester Number: </label>
-                    <input type="number" min="1" max="10" required id="semesterInput" runat="server" name="semesterInput" placeholder="semester" />
+                    <input type="number" min="1" max="10" required id="semesterInput1" runat="server" name="semesterInput" placeholder="semester" />
 
                 </div>
                     <label class="validator2">(enter 0 for graduates)</label>
@@ -211,14 +211,14 @@
                 </div>
               <div class="courseDescription">
                 <label class="description" for="descriptionInput">Course Description: </label>
-                <textarea  type="text" id="descriptionInput" runat="server" name="descriptionInput" required/>
+                <textarea  type="text" id="descriptionInput1" runat="server" name="descriptionInput" required/>
                   </div>
             </div>
             
         </div>
         <div class="buttonDiv">
             <asp:Button ID="Button1" CssClass="addCourse" runat="server" Text="Add Course" OnClick="addCourse_Click"  />
-            <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click" Visible="false"  />
+            <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click1" Visible="false"  />
             <asp:Button ID="button3" CssClass="yesnobtn" runat="server" Text="No" visible="false" />
         </div>
     </form>

@@ -1,20 +1,19 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
-* {
-    box-sizing: border-box;
-}
+
 
 .header {
-    height: 7.6171875vw;
+    left: 0;
+    height: 5.5vw;
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: flex;align-items: center;
     flex-direction: row;
     justify-content: start;
-    top: 0px;
 }
 
     .header > div {
@@ -27,13 +26,13 @@ body {
     }
 
 .logo {
-    width: 20.57vw;
-    height: 5.315104166666667vw;
+    width: 14vw;
+    height: 4vw;
 }
 
 .bar {
     width: 2.57vw;
-    height: 5.315104166666667vw;
+    height: 4vw;
 }
 
 .label1 {
@@ -42,9 +41,8 @@ body {
 }
 
 .adminLogo {
-    width: 3.875vw;
-    height: 7.67920133vh;
-    margin-left: 20vw;
+    width: 2.8vw;
+    margin-left: 28vw;
 }
 
 .adminLabel {
@@ -54,79 +52,192 @@ body {
     margin-left: 1vw;
 }
 
-.navBar {
+
+
+
+
+
+nav {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dashboard:hover {
+    cursor: pointer;
+}
+
+.navUl {
+    width: 64vw;
+    height: 3.5vw;
+    background: linear-gradient(to right, #FFE171, #FFC3C6);
+    border-radius: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 17.03125vw;
-    margin-right: 17.03125vw;
-    background: linear-gradient(to right, #FFE171, #FFC3C6);
-    border-radius: 40px;
-    vertical-align: middle;
-    justify-content: space-around;
+    padding-left: 1.2vw;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    ul::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+nav > ul > li {
+    position: relative;
+}
+
+a:hover {
+    cursor: default;
+}
+
+nav > ul > li > a {
+    /*border: solid red;*/
+    display: block;
+    padding: 0px;
+    color: white;
+    font-size: 1.62vw;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    background: #88bfff;
+}
+
+.dropdown {
+    position: relative;
+    margin: 0 0 0 3vw;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: wheat;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 0 0.5vw 0;
+}
+
+    .dropdown:hover .dropdown-content li {
+        margin: 0.5vw;
+        font-size: .85vw;
+        color: white;
+        font-weight: 500;
+    }
+
+.dropdown:hover #dropdown-home {
+    width: 9vw;
+    background: linear-gradient(to right, rgba(251,213,137,255), #fad195);
+}
+
+.dropdown:hover #dropdown-course {
+    width: 9.3vw;
+    background: linear-gradient(to right, #fbd295, #facda1);
+}
+
+.dropdown:hover #dropdown-studentActivity {
+    width: 12vw;
+    background: linear-gradient(to right, #fbcea1, #fac9b4);
+}
+
+.dropdown:hover #dropdown-others {
+    width: 8vw;
+    background: linear-gradient(to right, #fac6b9, #f9c3c4);
+}
+
+
+.dropdown:hover .dropdown-content a {
+    text-decoration: none;
+    color: white;
+}
+
+    .dropdown:hover .dropdown-content a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
 .dashboard {
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
     color: white;
     text-decoration: none;
     font-size: 1.62vw;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 1.8vh;
     margin-left: 1vw;
 }
 
-.navLabels {
-    vertical-align: middle;
-    color: white;
-    font-size: 1.62vw;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.dashIconLabel {
-    vertical-align: middle;
-    display: flex;
-    flex-direction: row;
-}
-
 .dashboardIcon {
-    vertical-align: middle;
+    margin-top: 0.3vw;
+    width: 2.5vw;
 }
+
+
+
 
 .addInstructorDiv {
     font-size: 2.43vw;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 3vh;
-    text-align: center;
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+}
+.container {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .inputs {
-    margin-left: 30.4166667vw;
-    margin-right: 30.4166667vw;
-    width: 39.1666667vw;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.name, .password, .email {
-    margin-top: 5vh;
+.name, .position, .email {
+    margin-top: 2vw;
 }
 
-.nameLabel, .passwordLabel, .emailLabel {
+.nameLabel, .positionLabel, .emailLabel {
     font-size: 1.62vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
 
-#nameInput, #passwordInput, #emailInput {
-    border: solid #FFD0A1 2px;
-    border-radius: 5px;
-    height: 4.63vh;
+#nameInput, #positionInput, #emailInput {
+    border: solid #dbdfe3 1px;
+    border-radius: 2px;
+    height: 2.4vw;
     width: 26.0416666vw;
-    float: right;
+    float: left;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9vw;
+    -webkit-transition: all .2s;
 }
-
+    #nameInput:focus, #positionInput:focus, #emailInput:focus {
+        outline: solid;
+        border-color: #FFBF80;
+        outline-color: #FFDFC8;
+    }
 .sendInvite {
     color: white;
     background-color: #FFD0A1;
@@ -138,7 +249,13 @@ body {
     border-radius: 5px;
     border: none;
     align-items: center;
+   
+    -webkit-transition: all .3s;
 }
+    .sendInvite:hover {
+        background-color: black;
+        cursor: pointer;
+    }
 
 .buttonDiv {
     align-items: center;
@@ -146,4 +263,5 @@ body {
     margin-top: 5vh;
     margin-left: 42.1875vw;
     margin-right: 42.1875vw;
+    margin-bottom: 2vw;
 }

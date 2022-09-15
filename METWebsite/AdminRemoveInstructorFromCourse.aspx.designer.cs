@@ -33,13 +33,13 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl instructor;
 
         /// <summary>
-        /// instructorSearch control.
+        /// searchInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText instructorSearch;
+        protected global::System.Web.UI.WebControls.TextBox searchInput;
 
         /// <summary>
         /// instructorList control.

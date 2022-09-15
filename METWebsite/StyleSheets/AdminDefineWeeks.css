@@ -1,39 +1,45 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
-* {
-    box-sizing: border-box;
-}
+/*form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3.2552083333333335vw;
+}*/
+
 
 .header {
-    height: 7.6171875vw;
+    left: 0;
+    height: 5.5vw;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: start;
-    top: 0px;
 }
 
     .header > div {
         flex-grow: 1 1 0;
         display: flex;
         background-color: #ffff;
-        padding: 1.6vw;
+        padding: 1.3020833333333333vw;
         font-size: 2vw;
         top: 0px;
     }
 
 .logo {
-    width: 20.57vw;
-    height: 5.315104166666667vw;
+    width: 14vw;
+    height: 4vw;
 }
 
 .bar {
     width: 2.57vw;
-    height: 5.315104166666667vw;
+    height: 4vw;
 }
 
 .label1 {
@@ -42,9 +48,8 @@ body {
 }
 
 .adminLogo {
-    width: 3.875vw;
-    height: 3.7vw;
-    margin-left: 20vw;
+    width: 2.8vw;
+    margin-left: 28vw;
 }
 
 .adminLabel {
@@ -54,113 +59,397 @@ body {
     margin-left: 1vw;
 }
 
-.navBar {
+
+
+
+
+
+nav {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dashboard:hover {
+    cursor: pointer;
+}
+
+.navUl {
+    width: 64vw;
+    height: 3.5vw;
+    background: linear-gradient(to right, #FFE171, #FFC3C6);
+    border-radius: 2.6041666666666665vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 17.03125vw;
-    margin-right: 17.03125vw;
-    background: linear-gradient(to right, #FFE171, #FFC3C6);
-    border-radius: 3.2vw;
-    vertical-align: middle;
-    justify-content: space-around;
+    padding-left: 1.2vw;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    ul::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+nav > ul > li {
+    position: relative;
+}
+
+a:hover {
+    cursor: default;
+}
+
+nav > ul > li > a {
+    /*border: solid red;*/
+    display: block;
+    padding: 0px;
+    color: white;
+    font-size: 1.62vw;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    background: #88bfff;
+}
+
+.dropdown {
+    position: relative;
+    margin: 0 0 0 3vw;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: wheat;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 0 0.5vw 0;
+}
+
+    .dropdown:hover .dropdown-content li {
+        margin: 0.5vw;
+        font-size: .85vw;
+        color: white;
+        font-weight: 500;
+    }
+
+.dropdown:hover #dropdown-home {
+    width: 9vw;
+    background: linear-gradient(to right, rgba(251,213,137,255), #fad195);
+}
+
+.dropdown:hover #dropdown-course {
+    width: 9.3vw;
+    background: linear-gradient(to right, #fbd295, #facda1);
+}
+
+.dropdown:hover #dropdown-studentActivity {
+    width: 12vw;
+    background: linear-gradient(to right, #fbcea1, #fac9b4);
+}
+
+.dropdown:hover #dropdown-others {
+    width: 8vw;
+    background: linear-gradient(to right, #fac6b9, #f9c3c4);
+}
+
+
+.dropdown:hover .dropdown-content a {
+    text-decoration: none;
+    color: white;
+}
+
+    .dropdown:hover .dropdown-content a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
 .dashboard {
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
     color: white;
     text-decoration: none;
     font-size: 1.62vw;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 0.86vw;
     margin-left: 1vw;
 }
 
-.navLabels {
-    vertical-align: middle;
-    color: white;
-    font-size: 1.62vw;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.dashIconLabel {
-    vertical-align: middle;
-    display: flex;
-    flex-direction: row;
-}
-
 .dashboardIcon {
-    vertical-align: middle;
+    margin-top: 0.3vw;
+    width: 2.5vw;
 }
+
+
+
+
+
 
 .assignDiv {
     font-size: 2.43vw;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 4vw;
-    text-align: center;
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    /*border: solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap:1vw;
 }
 
 .weekDiv {
-    margin-top: 2.2vw;
+    /*border: solid green;*/
+    /* margin-top: 2.2vw;
     margin-left: 12.9479167vw;
     margin-right: 12.9479167vw;
-    height: 4vw;
-    background-color: #FFD39A;
-    border-radius: 0.8vw;
-    display:flex;
-    flex-direction:row;
-    column-gap:8vw;
-    justify-content:center;
-    align-items:center;
+    
+    border-radius: 1.9vw;
+    display: flex;
+    flex-direction: column;
+    column-gap: 8vw;
+    justify-content: center;
+    align-items: center;*/
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5vw;
+    justify-content: center;
+}
+
+.startDate, .endDate {
+    margin-top: 2vw;
 }
 
 .startDateLabel, .endDateLabel {
-    font-size: 1.4vw;
+    font-size: 1.62vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    color:white;
+    
 }
 
-.startDate,.endDate{
-    display:flex;
-    column-gap:1.6vw;
-    align-items:center;
+
+#startDate, #endDate {
+    border: solid #dbdfe3 0.06510416666666667vw;
+    border-radius: 0.13020833333333334vw;
+    height: 2.4vw;
+    width: 26.0416666vw;
+    float: left;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9vw;
+    -webkit-transition: all .2s;
 }
 
-#startDate,#endDate{
-    width:12vw;
-    height:3vw;
-    font-size:1.2vw;
-}
+    #startDate:focus, #endDate:focus {
+        outline: solid;
+        border-color: #FFBF80;
+        outline-color: #FFDFC8;
+    }
 
-input[type=date] {
-    border: 0.16vw solid #FFD0A1;
-    padding: .2em .4em;
-    border-radius: 1.6vw;
-    transition: 1s;
-    color: black;
-    height:2.88vw;
-    width:12vw;
-}
+
 
 .addWeek {
-    background-color: #43BB64;
-    font-family: 'Montserrat', sans-serif;
     color: white;
-    border-radius: 0.4vw;
+    background-color: #FFD0A1;
+    font-size: 1.296vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    width: 15.625vw;
+    height: 6.296vh;
+    border-radius: 0.3255208333333333vw;
     border: none;
-    font-size: 1vw;
-    font-weight: 500;
-    width: 6.7vw;
-    height: 2.2vw;
+    align-items: center;
+    -webkit-transition: all .3s;
 }
 
     .addWeek:hover {
         background-color: black;
         cursor: pointer;
-        transition: 0.5s;
     }
 
+.definedWeeksContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.definedLabel {
+    margin-top:2vw;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+.definedWeekDiv{
+    
+    margin-top:3vw;
+    display:flex;
+    flex-direction:row;
+    column-gap:7vw;
+    align-items:center;
+    font-size:1.2vw;
+}
+.definedWeekNoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    row-gap:0.2vw;
+
+}
+.definedWeekNoLabel {
+    font-size:1.5vw;
+    font-weight:600;
+    background: -webkit-linear-gradient(#FFE171, #FFC3C6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.definedStartDiv, .definedEndDiv {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+    align-items: center;
+    width:17vw;
+}
+.definedStartLabel, .definedEndLabel{
+    font-weight:500;
+}
+.definedStartDate {
+    border: solid #FFE173;
+    border-radius:5vw;
+    letter-spacing:0.2vw;
+    padding:0.3vw 1vw 0.3vw 1vw;
+}
+.definedEndDate {
+    border: solid #FFC9B7;
+    border-radius: 5vw;
+    letter-spacing: 0.2vw;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+}
+/**************************** Trash Button CSS***********************************/
+.trashButton {
+    padding: 18px 10px 5px 10px;
+    border-radius: 0.5vw;
+    -webkit-transition: all .2s;
+}
+
+.trash {
+    background: #ED1C24;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+    .trash:after {
+        position: absolute;
+        left: -99px;
+        right: 0;
+        bottom: -50px;
+        width: 300px;
+    }
+
+    .trash span {
+        position: absolute;
+        width: 25px;
+        height: 4px;
+        background: #ED1C24;
+        top: -5px;
+        left: -2.5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        transform: rotate(0deg);
+        transition: transform 250ms;
+        transform-origin: 19% 100%;
+    }
+
+        .trash span:after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 4px;
+            background: #ED1C24;
+            top: -2px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            transform: rotate(0deg);
+            transition: transform 250ms;
+            transform-origin: 19% 100%;
+            left: 6.5px;
+        }
+
+
+    .trash i {
+        position: relative;
+        width: 1.5px;
+        top:1.85px;
+        height: 12px;
+        background: #fff;
+        display: block;
+        margin: 2px auto;
+        border-radius: 3px;
+    }
+
+        .trash i:after {
+            content: '';
+            width: 1.5px;
+            height: 12px;
+            background: #fff;
+            position: absolute;
+            left: -4.4px;
+            border-radius: 3px;
+        }
+
+        .trash i:before {
+            content: '';
+            width: 1.5px;
+            height: 12px;
+            background: #fff;
+            position: absolute;
+            right: -4px;
+            border-radius: 3px;
+        }
+.trashButton:hover {
+    background: rgba(0,0,0,0.08);
+    border-radius: 0.5vw;
+    cursor:pointer;
+}
+    .trashButton:hover .innerSpan {
+        transform: rotate(-45deg);
+        transition: transform 250ms;
+    }
+
+/**************************************************************************/
+
+.separatingBar {
+    margin-top:1vw;
+    width: 70%;
+    height: 0.5px;
+    background-color: #D9D9D9;
+}

@@ -6,8 +6,8 @@
 <head runat="server">
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveAlumni.css" />
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveInstructor.css" />
-    <link rel="stylesheet" href="./StyleSheets/AdminAddAlumni.css" />
-
+    <link rel="stylesheet" href="./StyleSheets/AdminNavbar.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminOverlay.css" />
 
     <title></title>
 </head>
@@ -61,15 +61,5 @@
 
         </div>
     </form>
-    <%-- <script>
-
-        function confirmAlumni() {
-            const element = document.getElementById("successOverlay");
-            element.remove();
-            redirect("AdminRemoveAlumni.aspx");
-
-        }
-
-    </script>--%>
 </body>
 </html>

@@ -42,49 +42,49 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlInputText codeInput;
 
         /// <summary>
-        /// credit control.
+        /// credit1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl credit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl credit1;
 
         /// <summary>
-        /// lectureInput control.
+        /// lectureInput1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl lectureInput;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl lectureInput1;
 
         /// <summary>
-        /// tutorialInput control.
+        /// tutorialInput1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl tutorialInput;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl tutorialInput1;
 
         /// <summary>
-        /// labsInput control.
+        /// labsInput1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl labsInput;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl labsInput1;
 
         /// <summary>
-        /// semesterInput control.
+        /// semesterInput1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl semesterInput;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl semesterInput1;
 
         /// <summary>
         /// iselective control.
@@ -204,13 +204,13 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox graduate;
 
         /// <summary>
-        /// descriptionInput control.
+        /// descriptionInput1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea descriptionInput;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea descriptionInput1;
 
         /// <summary>
         /// Button1 control.
