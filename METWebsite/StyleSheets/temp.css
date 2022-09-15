@@ -1,0 +1,144 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+/*.scrollable{
+    top:0px;
+    position:fixed;
+    background-color:white;
+    width:100%;
+}*/
+
+.header {
+    height: 7.61716752vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    top: 0px;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.31510415vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.31510415vw;
+}
+
+.facultyLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.login {
+    position: relative;
+    width: 10.590494791666666vw;
+    height: 3.7109375vw;
+    border-radius: 0.32552vw;
+    background-color: #FFCB05;
+    border: none;
+    font-size: 1.5625vw;
+    margin-left: 22vw;
+    font-weight: bold;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .login:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+.navbar {
+    background-color: black;
+    height: 4.3vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+    .navbar > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5vw;
+    }
+
+.navbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+}
+
+    .navbtn:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid;
+        border-color: red;
+        border-width: 3px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+.navbtnin {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: default;
+}
+
+.navImgHomeBookHeadphones {
+    width: 1.6vw;
+    height: 1.6vw;
+}
+
+.navImgGroup {
+    width: 1.9vw;
+    height: 2.2vw;
+}
+
+.navImgGrad {
+    width: 1.6vw;
+    height: 1.6vw;
+}
+
+.navImgAbout {
+    width: 2vw;
+    height: 2vw;
+}

@@ -11,45 +11,106 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
         <div id="EditOverlay" class="overlay">
   
   <div class="overlay-content">
       <asp:Label Text="Edit Announcement" runat="server" CssClass="overlayTitle"  />
     
       <hr />
-      <input runat="server" id="editText" class="AnnouncmentTextBox" type="text"  autofocus />
+      <input runat="server" id="editText" class="AnnouncmentTextBox" type="text"   />
       <div class="confirm_cancel_Buttons">
           
-                      <asp:Button CssClass="show-more" runat="server" Text="Confirm" OnClick="EditConfirm" />
+                      <asp:Button CssClass="show-more" runat="server" Text="Confirm" OnClick="EditConfirm"/>
+                      <asp:Button  CssClass="cancel" runat="server" Text="Cancel" OnClientClick="closeEditOverlay()" />
+
+      </div>
+  </div>
+</div>  
+        
+        
+        
+        <div id="EditWeekOverlay" class="overlay">
+  
+  <div class="overlay-content">
+      <asp:Label Text="Edit Week Details" runat="server" CssClass="overlayTitle"  />
+    
+      <hr />
+      
+      <input id="weekTitleEdit" runat="server" class="AnnouncmentTextBox" type="text" placeholder=" Week Title..."  style="height: 40px;" />
+      
+      <input id="weekDescriptionEdit" runat="server" class="AnnouncmentTextBox" type="text" placeholder="Description..."   />
+      <div class="confirm_cancel_Buttons">
+          
+                      <asp:Button CssClass="show-more" runat="server" Text="Confirm" OnClick="EditWeekConfirm" />
+                      <asp:Button  CssClass="cancel" runat="server" Text="Cancel" />
+
+      </div>
+  </div>
+</div> 
+        
+        
+   <div id="AddWeekOverlay" class="overlay">
+  
+  <div class="overlay-content">
+      <asp:Label Text="Add New Week" runat="server" CssClass="overlayTitle"  />
+    
+      <hr />
+      <asp:DropDownList runat="server" id="dropdownWeeks">
+ 
+      </asp:DropDownList>
+      <br />
+      <input id="weekTitleAdd" runat="server" class="AnnouncmentTextBox" type="text" placeholder=" Week Title..."  style="height: 40px;" />
+      
+      <input id="weekDescriptionAdd" runat="server" class="AnnouncmentTextBox" type="text" placeholder="Description..."   />
+      <div class="confirm_cancel_Buttons">
+          
+                      <asp:Button CssClass="show-more" runat="server" Text="Confirm" OnClick="AddNewweekConfirm" />
                       <asp:Button  CssClass="cancel" runat="server" Text="Cancel" />
 
       </div>
   </div>
 </div>
+
+
+
         <div id="deleteOverlay" class="overlay">
-            <asp:Label Text="This Announcement will be deleted,Are you sure?" runat="server" />
-             <div class="confirm_cancel_Buttons">
-          
+            <div class="overlay-content">
+                <br />
+            <asp:Label Text="This Announcement will be deleted,Are you sure?" runat="server" Style="color : black; " />
+            <br />
+             <div class="yes_no_Buttons">
+
                       <asp:Button CssClass="show-more" runat="server" Text="Yes" OnClick="DeleteYes" />
                       <asp:Button  CssClass="cancel" runat="server" Text="No" />
+</div>
+      </div>
+        </div> 
+        <div id="deleteMaterialsOverlay" class="overlay">
+            <div class="overlay-content">
+                <br />
+            <asp:Label Text="This File will be deleted,Are you sure?" runat="server" Style="color : black; " />
+            <br />
+             <div class="yes_no_Buttons">
 
+                      <asp:Button CssClass="show-more" runat="server" Text="Yes" OnClick="DeleteMaterialYes" />
+                      <asp:Button  CssClass="cancel" runat="server" Text="No" />
+</div>
       </div>
         </div>
         
-        
+     
         <div id="AddAnnouncmentOverlay" class="overlay">
   
   <div class="overlay-content">
       <asp:Label Text="Add Announcement" runat="server" CssClass="overlayTitle" />
     
       <hr />
-      <input runat="server" id="AddAnnText" class="AnnouncmentTextBox" type="text" oninput="TextBox2_TextChanged" />
+      <input runat="server" id="AddAnnText" class="AnnouncmentTextBox" type="text" oninput="TextBox2_TextChanged" placeholder="Write Here..."  />
       <div class="confirm_cancel_Buttons">
           
 
                       <asp:Button ID="confirmAdd" CssClass="show-more" runat="server" Text="Confirm" OnClick="AddAnnConfirm" />
-                      <asp:Button  CssClass="cancel" runat="server" Text="Cancel" />
+                      <asp:Button  CssClass="cancel" runat="server" Text="Cancel" OnClientClick="closeAddAnnOverlay" />
 
       </div>
   </div>
@@ -91,11 +152,11 @@
             </div>
 
         </div>
-        <div class="title">
-            <p>Course Updates</p>
-        </div>
+      
+            <p class="title">Course Updates</p>
+     
        
-            <table id="updatesTable" runat="server">
+            <table class="updatesTable" id="updatesTable" runat="server">
             </table>
         <button class="AddNew" runat="server" onserverclick="AddAnnouncment">
             <img class="editIcon" src="./images/InstructorHome/plusIcon.svg" />
@@ -104,32 +165,27 @@
         <div class="line2 centerdiv" id="description">
         </div>
 
-        <div class="title">
-            <p>Syllabus</p>
-        </div>
+     
+            <p class="title">Syllabus</p>
         <div id="csyllabus" runat="server">
 
             <div class="flex-container-2">
                 <div class="flex-child">
                      <p class="syllabus-title">Week </p>
-                     <p class="week-number">15</p></div>
+                     <p class="week-number">15</p>
+                    <p class="syllabus-title"> 20/10/2022</p>
+                </div>
                 <div class="flex-child">
-                     <div>
-                         <span class="syllabus-title">Title</span>
+                     <div class="divTitle">
+                         <span class="syllabus-title">Title of the week hello hi hello and welcome Hello Hi </span>
                          <asp:ImageButton  CssClass="weekEdit" ID="Image2" runat="server" ImageUrl="./images/InstructorHome/blackEdit.svg" onmouseover="this.src='./images/InstructorHome/redEdit.svg'" onmouseout="this.src='./images/InstructorHome/blackEdit.svg'"/>
                       </div> 
                     <p class="syllabus-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.</p>
                     </div>
                 </div>  
-            <img class="syllabus-line" src="./images/coursePageImages/line.svg" />
-            <ul class="materialsUl">
-                <li class="materialsLi"><asp:ImageButton   ID="ImageButton3" runat="server" ImageUrl="./images/InstructorHome/blackDelete.svg" onmouseover="this.src='./images/InstructorHome/redDelete.svg'" onmouseout="this.src='./images/InstructorHome/blackDelete.svg'"/><a >Lecture 1</a></li>
-                <li class="materialsLi"><asp:ImageButton   ID="ImageButton4" runat="server" ImageUrl="./images/InstructorHome/blackDelete.svg" onmouseover="this.src='./images/InstructorHome/redDelete.svg'" onmouseout="this.src='./images/InstructorHome/blackDelete.svg'"/><a href="#">Lecture 1</a></li>
-            </ul>
-             <button class="AddNewMaterials" runat="server" >
-            <img class="editIcon" src="./images/InstructorHome/plusIcon.svg" />
-            <span class="innerSpan">Add Materials</span>
-        </button>
+           
+                 
+          
 
             
             
@@ -147,22 +203,32 @@
             function openDeleteOverlay() {
                 document.getElementById("deleteOverlay").style.display = "block";
             }
+            function openDeleteMaterialsOverlay() {
+                document.getElementById("deleteMaterialsOverlay").style.display = "block";
+            }
+            function openEditWeekOverlay() {
+                document.getElementById("EditWeekOverlay").style.display = "block";
+            }
+            function openAddWeekOverlay() {
+                document.getElementById("AddWeekOverlay").style.display = "block";
+            }
+
             
             
         </script>
 
-        <div class="show-moreDiv">
-            <asp:Button ID="mybtn7" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
-        </div>
-
+       
         <div class="line2 centerdiv" id="instructors">
         </div>
-        <div class="title">
-            <p>Resources</p>
-        </div>
+       
+            <p class="title">Resources</p>
+        <table runat="server" class="updatesTable" id="resourcesTable">
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <div id="AddResourceDiv" runat="server" style="padding-bottom : 3vw"></div>
 
-        <div class="margin-bottom margin-left" id="cres" runat="server">
-        </div>
     </form>
 </body>
 </html>
