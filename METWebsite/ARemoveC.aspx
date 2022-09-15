@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="./StyleSheets/AdminAddAlumni.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminNavbar.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminOverlay.css" />
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveCourse.css" />
     <link rel="stylesheet" href="./StyleSheets/InstructorsProfiles.css" />
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveAlumni.css" />
@@ -18,6 +19,7 @@
 </head>
 <body>
     <form id="form2" runat="server">
+
         <div class="header">
 
             <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
@@ -33,7 +35,8 @@
 
         </div>
 
-
+        <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click" Visible="false" />
+        <asp:Button ID="button3" CssClass="yesnobtn" runat="server" Text="No" Visible="false" />
         <nav>
 
             <ul class="navUl">
@@ -91,7 +94,28 @@
             </div>
             <div class="bottom"></div>
         </div>
+
     </form>
 
 </body>
+<script>
+
+    function confirmAlumni() {
+        const element = document.getElementById("successOverlay");
+        element.remove();
+
+    }
+    function confirmed() {
+        alert(12)
+    }
+    function func() {
+        var y = document.getElementById("labelforpic");
+        var x = document.getElementById("input1");
+        var div = document.getElementsByClassName("files")[0];
+        div.innerHTML = x.files.item(0).name;
+
+
+    }
+
+</script>
 </html>
