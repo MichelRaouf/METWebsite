@@ -61,15 +61,5 @@
 
         </div>
     </form>
-    <%-- <script>
-
-        function confirmAlumni() {
-            const element = document.getElementById("successOverlay");
-            element.remove();
-            redirect("AdminRemoveAlumni.aspx");
-
-        }
-
-    </script>--%>
 </body>
 </html>
