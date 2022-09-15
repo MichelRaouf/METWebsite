@@ -38,31 +38,9 @@ html {
     .flex-child-1:last-child {
     }
 
-.nav2-img {
-    width: 2.9vw;
-    height: 2.9vw;
-    padding-top: .2vw;
-    vertical-align: middle;
-}
 
-/*
-.center {
-    position: absolute;
-    left: 80%;
-    top: 52.5%;
-    transform: translate(-50%, -50%);
-    padding: 0.6510416666666666vw;
-}*/
 
-.line {
-    width: 100%;
-    height: 0.06510416666666667vw;
-    background-color: #D9D9D9;
-    display: flex;
-    z-index: 10000;
-    position: sticky;
-    top: 3.1901041666666665vw;
-}
+
 
 .title {
     font-family: 'Montserrat';
@@ -92,6 +70,7 @@ html {
 .centerdiv {
     margin: auto;
     width: 60%;
+    border-radius : 1vw;
 }
 
 .description {
@@ -131,6 +110,7 @@ html {
     font-size: 1.953125vw;
     font-weight: 300;
     color: #000000;
+    width : 70vw;
 }
 
 .syllabus-description {
@@ -138,14 +118,17 @@ html {
     font-size: 1.6103059581320451vw;
     font-weight: 300;
     color: #000000;
+    padding-right : 13vw;
 }
 
 .flex-container-2 {
     display: flex;
     flex-direction: row;
+    align-content :  center;
 }
 
 .flex-child {
+    
 }
 
     .flex-child:first-child {
@@ -219,69 +202,12 @@ span {
     color: #FFFFFF;
 }
 
-.navbar2 {
-    width: 100%;
-    height: 3.1901041666666665vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background-color: white;
-    z-index: 10000;
-    position: sticky;
-    top: 0px;
-}
 
-    .navbar2 > div {
-        margin-left: 0.6510416666666666vw;
-        flex-grow: 1 1 0;
-        display: flex;
-        padding: 1.3vw;
-        top: 0vw;
-    }
 
-.hover-underline-animation {
-    color: black;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.5vw;
-    text-decoration: none;
-    line-height: 3.9452495974235107vw;
-}
 
-    .hover-underline-animation:hover {
-        font-weight: 900;
-        text-decoration: underline;
-        font-size: 1.6vw;
-        cursor: pointer;
-    }
 
-li {
-    line-height: 1.5em;
-}
 
-#more7 {
-    display: none;
-}
-
-.login:hover {
-    background-color: black;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.navbtn:hover {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid;
-    border-color: red;
-    border-width: 3px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-#updatesTable {
+.updatesTable {
     border : none;
     table-layout: auto;
     width: 80%;
@@ -357,8 +283,7 @@ tr:nth-child(even) {
     background-color: white;
 }
 .weekEdit{
-    background: url(".images/InstructorHome/blackEdit.svg");
-    margin-left: 74vw;
+    
     width: 3.5%;
     height: 3.5%;
 }
@@ -369,12 +294,12 @@ tr:nth-child(even) {
     font-size: 2vw;
     display: grid;
   
-    grid-row-gap: 10px;
+    grid-row-gap: 1.3vw;
 }
 .materialsLi {
     display: flex;
     direction :initial;
-    grid-column-gap:20px;
+    grid-column-gap:2.6vw;
 }
 
 .AddNewMaterials {
@@ -408,8 +333,8 @@ tr:nth-child(even) {
 
 .overlay-content {
     background-color : white;
-    border: solid 1px;  
-    border-radius: 6px;
+    /*border: solid 1px;*/  
+    border-radius: 0.78vw;
     position: relative;
     top: 25%;
     width: 50%;
@@ -418,16 +343,13 @@ tr:nth-child(even) {
     margin : auto;
 }
 
-
- 
-
 .overlay .closebtn {
-    font-size: 50px;
+    font-size: 6.5vw;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 58.5vw) {
     .overlay a {
-        font-size: 20px
+        font-size: 2.6vw
     }
 
 
@@ -436,18 +358,18 @@ tr:nth-child(even) {
     color: black;
 }
 .AnnouncmentTextBox{
-    width : 600px;
-    height: 216px;
-    font-size : 20px;
-    margin-top : 12px;
+    width : 40.22vw;
+    height: 15.1vw;
+    font-size : 2.6vw;
+    margin-top :1.56vw;
 }
 .confirm_cancel_Buttons{
     display : flex;
     flex-direction: row;
-    column-gap : 15px;
-    margin-left :360px;
-    margin-top: 16px;
-    margin-bottom : 16px;
+    column-gap : 2vw;
+    margin-left :23vw;
+    margin-top: 2vw;
+    padding-bottom : 2vw;
 }
 .show-more {
     background-color: #FFCB05;
@@ -486,3 +408,47 @@ tr:nth-child(even) {
         cursor: pointer;
     }
 
+.yes_no_Buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 9.12vw;
+    margin : auto;
+    justify-content : center;
+    margin-top : 6.5vw;
+    padding-bottom : 6.5vw;
+}
+.divTitle{
+    display : flex;
+    flex-direction: row;
+    column-gap : 1.63vw;
+    align-content : center;
+    align-items : center;
+}
+
+
+.AddNewWeek {
+    display: block;
+    background-color: #FFCB05;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 12vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    margin: auto;
+    text-indent: -0.6510416666666666vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    cursor: pointer;
+   
+}
+.AddNewWeek:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.dropdownList{
+    width : 13vw;
+    height : 3.9vw;
+}

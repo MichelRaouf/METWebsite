@@ -33,13 +33,13 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlInputText nameInput;
 
         /// <summary>
-        /// passwordInput control.
+        /// positionInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText passwordInput;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect positionInput;
 
         /// <summary>
         /// emailInput control.
@@ -58,6 +58,24 @@ namespace METWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button button2;
+
+        /// <summary>
+        /// button3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button button3;
 
         /// <summary>
         /// mailmessage control.

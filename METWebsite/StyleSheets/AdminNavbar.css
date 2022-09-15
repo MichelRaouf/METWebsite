@@ -1,0 +1,181 @@
+﻿body {
+}
+
+.header {
+    left: 0;
+    height: 5.5vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 14vw;
+    height: 4vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 4vw;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.adminLogo {
+    width: 2.8vw;
+    margin-left: 28vw;
+}
+
+.adminLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.56vw;
+    font-weight: 600;
+    margin-left: 1vw;
+}
+
+
+
+
+
+
+nav {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dashboard:hover {
+    cursor: pointer;
+}
+
+.navUl {
+    width: 64vw;
+    height: 3.5vw;
+    background: linear-gradient(to right, #FFE171, #FFC3C6);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1.2vw;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    ul::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+nav > ul > li {
+    position: relative;
+}
+
+a:hover {
+    cursor: default;
+}
+
+nav > ul > li > a {
+    /*border: solid red;*/
+    display: block;
+    padding: 0px;
+    color: white;
+    font-size: 1.62vw;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    background: #88bfff;
+}
+
+.dropdown {
+    position: relative;
+    margin: 0 0 0 3vw;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: wheat;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 0 0.5vw 0;
+}
+
+    .dropdown:hover .dropdown-content li {
+        margin: 0.5vw;
+        font-size: .85vw;
+        color: white;
+        font-weight: 500;
+    }
+
+.dropdown:hover #dropdown-home {
+    width: 9vw;
+    background: linear-gradient(to right, rgba(251,213,137,255), #fad195);
+}
+
+.dropdown:hover #dropdown-course {
+    width: 9.3vw;
+    background: linear-gradient(to right, #fbd295, #facda1);
+}
+
+.dropdown:hover #dropdown-studentActivity {
+    width: 12vw;
+    background: linear-gradient(to right, #fbcea1, #fac9b4);
+}
+
+.dropdown:hover #dropdown-others {
+    width: 8vw;
+    background: linear-gradient(to right, #fac6b9, #f9c3c4);
+}
+
+
+.dropdown:hover .dropdown-content a {
+    text-decoration: none;
+    color: white;
+}
+
+    .dropdown:hover .dropdown-content a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+.dashboard {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.62vw;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 1vw;
+}
+
+.dashboardIcon {
+    margin-top: 0.3vw;
+    width: 2.5vw;
+}

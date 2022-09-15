@@ -1,0 +1,265 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('AdminRemoveStudentActivity.css');
+
+body {
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    height: 7.6171875vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    top: 0px;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 1.6vw;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.adminLogo {
+    width: 3.875vw;
+    height: 3.7vw;
+    margin-left: 20vw;
+}
+
+.adminLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.56vw;
+    font-weight: 600;
+    margin-left: 1vw;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 17.03125vw;
+    margin-right: 17.03125vw;
+    background: linear-gradient(to right, #FFE171, #FFC3C6);
+    border-radius: 3.2vw;
+    vertical-align: middle;
+    justify-content: space-around;
+}
+
+.dashboard {
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+    font-size: 1.62vw;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0.86vw;
+    margin-left: 1vw;
+}
+
+.navLabels {
+    vertical-align: middle;
+    color: white;
+    font-size: 1.62vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dashIconLabel {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboardIcon {
+    vertical-align: middle;
+}
+
+.assignDiv {
+    font-size: 2.43vw;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.4vw;
+    text-align: center;
+}
+
+.instructor {
+    margin-top: 2.2vw;
+    margin-left: 7.9479167vw;
+    margin-right: 7.9479167vw;
+    border-radius: 1.6vw;
+    background: linear-gradient(to bottom, #FFE172, #FFD595);
+    padding-top: 1.44vw;
+    text-align: center;
+
+}
+
+.course {
+    margin-top: 2.14vw;
+    margin-left: 7.9479167vw;
+    margin-right: 7.9479167vw;
+    border-radius: 1.6vw;
+    background: linear-gradient(to bottom, #FFD499, #FFC5C3);
+    padding-top: 1.44vw;
+    text-align: center;
+    display: none;
+}
+
+.selectInstructorLabel, .selectCourseLabel, .noSelectCourseLabel {
+    font-size: 1.89vw;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#instructorSearch, #courseSearch {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.44vw;
+    margin-bottom: 1.44vw;
+    border-radius: 0.8vw;
+    border-color: white;
+    border: none;
+    width: 25.15vw;
+    height: 2.4vw;
+    padding-left: 1vw;
+    font-size:1vw;
+}
+
+.instructorList, .courseList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2vw;
+    row-gap: 1.2vw;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.7vw;
+    margin-top: 1.6vw;
+}
+
+.instructorItem, .courseItem {
+    background-color: white;
+    border-radius: 0.8vw;
+    width: 37vw;
+    height: 2.9vw;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.4vw;
+    align-items: center;
+}
+
+.instructorLabelDiv, .courseLabelDiv {
+    width: 25vw;
+    margin-left: 3vw;
+    display: flex;
+}
+
+.instructorLabel, .courseLabel {
+    font-size: 1vw;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0;
+}
+
+.bottom {
+    height: 2.2vw;
+}
+
+.select {
+    background-color: #43BB64;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border-radius: 0.5vw;
+    border: none;
+    font-size: 0.9vw;
+    font-weight: 500;
+    width: 4.7vw;
+    height: 2vw;
+}
+
+    .select:hover {
+        background-color: black;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+.selectedInstructor, .selectedCourse ,.noSelectedCourse {
+    margin-top: 2.2vw;
+    margin-left: 7.9479167vw;
+    margin-right: 7.9479167vw;
+    border-radius: 1.6vw;
+    padding-top: 20px;
+    padding-left: 300px;
+    background: linear-gradient(to bottom, #FFE172, #FFD595);
+    height: 5.7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.Unselect {
+    background-color: #ED1C24;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border-radius: 0.5vw;
+    border: none;
+    font-size: 0.9vw;
+    font-weight: 500;
+    width: 5.4vw;
+    height: 2vw;
+}
+
+    .Unselect:hover {
+        background-color: black;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+.removeDiv {
+    margin: auto;
+    text-align: center;
+    display: none;
+}
+
+.remove {
+    width: 10vw;
+    height: 4vw;
+    color: white;
+    border: none;
+    border-radius: 0.4vw;
+    font-size: 1.3vw;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.6vw;
+    background-color: #ED1C24;
+}
+
+    .remove:hover {
+        background-color: black;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+

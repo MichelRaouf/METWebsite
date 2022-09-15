@@ -17,7 +17,7 @@ namespace METWebsite
         Button no = new Button();
         protected void Page_Load(object sender, EventArgs e)
         {
-            yes.Click += Yes_Click;
+            yes.Click += Yes_Click1;
         }
         protected void addCourse_Click(object sender, EventArgs e)
         {
@@ -43,7 +43,7 @@ namespace METWebsite
                 yes.Attributes.Add("class", "yesnobtn");
                 yes.Attributes.Add("runat", "server");
                 no.Attributes.Add("class", "yesnobtn");
-                yes.Click += Yes_Click;
+                yes.Click += Yes_Click1;
 
                 div.Attributes.Add("class", "confirmationOverlay");
                 div2.Attributes.Add("class", "confirmationBox");
@@ -75,7 +75,7 @@ namespace METWebsite
         }
 
 
-            protected void Yes_Click(object sender, EventArgs e)
+            protected void Yes_Click1(object sender, EventArgs e)
         {
           //  try
            // {
@@ -84,15 +84,15 @@ namespace METWebsite
                 //SqlCommand course_title = new SqlCommand("courseTitle", con);
                 String ctitle = titleInput.Value.ToString();
                 String ccode = codeInput.Value.ToString();
-                int clecs = Int16.Parse(lectureInput.Value);
-                int ctuts = Int16.Parse(tutorialInput.Value);
-                int clabs = Int16.Parse(labsInput.Value);
-                int ccredits = Int16.Parse(credit.Value);
-                int csemesterNo = Int16.Parse(semesterInput.Value);
+                int clecs = Int16.Parse(lectureInput1.Value);
+                int ctuts = Int16.Parse(tutorialInput1.Value);
+                int clabs = Int16.Parse(labsInput1.Value);
+                int ccredits = Int16.Parse(credit1.Value);
+                int csemesterNo = Int16.Parse(semesterInput1.Value);
 
 
 
-                string cdescription = descriptionInput.Value.ToString();
+                string cdescription = descriptionInput1.Value.ToString();
 
                 SqlCommand addCourse = new SqlCommand("AdminAddCourse", con);
                 addCourse.CommandType = System.Data.CommandType.StoredProcedure;

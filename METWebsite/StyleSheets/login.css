@@ -1,0 +1,37 @@
+﻿body {
+    background-color: #F1F1F1;
+}
+.signIn{
+    background-color : white;
+    width: 400px;
+    height : 501px;
+    border-radius : 2vw;
+    display : flex;
+    flex-direction : column;
+    
+}
+.signInTextBox{
+    width : 70%;
+    height : 2vw;
+    border-radius : .3vw;
+    margin : auto;
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+
+.welcomeMET {
+   
+    font-size : 21px;
+    margin : 0px;
+    margin-top : 20px;
+    margin-left : 30px;
+}
+.signInLabel{
+    padding-left : 56px;
+
+}
+.title {
+    font-size: 55px;
+    margin: 0;
+    margin-left: 30px;
+}
