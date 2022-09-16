@@ -7,177 +7,7 @@ body {
     box-sizing: border-box;
 }
 
-.header {
-    left: 0;
-    height: 5.5vw;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: start;
-}
 
-    .header > div {
-        flex-grow: 1 1 0;
-        display: flex;
-        background-color: #ffff;
-        padding: 1.3020833333333333vw;
-        font-size: 2vw;
-        top: 0px;
-    }
-
-.logo {
-    width: 14vw;
-    height: 4vw;
-}
-
-.bar {
-    width: 2.57vw;
-    height: 4vw;
-}
-
-.label1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8vw;
-}
-
-.adminLogo {
-    width: 2.8vw;
-    margin-left: 28vw;
-}
-
-.adminLabel {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.56vw;
-    font-weight: 600;
-    margin-left: 1vw;
-}
-
-
-nav {
-    margin-top:2vw;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-
-}
-.dashboard:hover{
-    cursor:pointer;
-}
-.dashboard {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    font-size: 1.62vw;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 1vw;
-}
-
-.dashboardIcon {
-    margin-top: 0.3vw;
-    width: 2.5vw;
-}
-.navUl {
-    width: 64vw;
-    height: 3.5vw;
-    background: linear-gradient(to right, #FFE171, #FFC3C6);
-    border-radius: 2.6041666666666665vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 1.2vw;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif; 
-}
-ul::after{
-    content: '';
-    clear:both;
-    display:block;
-
-}
-nav>ul>li{
-    position:relative;
-    
-}
-a:hover{
-    cursor:default;
-}
-    nav > ul > li > a {
-        /*border: solid red;*/
-        display: block;
-        padding: 0vw;
-        color: white;
-        font-size: 1.62vw;
-        font-weight: 400;
-        text-decoration: none;
-     
-
-    }
-    nav > a:hover {
-        background: #88bfff;
-    }
-.dropdown {
-    position: relative;
-    margin: 0 0 0 3vw;
-    
-  
-}
-.dropdown-content{
-    display:none;
-    background-color:wheat;
-    position:absolute;
-    
-}
-.dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
-    padding:1vw 0 0.5vw 0;
-}
-.dropdown:hover .dropdown-content li {
-    margin:0.5vw;
-    font-size:.85vw;
-    color:white;
-    font-weight:500;
-}
-
-.dropdown:hover #dropdown-home {
-    width: 9vw;
-    background: linear-gradient(to right, rgba(251,213,137,255), #fad195);
-}
-.dropdown:hover #dropdown-course {
-    width: 9.3vw;
-    background: linear-gradient(to right, #fbd295, #facda1);
-}
-
-.dropdown:hover #dropdown-studentActivity {
-    width: 12vw;
-    background: linear-gradient(to right, #fbcea1, #fac9b4);
-}
-
-.dropdown:hover #dropdown-others {
-    width: 8vw;
-    background: linear-gradient(to right, #fac6b9, #f9c3c4);
-}
-
-
-.dropdown:hover .dropdown-content a {
-    text-decoration:none;
-    color:white;
-    
-}
-
-.dropdown:hover .dropdown-content a:hover {
-    cursor: pointer;
-    text-decoration:underline;
-
-}
 
 .addCourseDiv {
     font-size: 2.43vw;
@@ -224,9 +54,16 @@ a:hover{
     
 }
 
-.titleLabel, .courseLabel, .lecturesLabel, .tutsLabel, .labsLabel {
+.titleLabel, .courseLabel, .lecturesLabel, .tutsLabel{
 
     width: 16vw;
+    text-align: start;
+    font-size: 1.62vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+.labsLabel {
+    width: 17vw;    
     text-align: start;
     font-size: 1.62vw;
     font-weight: 600;
@@ -243,22 +80,22 @@ a:hover{
     font-size: 0.9vw;
     -webkit-transition: all .2s;
 }
-input:focus, #descriptionInput1:focus {
-    outline: solid;
-    border-color: #FFBF80;
-    outline-color: #FFDFC8;
-}
+    input:focus, #descriptionInput1:focus {
+        outline: solid;
+        border-color: #FFBF80;
+        outline-color: #FFDFC8;
+    }
 
-#semesterInput {
+#semesterInput1 {
     position: relative;
-    left: 1vw;
+    
     border: solid #dbdfe3 0.06510416666666667vw;
     border-radius: 0.13020833333333334vw;
     height: 2.4vw;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9vw;
     -webkit-transition: all .2s;
-    width: 16.0416666vw;
+    width: 20vw;
     padding-left: 0;
 }
 .elective {
