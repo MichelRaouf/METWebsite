@@ -15,7 +15,7 @@
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -117,11 +117,9 @@
     <Content Include="AdminHomePage.aspx" />
     <Content Include="AdminInstructorToCourse.aspx" />
     <Content Include="AdminRemoveAlumni.aspx" />
-    <Content Include="AdminRemoveCourse.aspx" />
     <Content Include="AdminRemoveInstructor.aspx" />
     <Content Include="AdminRemoveInstructorFromCourse.aspx" />
     <Content Include="AdminRemoveStudentActivity.aspx" />
-    <Content Include="AdminStudentActivity.aspx" />
     <Content Include="App_Data\database2.mdf" />
     <Content Include="App_Data\database2_log.ldf">
       <DependentUpon>database2.mdf</DependentUpon>
@@ -146,8 +144,8 @@
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
-    <Content Include="images\adminImages\DefinedWeeksLabel.PNG" />
     <Content Include="images\ErrorIcon.png" />
+    <Content Include="images\InstructorHome\MET.svg" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
@@ -203,8 +201,6 @@
     <Content Include="images\InstructorHome\logout.svg" />
     <Content Include="images\InstructorHome\plusIcon.svg" />
     <Content Include="images\InstructorHome\profile.svg" />
-    <Content Include="images\InstructorHome\red.svg" />
-    <Content Include="images\InstructorHome\red1.png" />
     <Content Include="images\InstructorHome\redDelete.svg" />
     <Content Include="images\InstructorHome\redEdit.svg" />
     <Content Include="images\InstructorHome\whiteDelete.svg" />
@@ -307,7 +303,6 @@
     <Content Include="StyleSheets\InstructorViewCourse.css" />
     <Content Include="StyleSheets\studentActivities.css" />
     <Content Include="StaffProfile.aspx" />
-    <Content Include="temp.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -363,13 +358,6 @@
     <Compile Include="AdminRemoveAlumni.aspx.designer.cs">
       <DependentUpon>AdminRemoveAlumni.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminRemoveCourse.aspx.cs">
-      <DependentUpon>AdminRemoveCourse.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminRemoveCourse.aspx.designer.cs">
-      <DependentUpon>AdminRemoveCourse.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AdminRemoveInstructor.aspx.cs">
       <DependentUpon>AdminRemoveInstructor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -390,13 +378,6 @@
     </Compile>
     <Compile Include="AdminRemoveStudentActivity.aspx.designer.cs">
       <DependentUpon>AdminRemoveStudentActivity.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminStudentActivity.aspx.cs">
-      <DependentUpon>AdminStudentActivity.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminStudentActivity.aspx.designer.cs">
-      <DependentUpon>AdminStudentActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -512,13 +493,6 @@
     </Compile>
     <Compile Include="StaffProfile.aspx.designer.cs">
       <DependentUpon>StaffProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="temp.aspx.cs">
-      <DependentUpon>temp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="temp.aspx.designer.cs">
-      <DependentUpon>temp.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

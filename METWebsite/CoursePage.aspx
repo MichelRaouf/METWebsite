@@ -1,14 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourePage.aspx.cs" Inherits="METWebsite.CourePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CoursePage.aspx.cs" Inherits="METWebsite.temp8" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Course Page</title>
-    <link rel="icon" href="./images/gucLogo.png" />
-    <link rel="stylesheet" href="./StyleSheets/HomeStyles.css" />
-    <link rel="stylesheet" href="./StyleSheets/CoursePage.css" />
-
+    <title>Course</title>
+    <link rel="icon" href="./images/gucLogo.png"/>
+    <link  rel="stylesheet" href="./StyleSheets/CoursePage.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -51,101 +49,144 @@
         </div>
 
         <div class="flex-container-1">
-            <div id="ctitle" class="flex-child-1" runat="server">
+            <div class="courseTitleDiv" id="courseTitleDiv" runat="server">
+                
             </div>
 
-            <div class="flex-child-1 center">
-                <div class="margin-bottom">
-                    <img class="nav2-img" src="./images/coursePageImages/credit.svg" />
-                    <span id="ccredits" runat="server"></span>
+            <div class="iconsValues">
+                <div class="iconLineDiv" id="creditDiv" runat="server">
+                    <img class="iconNoTut" src="./images/coursePageImages/credit.svg" />
                 </div>
-                <div class="margin-bottom">
-                    <img class="nav2-img" src="./images/coursePageImages/lecture.svg" />
-                    <span id="clecs" runat="server"></span>
+                <div class="iconLineDiv" id="lectureDiv" runat="server">
+                    <img class="iconNoTut" src="./images/coursePageImages/lecture.svg" />
                 </div>
-                <div class="margin-bottom">
-                    <img class="nav2-img" src="./images/coursePageImages/tutorial.svg" />
-                    <span id="ctuts" runat="server"></span>
+                <div class="iconLineDiv" id="tutDiv" runat="server">
+                    <img class="iconTut" src="./images/coursePageImages/tutorial.svg" />
                 </div>
-                <div class="margin-bottom">
-                    <img class="nav2-img" src="./images/coursePageImages/lab.svg" />
-                    <span id="clabs" runat="server"></span>
+                <div class="iconLineDiv" id="labDiv" runat="server">
+                    <img class="iconNoTut" src="./images/coursePageImages/lab.svg" />
                 </div>
+
             </div>
 
         </div>
-        <div class="navbar2">
-            <div>
-                <a class="hover-underline-animation" href="#updates">Course Updates</a>
+
+        <div id="navbar2" class="navbar2">
+            <div class="AboutNav">
+                <asp:Label Text="Course Updates" runat="server" onClick="funcCourseUpdates()"/>
             </div>
-            <div>
-                <a class="hover-underline-animation" href="#description">Description</a>
+            <div class="AboutNav">
+                <asp:Label Text="Description" runat="server" onClick="funcDescription()" />
             </div>
-            <div>
-                <a class="hover-underline-animation" href="#prerequisites">Prerequisites</a>
+            <div class="AboutNav">
+                <asp:Label Text="Prerequisites" runat="server" onClick="funcPrerequisites()" />
             </div>
-            <div>
-                <a class="hover-underline-animation" href="#syllabus">Syllabus</a>
+            <div class="AboutNav">
+                <asp:Label Text="Syllabus" runat="server" onClick="funcSyllabus()" />
             </div>
-            <div>
-                <a class="hover-underline-animation" href="#instructors">Instructors</a>
+            <div class="AboutNav">
+                <asp:Label Text="Instructors" runat="server" onClick="funcInstructors()" />
             </div>
-            <div>
-                <a class="hover-underline-animation" href="#resources">Resources</a>
+            <div class="AboutNav">
+                <asp:Label Text="Resources" runat="server" onClick="funcResources()" />
             </div>
-            <br />
-        </div>
-        <div class="line" id="updates">
         </div>
 
-
-        <div class="title">
-            <p>Course Updates</p>
-        </div>
-        <div>
-            <ul id="cupdates" runat="server" class="updates">
-            </ul>
-        </div>
-        <div class="line2 centerdiv" id="description">
-        </div>
-
-
-        <div class="title">
-            <p>Description</p>
-        </div>
-        <div class="description" id="cdescription" runat="server">
-        </div>
-        <div class="line2 centerdiv" id="prerequisites">
-        </div>
-
-
-        <div class="title">
-            <p>Prerequisites</p>
-        </div>
-        <div>
-            <ul id="cpre" runat="server" class="prerequisites">
-            </ul>
-        </div>
-        <div class="line2 centerdiv" id="syllabus">
-        </div>
-
-        <div class="title">
-            <p>Syllabus</p>
-        </div>
-        <div id="csyllabus" runat="server">
-        </div>
-
-        <span id="space"></span>
-        <span id="more7">
-            <div id="csyllabus2" runat="server">
-            </div>
-        </span>
         <script>
             document.documentElement.style.scrollBehavior = "smooth";
-            function myFunction() {
-                var space = document.getElementById("space");
-                var moreText = document.getElementById("more7");
-                var btnText = document.getElementById("mybtn7");
+
+            function funcCourseUpdates() {
+                const element = document.getElementById("labDiv");
+                element.scrollIntoView();
+
+            }
+            function funcDescription() {
+                const element = document.getElementById("descriptionID");
+                element.scrollIntoView();
+            }
+            function funcPrerequisites() {
+                const element = document.getElementById("prerequisitesID");
+                element.scrollIntoView();
+            }
+            function funcSyllabus() {
+                const element = document.getElementById("syllabusID");
+                element.scrollIntoView();
+            }
+            function funcInstructors() {
+                const element = document.getElementById("instructorsID");
+                element.scrollIntoView();
+            }
+            function funcResources() {
+                const element = document.getElementById("resourcesID");
+                element.scrollIntoView();
+            };
+        </script>
+
+        <section id="courseUpdates" class="courseUpdates" runat ="server">
+             <div class="infoTitleDiv">
+                <label class="infoTitle">Course Updates</label>
+            </div>
+            <div class="listDiv">
+                <ul id ="updatesList" runat="server">
+
+                </ul>
+            </div>
+        </section>
+        
+
+        <div class="gradientBar" id="descriptionID">
+
+        </div>
+
+        <section id="description" class="description" runat ="server">
+             <div class="infoTitleDiv">
+                <label class="infoTitle">Description</label>
+            </div>
+            <div class="textDiv" id="textDiv" runat="server">
+                
+            </div>
+        </section>
+
+        <div class="gradientBar" id="prerequisitesID">
+
+        </div>
+
+        <section id="prerequisites" class="prerequisites" runat ="server">
+             <div class="infoTitleDiv">
+                <label class="infoTitle">Prerequisites</label>
+            </div>
+            <div class="listDiv">
+                <ul id ="prereqList" runat="server">
+                    
+                </ul>
+            </div>
+        </section>
+
+        <div class="gradientBar" id="syllabusID">
+
+        </div>
+
+        <section id="syllabus" class="syllabus" runat ="server">
+             <div class="infoTitleDiv">
+                <label class="infoTitle">Syllabus</label>
+            </div>
+
+            <span id="space3"></span>
+            <span id="more3" runat ="server">
+             
+            </span>
+
+            <div id="buttonMore3"  runat= "server" class="showMoreDiv" >
+                <asp:Button ID="mybtn3" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction3();return false;" />
+            </div>
+            
+        </section>
+
+        <script>
+            function myFunction3() {
+                var space = document.getElementById("space3");
+                var moreText = document.getElementById("more3");
+                var btnText = document.getElementById("mybtn3");
 
                 if (space.style.display === "none") {
                     space.style.display = "inline";
@@ -159,38 +200,57 @@
             }
         </script>
 
-        <div class="show-moreDiv">
-            <asp:Button ID="mybtn7" CssClass="show-more" runat="server" Text="Show More" OnClientClick="myFunction();return false;" />
+        <div class="gradientBar" id="instructorsID">
+
         </div>
 
-        <div class="line2 centerdiv" id="instructors">
+        <section id="instructors" class="instructors" runat ="server">
+             <div class="infoTitleDiv">
+                <label class="infoTitle">Instructors</label>
+            </div>
+            
+            <div class="instructorsLabelDiv">
+                <label class="instructorsLabel">Lecturers:</label>
+            </div>
+            <div class="instructorsListDiv">
+                <ul class="instructorsList" id="lecturersList" runat="server">
+                    
+                </ul>
+            </div>
+            <div class="instructorsLabelDiv">
+                <label class="instructorsLabel">Teaching Assistants:</label>
+            </div>
+            <div class="instructorsListDiv">
+                <ul class="instructorsList"  id="tasList" runat="server">
+                    
+                </ul>
+            </div>
+        </section>
+
+        <div class="gradientBar" id="resourcesID">
+
         </div>
 
+        <section id="resources" class="resources" runat ="server">
+             <div class="infoTitleDiv">
+                <label class="infoTitle">Resources</label>
+            </div>
+            <div class="resourcsItem">
+                <img class="linkImage" src="./images/coursePageImages/link.svg" />
+                <a class="resourceLink">Data Structures And Algorithms By Shi-Kuo</a>
+            </div>
+            <div class="resourcsItem">
+                <img class="linkImage" src="./images/coursePageImages/link.svg" />
+                <a class="resourceLink">Data Structures And Algorithms By Shi-Kuo</a>
+            </div>
+            <div class="resourcsItem">
+                <img class="linkImage" src="./images/coursePageImages/link.svg" />
+                <a class="resourceLink">Data Structures And Algorithms By Shi-Kuo</a>
+            </div>
+        </section>
 
-        <div class="title">
-            <p>Instructors</p>
-        </div>
-        <div>
-            <p class="instructors-title">Lecturers :</p>
-            <ul class="instructors-names" id="cprof" runat="server">
-            </ul>
-        </div>
-        <div>
-            <p class="instructors-title">Teaching Assistants :</p>
-            <ul class="instructors-names" id="cta" runat="server">
-            </ul>
-        </div>
-
-        <div class="line2 centerdiv" id="resources">
-        </div>
-
-
-   
-            <p class="title">Resources</p>
-    
-
-        <div class="margin-bottom margin-left" id="cres" runat="server">
-
+        <div class="blank">
+            &nbsp;
         </div>
 
     </form>
