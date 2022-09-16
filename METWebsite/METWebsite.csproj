@@ -113,6 +113,7 @@
     <Content Include="AdminAddAlumni.aspx" />
     <Content Include="AdminAddCourse.aspx" />
     <Content Include="AdminAddInstructor.aspx" />
+    <Content Include="AdminAddStudentActivity.aspx" />
     <Content Include="AdminDefineWeeks.aspx" />
     <Content Include="AdminHomePage.aspx" />
     <Content Include="AdminInstructorToCourse.aspx" />
@@ -144,6 +145,8 @@
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
     <Content Include="CourseHomePage.aspx" />
+    <Content Include="images\adminImages\guestIcon.png" />
+    <Content Include="images\adminImages\instructorIcon.png" />
     <Content Include="images\ErrorIcon.png" />
     <Content Include="images\InstructorHome\MET.svg" />
     <Content Include="LecturersProfiles.aspx" />
@@ -329,6 +332,13 @@
     </Compile>
     <Compile Include="AdminAddInstructor.aspx.designer.cs">
       <DependentUpon>AdminAddInstructor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddStudentActivity.aspx.cs">
+      <DependentUpon>AdminAddStudentActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddStudentActivity.aspx.designer.cs">
+      <DependentUpon>AdminAddStudentActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminDefineWeeks.aspx.cs">
       <DependentUpon>AdminDefineWeeks.aspx</DependentUpon>

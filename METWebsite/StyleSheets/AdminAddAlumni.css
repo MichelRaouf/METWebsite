@@ -105,7 +105,6 @@ a:hover{
     cursor:default;
 }
     nav > ul > li > a {
-        /*border: solid red;*/
         display: block;
         padding: 0px;
         color: white;
@@ -142,23 +141,26 @@ a:hover{
     font-weight:500;
 }
 
-.dropdown:hover #dropdown-home {
-    width: 9vw;
-    background: linear-gradient(to right, rgba(251,213,137,255), #fad195);
-}
-.dropdown:hover #dropdown-course {
+.dropdown:hover #dropdown-main {
+    margin-left: -2.6vw;
     width: 9.3vw;
-    background: linear-gradient(to right, #fbd295, #facda1);
+    background: linear-gradient(to right, #fcd784, #fbd291);
+}
+.dropdown:hover #dropdown-guest {
+    width: 9.3vw;
+    background: linear-gradient(to right, #fbd291, #face9f);
 }
 
 .dropdown:hover #dropdown-studentActivity {
-    width: 12vw;
+    margin-left: -1.4vw;
+    width: 9.3vw;
     background: linear-gradient(to right, #fbcea1, #fac9b4);
 }
 
 .dropdown:hover #dropdown-others {
-    width: 8vw;
-    background: linear-gradient(to right, #fac6b9, #f9c3c4);
+    margin-left: -0.7vw;
+    width: 9.3vw;
+    background: linear-gradient(to right, #fac9af, #fac6bb);
 }
 
 
