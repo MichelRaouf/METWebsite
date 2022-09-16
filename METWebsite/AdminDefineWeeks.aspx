@@ -5,65 +5,68 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="./StyleSheets/AdminDefineWeeks.css" />
+    <link rel="stylesheet" href="StyleSheets/AdminHeaderNav.css" />
+
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="scrollable">
-            <div class="header">
-             
-                <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+        <div class="header">
+
+            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
 
 
-                <img class="bar" src="./images/topBarImages/bar.svg" />
+            <img class="bar" src="./images/topBarImages/bar.svg" />
 
 
-                <label class="label1">Faculty of Media Engineering & Technology</label>
+            <label class="label1">Faculty of Media Engineering & Technology</label>
 
-                <img class="adminLogo" src="./images/adminImages/adminLogo.svg" />
-                <label class="adminLabel">Admin</label>
+            <img class="adminLogo" src="./images/adminImages/adminLogo.svg" />
+            <label class="adminLabel">Admin</label>
 
-            </div>
+        </div>
 
 
         <nav>
-           
+
             <ul class="navUl">
-                <li><img class="dashboardIcon" src="./images/adminImages/dashboardIcon-white.svg" /></li>
+                <li>
+                    <img class="dashboardIcon" src="./images/adminImages/dashboardIcon-white.svg" /></li>
                 <li><a class="dashboard" href="AdminHomePage.aspx">Admin Dashboard</a></li>
 
 
-                <li class="dropdown"><a>Home</a>
-                    <ul class="dropdown-content" id="dropdown-home">
-                        <li><a>Edit Photo Gallery</a></li>
-                        <li><a>Add News</a></li>
+                <li class="dropdown"><a>Main</a>
+                    <ul class="dropdown-content" id="dropdown-main">
+                        <li><a href="AdminDefineWeeks.aspx">Settings</a></li>
+                        <li><a href="AdminDefineWeeks.aspx">Define Weeks</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Guest View</a>
+                    <ul class="dropdown-content" id="dropdown-guest">
+                        <li><a href="AdminStudentActivity.aspx">Edit Photo Gallery</a></li>
+                        <li><a href="AdminStudentActivity.aspx">Edit News</a></li>
+                        <li><a href="AdminAddStudentActivity.aspx">Add Student Activity</a></li>
+                        <li><a href="AdminRemoveStudentActivity.aspx">Remove Student Activity</a></li>
+                        <li><a href="AdminAddAlumni.aspx">Add Alumni</a></li>
+                        <li><a href="AdminRemoveAlumni.aspx">Remove Alumni</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#">Courses</a>
-                    <ul class="dropdown-content" id="dropdown-course" >
-                        <li><a>Add Course</a></li>
-                        <li><a>Remove Course</a></li>
-                        <li><a>Add Instructor</a></li>
-                        <li><a>Remove Instructor</a></li>
-                        <li><a>Assign Instructor</a></li>
-                        <li><a>Remove Instructor</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="#">Student Activity</a>
                     <ul class="dropdown-content" id="dropdown-studentActivity">
-                        <li><a>Add Student Activity</a></li>
-                        <li><a>Remove Student Activity</a></li>
+                        <li><a href="AdminAddCourse.aspx">Add Course</a></li>
+                        <li><a href="ARemoveC.aspx">Remove Course</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#">Other</a>
+                <li class="dropdown"><a href="#">Instructor</a>
                     <ul class="dropdown-content" id="dropdown-others">
-                         <li><a>Add New Alumni</a></li>
-                        <li><a>Define Weeks </a></li>
-                        <li><a>Define Weeks </a></li>
+                        <li><a href="AdminAddInstructor.aspx">Add Instructor</a></li>
+                        <li><a href="AdminRemoveInstructor.aspx">Remove Instructor</a></li>
+                        <li><a href="AdminInstructorToCourse.aspx">Add Instructor to Course</a></li>
+                        <li><a href="AdminRemoveInstructorFromCourse.aspx">Remove Instructor from Course</a></li>
                     </ul>
                 </li>
-                
-                
+
+
             </ul>
         </nav>
 
@@ -73,28 +76,28 @@
             <label>Define Weeks</label>
         </div>
         <div class="container">
-        <div class="weekDiv">
-            <div class="startDate">
-                <label class="startDateLabel">Start Date</label>
-                <br />
-                
-                <input type="date" id="startDate" runat="server" name="startDate" required>
-            </div>
+            <div class="weekDiv">
+                <div class="startDate">
+                    <label class="startDateLabel">Start Date</label>
+                    <br />
 
-            <div class="endDate">
-                <label class="endDateLabel">End Date</label>
-                <br />
-                
-                <input type="date" id="endDate" runat="server" name="endDate" required>
+                    <input type="date" id="startDate" runat="server" name="startDate" required>
+                </div>
+
+                <div class="endDate">
+                    <label class="endDateLabel">End Date</label>
+                    <br />
+
+                    <input type="date" id="endDate" runat="server" name="endDate" required>
+                </div>
             </div>
-            </div>
-            <asp:Button ID="button1" CssClass="addWeek" runat="server" Text="Add Week" OnClick="addWeek"/>
-          
+            <asp:Button ID="button1" CssClass="addWeek" runat="server" Text="Add Week" OnClick="addWeek" />
+
         </div>
 
         <div class="definedWeeksContainer" id="definedWeeksContainer" runat="server">
             <div class="definedLabel">
-                <img src="images/adminImages/DefinedWeeksLabel.PNG" style="width:18%" />
+                <img src="images/adminImages/DefinedWeeksLabel.PNG" style="width: 18%" />
             </div>
 
 
@@ -123,11 +126,11 @@
                 </asp:LinkButton>
             </div>
             <span class="separatingBar"></span>--%>
-        </div>  
+        </div>
 
     </form>
     <script>
-       
-    </script>
+
+</script>
 </body>
 </html>

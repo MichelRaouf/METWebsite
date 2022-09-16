@@ -1,11 +1,13 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
-* {
-    box-sizing: border-box;
-}
+/** {
+        box-sizing: border-box;
+    }*/
 
 
 
@@ -45,25 +47,22 @@ body {
 }
 
 .title, .code, .lectures, .tuts, .labs {
-   
-    display:flex;
+    display: flex;
     flex-direction: row;
-    justify-content:start;
-    column-gap:0.5vw;
-    
-    
+    justify-content: start;
+    column-gap: 0.5vw;
 }
 
-.titleLabel, .courseLabel, .lecturesLabel, .tutsLabel{
-
+.titleLabel, .courseLabel, .lecturesLabel, .tutsLabel {
     width: 16vw;
     text-align: start;
     font-size: 1.62vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
+
 .labsLabel {
-    width: 17vw;    
+    width: 17vw;
     text-align: start;
     font-size: 1.62vw;
     font-weight: 600;
@@ -80,15 +79,15 @@ body {
     font-size: 0.9vw;
     -webkit-transition: all .2s;
 }
-    input:focus, #descriptionInput1:focus {
-        outline: solid;
-        border-color: #FFBF80;
-        outline-color: #FFDFC8;
-    }
+
+input:focus, #descriptionInput1:focus {
+    outline: solid;
+    border-color: #FFBF80;
+    outline-color: #FFDFC8;
+}
 
 #semesterInput1 {
     position: relative;
-    
     border: solid #dbdfe3 0.06510416666666667vw;
     border-radius: 0.13020833333333334vw;
     height: 2.4vw;
@@ -98,37 +97,41 @@ body {
     width: 20vw;
     padding-left: 0;
 }
+
 .elective {
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
 }
 
 .subMet {
-    
     display: flex;
     flex-direction: column;
     row-gap: 0.3vw;
     align-items: start;
 }
-.subMet div {
+
+    .subMet div {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
+
 .subIet, .subColumn1, .subColumn2 {
     display: flex;
     flex-direction: column;
     row-gap: 0.3vw;
     align-items: start;
 }
+
     .subIet div, .subColumn1 div, .subColumn2 div {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-.subColumn2{
-    margin-left:1vw;
+
+.subColumn2 {
+    margin-left: 1vw;
 }
 
 
@@ -161,10 +164,11 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-.courseDescription{
-    display:flex;
+
+.courseDescription {
+    display: flex;
     flex-direction: column;
-    row-gap:1vw;
+    row-gap: 1vw;
 }
 
 .description {
@@ -199,6 +203,7 @@ body {
     word-wrap: break-word;
     -webkit-transition: all .3s;
 }
+
     .addCourse:hover {
         background-color: black;
         cursor: pointer;
@@ -206,38 +211,38 @@ body {
 
 
 .buttonDiv {
-
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin-top: 5vh;
-    padding:0 2vw 2vw 2vw;
- 
+    padding: 0 2vw 2vw 2vw;
 }
 
 
 input[type=checkbox]:focus {
-    outline:none;
+    outline: none;
 }
 
 .validator {
-    position:absolute;
-    margin-left:15.5vw;
+    position: absolute;
+    margin-left: 15.5vw;
     font-family: 'Montserrat', sans-serif;
-    font-size:0.8vw;
+    font-size: 0.8vw;
     color: red;
 }
+
 .validator2 {
-    margin-top:0.4vw;
+    margin-top: 0.4vw;
     position: absolute;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8vw;
     color: black;
     margin-left: 17.5vw;
-}   
-.majorValidator{
-    position:absolute;
-    text-align:center;
-    margin-top:0.42vw;
+}
+
+.majorValidator {
+    position: absolute;
+    text-align: center;
+    margin-top: 0.42vw;
     font-family: 'Montserrat', sans-serif;
     font-size: 1vw;
     color: red;

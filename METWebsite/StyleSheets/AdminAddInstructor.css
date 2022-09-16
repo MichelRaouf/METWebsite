@@ -5,11 +5,6 @@ html, body {
     height: 100%;
 }
 
-
-
-
-
-
 .addInstructorDiv {
     font-size: 2.43vw;
     font-weight: bold;
@@ -18,8 +13,8 @@ html, body {
     display: flex;
     justify-content: center;
 }
+
 .container {
-   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,11 +50,13 @@ html, body {
     font-size: 0.9vw;
     -webkit-transition: all .2s;
 }
+
     #nameInput:focus, #positionInput:focus, #emailInput:focus {
         outline: solid;
         border-color: #FFBF80;
         outline-color: #FFDFC8;
     }
+
 .sendInvite {
     color: white;
     background-color: #FFD0A1;
@@ -71,9 +68,9 @@ html, body {
     border-radius: 5px;
     border: none;
     align-items: center;
-   
     -webkit-transition: all .3s;
 }
+
     .sendInvite:hover {
         background-color: black;
         cursor: pointer;

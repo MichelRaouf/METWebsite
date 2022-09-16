@@ -6,7 +6,7 @@
 <head runat="server">
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveAlumni.css" />
     <link rel="stylesheet" href="./StyleSheets/AdminRemoveInstructor.css" />
-    <link rel="stylesheet" href="./StyleSheets/AdminNavbar.css" />
+    <link rel="stylesheet" href="StyleSheets/AdminHeaderNav.css" />
     <link rel="stylesheet" href="./StyleSheets/AdminOverlay.css" />
 
 
@@ -39,33 +39,34 @@
                 <li><a class="dashboard" href="AdminHomePage.aspx">Admin Dashboard</a></li>
 
 
-                <li class="dropdown"><a>Home</a>
-                    <ul class="dropdown-content" id="dropdown-home">
-                        <li><a>Edit Photo Gallery</a></li>
-                        <li><a>Add News</a></li>
+                <li class="dropdown"><a>Main</a>
+                    <ul class="dropdown-content" id="dropdown-main">
+                        <li><a href="AdminDefineWeeks.aspx">Settings</a></li>
+                        <li><a href="AdminDefineWeeks.aspx">Define Weeks</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Guest View</a>
+                    <ul class="dropdown-content" id="dropdown-guest">
+                        <li><a href="AdminStudentActivity.aspx">Edit Photo Gallery</a></li>
+                        <li><a href="AdminStudentActivity.aspx">Edit News</a></li>
+                        <li><a href="AdminAddStudentActivity.aspx">Add Student Activity</a></li>
+                        <li><a href="AdminRemoveStudentActivity.aspx">Remove Student Activity</a></li>
+                        <li><a href="AdminAddAlumni.aspx">Add Alumni</a></li>
+                        <li><a href="AdminRemoveAlumni.aspx">Remove Alumni</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#">Courses</a>
-                    <ul class="dropdown-content" id="dropdown-course">
-                        <li><a>Add Course</a></li>
-                        <li><a>Remove Course</a></li>
-                        <li><a>Add Instructor</a></li>
-                        <li><a>Remove Instructor</a></li>
-                        <li><a>Assign Instructor</a></li>
-                        <li><a>Remove Instructor</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="#">Student Activity</a>
                     <ul class="dropdown-content" id="dropdown-studentActivity">
-                        <li><a>Add Student Activity</a></li>
-                        <li><a>Remove Student Activity</a></li>
+                        <li><a href="AdminAddCourse.aspx">Add Course</a></li>
+                        <li><a href="ARemoveC.aspx">Remove Course</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#">Other</a>
+                <li class="dropdown"><a href="#">Instructor</a>
                     <ul class="dropdown-content" id="dropdown-others">
-                        <li><a>Add New Alumni</a></li>
-                        <li><a>Define Weeks </a></li>
-                        <li><a>Define Weeks </a></li>
+                        <li><a href="AdminAddInstructor.aspx">Add Instructor</a></li>
+                        <li><a href="AdminRemoveInstructor.aspx">Remove Instructor</a></li>
+                        <li><a href="AdminInstructorToCourse.aspx">Add Instructor to Course</a></li>
+                        <li><a href="AdminRemoveInstructorFromCourse.aspx">Remove Instructor from Course</a></li>
                     </ul>
                 </li>
 
