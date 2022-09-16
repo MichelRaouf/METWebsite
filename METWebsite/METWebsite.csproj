@@ -379,6 +379,7 @@
     </Compile>
     <Compile Include="AdminRemoveInstructorFromCourse.aspx.cs">
       <DependentUpon>AdminRemoveInstructorFromCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminRemoveInstructorFromCourse.aspx.designer.cs">
       <DependentUpon>AdminRemoveInstructorFromCourse.aspx</DependentUpon>
