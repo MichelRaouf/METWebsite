@@ -22,45 +22,54 @@ namespace METWebsite
             if(IdString !=null)
              id = Int32.Parse(IdString);
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
-            //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
-            SqlCommand course_title = new SqlCommand("courseTitle", con);
-            course_title.CommandType = System.Data.CommandType.StoredProcedure;
-            course_title.Parameters.Add(new SqlParameter("@course_id", id));
-            SqlParameter title = course_title.Parameters.Add("@course_title", System.Data.SqlDbType.VarChar, 100);
-            SqlParameter code = course_title.Parameters.Add("@course_code", System.Data.SqlDbType.VarChar, 100);
-
-            title.Direction = ParameterDirection.Output;
-            code.Direction = ParameterDirection.Output;
-
-
             con.Open();
-            course_title.ExecuteNonQuery();
+            SqlCommand cmd = new SqlCommand("coursedetails", con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlParameter serial = new SqlParameter("@course_id", IdString);
+            cmd.Parameters.Add(serial);
+            SqlDataReader reader = cmd.ExecuteReader();
+            String courseCode = "";
+            String courseName = "";
+            String courseDescription = "";
+            String courseCredit = "";
+            String courseNumLectures = "";
+            String courseNumTuts = "";
+            String courseNumLabs = "";
+            reader.Read();
+            courseCode = reader.GetValue(1).ToString();
+            courseName = reader.GetValue(2).ToString();
+            courseDescription = reader.GetValue(3).ToString();
+            courseCredit = reader.GetValue(4).ToString();
+            courseNumLectures = reader.GetValue(6).ToString();
+            courseNumTuts = reader.GetValue(7).ToString();
+            courseNumLabs = reader.GetValue(8).ToString();
             con.Close();
-
-            ctitle.InnerHtml = "(" + code.Value.ToString() + ") " + title.Value.ToString();
-
-
-            SqlCommand course_details = new SqlCommand("coursedetails", con);
-            course_details.CommandType = System.Data.CommandType.StoredProcedure;
-            course_details.Parameters.Add(new SqlParameter("@course_id", id));
-            SqlParameter credits = course_details.Parameters.Add("@course_credits", System.Data.SqlDbType.Int);
-            credits.Direction = ParameterDirection.Output;
-            SqlParameter lectures = course_details.Parameters.Add("@courseLecs", System.Data.SqlDbType.Int);
-            lectures.Direction = ParameterDirection.Output;
-            SqlParameter tutorials = course_details.Parameters.Add("@coursetuts", System.Data.SqlDbType.Int);
-            tutorials.Direction = ParameterDirection.Output;
-            SqlParameter labs = course_details.Parameters.Add("@courseLabs", System.Data.SqlDbType.Int);
-            labs.Direction = ParameterDirection.Output;
-
-            con.Open();
-            course_details.ExecuteNonQuery();
-            con.Close();
-
-            ccredits.InnerHtml = "&nbsp;&nbsp;" + credits.Value.ToString() + " Credits Hours";
-            clecs.InnerHtml = "&nbsp;&nbsp;" + lectures.Value.ToString() + " Lectures";
-            ctuts.InnerHtml = "&nbsp;&nbsp;" + tutorials.Value.ToString() + " Tutorials";
-            clabs.InnerHtml = "&nbsp;&nbsp;" + labs.Value.ToString() + " Labs";
+            String courseTitle = "(" + courseCode + ") " + courseName;
+            var titleLabel = new HtmlGenericControl("label");
+            titleLabel.Attributes.Add("class", "courseTitle");
+            titleLabel.InnerHtml = courseTitle;
+            courseTitleDiv.Controls.Add(titleLabel);
+            var courseCreditLabel = new HtmlGenericControl("label");
+            courseCreditLabel.Attributes.Add("class", "iconLabelNoTut");
+            courseCreditLabel.InnerHtml = courseCredit + " Credit Hours";
+            creditDiv.Controls.Add(courseCreditLabel);
+            var courseLecturesNumLabel = new HtmlGenericControl("label");
+            courseLecturesNumLabel.Attributes.Add("class", "iconLabelNoTut");
+            courseLecturesNumLabel.InnerHtml = courseNumLectures + " Lectures";
+            lectureDiv.Controls.Add(courseLecturesNumLabel);
+            var courseTutsNumLabel = new HtmlGenericControl("label");
+            courseTutsNumLabel.Attributes.Add("class", "iconLabelTut");
+            courseTutsNumLabel.InnerHtml = courseNumTuts + " Tutorials";
+            tutDiv.Controls.Add(courseTutsNumLabel);
+            var courseLabsNumLabel = new HtmlGenericControl("label");
+            courseLabsNumLabel.Attributes.Add("class", "iconLabelNoTut");
+            courseLabsNumLabel.InnerHtml = courseNumLabs + " Labs";
+            labDiv.Controls.Add(courseLabsNumLabel);
+            var courseDescriptionLabel = new HtmlGenericControl("label");
+            courseDescriptionLabel.Attributes.Add("class", "descriptionText");
+            courseDescriptionLabel.InnerHtml = courseDescription;
+            textDiv.Controls.Add(courseDescriptionLabel);
 
             SqlCommand course_updates = new SqlCommand("courseUpdates", con);
             course_updates.CommandType = System.Data.CommandType.StoredProcedure;
@@ -69,16 +78,16 @@ namespace METWebsite
             con.Open();
             course_updates.ExecuteNonQuery();
 
-            SqlDataReader reader = course_updates.ExecuteReader();
-            while (reader.Read())
+            SqlDataReader reader1 = course_updates.ExecuteReader();
+            while (reader1.Read())
             {
-                int updateId =(int) reader.GetValue(1);
+                int updateId =(int) reader1.GetValue(1);
                 var tr = new HtmlTableRow();
                 var td1 = new HtmlTableCell();
                 var td2 = new HtmlTableCell();
                 var td3 = new HtmlTableCell();
                 td1.Attributes.Add("class", "updates");
-                td1.InnerHtml += "<li>" + reader.GetValue(0).ToString() + "</li>";
+                td1.InnerHtml += "<li>" + reader1.GetValue(0).ToString() + "</li>";
 
                 var editButton = new HtmlButton();
                 editButton.Attributes.Add("class","Edit");
@@ -124,147 +133,152 @@ namespace METWebsite
             }
 
             con.Close();
-
-            SqlCommand course_syll = new SqlCommand("weekDetails", con);
-            course_syll.CommandType = System.Data.CommandType.StoredProcedure;
-            course_syll.Parameters.Add(new SqlParameter("@course_id", id));
-
+            ////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////
             con.Open();
-            course_syll.ExecuteNonQuery();
-            
-            SqlDataReader readersyll = course_syll.ExecuteReader();
-            List<List<String>> weeks = new List<List<String>>();
-            while (readersyll.Read())
+            SqlCommand cmd3 = new SqlCommand("getCourseWeekInfo", con);
+            cmd3.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlParameter serial3 = new SqlParameter("@course_id", IdString);
+            cmd3.Parameters.Add(serial3);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            int weekCount = 1;
+            List<String> weekDateList = new List<String>();
+            List<String> weekTitleList = new List<String>();
+            List<String> weekInfoList = new List<String>();
+            List<int> weekSerialList = new List<int>();
+            while (reader3.Read())
             {
-                List<String> list = new List<string>();
-                list.Add(readersyll.GetValue(0).ToString());
-                list.Add(readersyll.GetValue(1).ToString());
-                list.Add(readersyll.GetValue(2).ToString());
-                list.Add(readersyll.GetValue(3).ToString());
-                weeks.Add(list);
+                weekDateList.Add((reader3.GetValue(0).ToString()).Split(' ')[0]);
+                weekTitleList.Add(reader3.GetValue(1).ToString());
+                weekInfoList.Add(reader3.GetValue(2).ToString());
+                weekSerialList.Add(Int32.Parse(reader3.GetValue(3).ToString()));
             }
             con.Close();
-            int i=1;
-            foreach (var eachWeek in weeks)
+            int j = 0;
+            while (j < weekDateList.Count)
             {
-               
-                var divFlex = new HtmlGenericControl("div");
-                divFlex.Attributes.Add("class", "flex-container-2");
-                var FlexChild = new HtmlGenericControl("div");
-                FlexChild.Attributes.Add("class", "flex-child");
-                var week = new HtmlGenericControl("p");
-                week.Attributes.Add("class", "syllabus-title");
-                var weekNo = new HtmlGenericControl("p");
-                weekNo.Attributes.Add("class", "week-number");
-                var FlexChild2 = new HtmlGenericControl("div");
-                FlexChild2.Attributes.Add("class", "flex-child");
-                var TitleP = new HtmlGenericControl("span");
-                TitleP.Attributes.Add("class", "syllabus-title");
-                var divTitle = new HtmlGenericControl("div");
-                divTitle.Attributes.Add("class", "divTitle");
-                var editbuttonContainer = new HtmlButton();
-                var EditButton = new ImageButton();
-                var x = new HtmlInputImage();
-               
-                EditButton.CssClass = "weekEdit";
-                EditButton.ImageUrl = "./images/InstructorHome/blackEdit.svg";
-                EditButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redEdit.svg'");
-                EditButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackEdit.svg'");
-                editbuttonContainer.Controls.Add(EditButton);
-                EditButton.Click += (object sender1, ImageClickEventArgs e1) => {
-                    ClientScript.RegisterStartupScript(this.GetType(), "key", "openEditWeekOverlay();", true);
-                    Session["weekeditSerial"] = eachWeek[3];
-                };
-                
-                var weekDescription = new HtmlGenericControl("p");
-                weekDescription.Attributes.Add("class", "syllabus-description");
-                var grayLine = new HtmlGenericControl("hr");
-                grayLine.Attributes.Add("style", "width: 82%; margin-left :13vw; border-left:none;border-right:none; border-bottom:none; opacity:40%;");
-               
-           
-                var materialsList = new HtmlGenericControl("ul");
-                materialsList.Attributes.Add("class", "materialsUl");
-               
-                FlexChild.Controls.Add(week);
-                FlexChild.Controls.Add(weekNo);
-                week.InnerHtml = "Week";
-                weekNo.InnerHtml = (i++).ToString();
-                divTitle.Controls.Add(TitleP);
-                divTitle.Controls.Add(EditButton);
-                weekDescription.InnerHtml = eachWeek[2];
-                TitleP.InnerHtml = eachWeek[1];
-                FlexChild2.Controls.Add(divTitle);
-                FlexChild2.Controls.Add(weekDescription);
-                csyllabus.Controls.Add(divFlex);
-                divFlex.Controls.Add(FlexChild);
-                divFlex.Controls.Add(FlexChild2);
-                csyllabus.Controls.Add(grayLine);
-
-                SqlCommand weekMaterials = new SqlCommand("weekMaterials",con);
-                weekMaterials.CommandType = System.Data.CommandType.StoredProcedure;
-                int temp = Int32.Parse(eachWeek[3]);
-                weekMaterials.Parameters.Add(new SqlParameter("@weekSerial", temp));
+                var weekLabel = new HtmlGenericControl("label");
+                weekLabel.Attributes.Add("class", "weekLabel");
+                weekLabel.InnerHtml = "Week";
+                var weekDiv = new HtmlGenericControl("div");
+                weekDiv.Attributes.Add("class", "week");
+                weekDiv.Controls.Add(weekLabel);
+                var weekNoLabel = new HtmlGenericControl("label");
+                weekNoLabel.Attributes.Add("class", "weekNoLabel");
+                weekNoLabel.InnerHtml = weekCount.ToString();
+                weekCount++;
+                var weekNoDiv = new HtmlGenericControl("div");
+                weekNoDiv.Attributes.Add("class", "weekNo");
+                weekNoDiv.Controls.Add(weekNoLabel);
+                var weekDateLabel = new HtmlGenericControl("div");
+                weekDateLabel.Attributes.Add("class", "weekDateLabel");
+                weekDateLabel.InnerHtml = weekDateList.ElementAt(j);
+                var weekDateDiv = new HtmlGenericControl("div");
+                weekDateDiv.Attributes.Add("class", "weekDate");
+                weekDateDiv.Controls.Add(weekDateLabel);
+                var sideInfoDiv = new HtmlGenericControl("div");
+                sideInfoDiv.Attributes.Add("class", "sideInfo");
+                sideInfoDiv.Controls.Add(weekDiv);
+                sideInfoDiv.Controls.Add(weekNoDiv);
+                sideInfoDiv.Controls.Add(weekDateDiv);
+                var vertical = new HtmlGenericControl("div");
+                vertical.Attributes.Add("class", "vertical");
+                sideInfoDiv.Controls.Add(vertical);
+                var weekTitleLabel = new HtmlGenericControl("label");
+                weekTitleLabel.Attributes.Add("class", "weekTitleLabel");
+                weekTitleLabel.InnerHtml = weekTitleList.ElementAt(j);
+                var weekTitleDiv = new HtmlGenericControl("div");
+                weekTitleDiv.Attributes.Add("class", "weekTitle");
+                weekTitleDiv.Controls.Add(weekTitleLabel);
+                var weekDescriptionLabel = new HtmlGenericControl("label");
+                weekDescriptionLabel.Attributes.Add("class", "weekDescriptionLabel");
+                weekDescriptionLabel.InnerHtml = weekInfoList.ElementAt(j);
+                var weekDescriptionDiv = new HtmlGenericControl("div");
+                weekDescriptionDiv.Attributes.Add("class", "weekDescription");
+                weekDescriptionDiv.Controls.Add(weekDescriptionLabel);
+                var detailsDiv = new HtmlGenericControl("div");
+                detailsDiv.Attributes.Add("class", "details");
+                detailsDiv.Controls.Add(weekTitleDiv);
+                detailsDiv.Controls.Add(weekDescriptionDiv);
+                var upperDiv = new HtmlGenericControl("div");
+                upperDiv.Attributes.Add("class", "upper");
+                upperDiv.Controls.Add(sideInfoDiv);
+                upperDiv.Controls.Add(vertical);
+                upperDiv.Controls.Add(detailsDiv);
+                var horizontalDiv = new HtmlGenericControl("div");
+                horizontalDiv.Attributes.Add("class", "horizontal");
+                var itemDiv = new HtmlGenericControl("div");
+                itemDiv.Attributes.Add("class", "itemDiv");
+                itemDiv.Controls.Add(upperDiv);
+                itemDiv.Controls.Add(horizontalDiv);
+                var lowerDiv = new HtmlGenericControl("div");
+                lowerDiv.Attributes.Add("class", "lower");
                 con.Open();
-                weekMaterials.ExecuteNonQuery();
-                SqlDataReader materialsReader = weekMaterials.ExecuteReader();
-                
-                while (materialsReader.Read())
+                SqlCommand cmd33 = new SqlCommand("getMaterialWeek", con);
+                cmd33.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlParameter serial33 = new SqlParameter("@week_serial", weekSerialList.ElementAt(j));
+                cmd33.Parameters.Add(serial33);
+                SqlDataReader reader33 = cmd33.ExecuteReader();
+                String name3 = "";
+                String fileLink = "";
+                while (reader33.Read())
                 {
-                    var li = new HtmlGenericControl("li");
-                    li.Attributes.Add("class", "materialsLi");
-                    var DelteButton = new ImageButton();
-                   
-                    DelteButton.ImageUrl = "./images/InstructorHome/blackDelete.svg";
-                    DelteButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redDelete.svg'");
-                    DelteButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackDelete.svg'");
-                    DelteButton.Attributes.Add("style", "width : 2vw; height:2.4vw");
-                    li.Controls.Add(DelteButton);
-                    var materialLink = new HtmlAnchor();
-                    materialLink.HRef = materialsReader.GetValue(1).ToString();
-                    materialLink.InnerHtml = materialsReader.GetValue(0).ToString();
-                    li.Controls.Add(materialLink);
-                    materialsList.Controls.Add(li);
-                    
-                    int xd = Int32.Parse(materialsReader.GetValue(2).ToString());
-                    DelteButton.Click += (object sender1, ImageClickEventArgs e1) => {
-                        ClientScript.RegisterStartupScript(this.GetType(), "key", "openDeleteMaterialsOverlay();", true);
-                        Session["deleteMaterials"] = xd;
-                    };
+                    name3 = reader33.GetValue(0).ToString();
+                    fileLink = reader33.GetValue(1).ToString();
+                    var materialId = Int32.Parse(reader33.GetValue(2).ToString());
+                    var materialItem = new HtmlGenericControl("a");
+                    materialItem.Attributes.Add("class", "materialItem");
+                    materialItem.Attributes.Add("href", fileLink + "");
+                    materialItem.InnerHtml = name3;
+                    var materialItemDiv = new HtmlGenericControl("div");
+                    materialItemDiv.Attributes.Add("class", "materialItemDiv");
+                           var DelteButton = new ImageButton();
 
-
-
+                           DelteButton.ImageUrl = "./images/InstructorHome/blackDelete.svg";
+                           DelteButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redDelete.svg'");
+                           DelteButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackDelete.svg'");
+                           DelteButton.Attributes.Add("style", "width : 2vw; height:2.4vw");
+                           DelteButton.Click += (object sender1, ImageClickEventArgs e1) => {
+                                ClientScript.RegisterStartupScript(this.GetType(), "key", "openDeleteMaterialsOverlay();", true);
+                               Session["deleteMaterials"] = materialId;
+                            };
+                    materialItemDiv.Controls.Add(DelteButton);/////////////////
+                    materialItemDiv.Controls.Add(materialItem);
+                    lowerDiv.Controls.Add(materialItemDiv);
                 }
-                csyllabus.Controls.Add(materialsList);
+                itemDiv.Controls.Add(lowerDiv);
+                    var addNewMaterialsButton = new HtmlButton();
+                    addNewMaterialsButton.ServerClick += (object sender1, EventArgs e1) => {
+                        // Write Add Matrials syntax here
+                    };
+                    addNewMaterialsButton.Attributes.Add("class", "AddNewMaterials");
+                    var addImg1 = new HtmlImage();
+                    addImg1.Attributes.Add("class", "editIcon");
+                    addImg1.Src = "./images/InstructorHome/plusIcon.svg";
+                    var span1 = new HtmlGenericControl("span");
+                    span1.Attributes.Add("class", "innerSpan");
+                    span1.InnerHtml = "Add Materials";
+                    addNewMaterialsButton.Controls.Add(addImg1);
+                    addNewMaterialsButton.Controls.Add(span1);
+                    itemDiv.Controls.Add(addNewMaterialsButton);
+                ///////////////////////////////////////////////////
+                var horizontal2 = new HtmlGenericControl("div");
+                horizontal2.Attributes.Add("class", "horizontal2");
+                itemDiv.Controls.Add(horizontal2);
                 
+                
+                    syllabus.Controls.Add(itemDiv);
+                
+              
+                
+                j++;
                 con.Close();
-                var addNewMaterialsButton = new HtmlButton();
-                addNewMaterialsButton.ServerClick += (object sender1, EventArgs e1) => {
-                    // Write Add Matrials syntax here
-                };
-                addNewMaterialsButton.Attributes.Add("class", "AddNewMaterials");
-                var addImg1 = new HtmlImage();
-                addImg1.Attributes.Add("class", "editIcon");
-                addImg1.Src = "./images/InstructorHome/plusIcon.svg";
-                var span1 = new HtmlGenericControl("span");
-                span1.Attributes.Add("class", "innerSpan");
-                span1.InnerHtml = "Add Materials";
-                addNewMaterialsButton.Controls.Add(addImg1);
-                addNewMaterialsButton.Controls.Add(span1);
-                csyllabus.Controls.Add(addNewMaterialsButton);
-                var blackLine = new HtmlGenericControl("hr");
-                blackLine.Attributes.Add("style", "width: 90%;  border-left:none;border-right:none; border-bottom:none;");
-
-                csyllabus.Controls.Add(blackLine);
-
-
-
-
-
             }
             var addNewWeekButton = new HtmlButton();
             addNewWeekButton.ServerClick += (object sender1, EventArgs e1) => {
                 ClientScript.RegisterStartupScript(this.GetType(), "key", "openAddWeekOverlay();", true);
-         
+
                 con.Open();
                 SqlCommand getAvailableWeeks = new SqlCommand("getAvailableWeeks", con);
                 getAvailableWeeks.CommandType = CommandType.StoredProcedure;
@@ -290,9 +304,189 @@ namespace METWebsite
             span.InnerHtml = "Add Week";
             addNewWeekButton.Controls.Add(addImg);
             addNewWeekButton.Controls.Add(span);
-            csyllabus.Controls.Add(addNewWeekButton);
+            syllabus.Controls.Add(addNewWeekButton);
             con.Open();
             con.Close();
+
+
+
+
+
+
+            //SqlCommand course_syll = new SqlCommand("weekDetails", con);
+            //course_syll.CommandType = System.Data.CommandType.StoredProcedure;
+            //course_syll.Parameters.Add(new SqlParameter("@course_id", id));
+
+            //con.Open();
+            //course_syll.ExecuteNonQuery();
+
+            //SqlDataReader readersyll = course_syll.ExecuteReader();
+            //List<List<String>> weeks = new List<List<String>>();
+            //while (readersyll.Read())
+            //{
+            //    List<String> list = new List<string>();
+            //    list.Add(readersyll.GetValue(0).ToString());
+            //    list.Add(readersyll.GetValue(1).ToString());
+            //    list.Add(readersyll.GetValue(2).ToString());
+            //    list.Add(readersyll.GetValue(3).ToString());
+            //    weeks.Add(list);
+            //}
+            //con.Close();
+            //int i=1;
+            //foreach (var eachWeek in weeks)
+            //{
+
+            //    var divFlex = new HtmlGenericControl("div");
+            //    divFlex.Attributes.Add("class", "flex-container-2");
+            //    var FlexChild = new HtmlGenericControl("div");
+            //    FlexChild.Attributes.Add("class", "flex-child");
+            //    var week = new HtmlGenericControl("p");
+            //    week.Attributes.Add("class", "syllabus-title");
+            //    var weekNo = new HtmlGenericControl("p");
+            //    weekNo.Attributes.Add("class", "week-number");
+            //    var FlexChild2 = new HtmlGenericControl("div");
+            //    FlexChild2.Attributes.Add("class", "flex-child");
+            //    var TitleP = new HtmlGenericControl("span");
+            //    TitleP.Attributes.Add("class", "syllabus-title");
+            //    var divTitle = new HtmlGenericControl("div");
+            //    divTitle.Attributes.Add("class", "divTitle");
+            //    var editbuttonContainer = new HtmlButton();
+            //    var EditButton = new ImageButton();
+            //    var x = new HtmlInputImage();
+
+            //    EditButton.CssClass = "weekEdit";
+            //    EditButton.ImageUrl = "./images/InstructorHome/blackEdit.svg";
+            //    EditButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redEdit.svg'");
+            //    EditButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackEdit.svg'");
+            //    editbuttonContainer.Controls.Add(EditButton);
+            //    EditButton.Click += (object sender1, ImageClickEventArgs e1) => {
+            //        ClientScript.RegisterStartupScript(this.GetType(), "key", "openEditWeekOverlay();", true);
+            //        Session["weekeditSerial"] = eachWeek[3];
+            //    };
+
+            //    var weekDescription = new HtmlGenericControl("p");
+            //    weekDescription.Attributes.Add("class", "syllabus-description");
+            //    var grayLine = new HtmlGenericControl("hr");
+            //    grayLine.Attributes.Add("style", "width: 82%; margin-left :13vw; border-left:none;border-right:none; border-bottom:none; opacity:40%;");
+
+
+            //    var materialsList = new HtmlGenericControl("ul");
+            //    materialsList.Attributes.Add("class", "materialsUl");
+
+            //    FlexChild.Controls.Add(week);
+            //    FlexChild.Controls.Add(weekNo);
+            //    week.InnerHtml = "Week";
+            //    weekNo.InnerHtml = (i++).ToString();
+            //    divTitle.Controls.Add(TitleP);
+            //    divTitle.Controls.Add(EditButton);
+            //    weekDescription.InnerHtml = eachWeek[2];
+            //    TitleP.InnerHtml = eachWeek[1];
+            //    FlexChild2.Controls.Add(divTitle);
+            //    FlexChild2.Controls.Add(weekDescription);
+            //    csyllabus.Controls.Add(divFlex);
+            //    divFlex.Controls.Add(FlexChild);
+            //    divFlex.Controls.Add(FlexChild2);
+            //    csyllabus.Controls.Add(grayLine);
+
+            //    SqlCommand weekMaterials = new SqlCommand("weekMaterials",con);
+            //    weekMaterials.CommandType = System.Data.CommandType.StoredProcedure;
+            //    int temp = Int32.Parse(eachWeek[3]);
+            //    weekMaterials.Parameters.Add(new SqlParameter("@weekSerial", temp));
+            //    con.Open();
+            //    weekMaterials.ExecuteNonQuery();
+            //    SqlDataReader materialsReader = weekMaterials.ExecuteReader();
+
+            //    while (materialsReader.Read())
+            //    {
+            //        var li = new HtmlGenericControl("li");
+            //        li.Attributes.Add("class", "materialsLi");
+            //        var DelteButton = new ImageButton();
+
+            //        DelteButton.ImageUrl = "./images/InstructorHome/blackDelete.svg";
+            //        DelteButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redDelete.svg'");
+            //        DelteButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackDelete.svg'");
+            //        DelteButton.Attributes.Add("style", "width : 2vw; height:2.4vw");
+            //        li.Controls.Add(DelteButton);
+            //        var materialLink = new HtmlAnchor();
+            //        materialLink.HRef = materialsReader.GetValue(1).ToString();
+            //        materialLink.InnerHtml = materialsReader.GetValue(0).ToString();
+            //        li.Controls.Add(materialLink);
+            //        materialsList.Controls.Add(li);
+
+            //        int xd = Int32.Parse(materialsReader.GetValue(2).ToString());
+            //        var DelteButton = new ImageButton();
+
+            //        DelteButton.ImageUrl = "./images/InstructorHome/blackDelete.svg";
+            //        DelteButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redDelete.svg'");
+            //        DelteButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackDelete.svg'");
+            //        DelteButton.Attributes.Add("style", "width : 2vw; height:2.4vw");
+            //        DelteButton.Click += (object sender1, ImageClickEventArgs e1) => {
+            //            ClientScript.RegisterStartupScript(this.GetType(), "key", "openDeleteMaterialsOverlay();", true);
+            //            Session["deleteMaterials"] = xd;
+            //        };
+
+
+
+            //    }
+            //    csyllabus.Controls.Add(materialsList);
+
+            //    con.Close();
+            //    var addNewMaterialsButton = new HtmlButton();
+            //    addNewMaterialsButton.ServerClick += (object sender1, EventArgs e1) => {
+            //        // Write Add Matrials syntax here
+            //    };
+            //    addNewMaterialsButton.Attributes.Add("class", "AddNewMaterials");
+            //    var addImg1 = new HtmlImage();
+            //    addImg1.Attributes.Add("class", "editIcon");
+            //    addImg1.Src = "./images/InstructorHome/plusIcon.svg";
+            //    var span1 = new HtmlGenericControl("span");
+            //    span1.Attributes.Add("class", "innerSpan");
+            //    span1.InnerHtml = "Add Materials";
+            //    addNewMaterialsButton.Controls.Add(addImg1);
+            //    addNewMaterialsButton.Controls.Add(span1);
+            //    csyllabus.Controls.Add(addNewMaterialsButton);
+            //    var blackLine = new HtmlGenericControl("hr");
+            //    blackLine.Attributes.Add("style", "width: 90%;  border-left:none;border-right:none; border-bottom:none;");
+
+            //    csyllabus.Controls.Add(blackLine);
+
+
+
+
+
+            //}
+            //var addNewWeekButton = new HtmlButton();
+            //addNewWeekButton.ServerClick += (object sender1, EventArgs e1) => {
+            //    ClientScript.RegisterStartupScript(this.GetType(), "key", "openAddWeekOverlay();", true);
+
+            //    con.Open();
+            //    SqlCommand getAvailableWeeks = new SqlCommand("getAvailableWeeks", con);
+            //    getAvailableWeeks.CommandType = CommandType.StoredProcedure;
+            //    getAvailableWeeks.Parameters.Add(new SqlParameter("@courseSerial", IdString));
+            //    SqlDataReader getAvailableWeeksReader = getAvailableWeeks.ExecuteReader();
+            //    while (getAvailableWeeksReader.Read())
+            //    {
+            //        int weekNo = Int32.Parse(getAvailableWeeksReader.GetValue(0).ToString());
+            //        String[] start_date = (getAvailableWeeksReader.GetValue(1).ToString()).Split(' ');
+            //        ListItem optionWeek = new ListItem(start_date[0], weekNo.ToString());
+            //        dropdownWeeks.Items.Add(optionWeek);
+            //    }
+
+
+
+            //};
+            //addNewWeekButton.Attributes.Add("class", "AddNewWeek");
+            //var addImg = new HtmlImage();
+            //addImg.Attributes.Add("class", "editIcon");
+            //addImg.Src = "./images/InstructorHome/plusIcon.svg";
+            //var span = new HtmlGenericControl("span");
+            //span.Attributes.Add("class", "innerSpan");
+            //span.InnerHtml = "Add Week";
+            //addNewWeekButton.Controls.Add(addImg);
+            //addNewWeekButton.Controls.Add(span);
+            //csyllabus.Controls.Add(addNewWeekButton);
+            //con.Open();
+            //con.Close();
 
             SqlCommand course_res = new SqlCommand("courseResources", con);
             course_res.CommandType = System.Data.CommandType.StoredProcedure;
@@ -356,7 +550,7 @@ namespace METWebsite
 
 
             var addNewResourceButton = new HtmlButton();
-            addNewWeekButton.ServerClick += (object sender1, EventArgs e1) => {
+            addNewResourceButton.ServerClick += (object sender1, EventArgs e1) => {
               
 
             };

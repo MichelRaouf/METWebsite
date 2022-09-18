@@ -96,49 +96,58 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button confirmAdd;
 
         /// <summary>
-        /// ctitle control.
+        /// courseTitleDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ctitle;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl courseTitleDiv;
 
         /// <summary>
-        /// ccredits control.
+        /// creditDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ccredits;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl creditDiv;
 
         /// <summary>
-        /// clecs control.
+        /// lectureDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl clecs;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lectureDiv;
 
         /// <summary>
-        /// ctuts control.
+        /// tutDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ctuts;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tutDiv;
 
         /// <summary>
-        /// clabs control.
+        /// labDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl clabs;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl labDiv;
+
+        /// <summary>
+        /// courseUpdates control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl courseUpdates;
 
         /// <summary>
         /// updatesTable control.
@@ -150,22 +159,31 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlTable updatesTable;
 
         /// <summary>
-        /// csyllabus control.
+        /// description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl csyllabus;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl description;
 
         /// <summary>
-        /// Image2 control.
+        /// textDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton Image2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl textDiv;
+
+        /// <summary>
+        /// syllabus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl syllabus;
 
         /// <summary>
         /// resourcesTable control.
