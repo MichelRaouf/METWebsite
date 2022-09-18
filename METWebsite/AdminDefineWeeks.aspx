@@ -95,14 +95,14 @@
 
         </div>
 
-        <div class="definedWeeksContainer" id="definedWeeksContainer" runat="server">
+         <div class="definedWeeksContainer" id="definedWeeksContainer" runat="server">
             <div class="definedLabel">
-                <img src="images/adminImages/DefinedWeeksLabel.PNG" style="width: 18%" />
+                Defined Weeks
             </div>
 
 
 
-            <%--<div class="definedWeekDiv">
+           <!-- <div class="definedWeekDiv">
                 <div class="definedWeekNoContainer">
                     <label class="definedWeekLabel">Week</label>
                     <label class="definedWeekNoLabel">1</label>
@@ -124,8 +124,8 @@
     	                <i></i>
                     </span>
                 </asp:LinkButton>
-            </div>
-            <span class="separatingBar"></span>--%>
+            </div> -->
+           
         </div>
 
     </form>
