@@ -6,7 +6,7 @@
 <head runat="server">
     <link rel="stylesheet" href="./StyleSheets/AdminDefineWeeks.css" />
     <link rel="stylesheet" href="StyleSheets/AdminHeaderNav.css" />
-
+    <link rel="stylesheet" href="StyleSheets/AdminAddAlumni.css" />
     <title></title>
 </head>
 <body>
@@ -125,8 +125,35 @@
                     </span>
                 </asp:LinkButton>
             </div> -->
-           
+             <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click" Visible="false" UseSubmitBehavior="false" />
+             <asp:Button ID="button3" CssClass="yesnobtn" runat="server" Text="No" Visible="false" UseSubmitBehavior="false" />
         </div>
+        <script>
+
+            function confirmAlumni() {
+                const element = document.getElementById("successOverlay");
+                element.remove();
+               
+            }
+
+            function refresh() {
+                document.getElementById("startDate").required= false;
+                document.getElementById("endDate").required=false;
+                document.location.reload();
+
+            }
+
+            function confirmed() {
+                alert(12);
+            }
+            function func() {
+                var y = document.getElementById("labelforpic");
+                var x = document.getElementById("input1");
+                var div = document.getElementsByClassName("files")[0];
+                div.innerHTML = x.files.item(0).name;
+            }
+
+        </script>
 
     </form>
     <script>
