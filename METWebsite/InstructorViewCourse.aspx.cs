@@ -143,20 +143,35 @@ namespace METWebsite
             cmd3.Parameters.Add(serial3);
             SqlDataReader reader3 = cmd3.ExecuteReader();
             int weekCount = 1;
-            List<String> weekDateList = new List<String>();
-            List<String> weekTitleList = new List<String>();
-            List<String> weekInfoList = new List<String>();
-            List<int> weekSerialList = new List<int>();
+            //List<String> weekDateList = new List<String>();
+            //List<String> weekTitleList = new List<String>();
+            //List<String> weekInfoList = new List<String>();
+            //List<int> weekSerialList = new List<int>();
+            //while (reader3.Read())
+            //{
+            //    weekDateList.Add((reader3.GetValue(0).ToString()).Split(' ')[0]);
+            //    weekTitleList.Add(reader3.GetValue(1).ToString());
+            //    weekInfoList.Add(reader3.GetValue(2).ToString());
+            //    weekSerialList.Add(Int32.Parse(reader3.GetValue(3).ToString()));
+            //}
+
+            List<List<String>> weeks = new List<List<String>>();
+
             while (reader3.Read())
             {
-                weekDateList.Add((reader3.GetValue(0).ToString()).Split(' ')[0]);
-                weekTitleList.Add(reader3.GetValue(1).ToString());
-                weekInfoList.Add(reader3.GetValue(2).ToString());
-                weekSerialList.Add(Int32.Parse(reader3.GetValue(3).ToString()));
+                List<String> list = new List<string>();
+                list.Add(reader3.GetValue(0).ToString().Split(' ')[0]);
+                list.Add(reader3.GetValue(1).ToString());
+                list.Add(reader3.GetValue(2).ToString());
+                list.Add(reader3.GetValue(3).ToString());
+                weeks.Add(list);
             }
+
+
+
             con.Close();
             int j = 0;
-            while (j < weekDateList.Count)
+            foreach (var week in weeks)
             {
                 var weekLabel = new HtmlGenericControl("label");
                 weekLabel.Attributes.Add("class", "weekLabel");
@@ -173,7 +188,7 @@ namespace METWebsite
                 weekNoDiv.Controls.Add(weekNoLabel);
                 var weekDateLabel = new HtmlGenericControl("div");
                 weekDateLabel.Attributes.Add("class", "weekDateLabel");
-                weekDateLabel.InnerHtml = weekDateList.ElementAt(j);
+                weekDateLabel.InnerHtml = week[0];
                 var weekDateDiv = new HtmlGenericControl("div");
                 weekDateDiv.Attributes.Add("class", "weekDate");
                 weekDateDiv.Controls.Add(weekDateLabel);
@@ -187,13 +202,25 @@ namespace METWebsite
                 sideInfoDiv.Controls.Add(vertical);
                 var weekTitleLabel = new HtmlGenericControl("label");
                 weekTitleLabel.Attributes.Add("class", "weekTitleLabel");
-                weekTitleLabel.InnerHtml = weekTitleList.ElementAt(j);
+                weekTitleLabel.InnerHtml = week[1];
                 var weekTitleDiv = new HtmlGenericControl("div");
                 weekTitleDiv.Attributes.Add("class", "weekTitle");
+                   var EditButton = new ImageButton();
+
+                    EditButton.CssClass = "weekEdit";
+                    EditButton.ImageUrl = "./images/InstructorHome/blackEdit.svg";
+                    EditButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redEdit.svg'");
+                    EditButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackEdit.svg'");
+                    EditButton.Click += (object sender1, ImageClickEventArgs e1) => {
+                        ClientScript.RegisterStartupScript(this.GetType(), "key", "openEditWeekOverlay();", true);
+                        Session["weekeditSerial"] = week[3];
+                    };
+
                 weekTitleDiv.Controls.Add(weekTitleLabel);
+                weekTitleDiv.Controls.Add(EditButton);
                 var weekDescriptionLabel = new HtmlGenericControl("label");
                 weekDescriptionLabel.Attributes.Add("class", "weekDescriptionLabel");
-                weekDescriptionLabel.InnerHtml = weekInfoList.ElementAt(j);
+                weekDescriptionLabel.InnerHtml =week[2];
                 var weekDescriptionDiv = new HtmlGenericControl("div");
                 weekDescriptionDiv.Attributes.Add("class", "weekDescription");
                 weekDescriptionDiv.Controls.Add(weekDescriptionLabel);
@@ -217,7 +244,7 @@ namespace METWebsite
                 con.Open();
                 SqlCommand cmd33 = new SqlCommand("getMaterialWeek", con);
                 cmd33.CommandType = System.Data.CommandType.StoredProcedure;
-                SqlParameter serial33 = new SqlParameter("@week_serial", weekSerialList.ElementAt(j));
+                SqlParameter serial33 = new SqlParameter("@week_serial", week[3]);
                 cmd33.Parameters.Add(serial33);
                 SqlDataReader reader33 = cmd33.ExecuteReader();
                 String name3 = "";
@@ -233,16 +260,15 @@ namespace METWebsite
                     materialItem.InnerHtml = name3;
                     var materialItemDiv = new HtmlGenericControl("div");
                     materialItemDiv.Attributes.Add("class", "materialItemDiv");
-                           var DelteButton = new ImageButton();
 
-                           DelteButton.ImageUrl = "./images/InstructorHome/blackDelete.svg";
-                           DelteButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redDelete.svg'");
-                           DelteButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackDelete.svg'");
-                           DelteButton.Attributes.Add("style", "width : 2vw; height:2.4vw");
-                           DelteButton.Click += (object sender1, ImageClickEventArgs e1) => {
-                                ClientScript.RegisterStartupScript(this.GetType(), "key", "openDeleteMaterialsOverlay();", true);
-                               Session["deleteMaterials"] = materialId;
-                            };
+                    var DelteButton = new HtmlButton();
+                    DelteButton.Attributes.Add("class", "trash");
+                    DelteButton.Controls.Add(new HtmlGenericControl("span"));
+                    DelteButton.Controls.Add(new HtmlGenericControl("i"));
+                    DelteButton.ServerClick += (object sender1, EventArgs e1) => {
+                    ClientScript.RegisterStartupScript(this.GetType(), "key", "openDeleteMaterialsOverlay();", true);
+                        Session["deleteMaterials"] = materialId;
+                    };
                     materialItemDiv.Controls.Add(DelteButton);/////////////////
                     materialItemDiv.Controls.Add(materialItem);
                     lowerDiv.Controls.Add(materialItemDiv);
@@ -350,7 +376,6 @@ namespace METWebsite
             //    TitleP.Attributes.Add("class", "syllabus-title");
             //    var divTitle = new HtmlGenericControl("div");
             //    divTitle.Attributes.Add("class", "divTitle");
-            //    var editbuttonContainer = new HtmlButton();
             //    var EditButton = new ImageButton();
             //    var x = new HtmlInputImage();
 
@@ -358,7 +383,6 @@ namespace METWebsite
             //    EditButton.ImageUrl = "./images/InstructorHome/blackEdit.svg";
             //    EditButton.Attributes.Add("onmouseover", "this.src='./images/InstructorHome/redEdit.svg'");
             //    EditButton.Attributes.Add("onmouseout", "this.src='./images/InstructorHome/blackEdit.svg'");
-            //    editbuttonContainer.Controls.Add(EditButton);
             //    EditButton.Click += (object sender1, ImageClickEventArgs e1) => {
             //        ClientScript.RegisterStartupScript(this.GetType(), "key", "openEditWeekOverlay();", true);
             //        Session["weekeditSerial"] = eachWeek[3];

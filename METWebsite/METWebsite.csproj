@@ -121,10 +121,6 @@
     <Content Include="AdminRemoveInstructor.aspx" />
     <Content Include="AdminRemoveInstructorFromCourse.aspx" />
     <Content Include="AdminRemoveStudentActivity.aspx" />
-    <Content Include="App_Data\database.mdf" />
-    <Content Include="App_Data\database_log.ldf">
-      <DependentUpon>database.mdf</DependentUpon>
-    </Content>
     <Content Include="ARemoveC.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -150,6 +146,7 @@
     <Content Include="images\ErrorIcon.png" />
     <Content Include="images\InstructorHome\MET.svg" />
     <Content Include="LecturersProfiles.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
     <Content Include="StyleSheets\AdminHeaderNav.css" />
@@ -161,6 +158,7 @@
     <Content Include="StyleSheets\HomePage.css" />
     <Content Include="HomePage.aspx" />
     <Content Include="StyleSheets\InstructorsProfiles.css" />
+    <Content Include="StyleSheets\register.css" />
     <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\AlumniPage.css" />
@@ -168,7 +166,6 @@
     <Content Include="StyleSheets\StudentActivityProfile.css" />
     <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StyleSheets\login.css" />
-    <Content Include="StyleSheets\temp.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
@@ -435,6 +432,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -521,6 +525,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="images\alumniPageImages\" />
     <Folder Include="images\coursesPageImages\" />
     <Folder Include="images\staffPageImages\" />
