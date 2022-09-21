@@ -1,0 +1,77 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+form {
+    padding-bottom: 2vw;
+}
+
+.assignDiv {
+    font-size: 2.43vw;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+}
+
+.yearSeason {
+    margin-top: 2.2vw;
+    margin-left: 7.9479167vw;
+    margin-right: 7.9479167vw;
+    border-radius: 1.6vw;
+    background: linear-gradient(to right, #FFE171, #FFC3C6);
+    height: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15vw;
+}
+
+.yearLabel, .seasonLabel {
+    font-size: 1.3vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.year, .season {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2.5vw;
+}
+
+.yearInput, .seasonInput{
+    width:12vw;
+    height:2.5vw;
+}
+
+.updateSettingDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:4vw;
+}
+
+.updateSetting {
+    color: white;
+    background-color: #FFD0A1;
+    font-size: 1.296vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    width: 12vw;
+    height: 6.296vh;
+    border-radius: 0.3255208333333333vw;
+    border: none;
+    -webkit-transition: all .3s;
+}
+
+    .updateSetting:hover {
+        background-color: black;
+        cursor: pointer;
+    }
