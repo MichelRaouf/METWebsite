@@ -1,0 +1,376 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+/*.scrollable{
+    top:0px;
+    position:fixed;
+    background-color:white;
+    width:100%;
+}*/
+
+.header {
+    height: 7.61716752vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    top: 0px;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.31510415vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.31510415vw;
+}
+
+.facultyLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.login {
+    position: relative;
+    width: 10.590494791666666vw;
+    height: 3.7109375vw;
+    border-radius: 0.32552vw;
+    background-color: #FFCB05;
+    border: none;
+    font-size: 1.5625vw;
+    margin-left: 22vw;
+    font-weight: bold;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .login:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+.navbar {
+    background-color: black;
+    height: 4.3vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+    .navbar > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5vw;
+    }
+
+.navbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+}
+
+    .navbtn:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid;
+        border-color: red;
+        border-width: 3px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+.navbtnin {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    vertical-align: middle;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid;
+    border-color: red;
+    border-width: 3px;
+    cursor: default;
+}
+
+.navImgHomeBookHeadphones {
+    width: 1.6vw;
+    height: 1.6vw;
+}
+
+.navImgGroup {
+    width: 1.9vw;
+    height: 2.2vw;
+}
+
+.navImgGrad {
+    width: 1.6vw;
+    height: 1.6vw;
+}
+
+.navImgAbout {
+    width: 2vw;
+    height: 2vw;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.875vw;
+}
+
+.index {
+    margin-left: 1.71875vw;
+    margin-right: 0.677vw;
+    margin-top: 1.40625vw;
+    width: 30vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.index::-webkit-scrollbar {
+    width: 0.1vw;
+}
+
+.vertical {
+    margin-right: 2.96875vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(237, 28, 36, 1), rgba(255, 203, 5, 1));
+    height: 30vw;
+    width: 0.075vw;
+}
+
+.semesters {
+    margin-right: 8.125vw;
+    width: 56.352vw;
+    height: 29vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.semesters::-webkit-scrollbar {
+    width: 0.1vw;
+}
+
+.searchButton {
+    width: 1.6vw;
+    height: 1.4vw;
+}
+
+.searchDiv {
+    background-color: #ECECEC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 1.3vw;
+    padding-left: 0.9765625vw;
+    margin-right: 3.5vw;
+}
+
+    .searchDiv input[type=text] {
+        height: 2.5vw;
+        width: 20vw;
+        background-color: #ECECEC;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        padding-left: 0.3255208333333333vw;
+        margin-right: 1.0416666666666667vw;
+        font-size: 1.0416666666666667vw;
+    }
+
+        .searchDiv input[type=text]:focus {
+            outline: none;
+        }
+
+.indexButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+    font-weight: 400;
+    vertical-align: middle;
+    margin-left: 0.52vw;
+}
+
+.indexButtonIn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 0.52vw;
+}
+
+.FacultyLabel {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 400;
+    vertical-align: middle;
+    margin-left: 2.3vw;
+    margin-bottom: 0.5vw;
+}
+
+ul.subMajorsList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.subMajorsList li {
+    margin-bottom: 0.2vw;
+}
+
+.subMajorLabel {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0px;
+    color: #4B8FEA;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    font-weight: 300;
+    vertical-align: middle;
+    margin-left: 4.9vw;
+}
+
+.bulletPoint {
+    width: 0.78125vw;
+    height: 0.78125vw;
+    vertical-align: middle;
+}
+
+.plusPoint {
+    width: 1.3vw;
+    height: 1.3vw;
+    vertical-align: middle;
+}
+
+.index div {
+    margin-bottom: 1.5vw;
+}
+
+.semesterDivClosed {
+    width: 60vw;
+    height: 4.166666666667vw;
+    border-radius: 0.4vw;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(237, 28, 36, 1), rgba(255, 203, 5, 1));
+    margin-bottom: 1.8vw;
+    display: block;
+}
+
+.semesterDivOpened {
+    width: 60vw;
+    height: 4.166666666667vw;
+    border-radius: 0.4vw;
+    background-color: black;
+    margin-bottom: 1.2vw;
+    display: none;
+}
+
+.plusCourse {
+    width: 1.66666666667vw;
+    height: 1.66666666667vw;
+    margin-top: 1.2vw;
+    margin-left: 2.08333333333vw;
+}
+
+.semesterButton {
+    width: 50vw;
+    margin-left: 1.5vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0px;
+    color: white;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: left;
+}
+
+.graduateCourses {
+    display: none;
+}
+
+.undergraduateCourses {
+    display: none;
+}
+
+.semesterListOpened {
+    display: none;
+}
+
+ul.coursesList li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.graduateCoursesLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.facultiesItems {
+    display: none;
+}
+
+.subMajors {
+    display: none;
+}
+
+.undergradSemesters {
+    display: none;
+}
+
+.tempLabelDiv {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2vw;
+}
