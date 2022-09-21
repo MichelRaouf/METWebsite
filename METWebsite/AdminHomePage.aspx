@@ -34,12 +34,30 @@
             <div class="wrapper">
             <div class="cards" >
                 <img class="homeIcon" src="./images/adminImages/homeIcon.svg" />
-                <label class="cardLabel">HOME</label>
+                <label class="cardLabel">MAIN</label>
             </div>
             <div class ="hover" >
                 <ul>
-                    <li><a href="AdminAddAlumni.aspx">Edit Photo gallery</a></li>
-                    <li><a href="AdminAddAlumni.aspx">Add News</a></li>
+                    <li><a href="AdminDefineWeeks.aspx">Settings</a></li>
+                    <li><a href="AdminDefineWeeks.aspx">Define Weeks</a></li>
+                </ul>
+            </div>
+                </div>
+
+
+            <div class="wrapper">
+            <div class="cards">
+                <img class="guestViewIcon" src="images/adminImages/guestIcon.png" />
+                <label class="cardLabel" id="guestViewLabel">GUEST VIEW</label>
+            </div>
+                 <div class ="hover"  id="hoverCourse" >
+                <ul>
+                    <li><a href="AdminStudentActivity.aspx">Edit Photo Gallery</a></li>
+                    <li><a href="AdminStudentActivity.aspx">Edit News</a></li>
+                    <li><a href="AdminAddStudentActivity.aspx">Add Student Activity</a></li>
+                    <li><a href="AdminRemoveStudentActivity.aspx">Remove Student Activity</a></li>
+                    <li><a href="AdminAddAlumni.aspx">Add Alumni</a></li>
+                    <li><a href="AdminRemoveAlumni.aspx">Remove Alumni</a></li>
                 </ul>
             </div>
                 </div>
@@ -49,41 +67,28 @@
                 <img class="coursesIcon" src="./images/adminImages/coursesIcon.svg" />
                 <label class="cardLabel">COURSES</label>
             </div>
-                 <div class ="hover" id="hoverCourse">
+                 <div class ="hover">
                 <ul>
                     <li><a href="AdminAddCourse.aspx">Add Course</a></li>
-                    <li><a href="AdminAddAlumni.aspx">Remove Course</a></li>
+                    <li><a href="ARemoveC.aspx">Remove Course</a></li>
+        
+                </ul>
+            </div>
+                </div>
+
+            
+
+            <div class="wrapper">
+            <div class="cards">
+                <img class="instructorIcon" src="images/adminImages/instructorIcon.png" />
+                <label class="cardLabel" id="instructorLabel">INSTRUCTOR</label>
+            </div>
+                 <div class ="hover" id="hoverInstructor" >
+                <ul>
                     <li><a href="AdminAddInstructor.aspx">Add Instructor</a></li>
-                    <li><a href="AdminAddAlumni.aspx">Remove Instructor</a></li>
-                    <li><a href="AdminAddAlumni.aspx">Assign Instructor</a></li>
-                    <li><a href="AdminAddAlumni.aspx">Remove Instructor</a></li>
-                </ul>
-            </div>
-                </div>
-
-            <div class="wrapper">
-            <div class="cards">
-                <img class="stActivityIcon" src="./images/adminImages/stActivityIcon.svg" />
-                <label class="cardLabel" id="stuActivity">STUDENT ACTIVITY</label>
-            </div>
-                 <div class ="hover" >
-                <ul>
-                    <li><a href="AdminStudentActivity.aspx">Add Student Activity</a></li>
-                    <li><a href="AdminAddAlumni.aspx">Remove Student Activity</a></li>
-                </ul>
-            </div>
-                </div>
-
-            <div class="wrapper">
-            <div class="cards">
-                <img class="otherIcon" src="./images/adminImages/otherIcon.svg" />
-                <label class="cardLabel">OTHER</label>
-            </div>
-                 <div class ="hover" >
-                <ul>
-                    <li><a href="AdminAddAlumni.aspx">Add New Alumni</a></li>
-                    <li><a href="AdminAddAlumni.aspx">Define Weeks</a></li>
-                    <li><a href="AdminAddAlumni.aspx">Change Settings</a></li>
+                    <li><a href="AdminRemoveInstructor.aspx">Remove Instructor</a></li>
+                    <li><a href="AdminInstructorToCourse.aspx">Add Instructor to Course</a></li>
+                    <li><a href="AdminRemoveInstructorFromCourse.aspx">Remove Instructor from Course</a></li>
                     
                 </ul>
             </div>

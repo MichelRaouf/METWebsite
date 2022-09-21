@@ -22,29 +22,53 @@ namespace METWebsite
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            String emailInput = username.Text;
-            String pass = password.Text;
+            String emailInput = username.Value;
+            String pass = password.Value;
 
             SqlCommand UsersCred = new SqlCommand("select email,password,id from Users", con);
             SqlDataReader reader = UsersCred.ExecuteReader();
+            password.Attributes.Add("style", "border-color : black;");
+            username.Attributes.Add("style", "border-color : black;");
+            wrongPass.Attributes.Add("style", "display : none");
+            wrongEmail.Attributes.Add("style", "display : none");
+
+            Boolean flag = false;
             while (reader.Read())
             {
                 String email = reader.GetValue(0).ToString();
                 if (email == emailInput)
                 {
-                    String password = reader.GetValue(1).ToString();
+                    flag = true;
+                    String passwordInput = reader.GetValue(1).ToString();
 
-                    if (password== pass)
+                    if (passwordInput== pass)
                     {
                         Session["id"] = reader.GetValue(2);
                         Response.Redirect("InstructorHome.aspx");
 
                     }
+                    else
+                    {
+                        password.Attributes.Add("style", "border-color : red;");
+                        wrongPass.Attributes.Add("style", "display : block");
+                    }
                 }
             }
+            if (!flag)
+            {
+                username.Attributes.Add("style", "border-color : red;");
+                wrongEmail.Attributes.Add("style", "display : block");
+
+
+            }
+
             reader.Close();
             con.Close();
 
         }
+        
     }
+    
+
+
 }

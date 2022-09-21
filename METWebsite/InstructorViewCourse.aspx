@@ -5,8 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+        <link rel="icon" href="./images/gucLogo.png"/>
         <link rel="stylesheet" href="./StyleSheets/InstructorHome.css" />
-    <link rel="stylesheet" href="./StyleSheets/InstructorViewCourse.css" />
+            <link rel="stylesheet" href="./StyleSheets/InstructorViewCourse.css" />
+        <link  rel="stylesheet" href="./StyleSheets/CoursePage.css"/>
+
 
 </head>
 <body>
@@ -129,67 +132,63 @@
         </div>
 
         <div class="flex-container-1">
-            <div id="ctitle" class="flex-child-1" runat="server">
+            <div class="courseTitleDiv" id="courseTitleDiv" runat="server">
+                
             </div>
 
-            <div class="flex-child-1 center">
-                <div class="margin-bottom">
-                    <img class="nav2-img" src="./images/coursePageImages/credit.svg" />
-                    <span id="ccredits" runat="server"></span>
+            <div class="iconsValues">
+                <div class="iconLineDiv" id="creditDiv" runat="server">
+                    <img class="iconNoTut" src="./images/coursePageImages/credit.svg" />
                 </div>
-                <div class="margin-bottom">
-                    <img class="nav2-img" src="./images/coursePageImages/lecture.svg" />
-                    <span id="clecs" runat="server"></span>
+                <div class="iconLineDiv" id="lectureDiv" runat="server">
+                    <img class="iconNoTut" src="./images/coursePageImages/lecture.svg" />
                 </div>
-                <div class="margin-bottom">
-                    <img class="nav2-img" src="./images/coursePageImages/tutorial.svg" />
-                    <span id="ctuts" runat="server"></span>
+                <div class="iconLineDiv" id="tutDiv" runat="server">
+                    <img class="iconTut" src="./images/coursePageImages/tutorial.svg" />
                 </div>
-                <div class="margin-bottom">
-                    <img class="nav2-img" src="./images/coursePageImages/lab.svg" />
-                    <span id="clabs" runat="server"></span>
+                <div class="iconLineDiv" id="labDiv" runat="server">
+                    <img class="iconNoTut" src="./images/coursePageImages/lab.svg" />
                 </div>
+
             </div>
 
         </div>
       
-            <p class="title">Course Updates</p>
-     
-       
-            <table class="updatesTable" id="updatesTable" runat="server">
+             <section id="courseUpdates" class="courseUpdates" runat ="server">
+             <div class="infoTitleDiv">
+                <label class="infoTitle">Course Updates</label>
+            </div>
+            <div class="listDiv">
+                <table class="updatesTable" id="updatesTable" runat="server">
             </table>
-        <button class="AddNew" runat="server" onserverclick="AddAnnouncment">
+            </div>
+                 <button class="AddNew" runat="server" onserverclick="AddAnnouncment">
             <img class="editIcon" src="./images/InstructorHome/plusIcon.svg" />
             <span class="innerSpan">Add Announcement</span>
         </button>
-        <div class="line2 centerdiv" id="description">
-        </div>
+        </section>     
+        <div class="gradientBar" id="descriptionID"></div>
+         <section id="description" class="description" runat ="server">
+             <div class="infoTitleDiv">
+                <label class="infoTitle">Description</label>
+            </div>
+            <div class="textDiv" id="textDiv" runat="server">
+                
+            </div>
+        </section>
+     <div class="gradientBar" ></div>
+               <section id="syllabus" class="syllabus" runat ="server">
+             <div class="infoTitleDiv">
+                <label class="infoTitle">Syllabus</label>
+            </div>
 
-     
-            <p class="title">Syllabus</p>
-        <div id="csyllabus" runat="server">
-
-            <div class="flex-container-2">
-                <div class="flex-child">
-                     <p class="syllabus-title">Week </p>
-                     <p class="week-number">15</p>
-                    <p class="syllabus-title"> 20/10/2022</p>
-                </div>
-                <div class="flex-child">
-                     <div class="divTitle">
-                         <span class="syllabus-title">Title of the week hello hi hello and welcome Hello Hi </span>
-                         <asp:ImageButton  CssClass="weekEdit" ID="Image2" runat="server" ImageUrl="./images/InstructorHome/blackEdit.svg" onmouseover="this.src='./images/InstructorHome/redEdit.svg'" onmouseout="this.src='./images/InstructorHome/blackEdit.svg'"/>
-                      </div> 
-                    <p class="syllabus-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non proident, sunt in.</p>
-                    </div>
-                </div>  
-           
-                 
           
+           
+           
+            
+        </section>
+             <div class="gradientBar" ></div>
 
-            
-            
-        </div>
 
         
         <script>
@@ -218,9 +217,7 @@
         </script>
 
        
-        <div class="line2 centerdiv" id="instructors">
-        </div>
-       
+
             <p class="title">Resources</p>
         <table runat="server" class="updatesTable" id="resourcesTable">
             <tr>

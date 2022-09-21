@@ -118,21 +118,19 @@ form {
     text-align: center;
     color: white;
 }
-#stuActivity {
-    width: 12.6vw;
-    
+#guestViewLabel {
+    text-align:start;
+    width: 10vw;
+}
+#instructorLabel {
+    text-align:start;
+    font-size: 2.4vw;
 }
 
-.homeIcon, .coursesIcon, .stActivityIcon, .otherIcon {
-    
-    width:4.5vw;
-    margin-right:1vw;
+.homeIcon, .coursesIcon, .guestViewIcon, .instructorIcon {
+    width: 4.5vw;
+    margin-right: 1vw;
 }
-
-
-
-
-
 
 .hover {
     display: none;
@@ -173,6 +171,13 @@ form {
         font-weight: 500;
         margin: 0.4vw;
     }
+    .wrapper:hover #hoverInstructor li {
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.4vw;
+        font-weight: 500;
+        margin: 0.6vw;
+    }
 
 a:link {
     color: white;
@@ -192,6 +197,6 @@ a:hover {
 
 /* selected link */
 a:active {
-    color: blue;
+    color: gray;
 }
 
