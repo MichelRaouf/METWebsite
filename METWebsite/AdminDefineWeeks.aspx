@@ -6,7 +6,7 @@
 <head runat="server">
     <link rel="stylesheet" href="./StyleSheets/AdminDefineWeeks.css" />
     <link rel="stylesheet" href="StyleSheets/AdminHeaderNav.css" />
-
+    <link rel="stylesheet" href="StyleSheets/AdminAddAlumni.css" />
     <title></title>
 </head>
 <body>
@@ -95,14 +95,14 @@
 
         </div>
 
-        <div class="definedWeeksContainer" id="definedWeeksContainer" runat="server">
+         <div class="definedWeeksContainer" id="definedWeeksContainer" runat="server">
             <div class="definedLabel">
-                <img src="images/adminImages/DefinedWeeksLabel.PNG" style="width: 18%" />
+                Defined Weeks
             </div>
 
 
 
-            <%--<div class="definedWeekDiv">
+           <!-- <div class="definedWeekDiv">
                 <div class="definedWeekNoContainer">
                     <label class="definedWeekLabel">Week</label>
                     <label class="definedWeekNoLabel">1</label>
@@ -124,9 +124,36 @@
     	                <i></i>
                     </span>
                 </asp:LinkButton>
-            </div>
-            <span class="separatingBar"></span>--%>
+            </div> -->
+             <asp:Button ID="button2" CssClass="yesnobtn" runat="server" Text="Yes" OnClick="Yes_Click" Visible="false" UseSubmitBehavior="false" />
+             <asp:Button ID="button3" CssClass="yesnobtn" runat="server" Text="No" Visible="false" UseSubmitBehavior="false" />
         </div>
+        <script>
+
+            function confirmAlumni() {
+                const element = document.getElementById("successOverlay");
+                element.remove();
+               
+            }
+
+            function refresh() {
+                document.getElementById("startDate").required= false;
+                document.getElementById("endDate").required=false;
+                document.location.reload();
+
+            }
+
+            function confirmed() {
+                alert(12);
+            }
+            function func() {
+                var y = document.getElementById("labelforpic");
+                var x = document.getElementById("input1");
+                var div = document.getElementsByClassName("files")[0];
+                div.innerHTML = x.files.item(0).name;
+            }
+
+        </script>
 
     </form>
     <script>
