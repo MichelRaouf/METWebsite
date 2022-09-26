@@ -327,6 +327,7 @@ li.courseItem {
 .itemDiv {
     margin-top: 3vw;
     margin-left: 4.6875vw;
+    margin-right: 4.6875vw;
 }
 
 .upper {
@@ -369,7 +370,13 @@ li.courseItem {
     font-size: 1.6vw;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 0.7vw;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.63vw;
+    align-content: center;
+    align-items: center;
 }
+
 
 .weekDescription {
     font-size: 1.4vw;
@@ -403,6 +410,10 @@ li.courseItem {
 
 .materialItemDiv {
     margin-bottom: 0.8vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1vw;
 }
 
 .showMore {
