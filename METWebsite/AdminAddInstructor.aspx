@@ -7,6 +7,7 @@
     <title></title>
     <link rel="stylesheet" href="./StyleSheets/AdminAddInstructor.css" />
     <link rel="stylesheet" href="StyleSheets/AdminHeaderNav.css" />
+    <link rel="stylesheet" href="StyleSheets/AdminAddAlumni.css" />
 </head>
 <body>
     <form id="form1" runat="server">

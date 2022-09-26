@@ -119,6 +119,7 @@
     <Content Include="AdminRemoveAlumni.aspx" />
     <Content Include="AdminRemoveInstructor.aspx" />
     <Content Include="AdminRemoveStudentActivity.aspx" />
+    <Content Include="AdminSetting.aspx" />
     <Content Include="App_Data\database2.mdf" />
     <Content Include="App_Data\database2_log.ldf">
       <DependentUpon>database2.mdf</DependentUpon>
@@ -155,6 +156,7 @@
     <Content Include="StyleSheets\AdminRemoveAlumni.css" />
     <Content Include="StyleSheets\AdminRemoveCourse.css" />
     <Content Include="StyleSheets\AdminRemoveStudentActivity.css" />
+    <Content Include="StyleSheets\AdminSetting.css" />
     <Content Include="StyleSheets\HomePage.css" />
     <Content Include="HomePage.aspx" />
     <Content Include="StyleSheets\InstructorsProfiles.css" />
@@ -377,6 +379,13 @@
     </Compile>
     <Compile Include="AdminRemoveStudentActivity.aspx.designer.cs">
       <DependentUpon>AdminRemoveStudentActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSetting.aspx.cs">
+      <DependentUpon>AdminSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSetting.aspx.designer.cs">
+      <DependentUpon>AdminSetting.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
