@@ -1,276 +1,302 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseHomePage.aspx.cs" Inherits="METWebsite.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseHomePage.aspx.cs" Inherits="METWebsite.tempp" %>
 
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link  rel="stylesheet" href="./StyleSheets/CourseHome.css"/>
-<style>
 
-</style>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MET Website</title>
+    <link rel="icon" href="./images/gucLogo.png"/>
+    <link rel="stylesheet" href="./StyleSheets/Header.css"/>
+    <link rel="stylesheet" href="./StyleSheets/CourseHomePage.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="rest">
+        <div class="scrollable">
             <div class="header">
-            
-                            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
-           
-           
-                            <img class="bar" src="./images/topBarImages/bar.svg"/>
-            
-          
-                            <label class="label1">Faculty of Media Engineering & Technology</label>
-            
-                    <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
-            
+                <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+                <img class="bar" src="./images/topBarImages/bar.svg"/>
+                <label class="facultyLabel">Faculty of Media Engineering & Technology</label>
+            </div>
+
+            <div class="navbar">
+                <button class="navbtn" onserverclick="toHome" runat="server"><img src="images/staff/home.png" class="navImgHomeBookHeadphones"  /> <span>Home</span></button>
+                <button class="navbtnin" onserverclick="toCourses" runat="server"><img src="images/staff/book.png"class="navImgHomeBookHeadphones"/> <span>Courses</span></button>
+                <button class="navbtn" onserverclick="toStaff" runat="server"><img src="images/staff/group.png" class="navImgGroup"/><span>Staff</span></button>
+                <button class="navbtn" onserverclick="toStudentActiv" runat="server"><img src="images/staff/headphones.png" class="navImgHomeBookHeadphones" /><span>Student Activity</span></button>
+                <button class="navbtn" onserverclick="toAlumni" runat="server"><img src="images/staff/graduated.png"class="navImgGrad" /><span>Alumni</span></button>
+                <button class="navbtn" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
+            </div>
+
         </div>
-        <div class="navbar">
-            <div >
-                <img src="images/topBarImages/home.svg" alt="Alternate Text" class="navimg" />
-                                    <asp:Button Text="Home" runat="server" CssClass="navbtn" OnClick="toHome" />
+
+        <div class="body">
+            <div class="index">
+                <div class="searchDiv">
+                    <asp:ImageButton runat="server" ImageUrl="images/staff/search.png" CssClass="searchButton" OnClick="toSearchRes" />
+                    <asp:TextBox placeholder="Search.." id="searchInput" runat="server"/>
+                </div>
+                <div class="courseCatalogDiv">
+                    <asp:ImageButton runat="server" ImageUrl="./images/coursesPageImages/bulletPoint.svg" CssClass="bulletPoint" OnClientClick="courseCatalogueClicked();return false;" />
+                    <asp:Button ID="buttonCatalogue" Text="Course Catalogue" CssClass="indexButtonIn" runat="server" OnClientClick="courseCatalogueClicked();return false;"/>
+                </div>
+                <div class="graduateCoursesDiv">
+                    <asp:ImageButton runat="server" ImageUrl="./images/coursesPageImages/bulletPoint.svg" CssClass="bulletPoint" OnClientClick="gradCoursesClicked();return false;" />
+                    <asp:Button ID="buttonGraduate" Text="Graduate Courses" CssClass="indexButton" runat="server" OnClientClick="gradCoursesClicked();return false;"/>
+                </div>
+                <div class="undergradCoursesDiv">
+                    <asp:ImageButton runat="server" ImageUrl="images/coursesPageImages/plusButton.svg" CssClass="plusPoint" OnClientClick="undergradCoursesClicked();return false;" />
+                    <asp:Button ID="buttonUndergraduate" Text="Undergraduate Courses" CssClass="indexButton" runat="server" OnClientClick="undergradCoursesClicked();return false;"/>
+                </div>
+                <div class="undergradFaculties" id="undergradFaculties" runat="server">
+
+                </div>
             </div>
-                <div>
-                <img src="images/topBarImages/course.svg" alt="Alternate Text"class="navimg"/>
-                                    <asp:Button Text="Courses" runat="server" CssClass="navbtnin"  />
+            <div class="vertical">
+
             </div>
-                <div>
-                <img src="images/topBarImages/staff.svg" alt="Alternate Text" class="navimg"/>
-                                    <asp:Button Text="Staff" runat="server" CssClass="navbtn" OnClick="toStaff" />
+            <div class="semesters">
+                <div class="catalogueSemesters" id="catalogueSemesters" runat="server">
+
+                </div>
+                <div class="graduateCourses" id="graduateCourses">
+                    <label class="graduateCoursesLabel">Graduate Courses: </label>
+                    <ul class="coursesList" id="graduateCoursesList" runat="server">
+
+                    </ul>
+                </div>
+                <div class="undergraduateCourses" id="undergraduateCourses" runat="server">
+                    <div class="tempLabelDiv" id="tempLabelDiv">
+                        Undergraduate Courses:
+                    </div>
+
+                </div>
             </div>
-                <div >
-                <img src="images/topBarImages/studactiv.svg" alt="Alternate Text"class="navimg" />
-                                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" OnClick="toStudentActiv" />
-            </div>
-                <div >
-                <img src="images/topBarImages/Alumni.svg" alt="Alternate Text"class="navimg2" />
-                                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" OnClick="toAlumni" />
-            </div>
-                <div >
-                <img src="images/topBarImages/about.svg" alt="Alternate Text" class="navimg2" />
-                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" OnClick="toAbout" />
-            </div>
-           
-            
         </div>
-        </div>
-        </form>
-    <br />
-    <div class="row_flex">
-        
-        <div class="Scroll">
-      
-           <div class="Catalouge">
-                        <div class="hierarchyTitle"> <div><img src="images/staff/search.png" style="width:1.6vw;height:1.4vw;"/><input type="text" placeholder="Search.."/></div></div>
-               <ul>
-                   <li id="CourseCatalouge" class="catalougebtn"><Label class="catalougebtnIN"  >Course Catalouge</Label> </li>
-                   <br />
-                  
-                   <li id="gradCourses" class="catalougebtn"><Label class="catalougebtn" >Graduate Courses</Label></li>
-                    <br />
-                       <div id="underCourses" class="catalougebtn">
-                           <img class="changeimage" src="./images/plusicon.svg" />
-                           <Label class="catalougebtn4">Undergraduate Courses</Label>
-                   
-                       <div id="underGradContent">
-                           <ul>
-                               <li id="MET" class="catalougebtn2"><Label class="catalougebtn2">Media Engineering and Technology</Label><div class="coll" id="METContent">
-                                   <ul>
-                                       <li class="catalougebtn3"><a href="CourseHomePage.aspx?major=MET" class="catalougebtn3">Computer Science & Engineering</a></li>
-                                       <li class="catalougebtn3"><a href="CourseHomePage.aspx?major=MET" class="catalougebtn3">Digital Media Engineering & Technology</a></li>
-                                   </ul>
 
-                               </div>
-                               </li>
-                               
-                               <li id="IET" class="catalougebtn2"><Label class="catalougebtn2">Information Engineering and Technology</Label><div class="coll" id="IETContent">
-                                   <ul>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Electronics</a></li>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Communication</a></li>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Networking</a></li>
-                                   </ul>
-
-                               </div></li>
-                             
-                               <li id="EMS" class="catalougebtn2"><Label class="catalougebtn2">Material Science and Engineering</Label><div class="coll" id="EMSContent">
-                                   <ul>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Mechatronics</a></li>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Materials</a></li>
-                                       <li class="catalougebtn3"><a href="#" class="catalougebtn3">Production</a></li>
-                                   </ul>
-
-                               </div></li>
-                               
-                               <li id="MGT" class="catalougebtn2"><a href="#" class="catalougebtn2">Management Technology</a></li>
-                           </ul>
-
-                       </div>
-
-                   </div>
-               </ul>
-               
-        </div>
-            </div>
-            
-            <img src="./images/coursePageImages/VbarCourses.svg" alt="Alternate Text" class="vbar" />
-       
-    <div id="Semesters" runat="server" class="semesters">
-        
-       
-        </div> 
-            
-        
-    </div>
-<script>
-    var img = document.getElementsByClassName("vbar");
-    img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50+ "px";
-    
-    document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
-    window.addEventListener('scroll', (event) => {
-        
-        var scroll = document.getElementsByClassName("Scroll");
-        
-        
-    })
-    window.addEventListener('resize', (event) => {
-        
-        var img = document.getElementsByClassName("vbar");
-        img[0].style.height = document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 50 + "px";
-        document.getElementById("Semesters").style.maxHeight = (document.querySelector("body").offsetHeight - document.getElementById("rest").offsetHeight - 90) * 100 / document.querySelector("body").offsetWidth + "vw";
-
-    })
-    function redirect() {
-
-        var serial = event.srcElement.getAttribute("id");
-        location.href = "./CoursePage.aspx" + "?id=" + serial;
-        
-    }
-    var gatalouge = document.getElementById("CourseCatalouge");
-    var x = document.getElementsByClassName("catalougebtn4");
-
-    
-    var grad = document.getElementById("gradCourses");
-    var under = document.getElementById("underCourses");
-    var img = document.getElementsByClassName("changeimage");
-    var underContent = document.getElementById("underGradContent");
-    var met = document.getElementById("MET");
-    var METContent = document.getElementById("METContent");
-    var iet = document.getElementById("IET");
-    var IETContent = document.getElementById("IETContent");
-    var ems = document.getElementById("EMS");
-    var EMSContent = document.getElementById("EMSContent");
-    var cont = document.getElementsByClassName("coll");
-    var coll = document.getElementsByClassName("collapsible");
-    var querystring = location.search;
-    if (querystring != "") {
-        gatalouge.childNodes.item(0).setAttribute("class", "catalougebtn")
-        if (querystring == "?page=2") {
-            grad.childNodes.item(0).setAttribute("class", "catalougebtnIN")
+    </form>
+    <script>
+        for (var i = 1; i <= 10; i++) {
+            if (((document.getElementById("semesterListOpenedCata" + i).children)[0]).children.length == 0) {
+                document.getElementById("semesterClosedCata" + i).style.display = "none";
+            }
         }
-        if (querystring == "?page=3") {
-            under.childNodes.item(0).setAttribute("class", "catalougebtnIN")
+        if (((document.getElementById("semesterListOpenedCataElectives").children)[0]).children.length == 0) {
+            document.getElementById("semesterClosedCataElectives").style.display = "none";
+        }
+        function hideEmpty() {
+            for (var i = 1; i <= 10; i++) {
+                if (((document.getElementById("semesterListOpenedCata" + i).children)[0]).children.length == 0) {
+                    document.getElementById("semesterClosedCata" + i).style.display = "none";
+                }
+            }
+            if (((document.getElementById("semesterListOpenedCataElectives").children)[0]).children.length == 0) {
+                document.getElementById("semesterClosedCataElectives").style.display = "none";
+            }
+
+            var faculties = document.getElementById("undergradFaculties").children.length;
+            for (var i = 1; i <= faculties; i++) {
+                var length = ((((document.getElementById("fac" + i).children)[1]).children)[0]).children.length;
+                for (var j = 1; j <= length; j++) {
+                    if (((((((document.getElementById("fac" + i + "sub" + j + "Div").children)[0]).children)[0]).children)[1]).value == "Semester 1") {
+                        for (var k = 1; k <= 9; k = k + 2) {
+                            if (((document.getElementById("semester" + k + "ListOpenedFac" + i + "Sub" + j).children)[0]).children.length == 0) {
+                                document.getElementById("semester" + k + "ClosedFac" + i + "Sub" + j).style.display = "none";
+                            }
+                        }
+                    } else {
+                        for (var k = 2; k <= 10; k = k + 2) {
+                            if (((document.getElementById("semester" + k + "ListOpenedFac" + i + "Sub" + j).children)[0]).children.length == 0) {
+                                document.getElementById("semester" + k + "ClosedFac" + i + "Sub" + j).style.display = "none";
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-    } 
 
-    
-    var j;
-    
-    gatalouge.addEventListener("click", function () {
-        location.href = "./CourseHomePage.aspx";
-        x[0].style.cssText = 'font-size:2.34375vw';
-        img[0].setAttribute("src", "./images/plusicon.svg");
-        this.style.cssText = 'font-weight:bold';
-        grad.style.cssText = 'font-weight:400';
-        under.style.cssText = 'font-weight:400';
-        underContent.style.cssText = 'display : none';
-        for (j = 0; j < coll.length; j++){
-        cont[j].style.cssText = 'display: none';
+        function courseCatalogueClicked() {
+            document.getElementById("catalogueSemesters").style.display = "block";
+            document.getElementById("graduateCourses").style.display = "none";
+            document.getElementById("undergraduateCourses").style.display = "none";
+            document.getElementById("buttonCatalogue").style.fontWeight = "600";
+            document.getElementById("buttonGraduate").style.fontWeight = "400";
+            document.getElementById("buttonUndergraduate").style.fontWeight = "400";
+            document.getElementById("tempLabelDiv").style.display = "block";
+            var faculties = document.getElementById("undergradFaculties").children.length;
+            for (var i = 1; i <= faculties; i++) {
+                document.getElementById("fac" + i).style.display = "none";
+                document.getElementById("subMajors" + i).style.display = "none";
+                var length = ((((document.getElementById("fac" + i).children)[1]).children)[0]).children.length;
+                for (var j = 1; j <= length; j++) {
+                    document.getElementById("fac" + i + "sub" + j + "Div").style.display = "none";
+                    (((((document.getElementById("subMajors" + i).children)[0]).children)[j - 1]).children)[0].style.fontWeight = 300;
+                    if (((((((document.getElementById("fac" + i + "sub" + j + "Div").children)[0]).children)[0]).children)[1]).value == "Semester 1") {
+                        for (var k = 1; k <= 9; k = k + 2) {
+                            document.getElementById("semester" + k + "ClosedFac" + i + "Sub" + j).style.display = "block";
+                            document.getElementById("semester" + k + "OpenedFac" + i + "Sub" + j).style.display = "none";
+                            document.getElementById("semester" + k + "ListOpenedFac" + i + "Sub" + j).style.display = "none";
+                        }
+                    } else {
+                        for (var k = 2; k <= 10; k = k + 2) {
+                            document.getElementById("semester" + k + "ClosedFac" + i + "Sub" + j).style.display = "block";
+                            document.getElementById("semester" + k + "OpenedFac" + i + "Sub" + j).style.display = "none";
+                            document.getElementById("semester" + k + "ListOpenedFac" + i + "Sub" + j).style.display = "none";
+                        }
+                    }
+                }
+            }
+            for (var i = 1; i <= 10; i++) {
+                document.getElementById("semesterClosedCata" + i).style.display = "block";
+                document.getElementById("semesterOpenedCata" + i).style.display = "none";
+                document.getElementById("semesterListOpenedCata" + i).style.display = "none";
+            }
+            document.getElementById("semesterClosedCataElectives").style.display = "block";
+            document.getElementById("semesterOpenedCataElectives").style.display = "none";
+            document.getElementById("semesterListOpenedCataElectives").style.display = "none";
+            hideEmpty();
         }
-        
-        
-    });
-    grad.addEventListener("click", function () {
-        gatalouge.childNodes.item(0).setAttribute("class", "catalougebtn")
-        img[0].setAttribute("src", "./images/plusicon.svg");
-        x[0].style.cssText = 'font-size:2.34375vw';
-        this.style.cssText = 'font-weight:bold';
-        gatalouge.style.cssText = 'font-weight:400';
-        under.style.cssText = 'font-weight:400';
-        underContent.style.cssText = 'display : none';
-        
-        var semesters = document.getElementById("Semesters");
-        
-        while (semesters.firstChild) {
-            semesters.removeChild(semesters.lastChild);
+        function gradCoursesClicked() {
+            document.getElementById("catalogueSemesters").style.display = "none";
+            document.getElementById("graduateCourses").style.display = "block";
+            document.getElementById("undergraduateCourses").style.display = "none";
+            document.getElementById("buttonCatalogue").style.fontWeight = "400";
+            document.getElementById("buttonGraduate").style.fontWeight = "600";
+            document.getElementById("buttonUndergraduate").style.fontWeight = "400";
+            document.getElementById("tempLabelDiv").style.display = "block";
+            var faculties = document.getElementById("undergradFaculties").children.length;
+            for (var i = 1; i <= faculties; i++) {
+                document.getElementById("fac" + i).style.display = "none";
+                document.getElementById("subMajors" + i).style.display = "none";
+                var length = ((((document.getElementById("fac" + i).children)[1]).children)[0]).children.length;
+                for (var j = 1; j <= length; j++) {
+                    document.getElementById("fac" + i + "sub" + j + "Div").style.display = "none";
+                    (((((document.getElementById("subMajors" + i).children)[0]).children)[j - 1]).children)[0].style.fontWeight = 300;
+                    if (((((((document.getElementById("fac" + i + "sub" + j + "Div").children)[0]).children)[0]).children)[1]).value == "Semester 1") {
+                        for (var k = 1; k <= 9; k = k + 2) {
+                            document.getElementById("semester" + k + "ClosedFac" + i + "Sub" + j).style.display = "block";
+                            document.getElementById("semester" + k + "OpenedFac" + i + "Sub" + j).style.display = "none";
+                            document.getElementById("semester" + k + "ListOpenedFac" + i + "Sub" + j).style.display = "none";
+                        }
+                    } else {
+                        for (var k = 2; k <= 10; k = k + 2) {
+                            document.getElementById("semester" + k + "ClosedFac" + i + "Sub" + j).style.display = "block";
+                            document.getElementById("semester" + k + "OpenedFac" + i + "Sub" + j).style.display = "none";
+                            document.getElementById("semester" + k + "ListOpenedFac" + i + "Sub" + j).style.display = "none";
+                        }
+                    }
+                }
+            }
+            for (var i = 1; i <= 10; i++) {
+                document.getElementById("semesterClosedCata" + i).style.display = "block";
+                document.getElementById("semesterOpenedCata" + i).style.display = "none";
+                document.getElementById("semesterListOpenedCata" + i).style.display = "none";
+            }
+            document.getElementById("semesterClosedCataElectives").style.display = "block";
+            document.getElementById("semesterOpenedCataElectives").style.display = "none";
+            document.getElementById("semesterListOpenedCataElectives").style.display = "none";
+            hideEmpty();
         }
-        location.href = "CourseHomePage.aspx" + "?page=" + 2;
-
-        for (j = 0; j < coll.length; j++) {
-            cont[j].style.cssText = 'display: none';
-            alert(1);
+        function undergradCoursesClicked() {
+            document.getElementById("catalogueSemesters").style.display = "none";
+            document.getElementById("graduateCourses").style.display = "none";
+            document.getElementById("undergraduateCourses").style.display = "block";
+            document.getElementById("buttonCatalogue").style.fontWeight = "400";
+            document.getElementById("buttonGraduate").style.fontWeight = "400";
+            document.getElementById("buttonUndergraduate").style.fontWeight = "600";
+            var faculties = document.getElementById("undergradFaculties").children.length;
+            for (var i = 1; i <= faculties; i++) {
+                document.getElementById("fac" + i).style.display = "block";
+            }
+            for (var i = 1; i <= 10; i++) {
+                document.getElementById("semesterClosedCata" + i).style.display = "block";
+                document.getElementById("semesterOpenedCata" + i).style.display = "none";
+                document.getElementById("semesterListOpenedCata" + i).style.display = "none";
+            }
+            document.getElementById("semesterClosedCataElectives").style.display = "block";
+            document.getElementById("semesterOpenedCataElectives").style.display = "none";
+            document.getElementById("semesterListOpenedCataElectives").style.display = "none";
+            hideEmpty();
         }
-        
-        
-    });
-    under.addEventListener("click", function () {
-        gatalouge.childNodes.item(0).setAttribute("class", "catalougebtn")
-       
-        grad.childNodes.item(0).setAttribute("class", "catalougebtn");
-
-
-        this.style.cssText = 'font-weight:bold';
-        gatalouge.style.cssText = 'font-weight:400';
-        grad.style.cssText = 'font-weight:400';
-        underContent.style.cssText = 'display : block';
-        x[0].style.cssText = 'font-size:2.13vw';
-        img[0].setAttribute("src", "./images/upicon.svg");
-        //location.href = "CourseHomePage.aspx" + "?page=" + 3;
-
-
-    });
-    met.addEventListener("click", function () {
-        METContent.style.cssText = 'display:block';
-        IETContent.style.cssText = 'display:none';
-        EMSContent.style.cssText = 'display:none; ';
-    });
-    iet.addEventListener("click", function () {
-        IETContent.style.cssText = 'display:block';
-        METContent.style.cssText = 'display:none; ';
-        EMSContent.style.cssText = 'display:none; ';
-    });
-    ems.addEventListener("click", function () {
-        EMSContent.style.cssText = 'display:block';
-        METContent.style.cssText = 'display:none; ';
-        IETContent.style.cssText = 'display:none; ';
-
-    });
-    
-    
-var i;
-
-for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-        
-    this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        content.style.transition = "overflow 0.2s ease-out";
-        
-        if (content.style["overflow"] == "hidden" || content.style["overflow"] == "" ) {
-            
-            content.style.overflow = "unset"
+        function facClicked(facultyNumber) {
+            if (document.getElementById("subMajors" + facultyNumber).style.display == "none") {
+                document.getElementById("subMajors" + facultyNumber).style.display = "block";
+                var faculties = document.getElementById("undergradFaculties").children.length;
+                for (var i = 1; i <= faculties; i++) {
+                    if (i != facultyNumber) {
+                        document.getElementById("subMajors" + i).style.display = "none";
+                    }
+                }
+            } else {
+                document.getElementById("subMajors" + facultyNumber).style.display = "none";
+            }
+            hideEmpty();
         }
-        else
-            content.style.overflow = "hidden"
-    if (content.style.maxHeight){
-     content.style.maxHeight = null;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-    
-</script>
-
+        function facSubClicked(facultyNumber, subMajorNumber) {
+            (((((document.getElementById("subMajors" + facultyNumber).children)[0]).children)[subMajorNumber - 1]).children)[0].style.fontWeight = 600;
+            document.getElementById("tempLabelDiv").style.display = "none";
+            document.getElementById("fac" + facultyNumber + "sub" + subMajorNumber + "Div").style.display = "block";
+            var faculties = document.getElementById("undergradFaculties").children.length;
+            for (var i = 1; i <= faculties; i++) {
+                var length = ((((document.getElementById("fac" + i).children)[1]).children)[0]).children.length;
+                for (var j = 1; j <= length; j++) {
+                    if (i != facultyNumber || j != subMajorNumber) {
+                        document.getElementById("fac" + i + "sub" + j + "Div").style.display = "none";
+                        (((((document.getElementById("subMajors" + i).children)[0]).children)[j - 1]).children)[0].style.fontWeight = 300;
+                        if (((((((document.getElementById("fac" + i + "sub" + j + "Div").children)[0]).children)[0]).children)[1]).value == "Semester 1") {
+                            for (var k = 1; k <= 9; k = k + 2) {
+                                document.getElementById("semester" + k + "ClosedFac" + i + "Sub" + j).style.display = "block";
+                                document.getElementById("semester" + k + "OpenedFac" + i + "Sub" + j).style.display = "none";
+                                document.getElementById("semester" + k + "ListOpenedFac" + i + "Sub" + j).style.display = "none";
+                            }
+                        } else {
+                            for (var k = 2; k <= 10; k = k + 2) {
+                                document.getElementById("semester" + k + "ClosedFac" + i + "Sub" + j).style.display = "block";
+                                document.getElementById("semester" + k + "OpenedFac" + i + "Sub" + j).style.display = "none";
+                                document.getElementById("semester" + k + "ListOpenedFac" + i + "Sub" + j).style.display = "none";
+                            }
+                        }
+                    }
+                }
+            }
+            hideEmpty();
+        }
+        function openSemesterCata(semester) {
+            document.getElementById("semesterClosedCata" + semester).style.display = "none";
+            document.getElementById("semesterOpenedCata" + semester).style.display = "block";
+            document.getElementById("semesterListOpenedCata" + semester).style.display = "block";
+            hideEmpty();
+        }
+        function closeSemesterCata(semester) {
+            document.getElementById("semesterClosedCata" + semester).style.display = "block";
+            document.getElementById("semesterOpenedCata" + semester).style.display = "none";
+            document.getElementById("semesterListOpenedCata" + semester).style.display = "none";
+            hideEmpty();
+        }
+        function openSemesterCataE() {
+            document.getElementById("semesterClosedCataElectives").style.display = "none";
+            document.getElementById("semesterOpenedCataElectives").style.display = "block";
+            document.getElementById("semesterListOpenedCataElectives").style.display = "block";
+            hideEmpty();
+        }
+        function closeSemesterCataE() {
+            document.getElementById("semesterClosedCataElectives").style.display = "block";
+            document.getElementById("semesterOpenedCataElectives").style.display = "none";
+            document.getElementById("semesterListOpenedCataElectives").style.display = "none";
+            hideEmpty();
+        }
+        function openSemesterFacSub(semester, facultyNumber, subMajorNumber) {
+            document.getElementById("semester" + semester + "ClosedFac" + facultyNumber + "Sub" + subMajorNumber).style.display = "none";
+            document.getElementById("semester" + semester + "OpenedFac" + facultyNumber + "Sub" + subMajorNumber).style.display = "block";
+            document.getElementById("semester" + semester + "ListOpenedFac" + facultyNumber + "Sub" + subMajorNumber).style.display = "block";
+            hideEmpty();
+        }
+        function closeSemesterFacSub(semester, facultyNumber, subMajorNumber) {
+            document.getElementById("semester" + semester + "ClosedFac" + facultyNumber + "Sub" + subMajorNumber).style.display = "block";
+            document.getElementById("semester" + semester + "OpenedFac" + facultyNumber + "Sub" + subMajorNumber).style.display = "none";
+            document.getElementById("semester" + semester + "ListOpenedFac" + facultyNumber + "Sub" + subMajorNumber).style.display = "none";
+            hideEmpty();
+        }
+    </script>
 </body>
 </html>

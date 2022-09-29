@@ -141,7 +141,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
-    <Content Include="CourseHomePage.aspx" />
     <Content Include="images\coursesPageImages\bulletPoint.svg" />
     <Content Include="images\coursesPageImages\link.svg" />
     <Content Include="images\coursesPageImages\plusButton.svg" />
@@ -149,12 +148,14 @@
     <Content Include="images\coursesPageImages\upArrow.svg" />
     <Content Include="images\ErrorIcon.png" />
     <Content Include="LecturersProfiles.aspx" />
+    <Content Include="LecturersSearchRes.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
     <Content Include="StyleSheets\AdminInstructorToCourse.css" />
     <Content Include="StyleSheets\AdminRemoveAlumni.css" />
     <Content Include="StyleSheets\AdminRemoveCourse.css" />
     <Content Include="StyleSheets\AdminRemoveStudentActivity.css" />
+    <Content Include="StyleSheets\Header.css" />
     <Content Include="StyleSheets\HomePage.css" />
     <Content Include="HomePage.aspx" />
     <Content Include="StyleSheets\InstructorsProfiles.css" />
@@ -165,7 +166,7 @@
     <Content Include="StyleSheets\StudentActivityProfile.css" />
     <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StyleSheets\CoursePage.css" />
-    <Content Include="StyleSheets\temp.css" />
+    <Content Include="StyleSheets\CourseHomePage.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
@@ -306,9 +307,8 @@
     <Content Include="StyleSheets\studentActivities.css" />
     <Content Include="StaffProfile.aspx" />
     <Content Include="CoursePage.aspx" />
-    <Content Include="temp.aspx" />
-    <Content Include="temp2.aspx" />
-    <Content Include="try.aspx" />
+    <Content Include="CourseHomePage.aspx" />
+    <Content Include="TAsSearchRes.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -408,6 +408,13 @@
     <Compile Include="LecturersProfiles.aspx.designer.cs">
       <DependentUpon>LecturersProfiles.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LecturersSearchRes.aspx.cs">
+      <DependentUpon>LecturersSearchRes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LecturersSearchRes.aspx.designer.cs">
+      <DependentUpon>LecturersSearchRes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -493,26 +500,19 @@
     <Compile Include="CoursePage.aspx.designer.cs">
       <DependentUpon>CoursePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="temp.aspx.cs">
-      <DependentUpon>temp.aspx</DependentUpon>
+    <Compile Include="CourseHomePage.aspx.cs">
+      <DependentUpon>CourseHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="temp.aspx.designer.cs">
-      <DependentUpon>temp.aspx</DependentUpon>
+    <Compile Include="CourseHomePage.aspx.designer.cs">
+      <DependentUpon>CourseHomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="temp2.aspx.cs">
-      <DependentUpon>temp2.aspx</DependentUpon>
+    <Compile Include="TAsSearchRes.aspx.cs">
+      <DependentUpon>TAsSearchRes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="temp2.aspx.designer.cs">
-      <DependentUpon>temp2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="try.aspx.cs">
-      <DependentUpon>try.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="try.aspx.designer.cs">
-      <DependentUpon>try.aspx</DependentUpon>
+    <Compile Include="TAsSearchRes.aspx.designer.cs">
+      <DependentUpon>TAsSearchRes.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -520,13 +520,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="CourseHomePage.aspx.cs">
-      <DependentUpon>CourseHomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CourseHomePage.aspx.designer.cs">
-      <DependentUpon>CourseHomePage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
