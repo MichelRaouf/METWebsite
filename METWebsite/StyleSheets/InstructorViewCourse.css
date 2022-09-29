@@ -140,6 +140,7 @@ tr:nth-child(even) {
     
     width: 3.5%;
     height: 3.5%;
+    margin-left : auto;
 }
 
 
@@ -200,7 +201,7 @@ tr:nth-child(even) {
 .AnnouncmentTextBox{
     width : 40.22vw;
     height: 15.1vw;
-    font-size : 2.6vw;
+    font-size : 1.5vw;
     margin-top :1.56vw;
 }
 .confirm_cancel_Buttons{
@@ -292,3 +293,95 @@ tr:nth-child(even) {
     width : 13vw;
     height : 3.9vw;
 }
+
+
+
+
+.trash {
+    background: black;
+    width: 22px;
+    height: 26.66666666666667px;
+    display: inline-block;
+    border: none;
+    position: relative;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    cursor : pointer;
+}
+
+    .trash span {
+        position: absolute;
+        height: 4px;
+        background: black;
+        top: -6.333333px;
+        left: -3.3333333333333px;
+        right: -3.3333333333333px;
+        border-top-left-radius: 3.3333333333333px;
+        border-top-right-radius: 3.3333333333333px;
+        transform: rotate(0deg);
+        transition: transform 250ms;
+        transform-origin: 19% 100%;
+    }
+
+        .trash span:after {
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 2.3333333333333px;
+            background: black;
+            top: -3.3333333333333px;
+            border-top-left-radius: 3.3333333333333px;
+            border-top-right-radius: 3.3333333333333px;
+            transform: rotate(0deg);
+            transition: transform 250ms;
+            transform-origin: 19% 100%;
+            left: 9px;
+        }
+
+
+    .trash i {
+        position: relative;
+        width: 1.666666666666px;
+        height: 16.66666666666px;
+        background: #fff;
+        display: block;
+        margin: 4.6666667px auto;
+        border-radius: 1.666666666666px;
+    }
+
+        .trash i:after {
+            content: '';
+            width: 1.666666666666px;
+            height: 16.66666666666px;
+            background: #fff;
+            position: absolute;
+            left: -6px;
+            border-radius: 1.666666666666px;
+        }
+
+        .trash i:before {
+            content: '';
+            width: 1.666666666666px;
+            height: 16.66666666666px;
+            background: #fff;
+            position: absolute;
+            right: -6px;
+            border-radius: 1.666666666666px;
+        }
+
+    .trash:hover span {
+        transform: rotate(-45deg);
+        transition: transform 250ms;
+        background: #ED1C24;
+    }
+    .trash:hover {
+        background: #ED1C24;
+    }
+        .trash:hover span:after {
+            background: #ED1C24;
+        }
+

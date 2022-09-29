@@ -19,43 +19,44 @@ form {
 }
 
 .yearSeason {
-    margin-top: 2.2vw;
-    margin-left: 7.9479167vw;
-    margin-right: 7.9479167vw;
-    border-radius: 1.6vw;
-    background: linear-gradient(to right, #FFE171, #FFC3C6);
-    height: 5vw;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    column-gap: 15vw;
 }
 
 .yearLabel, .seasonLabel {
-    font-size: 1.3vw;
+    font-size: 1.62vw;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
 
 .year, .season {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    column-gap: 2.5vw;
+    margin-top: 2vw;
 }
 
-.yearInput, .seasonInput{
-    width:12vw;
-    height:2.5vw;
+.yearInput, .seasonInput {
+    border: solid #dbdfe3 1px;
+    border-radius: 2px;
+    height: 2.4vw;
+    width: 26.0416666vw;
+    float: left;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9vw;
+    -webkit-transition: all .2s;
 }
+    .yearInput:focus, .seasonInput:focus {
+        outline: solid;
+        border-color: #FFBF80;
+        outline-color: #FFDFC8;
+    }
 
 .updateSettingDiv {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top:4vw;
+    margin-top:3vw;
 }
 
 .updateSetting {

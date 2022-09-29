@@ -70,13 +70,14 @@
         </nav>
 
         <div class="assignDiv">
-            <label>Setting</label>
+            <label>Settings</label>
         </div>
 
         <div class="yearSeason">
 
             <div class="season">
                 <label class="seasonLabel" for="nameInput">Season :</label>
+                <br />
                 <select required class="seasonInput" name="seasonInput" id="seasonInput" runat="server">
                     <option value="" disabled selected>Select a Season</option>
                     <option class="seasonOption" value="summer">Summer</option>
@@ -88,6 +89,7 @@
 
             <div class="year" id="yearDiv" runat="server">
                 <label class="yearLabel" for="nameInput">Year :</label>
+                <br />
                 <select required class="yearInput" name="yearInput" id="yearInput" runat="server">
                     <option value="" disabled selected>Select a Year</option>
                 </select>
