@@ -31,10 +31,10 @@
 
         <div class="body">
             <div class="index">
-                <div class="searchDiv">
+                <%--<div class="searchDiv">
                     <asp:ImageButton runat="server" ImageUrl="images/staff/search.png" CssClass="searchButton" OnClick="toSearchRes" />
                     <asp:TextBox placeholder="Search.." id="searchInput" runat="server"/>
-                </div>
+                </div>--%>
                 <div class="courseCatalogDiv">
                     <asp:ImageButton runat="server" ImageUrl="./images/coursesPageImages/bulletPoint.svg" CssClass="bulletPoint" OnClientClick="courseCatalogueClicked();return false;" />
                     <asp:Button ID="buttonCatalogue" Text="Course Catalogue" CssClass="indexButtonIn" runat="server" OnClientClick="courseCatalogueClicked();return false;"/>
