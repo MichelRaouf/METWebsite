@@ -369,3 +369,8 @@ ul.instructorsList li.instructorItem::before {
 .blank {
     min-height: 2vw;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

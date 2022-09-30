@@ -93,8 +93,10 @@ namespace METWebsite
             {
                 courseCodePre = reader2.GetValue(0).ToString();
                 courseNamePre = reader2.GetValue(1).ToString();
+                int courseSerialPre = Int32.Parse(reader2.GetValue(2).ToString());
                 String courseTitlePre = "(" + courseCodePre + ") " + courseNamePre;
-                var courseTitleLabelPre = new HtmlGenericControl("label");
+                var courseTitleLabelPre = new HtmlGenericControl("a");
+                courseTitleLabelPre.Attributes.Add("href", "CoursePage.aspx?id=" + courseSerialPre);
                 courseTitleLabelPre.InnerHtml = courseTitlePre;
                 var courseLIPre = new HtmlGenericControl("li");
                 courseLIPre.Attributes.Add("class", "courseItem");
