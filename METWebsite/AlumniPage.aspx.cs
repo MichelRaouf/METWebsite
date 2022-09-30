@@ -28,11 +28,12 @@ namespace METWebsite
             {
                 String name = reader.GetValue(0).ToString();
                 String description = reader.GetValue(1).ToString();
+                String imgURL = reader.GetValue(2).ToString();
                 var div = new HtmlGenericControl("div");
                 div.Attributes.Add("class", "honorsProfile");
                 var profimg = new HtmlGenericControl("img");
                 profimg.Attributes.Add("class", "img");
-                profimg.Attributes.Add("src", "images/alumniPageImages/image 6.png");
+                profimg.Attributes.Add("src", imgURL);
                 var infodiv = new HtmlGenericControl("div");
                 infodiv.Attributes.Add("class", "profileTextContainer");
                 var h4 = new HtmlGenericControl("h4");

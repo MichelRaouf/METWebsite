@@ -234,3 +234,8 @@ ul.coursesList li {
     font-size: 1.5vw;
     margin-bottom: 0.5vw;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

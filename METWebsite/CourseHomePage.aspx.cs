@@ -65,7 +65,7 @@ namespace METWebsite
                     courseName = reader.GetValue(1).ToString();
                     courseCode = reader.GetValue(2).ToString();
                     var aTag = new HtmlGenericControl("a");
-                    aTag.Attributes.Add("href", "CoursePage.aspx?id=((Control)sender)." + courseSerial);
+                    aTag.Attributes.Add("href", "CoursePage.aspx?id=" + courseSerial);
                     aTag.InnerHtml = "(" + courseCode + ") " + courseName;
                     var listItemCata = new HtmlGenericControl("li");
                     listItemCata.Controls.Add(aTag);
@@ -129,7 +129,7 @@ namespace METWebsite
                 courseNameE = readerE.GetValue(1).ToString();
                 courseCodeE = readerE.GetValue(2).ToString();
                 var aTagE = new HtmlGenericControl("a");
-                aTagE.Attributes.Add("href", "CoursePage.aspx?id=((Control)sender)." + courseSerialE);
+                aTagE.Attributes.Add("href", "CoursePage.aspx?id=" + courseSerialE);
                 aTagE.InnerHtml = "(" + courseCodeE + ") " + courseNameE;
                 var listItemCataE = new HtmlGenericControl("li");
                 listItemCataE.Controls.Add(aTagE);
@@ -160,7 +160,7 @@ namespace METWebsite
                 courseNameG = reader2.GetValue(1).ToString();
                 courseCodeG = reader2.GetValue(2).ToString();
                 var aTagG = new HtmlGenericControl("a");
-                aTagG.Attributes.Add("href", "CoursePage.aspx?id=((Control)sender)." + courseSerialG);
+                aTagG.Attributes.Add("href", "CoursePage.aspx?id=" + courseSerialG);
                 aTagG.InnerHtml = "(" + courseCodeG + ") " + courseNameG;
                 var listItemG = new HtmlGenericControl("li");
                 listItemG.Controls.Add(aTagG);
@@ -307,10 +307,10 @@ namespace METWebsite
                             while (reader3.Read())
                             {
                                 courseSerialU = reader3.GetValue(0).ToString();
-                                courseNameU = reader3.GetValue(1).ToString();
-                                courseCodeU = reader3.GetValue(2).ToString();
+                                courseNameU = reader3.GetValue(2).ToString();
+                                courseCodeU = reader3.GetValue(1).ToString();
                                 var aTagU = new HtmlGenericControl("a");
-                                aTagU.Attributes.Add("href", "CoursePage.aspx?id=((Control)sender)." + courseSerialU);
+                                aTagU.Attributes.Add("href", "CoursePage.aspx?id=" + courseSerialU);
                                 aTagU.InnerHtml = "(" + courseCodeU + ") " + courseNameU;
                                 var listItemU = new HtmlGenericControl("li");
                                 listItemU.Controls.Add(aTagU);

@@ -147,6 +147,14 @@
     <Content Include="images\coursesPageImages\semesterPlus.svg" />
     <Content Include="images\coursesPageImages\upArrow.svg" />
     <Content Include="images\ErrorIcon.png" />
+    <Content Include="images\HonorsImages\Ahmed Sabah.png" />
+    <Content Include="images\HonorsImages\Christine Farahat.png" />
+    <Content Include="images\HonorsImages\Hayat Mohamed.png" />
+    <Content Include="images\HonorsImages\Hussein Adel.png" />
+    <Content Include="images\HonorsImages\Yomna Abdelrahman.png" />
+    <Content Include="images\NewsImages\GUCCPC.png" />
+    <Content Include="images\NewsImages\JTA News.png" />
+    <Content Include="images\NewsImages\Meta.png" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="LecturersSearchRes.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
