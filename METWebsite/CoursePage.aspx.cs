@@ -203,6 +203,7 @@ namespace METWebsite
                     var materialItem = new HtmlGenericControl("a");
                     materialItem.Attributes.Add("class", "materialItem");
                     materialItem.Attributes.Add("href", fileLink + "");
+                    materialItem.Attributes.Add("download", name3);
                     materialItem.InnerHtml = name3;
                     var materialItemDiv = new HtmlGenericControl("div");
                     materialItemDiv.Attributes.Add("class", "materialItemDiv");

@@ -178,6 +178,13 @@
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
+    <Content Include="Material\CSEN502\CSEN502_Lecture 1.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_Lecture 2.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_Lecture 3.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_Lecture 4.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_PA1.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_PA2.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_PA1 Solution.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="images\aboutUsPageImages\about.svg" />
     <Content Include="images\adminImages\adminLogo.svg" />

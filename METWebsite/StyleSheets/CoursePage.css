@@ -373,4 +373,9 @@ ul.instructorsList li.instructorItem::before {
 a {
     text-decoration: none;
     color: inherit;
+    font-weight: 500;
+}
+
+#more3 {
+    display: none;
 }

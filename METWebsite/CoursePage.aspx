@@ -216,18 +216,7 @@
              <div class="infoTitleDiv">
                 <label class="infoTitle">Resources</label>
             </div>
-            <div class="resourcsItem">
-                <img class="linkImage" src="./images/coursePageImages/link.svg" />
-                <a class="resourceLink">Data Structures And Algorithms By Shi-Kuo</a>
-            </div>
-            <div class="resourcsItem">
-                <img class="linkImage" src="./images/coursePageImages/link.svg" />
-                <a class="resourceLink">Data Structures And Algorithms By Shi-Kuo</a>
-            </div>
-            <div class="resourcsItem">
-                <img class="linkImage" src="./images/coursePageImages/link.svg" />
-                <a class="resourceLink">Data Structures And Algorithms By Shi-Kuo</a>
-            </div>
+            
         </section>
 
         <div class="blank">
