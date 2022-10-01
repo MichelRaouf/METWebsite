@@ -8,6 +8,7 @@
     <link rel="icon" href="./images/gucLogo.png"/>
     <link  rel="stylesheet" href="./StyleSheets/Header.css"/>
     <link  rel="stylesheet" href="./StyleSheets/HomePage.css"/>
+    <link rel="stylesheet" href="StyleSheets/swiper-bundle.min.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -29,8 +30,17 @@
 
         </div>
 
-        <img class="graduationImage" src="./images/homePageImages/graduation.svg"/>
+        
         <%--images slideshow here--%>
+        <div class="intro">
+            <div class="intro-slideshow">
+               <img src="https://www.dropbox.com/s/h8rds5ozk0u3s2f/coder.jpg?raw=1"/>
+                <img src="https://www.dropbox.com/s/lf29ifrd354ngyv/coffee.jpg?raw=1"/>
+                <img src="https://www.dropbox.com/s/lxnf1mxej90qoae/library.jpg?raw=1"/>
+                <img src="https://www.dropbox.com/s/15gdoyzoai94j6j/path.jpg?raw=1"/>
+                <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1"/>
+            </div>
+        </div>
 
         <div class="aboutParagraphDiv">
             <label class="aboutParagraph">
@@ -48,11 +58,22 @@
         </div>
 
         <div class="news" >
+           
             <div> 
                 <label class="newsLabel">Latest News</label> 
             </div>
-            <div class="newsItem" id="newsDiv" runat="server" >
-                
+            
+            <div class="newsSlider">
+              <div class="slideContaier swiper">
+                  <div class="slideContent">
+                     <div class="cardWrapper swiper-wrapper" id="cardWrapper" runat="server">   
+                     </div>
+                  </div>
+                  <div class="swiper-button-next" id="newsNxtBtn"></div>
+                 <div class="swiper-button-prev" id="newsPrevBtn"></div>
+                 <%--<div class="swiper-pagination" ></div>--%>
+              </div>
+               
             </div>
         </div>
 
@@ -166,7 +187,66 @@
 
     </form>
 
+    <script src="Scripts/swiper-bundle.min.js"></script>
+
     <script>
+        //Image Slideshow
+
+        const slideshowImages = document.querySelectorAll(".intro-slideshow img");
+
+        const nextImageDelay = 5000;
+        let currentImageCounter = 0; // setting a variable to keep track of the current image (slide)
+
+        // slideshowImages[currentImageCounter].style.display = "block";
+        slideshowImages[currentImageCounter].style.opacity = 1;
+
+        setInterval(nextImage, nextImageDelay);
+
+        function nextImage() {
+            // slideshowImages[currentImageCounter].style.display = "none";
+            slideshowImages[currentImageCounter].style.opacity = 0;
+
+            currentImageCounter = (currentImageCounter + 1) % slideshowImages.length;
+
+            // slideshowImages[currentImageCounter].style.display = "block";
+            slideshowImages[currentImageCounter].style.opacity = 1;
+        }
+
+
+
+        //News Cards JS
+        var swiper = new Swiper(".slideContent", {
+            slidesPerView: 1,
+            spaceBetween: 100,
+            loop: true,
+            centerSlide: 'true',
+            fade: 'true',
+            grabCursor: 'true',
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                520: {
+                    slidesPerView: 2,
+                },
+                950: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+        //////////////////////
+
         var sections = document.getElementsByClassName("whiteBox");
         for (var i = 0; i < sections.length; i++) {
             //alert(sections[i].offsetTop + " " + sections[i].parentElement.offsetTop);

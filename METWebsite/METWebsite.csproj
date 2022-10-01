@@ -155,8 +155,10 @@
     <Content Include="images\NewsImages\GUCCPC.png" />
     <Content Include="images\NewsImages\JTA News.png" />
     <Content Include="images\NewsImages\Meta.png" />
+    <Content Include="images\trial.png" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="LecturersSearchRes.aspx" />
+    <Content Include="Scripts\swiper-bundle.min.js" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
     <Content Include="StyleSheets\AdminInstructorToCourse.css" />
@@ -175,6 +177,7 @@
     <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\CourseHomePage.css" />
+    <Content Include="StyleSheets\swiper-bundle.min.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
