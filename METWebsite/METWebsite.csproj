@@ -144,7 +144,9 @@
     <Content Include="images\adminImages\guestIcon.png" />
     <Content Include="images\adminImages\instructorIcon.png" />
     <Content Include="images\ErrorIcon.png" />
+    <Content Include="images\InstructorHome\blackPlus.svg" />
     <Content Include="images\InstructorHome\MET.svg" />
+    <Content Include="images\InstructorHome\upload.svg" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
@@ -304,6 +306,7 @@
     <Content Include="StyleSheets\InstructorViewCourse.css" />
     <Content Include="StyleSheets\studentActivities.css" />
     <Content Include="StaffProfile.aspx" />
+    <Content Include="temp1.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -508,6 +511,13 @@
     </Compile>
     <Compile Include="StaffProfile.aspx.designer.cs">
       <DependentUpon>StaffProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="temp1.aspx.cs">
+      <DependentUpon>temp1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="temp1.aspx.designer.cs">
+      <DependentUpon>temp1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
