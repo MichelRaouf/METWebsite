@@ -146,12 +146,16 @@
     <Content Include="images\coursesPageImages\plusButton.svg" />
     <Content Include="images\coursesPageImages\semesterPlus.svg" />
     <Content Include="images\coursesPageImages\upArrow.svg" />
+    <Content Include="images\DevelopersBlack.png" />
     <Content Include="images\ErrorIcon.png" />
     <Content Include="images\HonorsImages\Ahmed Sabah.png" />
     <Content Include="images\HonorsImages\Christine Farahat.png" />
     <Content Include="images\HonorsImages\Hayat Mohamed.png" />
     <Content Include="images\HonorsImages\Hussein Adel.png" />
     <Content Include="images\HonorsImages\Yomna Abdelrahman.png" />
+    <Content Include="images\New Logo.png" />
+    <Content Include="images\New Logo.svg" />
+    <Content Include="images\New Logo2.svg" />
     <Content Include="images\NewsImages\GUCCPC.png" />
     <Content Include="images\NewsImages\JTA News.png" />
     <Content Include="images\NewsImages\Meta.png" />
@@ -188,6 +192,10 @@
     <Content Include="Material\CSEN502\CSEN502_PA1.pdf" />
     <Content Include="Material\CSEN502\CSEN502_PA2.pdf" />
     <Content Include="Material\CSEN502\CSEN502_PA1 Solution.pdf" />
+    <Content Include="Material\CSEN102\CSEN102_Lecture 1.pdf" />
+    <Content Include="Material\CSEN301\CSEN301_Lecture 1.pdf" />
+    <Content Include="Material\CSEN501\CSEN501_Lecture 1.pdf" />
+    <Content Include="Material\CSEN503\CSEN503_Lecture 1.pptx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="images\aboutUsPageImages\about.svg" />
     <Content Include="images\adminImages\adminLogo.svg" />
