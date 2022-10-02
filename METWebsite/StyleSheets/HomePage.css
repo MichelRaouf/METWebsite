@@ -16,136 +16,34 @@ html, body {
     width:100%;
 }*/
 
-.header {
-    height: 7.61716752vw;
+/*.graduationImage {
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: start;
-    top: 0px;
-}
-
-    .header > div {
-        flex-grow: 1 1 0;
-        display: flex;
-        background-color: #ffff;
-        padding: 20px;
-        font-size: 2vw;
-        top: 0px;
-    }
-
-.logo {
-    width: 20.57vw;
-    height: 5.31510415vw;
-}
-
-.bar {
-    width: 2.57vw;
-    height: 5.31510415vw;
-}
-
-.facultyLabel {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8vw;
-}
-
-.login {
+}*/
+.intro {
+    height: 38.18750000000001vw;
     position: relative;
-    width: 10.590494791666666vw;
-    height: 3.7109375vw;
-    border-radius: 0.32552vw;
-    background-color: #FFCB05;
-    border: none;
-    font-size: 1.5625vw;
-    margin-left: 22vw;
-    font-weight: bold;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-}
-
-    .login:hover {
-        background-color: black;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-
-.navbar {
-    background-color: black;
-    height: 4.3vw;
-    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1rem;
 }
 
-    .navbar > div {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin: 1.5vw;
-    }
-
-.navbtn {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4vw;
-    font-weight: 400;
-    background-color: black;
-    color: white;
+.intro-slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* relative to nearest positioned ancestor and not nearest block-level ancestor - alternatively: width: 100vw; */
+    height: 100%; /* relative to nearest positioned ancestor and not nearest block-level ancestor - alternatively: height: 100vh; */
+    object-fit: cover;
+    z-index: -1;
+    /* filter: brightness(50%); */ /* 0% black, 100% original image, values > 100% are allowed for brighter than original image. */
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
 }
 
-    .navbtn:hover {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: solid;
-        border-color: red;
-        border-width: 3px;
-        cursor: pointer;
-        transition: 0.5s;
-    }
 
-.navbtnin {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5625vw;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    vertical-align: middle;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid;
-    border-color: red;
-    border-width: 3px;
-    cursor: default;
-}
-
-.navImgHomeBookHeadphones {
-    width: 1.6vw;
-    height: 1.6vw;
-}
-
-.navImgGroup {
-    width: 1.9vw;
-    height: 2.2vw;
-}
-
-.navImgGrad {
-    width: 1.6vw;
-    height: 1.6vw;
-}
-
-.navImgAbout {
-    width: 2vw;
-    height: 2vw;
-}
-
-.graduationImage {
-    width: 100%;
-}
 
 .aboutParagraphDiv {
     margin: 2% 5% 3% 5%;
@@ -165,18 +63,18 @@ html, body {
 
 .readMore {
     padding: 1% 2% 1% 2%;
-    border-radius: 5px;
+    border-radius: 0.3255208333333333vw;
     background-color: #FFCB05;
     border: none;
     font-size: 1.7vw;
     font-weight: bold;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    transition: 0.5s;
 }
 
     .readMore:hover {
         background-color: black;
-        transition: 0.5s;
         cursor: pointer;
     }
 
@@ -187,30 +85,170 @@ html, body {
     height: auto;
     background-color: #ECECEC;
     align-items: center;
-    row-gap: 5vw;
     flex-direction: column;
-    justify-content: start;
+    font-family: 'Montserrat', sans-serif;
+    padding-top:1.6vw;
+    
 }
-
-    .news > div {
-        flex-grow: 1 1 0;
-        display: flex;
-        height: auto;
-        width: auto;
-        font-size: 2vw;
-        top: 0px;
-    }
-
 .newsLabel {
+
     font-family: Montserrat;
     font-size: 2.8vw;
     font-weight: 600;
     text-align: center;
-    margin-top: 1.6vw;
-    margin-bottom: -8vw;
+    
 }
 
-.whiteBox {
+
+/*****************************************************************/
+.newsSlider {
+    min-height: 32.5390625vw;
+    height: 32.5390625vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.6vw;
+    /*background-color:#EFEFEF;*/
+}
+.slideContaier {
+    max-width: 97.65625vw;
+    width: 100%;
+    padding: 2.6041666666666665vw;
+}
+.slideContent {
+    margin: 0 6.510416666666667vw;
+    overflow: hidden;
+    border-radius: 1.6276041666666667vw;
+}
+.card {
+    border-radius: 1.6276041666666667vw;
+    background: white;
+}
+.imageContent, .cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.6510416666666666vw 0.9114583333333334vw;
+}
+
+
+.imageContent {
+    position: relative;
+    row-gap: 0.3255208333333333vw;
+    padding: 1.6276041666666667vw 0;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFE379;
+    border-radius: 1.6276041666666667vw 1.6276041666666667vw 0 1.6276041666666667vw;
+}
+    .overlay::before,
+    .overlay::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -2.6041666666666665vw;
+        height: 2.6041666666666665vw;
+        width: 2.6041666666666665vw;
+        background-color: #FFE379;
+    }
+
+    .overlay::after {
+        width: 2.9296875vw;
+        border-radius: 0 1.6276041666666667vw 0 0;
+        background-color: #FFF;
+    }
+
+.cardImage {
+    position: relative;
+    height: 9.765625vw;
+    width: 9.765625vw;
+    background: #FFF;
+    border-radius: 50%;
+    padding: 0.1953125vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardImage .cardImg{
+    width:100%;
+    height:100%;
+    object-fit:scale-down;
+    border-radius:50%;
+      
+}
+.cardContent {
+    position: relative;
+    height: 12.369791666666666vw;
+}
+.newsTitle {
+    font-size: 1.171875vw;
+    font-weight: 500;
+    color: #333;
+}
+.newsDescription {
+    font-size: 0.9114583333333334vw;
+    color: black;
+    text-align: center;
+}
+.newsViewMoreBtn {
+    position: absolute;
+    bottom: 0.6510416666666666vw;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.0416666666666667vw;
+    color: #FFF;
+    padding: 0.5208333333333334vw 1.0416666666666667vw;
+    background-color: #FFE379;
+    border-radius: 0.390625vw;
+    margin: 0.9114583333333334vw;
+    cursor: pointer;
+    transition: 0.5s;
+}
+    .newsViewMoreBtn:hover {
+        background: black;
+    }
+#newsNxtBtn, #newsPrevBtn {
+    color: black;
+    transition: color 0.5s ease;
+}
+    #newsNxtBtn:hover, #newsPrevBtn:hover {
+        color: #FFCB05;
+    }
+    #newsNxtBtn::before, #newsNxtBtn::after, #newsPrevBtn::before, #newsPrevBtn::after {
+        font-size: 2.6041666666666665vw;
+    }
+#newsNxtBtn{
+    right:0;
+}
+#newsPrevBtn {
+    left: 0;
+}
+#lol {
+    color: green;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #F4CF3F;
+}
+
+/*@media screen and (max-width: 768px) {
+    .slideContent {
+        margin: 0 10px;
+    }
+
+    #newsNxtBtn, #newsPrevBtn {
+        display: none;
+    }
+}*/
+    /*****************************************************************/
+
+/*.whiteBox {
     background-color: #FFFFFF;
     opacity: 70%;
     align-items: center;
@@ -286,7 +324,7 @@ html, body {
         padding: 1vw;
         width: auto;
         top: 0px;
-    }
+    }*/
 
 .pathsDiv {
     background-color: #7A7A7A;
@@ -323,7 +361,7 @@ html, body {
 
 .viewCourses {
     padding: 1% 2% 1% 2%;
-    border-radius: 5px;
+    border-radius: 0.3255208333333333vw;
     background-color: white;
     border: none;
     font-size: 1.7vw;
@@ -348,21 +386,23 @@ html, body {
 .weGUCians {
     background-color: #343434;
     text-align: center;
+    height:37vw;    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    row-gap:5vw;
+    flex-wrap:wrap;
+    
 }
 
-    .weGUCians > div {
-        margin-left: 1vw;
-        margin-right: 1vw;
-        /*flex-grow: 1 1 0;
-        display: flex;*/
-    }
 
 .redLabel {
     background-color: rgba(237,28,36,0.7);
+    width:20%;
     margin-top: 1.5vw;
-    margin-bottom: 1.5vw;
     display: inline-block;
-    padding: 0.1% 4% 0.1% 4%;
+    padding: 0.1% 6% 0.1% 4%;
 }
 
 .guciansLabel {
@@ -375,7 +415,7 @@ html, body {
 
 .gucianinfo {
     background-color: #343434;
-    width: 99%;
+    width: 98%;
     display: flex;
     align-items: center;
     column-gap: 2.2vw;
@@ -384,17 +424,21 @@ html, body {
 }
 
     .gucianinfo > div {
-        flex-grow: 1 1 0;
         display: flex;
         top: 0px;
+        align-items: start;
     }
-
+.alumniCard {
+    
+}
 .alumniinfo {
+
+    height: 100%;
+    margin-left: 1vw;
     background-color: #343434;
-    width: 100%;
     display: flex;
-    align-items: center;
-    row-gap: -2px;
+    align-items: start;
+    row-gap: 1vw;
     flex-direction: column;
     justify-content: start;
 }
@@ -418,7 +462,6 @@ html, body {
     font-size: 1.8vw;
     font-weight: 600;
     color: white;
-    margin-bottom: -1.5vw;
 }
 
 .description {
@@ -427,12 +470,12 @@ html, body {
     position: relative;
     font-size: 1vw;
     font-weight: 600;
-    margin-left: 1.3vw;
+    text-align:start;
 }
 
 .showMore {
-    width: 18vw;
-    height: 4vw;
+    width: 15vw;
+    height: 3.5vw;
     border-radius: 0.5vw;
     background-color: #FFFFFF;
     border: none;
@@ -454,12 +497,12 @@ html, body {
 
 .alumniImage {
     width: 10vw;
-    height: 17vh;
+    height: 10vw;
 }
 
 .whiteVerBar {
     width: 0.2vw;
-    height: 23vh;
+    height: 10.69140625vw;
 }
 
 .ContactUs {

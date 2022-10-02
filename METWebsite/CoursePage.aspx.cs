@@ -93,8 +93,10 @@ namespace METWebsite
             {
                 courseCodePre = reader2.GetValue(0).ToString();
                 courseNamePre = reader2.GetValue(1).ToString();
+                int courseSerialPre = Int32.Parse(reader2.GetValue(2).ToString());
                 String courseTitlePre = "(" + courseCodePre + ") " + courseNamePre;
-                var courseTitleLabelPre = new HtmlGenericControl("label");
+                var courseTitleLabelPre = new HtmlGenericControl("a");
+                courseTitleLabelPre.Attributes.Add("href", "CoursePage.aspx?id=" + courseSerialPre);
                 courseTitleLabelPre.InnerHtml = courseTitlePre;
                 var courseLIPre = new HtmlGenericControl("li");
                 courseLIPre.Attributes.Add("class", "courseItem");
@@ -201,6 +203,7 @@ namespace METWebsite
                     var materialItem = new HtmlGenericControl("a");
                     materialItem.Attributes.Add("class", "materialItem");
                     materialItem.Attributes.Add("href", fileLink + "");
+                    materialItem.Attributes.Add("download", name3);
                     materialItem.InnerHtml = name3;
                     var materialItemDiv = new HtmlGenericControl("div");
                     materialItemDiv.Attributes.Add("class", "materialItemDiv");

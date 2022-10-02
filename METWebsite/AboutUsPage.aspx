@@ -6,45 +6,26 @@
 <head runat="server">
     <title>About Us</title>
     <link rel="icon" href="./images/gucLogo.png"/>
+    <link  rel="stylesheet" href="./StyleSheets/Header.css"/>
     <link  rel="stylesheet" href="./StyleSheets/AboutUsPage.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="scrollable">
-
             <div class="header">
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                 <img class="bar" src="./images/topBarImages/bar.svg"/>
                 <label class="facultyLabel">Faculty of Media Engineering & Technology</label>
-                <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login" OnClick="toLogin" />
             </div>
 
             <div class="navbar">
-            <div>
-                <img src="images/staff/home.png" alt="Alternate Text" class="navImgHomeBookHeadphones" />
-                <asp:Button Text="Home" runat="server" CssClass="navbtn" OnClick="toHome" />
+                <button class="navbtn" onserverclick="toHome" runat="server"><img src="images/staff/home.png" class="navImgHomeBookHeadphones"  /> <span>Home</span></button>
+                <button class="navbtn" onserverclick="toCourses" runat="server"><img src="images/staff/book.png"class="navImgHomeBookHeadphones"/> <span>Courses</span></button>
+                <button class="navbtn" onserverclick="toStaff" runat="server"><img src="images/staff/group.png" class="navImgGroup"/><span>Staff</span></button>
+                <button class="navbtn" onserverclick="toStudentActiv" runat="server"><img src="images/staff/headphones.png" class="navImgHomeBookHeadphones" /><span>Student Activity</span></button>
+                <button class="navbtn" onserverclick="toAlumni" runat="server"><img src="images/staff/graduated.png"class="navImgGrad" /><span>Alumni</span></button>
+                <button class="navbtnin" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
             </div>
-            <div>
-                <img src="images/staff/book.png" alt="Alternate Text"class="navImgHomeBookHeadphones"/>
-                <asp:Button Text="Courses" runat="server" CssClass="navbtn" OnClick="toCourses" />
-            </div>
-            <div>
-                <img src="images/staff/group.png" alt="Alternate Text" class="navImgGroup"/>
-                <asp:Button Text="Staff" runat="server" CssClass="navbtn" OnClick="toStaff" />
-            </div>
-            <div >
-                <img src="images/staff/headphones.png" alt="Alternate Text"class="navImgHomeBookHeadphones" />
-                <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" OnClick="toStudentActiv" />
-            </div>
-            <div >
-                <img src="images/staff/graduated.png" alt="Alternate Text"class="navImgGrad" />
-                <asp:Button Text="Alumni" runat="server" CssClass="navbtn" OnClick="toAlumni" />
-            </div>
-            <div >
-                <img src="images/staff/info.png" alt="Info" class="navImgAbout" />
-                 <asp:Button Text="About Us" runat="server" CssClass="navbtnin" OnClick="toAbout" />
-            </div> 
-        </div>
 
         </div>
 

@@ -15,7 +15,7 @@
     <RootNamespace>METWebsite</RootNamespace>
     <AssemblyName>METWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44311</IISExpressSSLPort>
@@ -113,21 +113,22 @@
     <Content Include="AdminAddAlumni.aspx" />
     <Content Include="AdminAddCourse.aspx" />
     <Content Include="AdminAddInstructor.aspx" />
-    <Content Include="AdminAddStudentActivity.aspx" />
     <Content Include="AdminDefineWeeks.aspx" />
     <Content Include="AdminHomePage.aspx" />
     <Content Include="AdminInstructorToCourse.aspx" />
     <Content Include="AdminRemoveAlumni.aspx" />
     <Content Include="AdminRemoveInstructor.aspx" />
-    <Content Include="AdminRemoveInstructorFromCourse.aspx" />
     <Content Include="AdminRemoveStudentActivity.aspx" />
+    <Content Include="App_Data\database2.mdf" />
+    <Content Include="App_Data\database2_log.ldf">
+      <DependentUpon>database2.mdf</DependentUpon>
+    </Content>
     <Content Include="ARemoveC.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CoursePage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -140,37 +141,57 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="fonts\ArbFONTS-Tanseek-Modern-Pro-Arabic-Bold.ttf" />
     <Content Include="fonts\Tanseek Modern Pro Arabic.ttf" />
-    <Content Include="CourseHomePage.aspx" />
-    <Content Include="images\adminImages\guestIcon.png" />
-    <Content Include="images\adminImages\instructorIcon.png" />
+    <Content Include="images\coursesPageImages\bulletPoint.svg" />
+    <Content Include="images\coursesPageImages\link.svg" />
+    <Content Include="images\coursesPageImages\plusButton.svg" />
+    <Content Include="images\coursesPageImages\semesterPlus.svg" />
+    <Content Include="images\coursesPageImages\upArrow.svg" />
     <Content Include="images\ErrorIcon.png" />
-    <Content Include="images\InstructorHome\blackPlus.svg" />
-    <Content Include="images\InstructorHome\MET.svg" />
-    <Content Include="images\InstructorHome\upload.svg" />
+    <Content Include="images\HonorsImages\Ahmed Sabah.png" />
+    <Content Include="images\HonorsImages\Christine Farahat.png" />
+    <Content Include="images\HonorsImages\Hayat Mohamed.png" />
+    <Content Include="images\HonorsImages\Hussein Adel.png" />
+    <Content Include="images\HonorsImages\Yomna Abdelrahman.png" />
+    <Content Include="images\NewsImages\GUCCPC.png" />
+    <Content Include="images\NewsImages\JTA News.png" />
+    <Content Include="images\NewsImages\Meta.png" />
+    <Content Include="images\trial.png" />
     <Content Include="LecturersProfiles.aspx" />
-    <Content Include="Register.aspx" />
+    <Content Include="LecturersSearchRes.aspx" />
+    <Content Include="Scripts\swiper-bundle.min.js" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
-    <Content Include="StyleSheets\AdminHeaderNav.css" />
     <Content Include="StyleSheets\AdminInstructorToCourse.css" />
     <Content Include="StyleSheets\AdminRemoveAlumni.css" />
     <Content Include="StyleSheets\AdminRemoveCourse.css" />
-    <Content Include="StyleSheets\AdminRemoveInstructorFromCourse.css" />
     <Content Include="StyleSheets\AdminRemoveStudentActivity.css" />
+    <Content Include="StyleSheets\Header.css" />
     <Content Include="StyleSheets\HomePage.css" />
     <Content Include="HomePage.aspx" />
     <Content Include="StyleSheets\InstructorsProfiles.css" />
-    <Content Include="StyleSheets\register.css" />
     <Content Include="StyleSheets\StaffHomePage.css" />
     <Content Include="StaffHomePage.aspx" />
     <Content Include="StyleSheets\AlumniPage.css" />
     <Content Include="StyleSheets\AboutUsPage.css" />
     <Content Include="StyleSheets\StudentActivityProfile.css" />
     <Content Include="StyleSheets\StaffProfile.css" />
-    <Content Include="StyleSheets\login.css" />
+    <Content Include="StyleSheets\CoursePage.css" />
+    <Content Include="StyleSheets\CourseHomePage.css" />
+    <Content Include="StyleSheets\swiper-bundle.min.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
+    <Content Include="Material\CSEN502\CSEN502_Lecture 1.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_Lecture 2.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_Lecture 3.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_Lecture 4.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_PA1.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_PA2.pdf" />
+    <Content Include="Material\CSEN502\CSEN502_PA1 Solution.pdf" />
+    <Content Include="Material\CSEN102\CSEN102_Lecture 1.pdf" />
+    <Content Include="Material\CSEN301\CSEN301_Lecture 1.pdf" />
+    <Content Include="Material\CSEN501\CSEN501_Lecture 1.pdf" />
+    <Content Include="Material\CSEN503\CSEN503_Lecture 1.pptx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="images\aboutUsPageImages\about.svg" />
     <Content Include="images\adminImages\adminLogo.svg" />
@@ -204,6 +225,8 @@
     <Content Include="images\InstructorHome\logout.svg" />
     <Content Include="images\InstructorHome\plusIcon.svg" />
     <Content Include="images\InstructorHome\profile.svg" />
+    <Content Include="images\InstructorHome\red.svg" />
+    <Content Include="images\InstructorHome\red1.png" />
     <Content Include="images\InstructorHome\redDelete.svg" />
     <Content Include="images\InstructorHome\redEdit.svg" />
     <Content Include="images\InstructorHome\whiteDelete.svg" />
@@ -301,12 +324,13 @@
     <Content Include="StyleSheets\AdminHome.css" />
     <Content Include="StyleSheets\AdminStudentActivity.css" />
     <Content Include="StyleSheets\CourseHome.css" />
-    <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\InstructorHome.css" />
     <Content Include="StyleSheets\InstructorViewCourse.css" />
     <Content Include="StyleSheets\studentActivities.css" />
     <Content Include="StaffProfile.aspx" />
-    <Content Include="temp1.aspx" />
+    <Content Include="CoursePage.aspx" />
+    <Content Include="CourseHomePage.aspx" />
+    <Content Include="TAsSearchRes.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -333,13 +357,6 @@
     </Compile>
     <Compile Include="AdminAddInstructor.aspx.designer.cs">
       <DependentUpon>AdminAddInstructor.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminAddStudentActivity.aspx.cs">
-      <DependentUpon>AdminAddStudentActivity.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminAddStudentActivity.aspx.designer.cs">
-      <DependentUpon>AdminAddStudentActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminDefineWeeks.aspx.cs">
       <DependentUpon>AdminDefineWeeks.aspx</DependentUpon>
@@ -376,13 +393,6 @@
     <Compile Include="AdminRemoveInstructor.aspx.designer.cs">
       <DependentUpon>AdminRemoveInstructor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminRemoveInstructorFromCourse.aspx.cs">
-      <DependentUpon>AdminRemoveInstructorFromCourse.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminRemoveInstructorFromCourse.aspx.designer.cs">
-      <DependentUpon>AdminRemoveInstructorFromCourse.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AdminRemoveStudentActivity.aspx.cs">
       <DependentUpon>AdminRemoveStudentActivity.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -398,13 +408,6 @@
     </Compile>
     <Compile Include="ARemoveC.aspx.designer.cs">
       <DependentUpon>ARemoveC.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CoursePage.aspx.cs">
-      <DependentUpon>CoursePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CoursePage.aspx.designer.cs">
-      <DependentUpon>CoursePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="InstructorHome.aspx.cs">
       <DependentUpon>InstructorHome.aspx</DependentUpon>
@@ -427,6 +430,13 @@
     <Compile Include="LecturersProfiles.aspx.designer.cs">
       <DependentUpon>LecturersProfiles.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LecturersSearchRes.aspx.cs">
+      <DependentUpon>LecturersSearchRes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LecturersSearchRes.aspx.designer.cs">
+      <DependentUpon>LecturersSearchRes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -435,13 +445,6 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -512,19 +515,12 @@
     <Compile Include="StaffProfile.aspx.designer.cs">
       <DependentUpon>StaffProfile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="temp1.aspx.cs">
-      <DependentUpon>temp1.aspx</DependentUpon>
+    <Compile Include="CoursePage.aspx.cs">
+      <DependentUpon>CoursePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="temp1.aspx.designer.cs">
-      <DependentUpon>temp1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    <Compile Include="CoursePage.aspx.designer.cs">
+      <DependentUpon>CoursePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="CourseHomePage.aspx.cs">
       <DependentUpon>CourseHomePage.aspx</DependentUpon>
@@ -533,11 +529,23 @@
     <Compile Include="CourseHomePage.aspx.designer.cs">
       <DependentUpon>CourseHomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TAsSearchRes.aspx.cs">
+      <DependentUpon>TAsSearchRes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TAsSearchRes.aspx.designer.cs">
+      <DependentUpon>TAsSearchRes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="images\alumniPageImages\" />
-    <Folder Include="images\coursesPageImages\" />
     <Folder Include="images\staffPageImages\" />
   </ItemGroup>
   <ItemGroup>
