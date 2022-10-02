@@ -188,6 +188,10 @@
     <Content Include="Material\CSEN502\CSEN502_PA1.pdf" />
     <Content Include="Material\CSEN502\CSEN502_PA2.pdf" />
     <Content Include="Material\CSEN502\CSEN502_PA1 Solution.pdf" />
+    <Content Include="Material\CSEN102\CSEN102_Lecture 1.pdf" />
+    <Content Include="Material\CSEN301\CSEN301_Lecture 1.pdf" />
+    <Content Include="Material\CSEN501\CSEN501_Lecture 1.pdf" />
+    <Content Include="Material\CSEN503\CSEN503_Lecture 1.pptx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="images\aboutUsPageImages\about.svg" />
     <Content Include="images\adminImages\adminLogo.svg" />
