@@ -13,7 +13,15 @@ namespace METWebsite
 	{
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id = Int32.Parse(Session["instructorid"].ToString());
+            int id = 0;
+            try
+            {
+                id = Int32.Parse(Request.QueryString["id"]);
+            }
+            catch (Exception ex)
+            {
+                id = Int32.Parse(Session["instructorid"].ToString());
+            }
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
@@ -37,7 +45,7 @@ namespace METWebsite
             String status = "";
             String languages = "";
             reader.Read();
-            photoUrl = "images/profile/Haythem.svg";
+            photoUrl = reader.GetValue(17).ToString();
             title = reader.GetValue(16).ToString();
             name = reader.GetValue(3).ToString();
             position = reader.GetValue(15).ToString();
