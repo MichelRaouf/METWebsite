@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -9,8 +10,10 @@ using System.Web.UI.WebControls;
 
 namespace METWebsite
 {
+
     public partial class temp : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
@@ -25,22 +28,61 @@ namespace METWebsite
                 String title = reader.GetValue(1).ToString();
                 String description = reader.GetValue(2).ToString();
                 String url = reader.GetValue(4).ToString();
-                var div = new HtmlGenericControl("div");
-                var section = new HtmlGenericControl("section");
-                section.Attributes.Add("class", "whiteBox");
-                var label = new HtmlGenericControl("label");
-                label.Attributes.Add("class", "newsItemLabel");
-                label.InnerHtml = title;
-                section.Controls.Add(label);
+                String truncationSuffix = "…";
+                description = description.Length > 125? description.Substring(0, 125) + truncationSuffix: description;
+                var div1 = new HtmlGenericControl("div");
+                var div11 = new HtmlGenericControl("div");
+                var span = new HtmlGenericControl("span");
+                var div111 = new HtmlGenericControl("div");
                 var img = new HtmlGenericControl("img");
-                img.Attributes.Add("class", "newsImage");
-                img.Attributes.Add("description", description);
-                img.Attributes.Add("onmouseenter", "ShowHover()");
-                img.Attributes.Add("src", url);
-                div.Controls.Add(section);
-                div.Controls.Add(img);
+                var div12 = new HtmlGenericControl("div");
+                var h = new HtmlGenericControl("h2");
+                var p = new HtmlGenericControl("p");
+                var button = new HtmlGenericControl("button");
 
-                newsDiv.Controls.Add(div);
+                div1.Attributes.Add("class", "card swiper-slide");
+                div11.Attributes.Add("class", "imageContent");
+                span.Attributes.Add("class", "overlay");
+                div111.Attributes.Add("class", "cardImage");
+                img.Attributes.Add("src", url);
+                img.Attributes.Add("class", "cardImg");
+                div12.Attributes.Add("class", "cardContent");
+                h.Attributes.Add("class", "newsTitle");
+                p.Attributes.Add("class", "newsDescription");
+                button.Attributes.Add("class", "newsViewMoreBtn");
+                h.InnerHtml = title;
+                p.InnerHtml = description;
+                button.InnerHtml = "View More";
+                div1.Controls.Add(div11);
+                div11.Controls.Add(span);
+                div11.Controls.Add(div111);
+                div111.Controls.Add(img);
+                div1.Controls.Add(div12);
+                div12.Controls.Add(h);
+                div12.Controls.Add(p);
+                div12.Controls.Add(button);
+                cardWrapper.Controls.Add(div1);
+
+
+
+
+
+                //var div = new HtmlGenericControl("div");
+                //var section = new HtmlGenericControl("section");
+                //section.Attributes.Add("class", "whiteBox");
+                //var label = new HtmlGenericControl("label");
+                //label.Attributes.Add("class", "newsItemLabel");
+                //label.InnerHtml = title;
+                //section.Controls.Add(label);
+                //var img = new HtmlGenericControl("img");
+                //img.Attributes.Add("class", "newsImage");
+                //img.Attributes.Add("description", description);
+                //img.Attributes.Add("onmouseenter", "ShowHover()");
+                //img.Attributes.Add("src", url);
+                //div.Controls.Add(section);
+                //div.Controls.Add(img);
+
+                //newsDiv.Controls.Add(div);
                 count++;
             }
             count = 0;
@@ -55,6 +97,7 @@ namespace METWebsite
                 String url = reader2.GetValue(3).ToString();
                 var div = new HtmlGenericControl("div");
                 var profimg = new HtmlGenericControl("img");
+                div.Attributes.Add("class", "alumniCard");
                 profimg.Attributes.Add("class", "alumniImage");
                 profimg.Attributes.Add("src", url);
                 var div2 = new HtmlGenericControl("div");
@@ -68,7 +111,6 @@ namespace METWebsite
                 label2.Attributes.Add("class", "description");
                 div.Controls.Add(profimg);
                 div2.Controls.Add(label);
-                div2.Controls.Add(br);
                 div2.Controls.Add(label2);
                 div.Controls.Add(div2);
                 gucianinfodiv.Controls.Add(div);
