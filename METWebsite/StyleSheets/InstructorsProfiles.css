@@ -28,6 +28,7 @@ html, body {
     flex-wrap: wrap;
     row-gap: 3.2552083333333335vw;
     padding-bottom: 5vw;
+    column-gap: 5vw;
 }
 
 .hierarchyTitle {

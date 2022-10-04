@@ -159,10 +159,14 @@
     <Content Include="images\NewsImages\GUCCPC.png" />
     <Content Include="images\NewsImages\JTA News.png" />
     <Content Include="images\NewsImages\Meta.png" />
-    <Content Include="images\trial.png" />
+    <Content Include="images\StaffProfiles\Amr ElMougy.png" />
+    <Content Include="images\StaffProfiles\Hassan Soubra.png" />
+    <Content Include="images\StaffProfiles\Hythem Ismail.png" />
+    <Content Include="images\StaffProfiles\Mervat Abulkheir.png" />
+    <Content Include="images\StaffProfiles\Slim Abdennadher.png" />
+    <Content Include="images\StaffProfiles\Wael Aboulsaadat.png" />
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="LecturersSearchRes.aspx" />
-    <Content Include="Scripts\swiper-bundle.min.js" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
     <Content Include="StyleSheets\AdminInstructorToCourse.css" />
@@ -181,7 +185,6 @@
     <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\CourseHomePage.css" />
-    <Content Include="StyleSheets\swiper-bundle.min.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
@@ -244,7 +247,7 @@
     <Content Include="images\staff\AmrElmougy.png" />
     <Content Include="images\staff\blackBar.png" />
     <Content Include="images\staff\book.png" />
-    <Content Include="images\staff\default.png" />
+    <Content Include="images\StaffProfiles\default.png" />
     <Content Include="images\staff\email.png" />
     <Content Include="images\staff\graduated.png" />
     <Content Include="images\staff\group.png" />

@@ -27,10 +27,11 @@ namespace METWebsite
                 String mail = reader.GetValue(2).ToString();
                 String office = reader.GetValue(3).ToString();
                 String title = reader.GetValue(4).ToString();
+                String imgURL = reader.GetValue(5).ToString();
                 var div = new HtmlGenericControl("div");
                 div.Attributes.Add("class", "profileData");
                 var profimg = new HtmlGenericControl("img");
-                profimg.Attributes.Add("src", "images/staff/Haytham.png");
+                profimg.Attributes.Add("src", imgURL);
                 profimg.Attributes.Add("class", "profilePicture");
                 var br = new HtmlGenericControl("br");
                 var namediv = new HtmlGenericControl("div");
