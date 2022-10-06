@@ -20,10 +20,21 @@ namespace METWebsite
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
+            SqlCommand cmd0 = new SqlCommand("getHomeImages", con);
+            SqlDataReader reader0 = cmd0.ExecuteReader();
+            while (reader0.Read())
+            {
+                String imageURL = reader0.GetValue(0).ToString();
+                var image = new HtmlGenericControl("img");
+                image.Attributes.Add("src", imageURL);
+                introSlideshow.Controls.Add(image);
+            }
+            con.Close();
+            con.Open();
             SqlCommand cmd = new SqlCommand("Select * from News", con);
             SqlDataReader reader = cmd.ExecuteReader();
-            int count = 0;
-            while (count < 3 && reader.Read())
+            //int count = 0;
+            while (/*count < 3 &&*/ reader.Read())
             {
                 String title = reader.GetValue(1).ToString();
                 String description = reader.GetValue(2).ToString();
@@ -83,9 +94,9 @@ namespace METWebsite
                 //div.Controls.Add(img);
 
                 //newsDiv.Controls.Add(div);
-                count++;
+                //count++;
             }
-            count = 0;
+            int count = 0;
             reader.Close();
 
             SqlCommand cmd2 = new SqlCommand("Select * from Honors", con);

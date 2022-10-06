@@ -47,12 +47,12 @@
         
         <%--images slideshow here--%>
         <div class="intro">
-            <div class="intro-slideshow">
-               <img src="https://www.dropbox.com/s/h8rds5ozk0u3s2f/coder.jpg?raw=1"/>
+            <div class="intro-slideshow" id="introSlideshow" runat="server">
+                <%--<img src="https://www.dropbox.com/s/h8rds5ozk0u3s2f/coder.jpg?raw=1"/>
                 <img src="https://www.dropbox.com/s/lf29ifrd354ngyv/coffee.jpg?raw=1"/>
                 <img src="https://www.dropbox.com/s/lxnf1mxej90qoae/library.jpg?raw=1"/>
                 <img src="https://www.dropbox.com/s/15gdoyzoai94j6j/path.jpg?raw=1"/>
-                <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1"/>
+                <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1"/>--%>
             </div>
         </div>
 

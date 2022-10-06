@@ -45,21 +45,21 @@ namespace METWebsite
             String status = "";
             String languages = "";
             reader.Read();
-            photoUrl = reader.GetValue(17).ToString();
-            title = reader.GetValue(16).ToString();
-            name = reader.GetValue(3).ToString();
-            position = reader.GetValue(15).ToString();
+            photoUrl = reader.GetValue(0).ToString();
+            title = reader.GetValue(1).ToString();
+            name = reader.GetValue(2).ToString();
+            position = reader.GetValue(3).ToString();
             office = reader.GetValue(4).ToString();
-            email = reader.GetValue(1).ToString();
-            fax = reader.GetValue(8).ToString();
+            email = reader.GetValue(5).ToString();
+            fax = reader.GetValue(6).ToString();
             phone = reader.GetValue(7).ToString();
-            city = reader.GetValue(9).ToString();
-            country = reader.GetValue(10).ToString();
-            String[] dob = (reader.GetValue(11).ToString()).Split(' ');
+            city = reader.GetValue(8).ToString();
+            country = reader.GetValue(9).ToString();
+            String[] dob = (reader.GetValue(10).ToString()).Split(' ');
             String dobDate = dob[0];
-            nationality = reader.GetValue(12).ToString();
-            status = reader.GetValue(13).ToString();
-            languages = reader.GetValue(14).ToString();
+            nationality = reader.GetValue(11).ToString();
+            status = reader.GetValue(12).ToString();
+            languages = reader.GetValue(13).ToString();
             con.Close();
             String titleName = title + " " + name;
             var img = new HtmlGenericControl("img");
@@ -161,8 +161,8 @@ namespace METWebsite
             string educField = "";
             while (reader1.Read())
             {
-                educMonth = reader1.GetValue(6).ToString();
-                educYear = reader1.GetValue(5).ToString();
+                educMonth = reader1.GetValue(5).ToString();
+                educYear = reader1.GetValue(6).ToString();
                 educTitle = reader1.GetValue(3).ToString();
                 educPlace = reader1.GetValue(2).ToString();
                 educField = reader1.GetValue(4).ToString();
@@ -224,13 +224,13 @@ namespace METWebsite
             while (reader2.Read())
             {
                 count--;
-                empStartMonth = reader2.GetValue(5).ToString();
-                empStartYear = reader2.GetValue(6).ToString();
-                empEndMonth = reader2.GetValue(7).ToString();
-                empEndYear = reader2.GetValue(8).ToString();
-                empPlace = reader2.GetValue(3).ToString();
-                empTitle = reader2.GetValue(2).ToString();
-                empField = reader2.GetValue(4).ToString();
+                empStartMonth = reader2.GetValue(0).ToString();
+                empStartYear = reader2.GetValue(1).ToString();
+                empEndMonth = reader2.GetValue(2).ToString();
+                empEndYear = reader2.GetValue(3).ToString();
+                empPlace = reader2.GetValue(4).ToString();
+                empTitle = reader2.GetValue(5).ToString();
+                empField = reader2.GetValue(6).ToString();
                 String startDate = empStartMonth + ", " + empStartYear;
                 String endDate = "";
                 if (empEndMonth == "" && empEndYear == "")
