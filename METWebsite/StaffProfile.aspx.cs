@@ -161,8 +161,8 @@ namespace METWebsite
             string educField = "";
             while (reader1.Read())
             {
-                educMonth = reader1.GetValue(5).ToString();
-                educYear = reader1.GetValue(6).ToString();
+                educMonth = reader1.GetValue(6).ToString();
+                educYear = reader1.GetValue(5).ToString();
                 educTitle = reader1.GetValue(3).ToString();
                 educPlace = reader1.GetValue(2).ToString();
                 educField = reader1.GetValue(4).ToString();

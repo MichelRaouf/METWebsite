@@ -86,10 +86,16 @@ html, body {
 }
 
 .honorParagraph {
-    margin: 0;
+    /*margin: 0;
     color: white;
     font-size: 0.9765625vw;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;*/
+    color: white;
+    font-family: Montserrat;
+    position: relative;
+    font-size: 1vw;
+    font-weight: 600;
+    text-align: start;
 }
 
 .whiteBar {
@@ -137,4 +143,22 @@ html, body {
 .companies {
     width: 68vw;
     height: 21vw;
+}
+
+.redLabel {
+    background-color: rgba(237,28,36,0.7);
+    width: 20%;
+    margin-top: 1.5vw;
+    display: inline-block;
+    padding: 0.1% 5% 0.1% 5%;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+}
+
+.guciansLabel {
+    color: white;
+    opacity: 100%;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
