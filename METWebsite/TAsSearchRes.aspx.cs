@@ -25,10 +25,10 @@ namespace METWebsite
             while (reader.Read())
             {
                 String id = reader.GetValue(0).ToString();
-                String name = reader.GetValue(3).ToString();
-                String mail = reader.GetValue(1).ToString();
-                String office = reader.GetValue(4).ToString();
-                String imgURL = reader.GetValue(17).ToString();
+                String name = reader.GetValue(1).ToString();
+                String mail = reader.GetValue(16).ToString();
+                String office = reader.GetValue(2).ToString();
+                String imgURL = reader.GetValue(12).ToString();
                 var div = new HtmlGenericControl("div");
                 div.Attributes.Add("class", "profileData");
                 var profimg = new HtmlGenericControl("img");
