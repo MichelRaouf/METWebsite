@@ -34,8 +34,8 @@
                 <img class="topLogo"  src="images/New Logo.svg"/>
                 <img class="scrollLogo" id="activeLogo" src="images/New Logo2.svg"/>
                 <div class="navContent" id="scrolledContent" >
-                    <a id="activeNavElement" href="HomePage.aspx">Home</a>
-                    <a href="CourseHomePage.aspx">Courses</a> 
+                    <a href="HomePage.aspx">Home</a>
+                    <a id="activeNavElement" href="CourseHomePage.aspx">Courses</a> 
                     <a href="StaffHomePage.aspx">Staff</a>
                     <a href="StudentActivities.aspx">Student Activity</a> 
                     <a href="AboutUsPage.aspx">About Us</a> 
