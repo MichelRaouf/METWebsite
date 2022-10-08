@@ -145,8 +145,9 @@ html, body {
     width:100%;
     height:8vw
 }
-
-
+#subNav {
+    height: 5.1vw;
+}
 /*********New Navbar*********/
 .navBar {
     top: 0;
@@ -159,7 +160,7 @@ html, body {
     margin-bottom: 8vw;
     background-color: white;
     z-index: 6156161151;
-    transition:all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
 .topLogo {
     display: none;

@@ -31,19 +31,18 @@
         </div>--%>
 
         <div class="nav-bar-space">
-
-        <nav class="navBar" >
-            <img class="topLogo" id="activeLogo" src="images/New Logo.svg"/>
-            <img class="scrollLogo"  src="images/New Logo2.svg"/>
-            <div class="navContent" >
-                <a id="activeNavElement" href="HomePage.aspx">Home</a>
-                <a href="CourseHomePage.aspx">Courses</a> 
-                <a href="StaffHomePage.aspx">Staff</a>
-                <a href="StudentActivities.aspx">Student Activity</a> 
-                <a href="AboutUsPage.aspx">About Us</a> 
-            </div>
-        </nav>
-            </div>
+            <nav class="navBar" >
+                <img class="topLogo" id="activeLogo" src="images/New Logo.svg"/>
+                <img class="scrollLogo"  src="images/New Logo2.svg"/>
+                <div class="navContent" >
+                    <a id="activeNavElement" href="HomePage.aspx">Home</a>
+                    <a href="CourseHomePage.aspx">Courses</a> 
+                    <a href="StaffHomePage.aspx">Staff</a>
+                    <a href="StudentActivities.aspx">Student Activity</a> 
+                    <a href="AboutUsPage.aspx">About Us</a> 
+                </div>
+            </nav>
+        </div>
         
         <%--images slideshow here--%>
         <div class="intro">
