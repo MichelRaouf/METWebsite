@@ -34,7 +34,7 @@
            align-items : flex-start;
            left : 0;
            transition : 400ms;
-           left : -300%
+           left : 0%
         }
        
         .container.next{
@@ -161,28 +161,28 @@
                 <div id="educations" runat="server"  style="display:contents">
                     <div  class="singleEducation">
                  <div class="col-3 input-effect" style="width:40%" >
-        	<input class="effect-19" type="month"   placeholder=" "  />
+        	<input class="effect-19" type="month"   placeholder=" " id="eudDate1" />
             <label>date</label>
             <span class="focus-border">
             	<i></i>
             </span>
         </div>
                 <div class="col-3 input-effect" style="width:22%">
-        	<input class="effect-19" type="text"   placeholder=" "  />
+        	<input class="effect-19" type="text"   placeholder=" " id="eduDeg1" />
             <label>degree</label>
             <span class="focus-border">
             	<i></i>
             </span>
         </div>  
                 <div class="col-3 input-effect" >
-        	<input class="effect-19" type="text"   placeholder=" "  />
+        	<input class="effect-19" type="text"   placeholder=" " id="eduUni1" />
             <label>university</label>
             <span class="focus-border">
             	<i></i>
             </span>
         </div>
                   <div class="col-3 input-effect" >
-        	<input class="effect-19" type="text"   placeholder=" "  />
+        	<input class="effect-19" type="text"   placeholder=" " id="eduDesc1" />
             <label>description</label>
             <span class="focus-border">
             	<i></i>
@@ -201,14 +201,14 @@
                 <div id="employments" runat="server"  style="display:contents">
                     <div  class="singleEducation">
                  <div class="col-3 input-effect" style="width:40%" >
-        	<input class="effect-19" type="month"   placeholder=" "  />
+        	<input class="effect-19" type="month"   placeholder=" " id="empSdate1" />
             <label>start date</label>
             <span class="focus-border">
             	<i></i>
             </span>
         </div>
                         <div class="col-3 input-effect" style="width:40%" >
-        	<input class="effect-19" type="month"   placeholder=" "  />
+        	<input class="effect-19" type="month"   placeholder=" " id="empEdate1"  />
             <label>end date</label>
             <span class="focus-border">
             	<i></i>
@@ -216,21 +216,21 @@
         </div>
              
                 <div class="col-3 input-effect" >
-        	<input class="effect-19" type="text"   placeholder=" "  />
+        	<input class="effect-19" type="text"   placeholder=" " id="empPos1" />
             <label>position</label>
             <span class="focus-border">
             	<i></i>
             </span>
         </div>
                         <div class="col-3 input-effect" >
-        	<input class="effect-19" type="text"   placeholder=" "  />
+        	<input class="effect-19" type="text"   placeholder=" " id="empUni1" />
             <label>university</label>
             <span class="focus-border">
             	<i></i>
             </span>
         </div>
                   <div class="col-3 input-effect" >
-        	<input class="effect-19" type="text"   placeholder=" "  />
+        	<input class="effect-19" type="text"   placeholder=" " id="empFac1" />
             <label>faculty/department</label>
             <span class="focus-border">
             	<i></i>
@@ -263,7 +263,8 @@
             <label>research intersts</label>
             <span class="focus-border"><i></i></span>   
         </div> 
-            <div id="interestsDiv">        
+            <div id="interestsDiv">
+                <input type="hidden" runat="server" id="researchInterestsResults" value="" />
                      </div>
                     </div>
                <hr style="width:80%" />
@@ -486,18 +487,7 @@
   background: #f1f1f1;
   border-color: #d6d6d6;
 }
-/*.avatar-upload .avatar-edit input + label:after {
-    color:#000;
-    content: "\0000 "; 
-    font-family: "Font Awesome 5 Free"; 
-  color: #757575;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin: auto;
-}*/
+
 
 .avatar-upload .avatar-preview {
   width: 192px;
@@ -530,7 +520,13 @@
 
 
 
+        <div>
+            <input type="hidden" runat="server" id="EdusC"  value="1" />
+            <input type="hidden" runat="server" id="Edus" value="" />
+            <input type="hidden" runat="server" id="EmpsC"  value="1" />
+            <input type="hidden" runat="server" id="Emps" value="" />
 
+        </div>
 
 
 
@@ -550,18 +546,15 @@
             researchInterests.addEventListener("keypress", myfunc);  
         </script>
 
-
-
- 
-
          <script>
 
-             function myinput(type, placeholder, style = "") {
+             function myinput(type, placeholder,id, style = "") {
                  var col = document.createElement("div");
                  col.className = "col-3 input-effect";
                  col.style = style;
                  var input = document.createElement("input");
                  input.type = type;
+                 input.id = id;
                  input.classList.add("effect-19");
                  input.placeholder = " ";
                  var label = document.createElement("label");
@@ -579,14 +572,15 @@
              var educationsDiv = document.getElementById("educations")
              
              var addEdu = document.getElementById("addEducation");
+             var eduCount = 2;
              addEdu.onclick = function (event) {
                  event.preventDefault();
                  let singleEduDiv = document.createElement("div");
                  singleEduDiv.classList.add("singleEducation");
-                 const date = new myinput("month", "date","width:40%");
-                 const degree = new myinput("text", "degree","width:22%");
-                 const university = new myinput("text", "university");
-                 const description = new myinput("text", "description");
+                 const date = new myinput("month", "date", "eduDate" + eduCount, "width:40%");
+                 const degree = new myinput("text", "degree", "eduDeg" + eduCount, "width:22%");
+                 const university = new myinput("text", "university", "eduUni" + eduCount);
+                 const description = new myinput("text", "description", "eduDesc" + eduCount);
                  let hr = document.createElement("hr");
                  hr.style = "width:80%";
                  singleEduDiv.appendChild(date.div);
@@ -594,24 +588,24 @@
                  singleEduDiv.appendChild(university.div);
                  singleEduDiv.appendChild(description.div);
                  singleEduDiv.appendChild(hr);
-
-
-
                  educationsDiv.appendChild(singleEduDiv);
+                 document.getElementById("EdusC").value = eduCount;
+                 eduCount++;
                 
                  
              }
              var employmentsDiv = document.getElementById("employments")
              var addEmp = document.getElementById("addEmployment")
+             var empCount = 2;
              addEmp.onclick = function (event) {
                  event.preventDefault();
                  let singleEduDiv = document.createElement("div");
                  singleEduDiv.classList.add("singleEducation");
-                 const startDate = new myinput("month", "start date", "width:40%");
-                 const endDate = new myinput("month", "end date", "width:40%");
-                 const position = new myinput("text", "position");
-                 const university = new myinput("text", "university");
-                 const faculty = new myinput("text", "faculty/department");
+                 const startDate = new myinput("month", "start date", "empSdate" + empCount, "width:40%");
+                 const endDate = new myinput("month", "end date", "empEdate" + empCount, "width:40%");
+                 const position = new myinput("text", "position", "empPos" + empCount);
+                 const university = new myinput("text", "university", "empUni" + empCount);
+                 const faculty = new myinput("text", "faculty/department", "empFac" + empCount);
                  let hr = document.createElement("hr");
                  hr.style = "width:80%";
                  singleEduDiv.appendChild(startDate.div);
@@ -620,10 +614,9 @@
                  singleEduDiv.appendChild(university.div);
                  singleEduDiv.appendChild(faculty.div);
                  singleEduDiv.appendChild(hr);
-
-
-
                  employmentsDiv.appendChild(singleEduDiv);
+                 document.getElementById("EmpsC").value = empCount;
+                 empCount++;
 
 
              }
@@ -639,6 +632,27 @@
              next2.onclick = function (event) {
                  event.preventDefault();
                  container.classList.add("next2");
+                 var edus = document.getElementById("Edus");
+                 for (let i = 1; i <= eduCount; i++) {
+                     var date = document.getElementById("")
+                     edus.value += document.getElementById("eduDate" + i+",");
+                     edus.value += document.getElementById("eduDeg" + i+",");
+                     edus.value += document.getElementById("eduUni" + i+",");
+                     edus.value += document.getElementById("eduDesc" + i+",");
+                 }
+                 var emps = document.getElementById("Emps");
+                 for (let i = 1; i <= empCount; i++) {
+                     var date = document.getElementById("")
+                     emps.value += document.getElementById("empSdate" + i+",");
+                     emps.value += document.getElementById("empEdate" + i+",");
+                     emps.value += document.getElementById("empPos" + i+",");
+                     emps.value += document.getElementById("empUni" + i+",");
+                     emps.value += document.getElementById("empUni" + i+",");
+                     emps.value += document.getElementById("empFac" + i + ",");
+                     
+                 }
+
+
              }
 
 

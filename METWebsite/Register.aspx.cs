@@ -122,8 +122,43 @@ namespace METWebsite
 
         protected void finish (object sender,EventArgs e)
         {
+               string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
+               SqlConnection con = new SqlConnection(strcon);
+
+               int InstructorID = (int)Session["id"];
+               String Pass = newPass.Value;
+               String Office = office.Value;
+               String Fax = fax.Value;
+               String Phone = phone.Value;
+               String Dob = dob.Value;
+               String Nationality = nationality.Value;
+               String Status = status.Value;
+               String Lang = languages.Value;
+
+            SqlCommand addBasicInfo = new SqlCommand("addBasicInfo", con);
+                    addBasicInfo.CommandType = System.Data.CommandType.StoredProcedure;
+                    addBasicInfo.Parameters.Add(new SqlParameter("@password",Pass));
+                    addBasicInfo.Parameters.Add(new SqlParameter("@office",Office));
+                    addBasicInfo.Parameters.Add(new SqlParameter("@fax",Fax));
+                    addBasicInfo.Parameters.Add(new SqlParameter("@phone",Phone));
+                    addBasicInfo.Parameters.Add(new SqlParameter("@instructorID",InstructorID));
+                    addBasicInfo.Parameters.Add(new SqlParameter("@dob", Dob));
+                    addBasicInfo.Parameters.Add(new SqlParameter("@nationality", Nationality));
+                    addBasicInfo.Parameters.Add(new SqlParameter("@status", Status));
+                    addBasicInfo.Parameters.Add(new SqlParameter("@languages", Lang));
+                    con.Open();
+                    addBasicInfo.ExecuteNonQuery();
+                    con.Close();
+            int educations = Int32.Parse( EdusC.Value);
+            String[] edusValues = (Edus.Value).Split(',');
+            int j = 0;
+            for(int i = 1; i <= educations; i++)
+            {
+
+
+            }
 
         }
-        
+
     }
 }

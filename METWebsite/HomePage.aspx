@@ -9,9 +9,76 @@
     <link  rel="stylesheet" href="./StyleSheets/Header.css"/>
     <link  rel="stylesheet" href="./StyleSheets/HomePage.css"/>
     <link rel="stylesheet" href="StyleSheets/swiper-bundle.min.css"/>
+  
 </head>
 <body>
     <form id="form1" runat="server">
+              <div id="newsOverlay" class="overlay">
+  
+  <div class="overlay-content">
+      <div>
+      <asp:Label Text="Edit Announcement" runat="server" CssClass="overlayTitle" ID="newsTitle"  />
+          <asp:ImageButton ImageUrl="imageurl" runat="server" />
+    </div>
+      <hr />
+      <p runat="server" id="newsP" >In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.</p>
+      
+  </div>
+</div>  
+        <style>
+            
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.overlay-content {
+    background-color : white;
+    border-radius: 0.78vw;
+    position: relative;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    
+    margin : auto;
+}
+
+.overlay .closebtn {
+    font-size: 6.5vw;
+}
+
+@media screen and (max-height: 58.5vw) {
+    .overlay a {
+        font-size: 2.6vw
+    }
+
+
+}
+.overlayTitle {
+    color: black;
+    font-size: 30px;
+}
+
+        </style>
+        <script>
+            function openNewsOverlay() {
+                document.getElementById("newsOverlay").style.display = "block";
+
+            }
+            function closeNewsOverlay() {
+                document.getElementById("newsOverlay").style.display = "none";
+
+            }
+        </script>
+
+
         <div class="scrollable">
             <div class="header">
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
