@@ -31,11 +31,14 @@
 
         <div class="honors" id="honorDiv" runat="server"> 
             <div class="honorsDiv">
-                <h4 class="honorsTitle">
+                <%--<h4 class="honorsTitle">
                     #we_
                     <span class="gucSpan">
                         GUC</span>inas
-                </h4>
+                </h4>--%>
+                <div class="redLabel">
+                    <label class="guciansLabel">#we_GUCians</label>
+                </div>
             </div>
         </div>
 

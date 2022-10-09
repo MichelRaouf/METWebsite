@@ -246,8 +246,10 @@ namespace METWebsite
             {
                 title = reader4.GetValue(0).ToString();
                 name = reader4.GetValue(1).ToString();
+                int id = Int32.Parse(reader4.GetValue(2).ToString());
                 var lecturerATag = new HtmlGenericControl("a");
                 lecturerATag.Attributes.Add("class", "staffName");
+                lecturerATag.Attributes.Add("href", "StaffProfile.aspx?id=" + id);
                 lecturerATag.InnerHtml = title + " " + name;
                 var lecturerItem = new HtmlGenericControl("li");
                 lecturerItem.Attributes.Add("class", "instructorItem");
@@ -268,8 +270,10 @@ namespace METWebsite
             {
                 title1 = reader44.GetValue(0).ToString();
                 name1 = reader44.GetValue(1).ToString();
+                int id1 = Int32.Parse(reader44.GetValue(2).ToString());
                 var taATag = new HtmlGenericControl("a");
                 taATag.Attributes.Add("class", "staffName");
+                taATag.Attributes.Add("href", "StaffProfile.aspx?id=" + id1);
                 taATag.InnerHtml = title1 + " " + name1;
                 var taItem = new HtmlGenericControl("li");
                 taItem.Attributes.Add("class", "instructorItem");

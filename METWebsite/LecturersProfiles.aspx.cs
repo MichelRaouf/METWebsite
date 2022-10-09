@@ -27,11 +27,12 @@ namespace METWebsite
             String mail1 = reader1.GetValue(2).ToString();
             String office1 = reader1.GetValue(3).ToString();
             String title1 = reader1.GetValue(4).ToString();
+            String picURL1 = reader1.GetValue(5).ToString();
             reader1.Close();
             var div1 = new HtmlGenericControl("div");
             div1.Attributes.Add("class", "profileData");
             var profimg1 = new HtmlGenericControl("img");
-            profimg1.Attributes.Add("src", "images/staff/Haytham.png");
+            profimg1.Attributes.Add("src", picURL1);
             profimg1.Attributes.Add("class", "profilePicture");
             var br1 = new HtmlGenericControl("br");
             var namediv1 = new HtmlGenericControl("div");
@@ -63,7 +64,7 @@ namespace METWebsite
 
             SqlCommand cmd2 = new SqlCommand("getLecturerInfo", con);
             cmd2.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd2.Parameters.Add(new SqlParameter("@position", "ViceDean"));
+            cmd2.Parameters.Add(new SqlParameter("@position", "Vice Dean"));
             SqlDataReader reader2 = cmd2.ExecuteReader();
             while (reader2.Read())
             {
@@ -71,11 +72,12 @@ namespace METWebsite
                 String name2 = reader2.GetValue(1).ToString();
                 String mail2 = reader2.GetValue(2).ToString();
                 String office2 = reader2.GetValue(3).ToString();
-                String title2 = reader1.GetValue(4).ToString();
+                String title2 = reader2.GetValue(4).ToString();
+                String picURL2 = reader2.GetValue(5).ToString();
                 var div2 = new HtmlGenericControl("div");
                 div2.Attributes.Add("class", "profileData");
                 var profimg2 = new HtmlGenericControl("img");
-                profimg2.Attributes.Add("src", "images/staff/Haytham.png");
+                profimg2.Attributes.Add("src", picURL2);
                 profimg2.Attributes.Add("class", "profilePicture");
                 var br2 = new HtmlGenericControl("br");
                 var namediv2 = new HtmlGenericControl("div");
@@ -108,7 +110,7 @@ namespace METWebsite
             reader2.Close();
 
             SqlCommand cmd3 = new SqlCommand("getLecturerInfo", con);
-            cmd3.Parameters.Add(new SqlParameter("@position", "lecturer"));
+            cmd3.Parameters.Add(new SqlParameter("@position", "Lecturer"));
             cmd3.CommandType = System.Data.CommandType.StoredProcedure;
             SqlDataReader reader3 = cmd3.ExecuteReader();
             while (reader3.Read())
@@ -118,11 +120,12 @@ namespace METWebsite
                 String name3 = reader3.GetValue(1).ToString();
                 String mail3 = reader3.GetValue(2).ToString();
                 String office3 = reader3.GetValue(3).ToString();
-                String title3 = reader1.GetValue(4).ToString();
+                String title3 = reader3.GetValue(4).ToString();
+                String picURL3 = reader3.GetValue(5).ToString();
                 var div3 = new HtmlGenericControl("div");
                 div3.Attributes.Add("class", "profileData");
                 var profimg3 = new HtmlGenericControl("img");
-                profimg3.Attributes.Add("src", "images/staff/Haytham.png");
+                profimg3.Attributes.Add("src", picURL3);
                 profimg3.Attributes.Add("class", "profilePicture");
                 var br3 = new HtmlGenericControl("br");
                 var namediv3 = new HtmlGenericControl("div");

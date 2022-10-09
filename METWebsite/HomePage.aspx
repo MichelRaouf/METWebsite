@@ -9,77 +9,10 @@
     <link  rel="stylesheet" href="./StyleSheets/Header.css"/>
     <link  rel="stylesheet" href="./StyleSheets/HomePage.css"/>
     <link rel="stylesheet" href="StyleSheets/swiper-bundle.min.css"/>
-  
 </head>
 <body>
     <form id="form1" runat="server">
-              <div id="newsOverlay" class="overlay">
-  
-  <div class="overlay-content">
-      <div>
-      <asp:Label Text="Edit Announcement" runat="server" CssClass="overlayTitle" ID="newsTitle"  />
-          <asp:ImageButton ImageUrl="imageurl" runat="server" />
-    </div>
-      <hr />
-      <p runat="server" id="newsP" >In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.</p>
-      
-  </div>
-</div>  
-        <style>
-            
-.overlay {
-    height: 100%;
-    width: 100%;
-    display: none;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.3);
-}
-
-.overlay-content {
-    background-color : white;
-    border-radius: 0.78vw;
-    position: relative;
-    top: 25%;
-    width: 50%;
-    text-align: center;
-    
-    margin : auto;
-}
-
-.overlay .closebtn {
-    font-size: 6.5vw;
-}
-
-@media screen and (max-height: 58.5vw) {
-    .overlay a {
-        font-size: 2.6vw
-    }
-
-
-}
-.overlayTitle {
-    color: black;
-    font-size: 30px;
-}
-
-        </style>
-        <script>
-            function openNewsOverlay() {
-                document.getElementById("newsOverlay").style.display = "block";
-
-            }
-            function closeNewsOverlay() {
-                document.getElementById("newsOverlay").style.display = "none";
-
-            }
-        </script>
-
-
-        <div class="scrollable">
+        <%--<div class="scrollable">
             <div class="header">
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                 <img class="bar" src="./images/topBarImages/bar.svg"/>
@@ -95,17 +28,30 @@
                 <button class="navbtn" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
             </div>
 
-        </div>
+        </div>--%>
 
+        <div class="nav-bar-space">
+            <nav class="navBar" >
+                <img class="topLogo" id="activeLogo" src="images/New Logo.svg"/>
+                <img class="scrollLogo"  src="images/New Logo2.svg"/>
+                <div class="navContent" >
+                    <a id="activeNavElement" href="HomePage.aspx">Home</a>
+                    <a href="CourseHomePage.aspx">Courses</a> 
+                    <a href="StaffHomePage.aspx">Staff</a>
+                    <a href="StudentActivities.aspx">Student Activity</a> 
+                    <a href="AboutUsPage.aspx">About Us</a> 
+                </div>
+            </nav>
+        </div>
         
         <%--images slideshow here--%>
         <div class="intro">
-            <div class="intro-slideshow">
-               <img src="https://www.dropbox.com/s/h8rds5ozk0u3s2f/coder.jpg?raw=1"/>
+            <div class="intro-slideshow" id="introSlideshow" runat="server">
+                <%--<img src="https://www.dropbox.com/s/h8rds5ozk0u3s2f/coder.jpg?raw=1"/>
                 <img src="https://www.dropbox.com/s/lf29ifrd354ngyv/coffee.jpg?raw=1"/>
                 <img src="https://www.dropbox.com/s/lxnf1mxej90qoae/library.jpg?raw=1"/>
                 <img src="https://www.dropbox.com/s/15gdoyzoai94j6j/path.jpg?raw=1"/>
-                <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1"/>
+                <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1"/>--%>
             </div>
         </div>
 
@@ -182,74 +128,80 @@
             <div class="contactInfo" >
                 <div class="hotlines">
                     <div class ="Iconandtitle">
-                        <img class="contactIcons" src="./images/homePageImages/callLogo.svg"/>
-                        <label class="contactTitlesText">GUC Hotlines:</label>
+                        <img class="contactIconPhone" src="./images/homePageImages/callLogo.svg"/>
+                        
                     </div>
                     <div class="info">
+                        <label class="contactTitlesText">GUC Hotlines:</label>
                         <label class="contactText">16482</label>
-                        <br />
-                        <br />
                         <label class="contactTitlesText">IT:</label>
-                        <br />
+                       
                         <label class="contactText">+201006820746</label>
-                        <br />
+                       
                         <label class="contactText">+201006820746</label>
-                        <br />
-                        <br />
+                        
                         <label class="contactTitlesText">MET Coordinator:</label>
-                        <br />
+                      
                         <label class="contactText">+201006820746 </label>
-                        <br />
+                      
                         <label class="contactText">+201006820746 </label>
-                        <br />
+                      
                     </div>
                 </div>
                 <div class="emails">
                     <div class ="Iconandtitle">
                         <img class="contactIcons" src="./images/homePageImages/mailLogo.svg"/>
-                        <label class="contactTitlesText">Admission:</label>
+                        
                     </div>
                     <div class="info">
+                        
+                        <label class="contactTitlesText">Admission:</label>
                         <label class="contactText">admission@guc.edu.eg</label>
-                        <br />
-                        <br />
+                   
                         <label class="contactTitlesText">IT:</label>
-                        <br />
+                    
                         <label class="contactText">it1@guc.edu.eg</label>
                         <label class="contactText">it2@guc.edu.eg </label>
-                        <br />
-                        <br />
+                    
                         <label class="contactTitlesText">MET Coordinator:</label>
-                        <br />
+               
                         <label class="contactText">coordinator1@guc.edu.eg </label>
-                        <br />
+             
                         <label class="contactText">coordinator2@guc.edu.eg </label>
-                        <br />
+            
                         <label class="contactText">coordinator3@guc.edu.eg </label>
-                        <br />
+  
                     </div>
                 </div>
                 <div class="office">
                     <div class ="Iconandtitle">
                         <img class="contactIcons" src="./images/homePageImages/deskLogo.svg"/>
-                        <label class="contactTitlesText">IT:</label>
+                       
                     </div>
                     <div class="info">
+                        <label class="contactTitlesText">IT:</label>
                         <label class="contactText">C6.123</label>
-                        <br />
+           
                         <label class="contactText">C6.123</label>
-                        <br />
-                        <br />
+                
                         <label class="contactTitlesText">MET Coordinator:</label>
-                        <br />
+     
                         <label class="contactText">C7.235</label>
-                        <br />
+             
                         <label class="contactText">C7.235</label>
                     </div>
                 </div>
             </div>
-            <br />
-            <br />
+      
+        </div>
+        <div class="credits">
+            <label class="creditsRights">Copyrights © 2022 GUC. All Rights Reserved.</label>
+            <a href="#"class="developersButton" onmouseover="developerHover()" onmouseout="developerNormal()">
+                <img  src="images/DevelopersBlack.png"/>
+                <label class="boldDev">Developers</label>
+                <label>Credits</label>
+            </a>
+
         </div>
 
     </form>
@@ -257,6 +209,27 @@
     <script src="Scripts/swiper-bundle.min.js"></script>
 
     <script>
+        //Nav Bar Scrolling
+
+        const navBar = document.querySelector(".navBar");
+        const topImage = document.querySelector(".topLogo");
+        const scrollImage = document.querySelector(".scrollLogo");
+        const navContent = document.querySelector(".navContent");
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 700) {
+                navBar.setAttribute('id', 'navScrolled');
+                topImage.removeAttribute('id');
+                scrollImage.setAttribute('id', 'activeLogo');
+                navContent.setAttribute('id', 'scrolledContent');
+            }
+            else {
+                navBar.removeAttribute('id');
+                topImage.setAttribute('id', 'activeLogo');
+                scrollImage.removeAttribute('id');
+                navContent.removeAttribute('id');
+            }
+        })
+
         //Image Slideshow
 
         const slideshowImages = document.querySelectorAll(".intro-slideshow img");
@@ -311,6 +284,25 @@
                 },
             },
         });
+        // Credits Bar
+
+        function developerHover() {
+            document.querySelector(".developersButton").style.backgroundColor = 'black';
+            document.querySelectorAll(".developersButton label").forEach(el => {
+                el.style.color = 'white';
+            });
+            document.querySelector(".developersButton img").setAttribute('class','devHovered')
+      
+        }
+        function developerNormal() {
+            document.querySelector(".developersButton").style.backgroundColor = 'white';
+            document.querySelectorAll(".developersButton label").forEach(el => {
+                el.style.color = 'black';
+            });
+            document.querySelector(".developersButton img").removeAttribute('class')
+
+        }
+
 
         //////////////////////
 
