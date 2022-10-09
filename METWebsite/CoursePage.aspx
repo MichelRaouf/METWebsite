@@ -11,7 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="scrollable">
+       <%-- <div class="scrollable">
             <div class="header">
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                 <img class="bar" src="./images/topBarImages/bar.svg"/>
@@ -27,6 +27,19 @@
                 <button class="navbtn" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
             </div>
 
+        </div>--%>
+         <div class="nav-bar-space" id="subNav">
+            <nav class="navBar" id="navScrolled" >
+                <img class="topLogo"  src="images/New Logo.svg"/>
+                <img class="scrollLogo" id="activeLogo" src="images/New Logo2.svg"/>
+                <div class="navContent" id="scrolledContent" >
+                    <a href="HomePage.aspx">Home</a>
+                    <a id="activeNavElement" href="CourseHomePage.aspx">Courses</a> 
+                    <a href="StaffHomePage.aspx">Staff</a>
+                    <a href="StudentActivities.aspx">Student Activity</a> 
+                    <a href="AboutUsPage.aspx">About Us</a> 
+                </div>
+            </nav>
         </div>
 
         <div class="flex-container-1">
@@ -52,56 +65,18 @@
 
         </div>
 
-        <div id="navbar2" class="navbar2">
-            <div class="AboutNav">
-                <asp:Label Text="Course Updates" runat="server" onClick="funcCourseUpdates()"/>
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Description" runat="server" onClick="funcDescription()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Prerequisites" runat="server" onClick="funcPrerequisites()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Syllabus" runat="server" onClick="funcSyllabus()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Instructors" runat="server" onClick="funcInstructors()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Resources" runat="server" onClick="funcResources()" />
-            </div>
-        </div>
+        <nav id="navbar2" class="navbar2">
+            <a onclick="funcCourseUpdates()">Course Updates</a>
+            <a onclick="funcDescription()">Description</a>
+            <a onclick="funcPrerequisites()">Prerequisites</a>
+            <a onclick="funcSyllabus()">Syllabus</a>
+            <a onclick="funcInstructors()">Instructors</a>
+            <a onclick="funcResources()">Resources</a>
 
-        <script>
-            document.documentElement.style.scrollBehavior = "smooth";
+            
+        </nav>
 
-            function funcCourseUpdates() {
-                const element = document.getElementById("labDiv");
-                element.scrollIntoView();
-
-            }
-            function funcDescription() {
-                const element = document.getElementById("descriptionID");
-                element.scrollIntoView();
-            }
-            function funcPrerequisites() {
-                const element = document.getElementById("prerequisitesID");
-                element.scrollIntoView();
-            }
-            function funcSyllabus() {
-                const element = document.getElementById("syllabusID");
-                element.scrollIntoView();
-            }
-            function funcInstructors() {
-                const element = document.getElementById("instructorsID");
-                element.scrollIntoView();
-            }
-            function funcResources() {
-                const element = document.getElementById("resourcesID");
-                element.scrollIntoView();
-            };
-        </script>
+       
 
         <section id="courseUpdates" class="courseUpdates" runat ="server">
              <div class="infoTitleDiv">
@@ -114,9 +89,7 @@
             </div>
         </section>
         
-
         <div class="gradientBar" id="descriptionID">
-
         </div>
 
         <section id="description" class="description" runat ="server">
@@ -129,7 +102,6 @@
         </section>
 
         <div class="gradientBar" id="prerequisitesID">
-
         </div>
 
         <section id="prerequisites" class="prerequisites" runat ="server">
@@ -163,23 +135,6 @@
             
         </section>
 
-        <script>
-            function myFunction3() {
-                var space = document.getElementById("space3");
-                var moreText = document.getElementById("more3");
-                var btnText = document.getElementById("mybtn3");
-
-                if (space.style.display === "none") {
-                    space.style.display = "inline";
-                    btnText.value = "Show More";
-                    moreText.style.display = "none";
-                } else {
-                    space.style.display = "none";
-                    btnText.value = "Show Less";
-                    moreText.style.display = "inline";
-                }
-            }
-        </script>
 
         <div class="gradientBar" id="instructorsID">
 
@@ -224,5 +179,69 @@
         </div>
 
     </form>
+    <script>
+        document.documentElement.style.scrollBehavior = "smooth";
+        function findPosition(obj) {
+            var currenttop = 0;
+            if (obj.offsetParent) {
+                do {
+                    currenttop += obj.offsetTop;
+                } while ((obj = obj.offsetParent));
+                console.log(currenttop)
+                return [currenttop];
+            }
+        }
+        function funcCourseUpdates() {
+            const element = document.getElementById("labDiv");
+            window.scrollTo(0, findPosition(element)+100);
+
+        }
+        function funcDescription() {
+            const element = document.getElementById("descriptionID");
+            window.scrollTo(2, findPosition(element));
+        }
+        function funcPrerequisites() {
+            const element = document.getElementById("prerequisitesID");
+            element.scrollIntoView();
+        }
+        function funcSyllabus() {
+            const element = document.getElementById("syllabusID");
+            element.scrollIntoView();
+        }
+        function funcInstructors() {
+            const element = document.getElementById("instructorsID");
+            element.scrollIntoView();
+        }
+        function funcResources() {
+            const element = document.getElementById("resourcesID");
+            element.scrollIntoView();
+        };
+        window.addEventListener('scroll', () => {
+ 
+            if (window.scrollY >= 244.8000030517578) {
+                document.getElementById("navbar2").style.top = '5.1vw';
+                document.getElementById("subNav").style.height = '9.1vw';
+            }
+            else {
+                document.getElementById("subNav").style.height = '5.1vw'
+            }
+
+        })
+        function myFunction3() {
+            var space = document.getElementById("space3");
+            var moreText = document.getElementById("more3");
+            var btnText = document.getElementById("mybtn3");
+
+            if (space.style.display === "none") {
+                space.style.display = "inline";
+                btnText.value = "Show More";
+                moreText.style.display = "none";
+            } else {
+                space.style.display = "none";
+                btnText.value = "Show Less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
 </body>
 </html>

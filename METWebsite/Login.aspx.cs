@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -25,7 +25,7 @@ namespace METWebsite
             String emailInput = username.Value;
             String pass = password.Value;
 
-            SqlCommand UsersCred = new SqlCommand("select email,password,id from Users", con);
+            SqlCommand UsersCred = new SqlCommand("select email,password,id,roles from Users", con);
             SqlDataReader reader = UsersCred.ExecuteReader();
             password.Attributes.Add("style", "border-color : black;");
             username.Attributes.Add("style", "border-color : black;");
@@ -36,7 +36,8 @@ namespace METWebsite
             while (reader.Read())
             {
                 String email = reader.GetValue(0).ToString();
-                if (email == emailInput)
+                String role = reader.GetValue(3).ToString().ToLower();
+                if (email == emailInput && role !="previous")
                 {
                     flag = true;
                     String passwordInput = reader.GetValue(1).ToString();
@@ -44,7 +45,13 @@ namespace METWebsite
                     if (passwordInput== pass)
                     {
                         Session["id"] = reader.GetValue(2);
+                        if(role=="active")
                         Response.Redirect("InstructorHome.aspx");
+                        else
+                        {
+                            Response.Redirect("Register.aspx");
+
+                        }
 
                     }
                     else

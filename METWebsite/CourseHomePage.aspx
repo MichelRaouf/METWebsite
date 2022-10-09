@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseHomePage.aspx.cs" Inherits="METWebsite.tempp" %>
+﻿    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseHomePage.aspx.cs" Inherits="METWebsite.tempp" %>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="scrollable">
+        <%--<div class="scrollable">
             <div class="header">
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                 <img class="bar" src="./images/topBarImages/bar.svg"/>
@@ -27,6 +27,20 @@
                 <button class="navbtn" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
             </div>
 
+        </div>--%>
+
+        <div class="nav-bar-space" id="subNav">
+            <nav class="navBar" id="navScrolled" >
+                <img class="topLogo"  src="images/New Logo.svg"/>
+                <img class="scrollLogo" id="activeLogo" src="images/New Logo2.svg"/>
+                <div class="navContent" id="scrolledContent" >
+                    <a href="HomePage.aspx">Home</a>
+                    <a id="activeNavElement" href="CourseHomePage.aspx">Courses</a> 
+                    <a href="StaffHomePage.aspx">Staff</a>
+                    <a href="StudentActivities.aspx">Student Activity</a> 
+                    <a href="AboutUsPage.aspx">About Us</a> 
+                </div>
+            </nav>
         </div>
 
         <div class="body">
@@ -44,8 +58,8 @@
                     <asp:Button ID="buttonGraduate" Text="Graduate Courses" CssClass="indexButton" runat="server" OnClientClick="gradCoursesClicked();return false;"/>
                 </div>
                 <div class="undergradCoursesDiv">
-                    <asp:ImageButton runat="server" ImageUrl="images/coursesPageImages/plusButton.svg" CssClass="plusPoint" OnClientClick="undergradCoursesClicked();return false;" />
-                    <asp:Button ID="buttonUndergraduate" Text="Undergraduate Courses" CssClass="indexButton" runat="server" OnClientClick="undergradCoursesClicked();return false;"/>
+                    <asp:ImageButton runat="server"  ImageUrl="images/coursesPageImages/plusButton.svg" CssClass="plusPoint" OnClientClick="undergradCoursesClicked();return false;" />
+                    <asp:Button ID="buttonUndergraduate" Text="Undergraduate Courses" CssClass="indexButton" runat="server" OnClientClick="undergradCoursesClicked(this);return false;"/>
                 </div>
                 <div class="undergradFaculties" id="undergradFaculties" runat="server">
 
@@ -198,6 +212,7 @@
             hideEmpty();
         }
         function undergradCoursesClicked() {
+            
             document.getElementById("catalogueSemesters").style.display = "none";
             document.getElementById("graduateCourses").style.display = "none";
             document.getElementById("undergraduateCourses").style.display = "block";
