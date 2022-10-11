@@ -69,12 +69,10 @@ namespace METWebsite
             var nameTitleLabel = new HtmlGenericControl("label");
             nameTitleLabel.Attributes.Add("class", "name");
             nameTitleLabel.InnerHtml = titleName;
-            var br = new HtmlGenericControl("br");
             var positionP = new HtmlGenericControl("p");
             positionP.Attributes.Add("class", "position");
             positionP.InnerHtml = position;
             namePosition.Controls.Add(nameTitleLabel);
-            namePosition.Controls.Add(br);
             namePosition.Controls.Add(positionP);
             var officeLabel = new HtmlGenericControl("label");
             officeLabel.Attributes.Add("class", "iconLabelNoPhone");
@@ -199,9 +197,6 @@ namespace METWebsite
                 textDiv.Controls.Add(titleDiv);
                 textDiv.Controls.Add(placeDiv);
                 textDiv.Controls.Add(fieldDiv);
-                var horizontal = new HtmlGenericControl("div");
-                horizontal.Attributes.Add("class", "horizontal");
-                textDiv.Controls.Add(horizontal);
                 infoItem.Controls.Add(textDiv);
                 educationSection.Controls.Add(infoItem);
             }
@@ -276,14 +271,13 @@ namespace METWebsite
                 var fieldDiv = new HtmlGenericControl("div");
                 fieldDiv.Attributes.Add("class", "description");
                 fieldDiv.Controls.Add(fieldLabel);
-                var horizontalEmp = new HtmlGenericControl("div");
-                horizontalEmp.Attributes.Add("class", "horizontal");
+                
                 var textDivEmp = new HtmlGenericControl("div");
                 textDivEmp.Attributes.Add("class", "text");
                 textDivEmp.Controls.Add(titleDiv);
                 textDivEmp.Controls.Add(placeDiv);
                 textDivEmp.Controls.Add(fieldDiv);
-                textDivEmp.Controls.Add(horizontalEmp);
+       
                 infoItemEmp.Controls.Add(textDivEmp);
                 if (count >= 0)
                     employmentSection.Controls.Add(infoItemEmp);
@@ -367,15 +361,11 @@ namespace METWebsite
                 cmd333.Parameters.Add(serialH1);
                 int countItems = Int32.Parse(cmd333.ExecuteScalar().ToString());
                 double vertHeight = 2.95138889 * countItems;
-                verticalT.Style.Add("height", vertHeight + "vw");
                 con.Close();
                 infoItemT.Controls.Add(verticalT);
                 var textTDiv = new HtmlGenericControl("div");
                 textTDiv.Attributes.Add("class", "text");
                 textTDiv.Controls.Add(listT);
-                var horizontalT = new HtmlGenericControl("div");
-                horizontalT.Attributes.Add("class", "horizontal");
-                textTDiv.Controls.Add(horizontalT);
                 infoItemT.Controls.Add(textTDiv);
                 if (countH > 0)
                 {
@@ -411,17 +401,11 @@ namespace METWebsite
             SqlDataReader reader4 = cmd4.ExecuteReader();
             var emptyLabel = new HtmlGenericControl("label");
             emptyLabel.Attributes.Add("class", "date");
-            var emptyDateDiv = new HtmlGenericControl("div");
-            emptyDateDiv.Attributes.Add("class", "dateDiv");
-            emptyDateDiv.Controls.Add(emptyLabel);
             var infoItemR1 = new HtmlGenericControl("div");
             infoItemR1.Attributes.Add("class", "infoItem");
-            infoItemR1.Controls.Add(emptyDateDiv);
             var verticalR1 = new HtmlGenericControl("div");
-            verticalR1.Attributes.Add("class", "verticalR");
-            double vertHeightR = countItemsR * 2.6;
-            verticalR1.Style.Add("height", vertHeightR + "vw");
-            infoItemR1.Controls.Add(verticalR1);
+            verticalR1.Attributes.Add("class", "vertical");
+            //infoItemR1.Controls.Add(verticalR1);
             var listR = new HtmlGenericControl("ul");
             listR.Attributes.Add("class", "reInterests");
             while (reader4.Read())
@@ -433,9 +417,6 @@ namespace METWebsite
             var textR1 = new HtmlGenericControl("div");
             textR1.Attributes.Add("class", "text");
             textR1.Controls.Add(listR);
-            var horizontalR = new HtmlGenericControl("div");
-            horizontalR.Attributes.Add("class", "horizontal");
-            textR1.Controls.Add(horizontalR);
             infoItemR1.Controls.Add(textR1);
             researchSection.Controls.Add(infoItemR1);
             con.Close();
@@ -469,10 +450,10 @@ namespace METWebsite
                 dateDivR2.Controls.Add(dateLabelR2);
                 var infoItemR2 = new HtmlGenericControl("div");
                 infoItemR2.Attributes.Add("class", "infoItem");
-                infoItemR2.Controls.Add(dateDivR2);
+                //infoItemR2.Controls.Add(dateDivR2);
                 var verticalR2 = new HtmlGenericControl("div");
                 verticalR2.Attributes.Add("class", "verticalResearch");
-                infoItemR2.Controls.Add(verticalR2);
+                //infoItemR2.Controls.Add(verticalR2);
                 var titleLabelR = new HtmlGenericControl("label");
                 titleLabelR.InnerHtml = LinkTitle;
                 var titleDivR = new HtmlGenericControl("div");
@@ -483,13 +464,10 @@ namespace METWebsite
                 var urlDivR = new HtmlGenericControl("div");
                 urlDivR.Attributes.Add("class", "description1");
                 urlDivR.Controls.Add(urlLabelR);
-                var horizontalR2 = new HtmlGenericControl("div");
-                horizontalR2.Attributes.Add("class", "horizontal");
                 var textDivR2 = new HtmlGenericControl("div");
                 textDivR2.Attributes.Add("class", "text");
                 textDivR2.Controls.Add(titleDivR);
                 textDivR2.Controls.Add(urlDivR);
-                textDivR2.Controls.Add(horizontalR2);
                 infoItemR2.Controls.Add(textDivR2);
                 if (countr >= 0)
                     researchSection.Controls.Add(infoItemR2);
@@ -558,14 +536,12 @@ namespace METWebsite
                 var pubLinkDiv = new HtmlGenericControl("div");
                 pubLinkDiv.Attributes.Add("class", "linkTitle");
                 pubLinkDiv.Controls.Add(pubLinkLabel);
-                var pubHorizontal = new HtmlGenericControl("div");
-                pubHorizontal.Attributes.Add("class", "horizontal");
+
                 var pubText = new HtmlGenericControl("div");
                 pubText.Attributes.Add("class", "text");
                 pubText.Controls.Add(pubTitleDiv);
                 pubText.Controls.Add(pubDescripDiv);
                 pubText.Controls.Add(pubLinkDiv);
-                pubText.Controls.Add(pubHorizontal);
                 pubInfoItem.Controls.Add(pubText);
                 if (countP >= 0)
                     publicationsSection.Controls.Add(pubInfoItem);
@@ -632,13 +608,11 @@ namespace METWebsite
                 var actDescripDiv = new HtmlGenericControl("div");
                 actDescripDiv.Attributes.Add("class", "description");
                 actDescripDiv.Controls.Add(actDescripLabel);
-                var actHorizontal = new HtmlGenericControl("div");
-                actHorizontal.Attributes.Add("class", "horizontal");
+
                 var actText = new HtmlGenericControl("div");
                 actText.Attributes.Add("class", "text");
                 actText.Controls.Add(actLocDiv);
                 actText.Controls.Add(actDescripDiv);
-                actText.Controls.Add(actHorizontal);
                 actInfoItem.Controls.Add(actText);
                 if (countA >= 0)
                     activitySection.Controls.Add(actInfoItem);

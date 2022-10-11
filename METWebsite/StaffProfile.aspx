@@ -11,7 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="scrollable">
+        <%--<div class="scrollable">
             <div class="header">
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                 <img class="bar" src="./images/topBarImages/bar.svg"/>
@@ -27,6 +27,19 @@
                 <button class="navbtn" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
             </div>
 
+        </div>--%>
+        <div class="nav-bar-space" id="subNav">
+            <nav class="navBar" id="navScrolled" >
+                <img class="topLogo"  src="images/New Logo.svg"/>
+                <img class="scrollLogo" id="activeLogo" src="images/New Logo2.svg"/>
+                <div class="navContent" id="scrolledContent" >
+                    <a href="HomePage.aspx">Home</a>
+                    <a href="CourseHomePage.aspx">Courses</a> 
+                    <a id="activeNavElement" href="StaffHomePage.aspx">Staff</a>
+                    <a href="StudentActivities.aspx">Student Activity</a> 
+                    <a href="AboutUsPage.aspx">About Us</a> 
+                </div>
+            </nav>
         </div>
 
         <div class="ProfileHeader" id="ProfileHeader" runat="server">
@@ -50,56 +63,47 @@
                     <img class="iconNoPhone" src="images/Profile/faxIcon.svg" />
                 </div>
                 <div class="iconLineDiv" id="phoneDiv" runat="server">
-                    <img class="iconPhone" src="images/Profile/phoneIcon.svg" />
+                    <img id="iconPhone" src="images/Profile/phoneIcon.svg" />
                 </div>
 
             </div>
         </div>
 
         <div id="navbar2" class="navbar2">
-            <div class="AboutNav">
-                <asp:Label Text="Personal Info" runat="server" onClick="funcPersonalInfo()"/>
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Teaching" runat="server" onClick="funcTeaching()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Research" runat="server" onClick="funcResearch()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Publication" runat="server" onClick="funcPublications()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Activities" runat="server" onClick="funcActivities()" />
-            </div>
+            <a onclick="funcPersonalInfo()">Personal Info</a>
+            <a onclick="funcTeaching()">Teaching</a>
+            <a onclick="funcResearch()">Research</a>
+            <a onclick="funcPublications()">Publication</a>
+            <a onclick="funcActivities()">Activities</a>
+            
         </div>
 
         <script>
             document.documentElement.style.scrollBehavior = "smooth";
 
+
             function funcPersonalInfo() {
                 const element = document.getElementById("phoneDiv");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
 
             }
             function funcTeaching() {
                 const element = document.getElementById("teachingBar");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
             }
             function funcResearch() {
                 const element = document.getElementById("researchBar");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
             }
             function funcPublications() {
                 const element = document.getElementById("publicationsBar");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
             }
             function funcActivities() {
                 const element = document.getElementById("activityBar");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
             };
         </script>
-
         <section id="PersonalInfo" class="PersonalInfo" runat ="server">
              <div class="infoTitleDiv">
                 <label class="infoTitle">Personal Info</label>
@@ -128,6 +132,10 @@
             </span>
 
             <script>
+                //const nav2 = document.getElementById("navbar2");
+                //var count = 0;
+
+
                 document.documentElement.style.scrollBehavior = "smooth";
                 function myFunction() {
                     var space = document.getElementById("space");
@@ -214,8 +222,7 @@
                 <asp:Button ID="myBtn" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction();return false;"/>
             </div>
         </section>
-
-        
+   
 
         <div class="gradientBar" id="teachingBar">
 

@@ -9,10 +9,9 @@ html, body {
 
 .body {
     display: flex;
-    height:stretch;
     height:39vw;
     flex-direction: row;
-    margin-top: 1.875vw;
+    margin-top: 3vw;
     align-items:start;
 }
 

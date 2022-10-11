@@ -11,7 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="scrollable">
+    <%--    <div class="scrollable">
             <div class="header">
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                 <img class="bar" src="./images/topBarImages/bar.svg"/>
@@ -27,21 +27,52 @@
                 <button class="navbtn" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
             </div>
 
+        </div>--%>
+         <div class="nav-bar-space" id="subNav">
+            <nav class="navBar" id="navScrolled" >
+                <img class="topLogo"  src="images/New Logo.svg"/>
+                <img class="scrollLogo" id="activeLogo" src="images/New Logo2.svg"/>
+                <div class="navContent" id="scrolledContent" >
+                    <a href="HomePage.aspx">Home</a>
+                    <a href="CourseHomePage.aspx">Courses</a> 
+                    <a id="activeNavElement" href="StaffHomePage.aspx">Staff</a>
+                    <a href="StudentActivities.aspx">Student Activity</a> 
+                    <a href="AboutUsPage.aspx">About Us</a> 
+                </div>
+            </nav>
         </div>
-
-        <div class="meetLecturers">     
-            <img class="lecturersImg" src="images/staff/class 1.png" />
-            <a href="LecturersProfiles.aspx" class="imageTxt">  
-                <span >Meet Your Lectures </span>
+        <div class="container">
+            <a href="LecturersProfiles.aspx">
+                <div class="meetLecturers" onmouseover="hoverMe(this.getAttribute('class'))" onmouseout="stopHovering(this.getAttribute('class'))">     
+                    <img class="lecturersImg" src="images/staff/class 1.png" />
+                    <label href="LecturersProfiles.aspx" class="imageTxt">  
+                        <span >Meet Your Lectures </span>
+                    </label>
+                </div>
             </a>
-        </div>
-        <div class="meetTAs">
-            <img  class="TAsImg" src="images/staff/TA .png" />
-            <a href="TAsProfiles.aspx" class="imageTxt"> 
-                <span >Meet Your TAs </span> 
+            <a href="TAsProfiles.aspx">
+                <div class="meetTAs" onmouseover="hoverMe(this.getAttribute('class'))" onmouseout="stopHovering(this.getAttribute('class'))">
+                    <img  class="TAsImg" src="images/staff/TA .png" />
+                    <label  class="imageTxt"> 
+                        <span >Meet Your TAs </span> 
+                    </label>
+                </div>
             </a>
         </div>
 
     </form>
+    <script>
+        
+        function hoverMe(parent) {
+            document.getElementsByClassName(parent)[0].children[0].setAttribute('id', 'hovered')
+            document.getElementsByClassName(parent)[0].children[1].setAttribute('id', 'hoveredText')
+            
+        }
+        function stopHovering(parent) {
+            document.getElementsByClassName(parent)[0].children[0].removeAttribute('id')
+            document.getElementsByClassName(parent)[0].children[1].removeAttribute('id')
+        }
+
+    </script>
 </body>
 </html>

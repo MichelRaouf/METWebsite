@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
 
 .* {
@@ -76,10 +76,11 @@ html, body {
     row-gap:0.5vw;
 }
 .iconLineDiv {
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    column-gap:2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2vw;
+    font-family: 'Montserrat', sans-serif;
 }
 .iconLineDiv img {
  
@@ -114,7 +115,7 @@ html, body {
         .navbar2 a:after {
             content: "";
             position: absolute;
-            background-color: #ED1C24;
+            background: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 1),rgba(255, 203, 5, 0.8));
             border-radius: 0.2vw;
             height: 0.2vw;
             width: 0;
@@ -147,7 +148,7 @@ html, body {
 ul {
     list-style: none;
     justify-content: center;
-    margin-top: 3vw;
+    margin-top: 2vw;
 }
 
     ul li.updateItem::before {
@@ -198,7 +199,7 @@ li.updateItem {
 
 .descriptionText {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.5vw;
 }
 
@@ -221,10 +222,13 @@ ul.listDiv {
 li.courseItem {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     margin-bottom: 1vw;
     margin-left: 4.296875vw;
 }
+    li.courseItem:hover {
+        color: #4B8FEA
+    }
 
 .itemDiv {
     margin-top: 3vw;
@@ -235,33 +239,42 @@ li.courseItem {
 .upper {
     display: flex;
     flex-direction: row;
+
 }
 
 .sideInfo {
+    width:10%;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
 .week, .weekDate {
-    font-size: 1.4vw;
-    font-weight: 300;
+    font-size: 1.3vw;
+    letter-spacing:0.1vw;
+    font-weight: 400;
+}
+.weekDate {
+    font-size: 1.1vw;
+    font-weight:300;
 }
 
-.weekNo {
-    font-size: 2.8vw;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 1),rgba(237, 28, 36, 0.9),rgba(255, 203, 5, 0.8));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 300;
-}
+
+    .weekNo {
+        margin: 0.2vw 0 0.2vw 0;
+        font-size: 2.3vw;
+        background: -webkit-linear-gradient(rgba(0, 0, 0, 1),rgba(237, 28, 36, 0.9),rgba(255, 203, 5, 0.8));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 300;
+    }
 
 .vertical {
+    content:'';
     border-left: 0.08051529790660225vw solid grey;
-    height: 7vw;
-    position: center;
+    height: inherit;
     margin-left: 3vw;
     margin-right: 2vw;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .details {
@@ -269,8 +282,9 @@ li.courseItem {
 }
 
 .weekTitle {
-    font-size: 1.6vw;
+    font-size: 1.5vw;
     font-family: 'Montserrat', sans-serif;
+    font-weight:600;
     margin-bottom: 0.7vw;
     display: flex;
     flex-direction: row;
@@ -281,24 +295,25 @@ li.courseItem {
 
 
 .weekDescription {
-    font-size: 1.4vw;
+    font-size: 1.3vw;
+    font-weight:300;
     font-family: 'Montserrat', sans-serif;
 }
 
 .horizontal {
-    height: 0.052vw;
-    width: 74vw;
-    color: gray;
-    background-color: gray;
-    opacity: 0.3;
-    margin-left: 10vw;
+    background-color: #E9E9E9;
+    width: 52.08333333333333vw;
+    height: 0.05vw;
+    margin-left: 23.95833333333333vw;
+    margin-top: 3vw;
 }
 
 .horizontal2 {
-    height: 0.092vw;
-    width: 90vw;
-    color: gray;
-    background-color: gray;
+    display:none;
+    height: 0.05vw;
+    width: 90%;
+    margin-left:5%;
+    background-color: #E9E9E9;
     opacity: 0.8;
 }
 
@@ -311,12 +326,26 @@ li.courseItem {
 }
 
 .materialItemDiv {
-    margin-bottom: 0.8vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400;
+    font-size:1.4vw;
+    margin-top: 1vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 1vw;
 }
+    .materialItemDiv a::before {
+        content: "\2022";
+        color: black;
+        font-weight: 800;
+        display: inline-block;
+        width: 1em;
+        opacity: 80%;
+    }
+    .materialItemDiv a:hover {
+        color: #4B8FEA;
+    }
 
 .showMore {
     background-color: #FFCB05;
@@ -346,7 +375,7 @@ li.courseItem {
     margin-left: 4.1666666666vw;
     margin-top: 3vw;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.4vw;
+    font-size: 2vw;
     font-weight: 400;
 }
 
@@ -356,6 +385,7 @@ ul.instructorsList {
     flex-direction: row;
     justify-content: start;
     margin-left: 7vw;
+
 }
 
 li.instructorItem {
@@ -363,8 +393,11 @@ li.instructorItem {
     width: 16.7vw;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2vw;
-    font-weight: 300;
+    font-weight: 200;
     margin-bottom: 1vw;
+}
+.instructorItem a:hover {
+    color: #4B8FEA
 }
 
 ul.instructorsList li.instructorItem::before {
@@ -379,32 +412,40 @@ ul.instructorsList li.instructorItem::before {
 
 .resourcsItem {
     margin-top: 2vw;
-    margin-left: 6.25vw;
+    width:90%;
+    margin-left:5%;
 }
 
 .linkImage {
-    width: 2.08333333vw;
-    height: 2.08333333vw;
+    width: 1.5vw;
     vertical-align: middle;
 }
 
 .resourceLink {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6vw;
-    font-weight: 400;
+    font-size: 1.4vw;
+    font-weight: 300;
     margin-left: 1.30208333vw;
 }
-
-.blank {
-    min-height: 2vw;
-}
+    .resourceLink:hover {
+        text-decoration: underline;
+        text-decoration-color: #4B8FEA
+    }
+    .blank {
+        min-height: 2vw;
+    }
 
 a {
+    text-align:left;
     text-decoration: none;
     color: inherit;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 #more3 {
     display: none;
+}
+.contentContainer{
+    width:100%;
+    padding-bottom:10vw;
 }

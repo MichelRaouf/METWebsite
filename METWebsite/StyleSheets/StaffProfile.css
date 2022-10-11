@@ -17,29 +17,35 @@ html, body {
 }*/
 
 .ProfileHeader {
+    background-color: #5a5a5a;
     display: flex;
     column-gap: 10vw;
     align-items: center;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    justify-content: space-between;
+    padding: 4vw 10vw 4vw 6vw;
+    color: white;
 }
 
 .profileName {
     display: flex;
-    column-gap: 3.90625vw;
+    column-gap: 3vw;
     justify-content: center;
     align-items: center;
-    margin-left: 6.40624vw;
-    margin-right: 12.1875vw;
 }
 
 .profileImage {
-    width: 15.7291667vw;
-    height: 15.7291667vw;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 10vw;
+    border: solid 3px white;
+    /*box-shadow: 0 0 1vw 0 rgb(255 203, 5 / 20%);*/
 }
 
 .namePosition {
+    margin-top:-1.8vw;
     width: 20vw;
+    display:flex;
+    flex-direction:column;
 }
 
 @font-face {
@@ -48,69 +54,95 @@ html, body {
 }
 
 .name {
-    font-size: 3.9vw;
+    font-size: 3vw;
     font-family: Tanseek,sans-serif;
     font-weight: 300;
 }
 
 .position {
+    margin:0;
     font-size: 1.8vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
-
+.iconsValues{
+    display:flex;
+    flex-direction:column;
+    row-gap:1vw;
+}
 .iconLineDiv {
-    margin-bottom: 1.5vw;
-}
+    display:flex;
+    flex-direction:row;
+    justify-content:start;
+    align-items:center;
+    column-gap:2vw;
 
-.iconNoPhone {
-    vertical-align: middle;
-    width: 2.6vw;
-    height: 2.6vw;
 }
+#iconPhone {
+    width: 1.3vw;
+}
+.iconLineDiv img {
+    width: 1.5vw;
+    filter: invert(1);
+}
+    .iconLineDiv label {
+        font-size: 1.2vw;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
 
-.iconPhone {
-    vertical-align: middle;
-    width: 2.083333333vw;
-    height: 2.083333333vw;
-}
-
-.iconLabelNoPhone {
-    vertical-align: middle;
-    font-size: 1.5vw;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    margin-left: 3.64583333vw;
-}
+/* .iconLabelNoPhone {
+        vertical-align: middle;
+        font-size: 1.5vw;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+    }
 
 .iconLabelPhone {
     vertical-align: middle;
     font-size: 1.5vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    margin-left: 4.1625vw;
-}
-
+}*/
 .navbar2 {
-    width: 100%;
-    height: 3.1901041666666665vw;
+    height: 4vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    background-image: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 1),rgba(255, 203, 5, 0.8));
+    justify-content: center;
+    column-gap: 5vw;
+    background-color: white;
     z-index: 10000;
     position: sticky;
-    top: 0px;
+    top: 5.1vw;
+    box-shadow: 0 0 1vw 0 rgba(0,0,0,0.2);
 }
-
-    .navbar2 > div {
-        margin-left: 0.8051529790660226vw;
-        flex-grow: 1 1 0;
-        display: flex;
-        padding: 1.3vw;
-        top: 0vw;
+    .navbar2 a {
+        position: relative;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.3vw;
+        font-weight: 500;
+        letter-spacing: 0.07vw;
+        color: black;
+        cursor: pointer;
     }
+
+        .navbar2 a:after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 1),rgba(255, 203, 5, 0.8));
+            border-radius: 0.2vw;
+            height: 0.2vw;
+            width: 0;
+            left: 0;
+            bottom: -0.4vw;
+            transition: all 0.1s ease-in;
+        }
+
+        .navbar2 a:hover:after {
+            width: 100%;
+        }
 
 
 .AboutNav {
@@ -136,13 +168,14 @@ html, body {
 
 .infoTitle {
     font-family: 'Montserrat';
-    font-size: 3.9vw;
+    font-size: 2.8vw;
     font-weight: 500;
 }
 
 .listDiv {
+    margin-top:3vw;
     font-family: 'Montserrat';
-    font-size: 1.8vw;
+    font-size: 1.6vw;
     font-weight: 300;
     margin-left: 4.32291667vw;
     line-height: 1.5em;
@@ -164,38 +197,74 @@ ul {
     }
 
 li {
-    margin-bottom: 1vw;
+    margin-bottom: 0.4vw;
+    margin-top: 0.4vw;
+}
+#educationSection, #employmentSection, #researchSection, #publicationsSection, #activitySection, #teachingSection {
+    width: 80%;
+    margin-left: 5.9%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vw;
+}
+#researchSection {
+   row-gap:1vw;
 }
 
-.infoSubTitleDiv {
-    margin-top: 3.75vw;
-}
+    #researchSection ul {
+        margin-left:-0.4vw;
+        margin-top:3vw;
+        margin-block-start: -2vw;
+        margin-block-end: -2vw;
+    }
+    #researchSection .infoSubTitle {
+        margin-bottom:4vw;
+    }
+
+    #teachingSection {
+        width: 80%;
+        margin-left: 5.9%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vw;
+        margin-bottom: 5vw;
+    }
+
+
+
+    .infoSubTitleDiv {
+        margin-top: 3.75vw;
+        margin-bottom:1vw;
+    }
 
 .infoSubTitle {
     font-family: 'Montserrat';
-    font-size: 3.6vw;
-    font-weight: 400;
-    margin-left: 10.234375vw;
+    font-size: 2.3vw;
+    font-weight: 500;
+    /*margin-left: 4.9vw;*/
     margin-bottom: 2.8125vw;
 }
 
 .infoItem {
     display: flex;
-    align-items: center;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    margin-left: 6.25vw;
+    flex-direction: row;
     /* margin-right: 4vw;*/
 }
 
 .dateDiv {
     width: 16.82291666666667vw;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    row-gap:0.5vw;
 }
 
 .date {
+    width: 16.82291666666667vw;
     align-content: center;
     font-family: 'Montserrat';
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     font-weight: 400;
     background: -webkit-linear-gradient(rgba(0, 0, 0, 1),rgba(237, 28, 36, 0.9),rgba(255, 203, 5, 0.8));
     -webkit-background-clip: text;
@@ -204,55 +273,40 @@ li {
     display: block;
 }
 
-.vertical {
+.vertical, .verticalT, .verticalR, .verticalResearch {
+    content: '';
     border-left: 0.08051529790660225vw solid grey;
-    height: 8.854166666666667vw;
-    position: center;
-    margin-left: 2.6vw;
-    margin-right: 1.5625vw;
-    opacity: 0.5;
+    height: inherit;
+    margin-left: 3vw;
+    margin-right: 2vw;
+    opacity: 0.3;
 }
 
-.verticalResearch {
-    border-left: 0.08051529790660225vw solid grey;
-    height: 5.5vw;
-    position: center;
-    margin-left: 2.6vw;
-    margin-right: 1.5625vw;
-    opacity: 0.5;
-}
 
-.verticalT, .verticalR {
-    border-left: 0.08051529790660225vw solid grey;
-    position: center;
-    margin-left: 2.6vw;
-    margin-right: 1.5625vw;
-    opacity: 0.5;
-}
+
 
 .text {
     width: 65vw;
+    display:flex;
+    flex-direction:column
 }
 
 .degreeTitle {
     font-family: 'Montserrat';
-    font-size: 1.8vw;
-    font-weight: 800;
-    margin-bottom: 0.8vw;
+    font-size: 1.5vw;
+    font-weight: 600;
 }
 
 .university {
     font-family: 'Montserrat';
-    font-size: 1.5vw;
-    font-weight: 600;
-    margin-bottom: 0.8vw;
+    font-size: 1.2vw;
+    font-weight: 500;
 }
 
 .description {
     font-family: 'Montserrat';
-    font-size: 1.5vw;
-    font-weight: 400;
-    margin-bottom: 1.7vw;
+    font-size: 1vw;
+    font-weight: 300;
 }
 
 .description1 {
@@ -306,23 +360,27 @@ li {
     }
 
 .gradientBar {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(237, 28, 36, 0.9), rgba(255, 203, 5, 0.8));
-    width: 52.08333333333333vw;
-    height: 0.5729166666666667vw;
-    margin-left: 23.95833333333333vw;
+    background-color:#E9E9E9;
+    width: 60%;
+    height: 0.03vw;
+    margin-left: 20%;
 }
 
 ul.course li {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5vw;
-    font-weight: 600;
+    font-weight: 500;
 }
+    ul.course li:hover {
+        color: #4B8FEA;
+        cursor:pointer;
+    }
 
-ul.reInterests li {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6vw;
-    font-weight: 400;
-}
+    ul.reInterests li {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.6vw;
+        font-weight: 400;
+    }
 
 .blank {
     min-height: 2vw;

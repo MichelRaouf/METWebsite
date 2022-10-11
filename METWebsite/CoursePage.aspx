@@ -77,6 +77,8 @@
         </nav>
 
        
+        <div class="contentContainer" id="contentContainer">
+
 
         <section id="courseUpdates" class="courseUpdates" runat ="server">
              <div class="infoTitleDiv">
@@ -124,7 +126,7 @@
                 <label class="infoTitle">Syllabus</label>
             </div>
 
-            <span id="space3"></span>
+            
             <span id="more3" runat ="server">
              
             </span>
@@ -170,15 +172,37 @@
         <section id="resources" class="resources" runat ="server">
              <div class="infoTitleDiv">
                 <label class="infoTitle">Resources</label>
-            </div>
-            
+            </div> 
         </section>
-
-        <div class="blank">
-            &nbsp;
         </div>
+        
 
     </form>
+    <script type="module">
+        const nav2 = document.getElementById("navbar2");
+        const container = document.getElementById("contentContainer");
+        var count = 0;
+        if (document.getElementById("updatesList").childElementCount == 0) { 
+            nav2.removeChild(nav2.children[0]);
+            container.removeChild(container.children[0]);
+            container.removeChild(container.children[0]);
+            count++
+
+        }
+        
+        if (document.getElementById("prereqList").childElementCount == 0) {
+            nav2.removeChild(nav2.children[2 - count]);
+            container.removeChild(container.children[2 - count]);
+            container.removeChild(container.children[2 - count]);
+            count++
+        }
+        if (document.getElementById("resources").childElementCount == 0) {
+            nav2.removeChild(nav2.children[5 - count]);
+            container.removeChild(container.children[5 - count]);
+            container.removeChild(container.children[5 - count]);
+        }
+      
+    </script>
     <script>
         document.documentElement.style.scrollBehavior = "smooth";
         function findPosition(obj) {
@@ -192,29 +216,29 @@
             }
         }
         function funcCourseUpdates() {
-            const element = document.getElementById("labDiv");
-            window.scrollTo(0, findPosition(element)+100);
+            const element = document.getElementById("courseUpdates");
+            window.scrollTo(0, element.offsetTop - 160);
 
         }
         function funcDescription() {
-            const element = document.getElementById("descriptionID");
-            window.scrollTo(2, findPosition(element));
+            const element = document.getElementById("description");
+            window.scrollTo(0, element.offsetTop-160);
         }
         function funcPrerequisites() {
-            const element = document.getElementById("prerequisitesID");
-            element.scrollIntoView();
+            const element = document.getElementById("prerequisites");
+            window.scrollTo(0, element.offsetTop - 160);
         }
         function funcSyllabus() {
-            const element = document.getElementById("syllabusID");
-            element.scrollIntoView();
+            const element = document.getElementById("syllabus");
+            window.scrollTo(0, element.offsetTop - 160);
         }
         function funcInstructors() {
-            const element = document.getElementById("instructorsID");
-            element.scrollIntoView();
+            const element = document.getElementById("instructors");
+            window.scrollTo(0, element.offsetTop - 160);
         }
         function funcResources() {
-            const element = document.getElementById("resourcesID");
-            element.scrollIntoView();
+            const element = document.getElementById("resources");
+            window.scrollTo(0, element.offsetTop - 160);
         };
         window.addEventListener('scroll', () => {
  
