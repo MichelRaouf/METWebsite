@@ -59,10 +59,10 @@ namespace METWebsite
             var typeLabel = new HtmlGenericControl("label");
             typeLabel.Attributes.Add("class", "type");
             typeLabel.InnerHtml = type;
-            if (type == "club")
-                typeLabel.Style.Add("width", "4.5893719806763285vw");
-            else
-                typeLabel.Style.Add("width", "9.3vw");
+            //if (type == "club")
+            //    typeLabel.Style.Add("width", "4.5893719806763285vw");
+            //else
+            //    typeLabel.Style.Add("width", "9.3vw");
 
             typeLabel.Style.Add("background", gradient);
             typeLabel.Style.Add("-webkit-background-clip", "text");
@@ -102,8 +102,8 @@ namespace METWebsite
                 facebookImg.Attributes.Add("class", "facebook");
                 facebookImg.Attributes.Add("alt", "facebook");
                 facebookImg.Attributes.Add("src", "./images/stActivitiesPageImages/facebook.svg");
-                facebookImg.Style.Add("width", "4.428341384863124vw");
-                facebookImg.Style.Add("height", "4.428341384863124vw");
+                facebookImg.Style.Add("width", "3.428341384863124vw");
+                facebookImg.Style.Add("height", "3.428341384863124vw");
                 facebookA.Controls.Add(facebookImg);
                 socialIcons.Controls.Add(facebookA);
             }
@@ -116,8 +116,8 @@ namespace METWebsite
                 instagramImg.Attributes.Add("class", "instagram");
                 instagramImg.Attributes.Add("alt", "instagram");
                 instagramImg.Attributes.Add("src", "./images/stActivitiesPageImages/instagram.png");
-                instagramImg.Style.Add("width", "4.428341384863124vw");
-                instagramImg.Style.Add("height", "4.428341384863124vw");
+                instagramImg.Style.Add("width", "3.428341384863124vw");
+                instagramImg.Style.Add("height", "3.428341384863124vw");
                 instagramA.Controls.Add(instagramImg);
                 socialIcons.Controls.Add(instagramA);
             }

@@ -128,7 +128,9 @@
 
             <label class="label1">Faculty of Media Engineering & Technology</label>
              <button class="logout" runat="server" onserverclick="logOut_click">
-                 <img class="logoutIcon" src="./images/InstructorHome/logout.svg" /><span class="logoutlabel">Log Out</span></></button>
+                 <img class="logoutIcon" src="./images/InstructorHome/logout.svg" /><span class="logoutlabel">Log Out</span></>
+
+             </button>
         </div>
 
         <div class="flex-container-1">
