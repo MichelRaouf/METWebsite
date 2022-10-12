@@ -408,6 +408,7 @@ namespace METWebsite
             //infoItemR1.Controls.Add(verticalR1);
             var listR = new HtmlGenericControl("ul");
             listR.Attributes.Add("class", "reInterests");
+            listR.Attributes.Add("id", "reInterests");
             while (reader4.Read())
             {
                 var item = new HtmlGenericControl("li");
@@ -426,6 +427,7 @@ namespace METWebsite
             linksLabel.InnerHtml = "Research Links";
             var linksLabelDiv = new HtmlGenericControl("div");
             linksLabelDiv.Attributes.Add("class", "infoSubTitleDiv");
+            linksLabelDiv.Attributes.Add("id", "infoSubTitleDivLinks");
             linksLabelDiv.Controls.Add(linksLabel);
             researchSection.Controls.Add(linksLabelDiv);
             //////////////////////////////////////////////////////////

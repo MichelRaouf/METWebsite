@@ -43,7 +43,7 @@ html, body {
 
 .namePosition {
     margin-top:-1.8vw;
-    width: 20vw;
+    width: 50vw;
     display:flex;
     flex-direction:column;
 }
