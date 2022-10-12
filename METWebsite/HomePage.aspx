@@ -48,11 +48,11 @@
         <%--images slideshow here--%>
         <div class="intro">
             <div class="intro-slideshow" id="introSlideshow" runat="server">
-                <%--<img src="https://www.dropbox.com/s/h8rds5ozk0u3s2f/coder.jpg?raw=1"/>
+                <img src="https://www.dropbox.com/s/h8rds5ozk0u3s2f/coder.jpg?raw=1"/>
                 <img src="https://www.dropbox.com/s/lf29ifrd354ngyv/coffee.jpg?raw=1"/>
                 <img src="https://www.dropbox.com/s/lxnf1mxej90qoae/library.jpg?raw=1"/>
                 <img src="https://www.dropbox.com/s/15gdoyzoai94j6j/path.jpg?raw=1"/>
-                <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1"/>--%>
+                <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1"/>
             </div>
         </div>
 
@@ -97,9 +97,7 @@
                     <label>Paths for Every Passion</label>
                 </div>
                 <div class="pathsParagraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e cupidatat non
-                    proident, sunt in.amet, consectetur adipiscing elit, sed do e cupidatat non
-                    proident, sunt in.
+                    Students take courses which range from covering the basics of the profession, until focusing on particular aspect of the field. Each will offer preparation for a certain set of careers and professional achievement.
                 </div>
                 <div>
                     <asp:Button ID="viewCoursesButton" CssClass="viewCourses" runat="server" Text="View Courses" OnClick="viewCoursesButton_Click"/>
