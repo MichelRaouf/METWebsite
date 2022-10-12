@@ -43,7 +43,7 @@ html, body {
 
 .namePosition {
     margin-top:-1.8vw;
-    width: 20vw;
+    width: 50vw;
     display:flex;
     flex-direction:column;
 }
@@ -126,22 +126,13 @@ html, body {
         letter-spacing: 0.07vw;
         color: black;
         cursor: pointer;
+        transition: all 0.2s ease-in;
     }
 
-        .navbar2 a:after {
-            content: "";
-            position: absolute;
-            background: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(237, 28, 36, 1),rgba(255, 203, 5, 0.8));
-            border-radius: 0.2vw;
-            height: 0.2vw;
-            width: 0;
-            left: 0;
-            bottom: -0.4vw;
-            transition: all 0.1s ease-in;
-        }
 
-        .navbar2 a:hover:after {
-            width: 100%;
+        .navbar2 a:hover {
+            font-size: 1.6vw;
+            font-weight: 600;
         }
 
 
