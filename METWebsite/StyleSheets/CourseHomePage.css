@@ -13,12 +13,11 @@ html, body {
     flex-direction: row;
     margin-top: 3vw;
     align-items:start;
+    justify-content:space-around;
 }
 
 .index {
     margin-top:1vw;
-    margin-left: 1.71875vw;
-    margin-right: 0.677vw;
     width: 30vw;
     overflow-x: hidden;
     overflow-y: auto;
@@ -35,15 +34,13 @@ html, body {
         }
 
 .vertical {
-    margin-right: 2.96875vw;
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(237, 28, 36, 1), rgba(255, 203, 5, 1));
     height: 36vw;
-    width: 0.075vw;
+    width: 0.1vw;
 }
 
 .semesters {
     margin-top:1vw;
-    margin-right: 8.125vw;
     width: 56.352vw;
     height: 36vw;
     overflow-x: hidden;

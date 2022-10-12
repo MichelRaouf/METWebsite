@@ -161,6 +161,7 @@ html, body {
     background-color: white;
     z-index: 6156161151;
     transition: all 0.3s ease-in;
+    box-shadow: 0 0 1vw 0 rgba(0,0,0,0.2);
 }
 .topLogo {
     display: none;
@@ -180,9 +181,9 @@ html, body {
 }
 .navContent {
     display: flex;
-    width: 45%;
+    width: 53%;
     justify-content: space-between;
-    margin-right: 9vw;
+    margin-right: 4vw;
     transition: all 0.3s ease-in;
 }
     .navContent a {

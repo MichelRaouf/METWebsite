@@ -38,6 +38,7 @@
                     <a id="activeNavElement" href="CourseHomePage.aspx">Courses</a> 
                     <a href="StaffHomePage.aspx">Staff</a>
                     <a href="StudentActivities.aspx">Student Activity</a> 
+                    <a href="AlumniPage.aspx">Alumni</a>
                     <a href="AboutUsPage.aspx">About Us</a> 
                 </div>
             </nav>
