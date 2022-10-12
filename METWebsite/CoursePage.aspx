@@ -127,7 +127,7 @@
                 <label class="infoTitle">Syllabus</label>
             </div>
 
-            
+            <span id="space3"></span>
             <span id="more3" runat ="server">
              
             </span>
@@ -137,6 +137,24 @@
             </div>
             
         </section>
+
+        <script>
+            function myFunction3() {
+                var space = document.getElementById("space3");
+                var moreText = document.getElementById("more3");
+                var btnText = document.getElementById("mybtn3");
+
+                if (space.style.display === "none") {
+                    space.style.display = "inline";
+                    btnText.value = "Show More";
+                    moreText.style.display = "none";
+                } else {
+                    space.style.display = "none";
+                    btnText.value = "Show Less";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
 
 
         <div class="gradientBar" id="instructorsID">
@@ -252,21 +270,8 @@
             }
 
         })
-        function myFunction3() {
-            var space = document.getElementById("space3");
-            var moreText = document.getElementById("more3");
-            var btnText = document.getElementById("mybtn3");
-
-            if (space.style.display === "none") {
-                space.style.display = "inline";
-                btnText.value = "Show More";
-                moreText.style.display = "none";
-            } else {
-                space.style.display = "none";
-                btnText.value = "Show Less";
-                moreText.style.display = "inline";
-            }
-        }
+        
     </script>
+    
 </body>
 </html>
