@@ -38,6 +38,7 @@
                     <a id="activeNavElement" href="CourseHomePage.aspx">Courses</a> 
                     <a href="StaffHomePage.aspx">Staff</a>
                     <a href="StudentActivities.aspx">Student Activity</a> 
+                    <a href="AlumniPage.aspx">Alumni</a>
                     <a href="AboutUsPage.aspx">About Us</a> 
                 </div>
             </nav>
@@ -71,6 +72,7 @@
             <div class="semesters">
                 <div class="catalogueSemesters" id="catalogueSemesters" runat="server">
 
+
                 </div>
                 <div class="graduateCourses" id="graduateCourses">
                     <label class="graduateCoursesLabel">Graduate Courses: </label>
@@ -86,9 +88,39 @@
                 </div>
             </div>
         </div>
+        <%-- test --%>
+       <nav>
+          <ul class="drop-down closed" ">
+            <li><a class="nav-button"> <img  src="images/coursesPageImages/semesterPlus.svg" />Home</a></li>
+            <ul id="semesterCourses">
+            <li ><a href="#">About</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+          </ul>
+       </nav>
+       <div>
+           <br /><br /><br /><br /><br />
+       </div>
+
+        
 
     </form>
     <script>
+        ///TEST
+
+        document.querySelector('.nav-button').addEventListener('click', function () {
+            const ul = document.querySelector('#semesterCourses')
+            var ulLength = ((1 + ul.children.length) * 3.8).toString() + 'vw'
+            document.styleSheets[1].cssRules[33].style.height = ulLength
+                this.parentNode.parentNode.classList.toggle('closed')
+            }, false);
+        
+
+
+
+
+        ///////////////////////////
         for (var i = 1; i <= 10; i++) {
             if (((document.getElementById("semesterListOpenedCata" + i).children)[0]).children.length == 0) {
                 document.getElementById("semesterClosedCata" + i).style.display = "none";

@@ -10,23 +10,19 @@
     <link  rel="stylesheet" href="./StyleSheets/AboutUsPage.css"/>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class="scrollable">
-            <div class="header">
-                <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
-                <img class="bar" src="./images/topBarImages/bar.svg"/>
-                <label class="facultyLabel">Faculty of Media Engineering & Technology</label>
-            </div>
-
-            <div class="navbar">
-                <button class="navbtn" onserverclick="toHome" runat="server"><img src="images/staff/home.png" class="navImgHomeBookHeadphones"  /> <span>Home</span></button>
-                <button class="navbtn" onserverclick="toCourses" runat="server"><img src="images/staff/book.png"class="navImgHomeBookHeadphones"/> <span>Courses</span></button>
-                <button class="navbtn" onserverclick="toStaff" runat="server"><img src="images/staff/group.png" class="navImgGroup"/><span>Staff</span></button>
-                <button class="navbtn" onserverclick="toStudentActiv" runat="server"><img src="images/staff/headphones.png" class="navImgHomeBookHeadphones" /><span>Student Activity</span></button>
-                <button class="navbtn" onserverclick="toAlumni" runat="server"><img src="images/staff/graduated.png"class="navImgGrad" /><span>Alumni</span></button>
-                <button class="navbtnin" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
-            </div>
-
+    <div class="nav-bar-space" id="subNav">
+            <nav class="navBar" id="navScrolled" >
+                <img class="topLogo"  src="images/New Logo.svg"/>
+                <img class="scrollLogo" id="activeLogo" src="images/New Logo2.svg"/>
+                <div class="navContent" id="scrolledContent" >
+                    <a href="HomePage.aspx">Home</a>
+                    <a href="CourseHomePage.aspx">Courses</a> 
+                    <a href="StaffHomePage.aspx">Staff</a>
+                    <a href="StudentActivities.aspx">Student Activity</a>
+                    <a href="AlumniPage.aspx">Alumni</a> 
+                    <a id="activeNavElement" href="AboutUsPage.aspx">About Us</a> 
+                </div>
+            </nav>
         </div>
 
         <div class="flex-container">
@@ -56,7 +52,13 @@
                     <br />
                 </label>
             </div>
-            <div id="yellowNav" class="yellowNav">
+        <nav id="navbar2" class="navbar2">
+            <a onclick="funcCsenProgram()">CSEN Program</a>
+            <a onclick="funcDmetProgram()">DMET Program</a>
+            <a onclick="funcDegrees()">Degrees</a>
+            <a onclick="funcCareerPaths()">Career Paths</a> 
+        </nav>
+            <%--<div id="yellowNav" class="yellowNav">
                 <div class="aboutNav" >
                     <asp:Label Text="CSEN Program" runat="server" onClick="funcCsenProgram()"/>
                 </div>
@@ -69,26 +71,26 @@
                 <div class="aboutNav" >
                     <asp:Label Text="Career Paths" runat="server" onClick="funcCareerPaths()"/>
                 </div>
-            </div>
+            </div>--%>
             <script>
                 document.documentElement.style.scrollBehavior = "smooth";
 
                 function funcCsenProgram() {
                     const element = document.getElementById("csen");
-                    element.scrollIntoView();
+                    window.scrollTo(0, element.offsetTop - 160);
 
                 }
                 function funcDmetProgram() {
                     const element = document.getElementById("dmet");
-                    element.scrollIntoView();
+                    window.scrollTo(0, element.offsetTop - 160);
                 }
                 function funcDegrees() {
                     const element = document.getElementById("degrees");
-                    element.scrollIntoView();
+                    window.scrollTo(0, element.offsetTop - 160);
                 }
                 function funcCareerPaths() {
                     const element = document.getElementById("career");
-                    element.scrollIntoView();
+                    window.scrollTo(0, element.offsetTop - 160);
                 };
             </script>
             

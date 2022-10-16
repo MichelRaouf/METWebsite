@@ -15,12 +15,15 @@ html, body {
     background-color:white;
     width:100%;
 }*/
+.container{
+    height:100%;
 
+}
 .meetLecturers, .meetTAs {
+    
     width: 100%;
-    padding: -5px;
-    height: 20vw;
     display: flex;
+    height:50%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -33,27 +36,41 @@ html, body {
 
 .lecturersImg, .TAsImg {
     opacity: 70%;
-    height: 20vw;
-    transition: all .3s ease-in-out;
+    height: 20.7vw;
+    transition: all .3s ease-in;
     width: 100%;
+    overflow: hidden;
 }
 
-    .lecturersImg:hover, .TAsImg:hover {
-        opacity: 90%;
-        transform: scale(1.3);
-    }
+#hovered {
+    opacity: 90%;
+    transform: scale(1.3);
+    overflow: hidden;
+}
 
 .imageTxt {
     position: absolute;
     font-family: 'Montserrat', sans-serif;
-    font-size: 3vw;
+    font-size: 2.8vw;
     font-weight: 700;
     color: white;
-    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s ease-in;
 }
 
-    .imageTxt:hover {
-        cursor: pointer;
-        text-decoration: underline;
-        text-decoration-color: white;
+#hoveredText {
+    font-size: 3.2vw;
+    transition: all .3s ease-in;
+}
+    #hoveredText:after {
+        font-size: 3.2vw;
+        content: "";
+        position: absolute;
+        background-color: white;
+        border-radius: 0.2vw;
+        height: 0.28vw;
+        width: 100%;
+        left: 0;
+        bottom: -0.10416666666666vw;
+        transition: 0.3s;
     }

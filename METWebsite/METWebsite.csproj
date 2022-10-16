@@ -123,7 +123,6 @@
     <Content Include="App_Data\database2_log.ldf">
       <DependentUpon>database2.mdf</DependentUpon>
     </Content>
-    <Content Include="ARemoveC.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -170,7 +169,9 @@
     <Content Include="LecturersSearchRes.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
+    <Content Include="StyleSheets\AdminHeaderNav.css" />
     <Content Include="StyleSheets\AdminInstructorToCourse.css" />
+    <Content Include="StyleSheets\AdminOverlay.css" />
     <Content Include="StyleSheets\AdminRemoveAlumni.css" />
     <Content Include="StyleSheets\AdminRemoveCourse.css" />
     <Content Include="StyleSheets\AdminRemoveStudentActivity.css" />
@@ -186,6 +187,7 @@
     <Content Include="StyleSheets\StaffProfile.css" />
     <Content Include="StyleSheets\CoursePage.css" />
     <Content Include="StyleSheets\CourseHomePage.css" />
+    <Content Include="StyleSheets\AdminCourse.css" />
     <Content Include="TAsProfiles.aspx" />
     <Content Include="AlumniPage.aspx" />
     <Content Include="AboutUsPage.aspx" />
@@ -339,6 +341,7 @@
     <Content Include="CoursePage.aspx" />
     <Content Include="CourseHomePage.aspx" />
     <Content Include="TAsSearchRes.aspx" />
+    <Content Include="AdminCourse.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -410,13 +413,6 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="ARemoveC.aspx.cs">
-      <DependentUpon>ARemoveC.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ARemoveC.aspx.designer.cs">
-      <DependentUpon>ARemoveC.aspx</DependentUpon>
-    </Compile>
     <Compile Include="InstructorHome.aspx.cs">
       <DependentUpon>InstructorHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -543,6 +539,13 @@
     </Compile>
     <Compile Include="TAsSearchRes.aspx.designer.cs">
       <DependentUpon>TAsSearchRes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCourse.aspx.cs">
+      <DependentUpon>AdminCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCourse.aspx.designer.cs">
+      <DependentUpon>AdminCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

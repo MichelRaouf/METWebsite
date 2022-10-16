@@ -36,7 +36,8 @@
                     <a href="HomePage.aspx">Home</a>
                     <a id="activeNavElement" href="CourseHomePage.aspx">Courses</a> 
                     <a href="StaffHomePage.aspx">Staff</a>
-                    <a href="StudentActivities.aspx">Student Activity</a> 
+                    <a href="StudentActivities.aspx">Student Activity</a>
+                    <a href="AlumniPage.aspx">Alumni</a>
                     <a href="AboutUsPage.aspx">About Us</a> 
                 </div>
             </nav>
@@ -77,6 +78,8 @@
         </nav>
 
        
+        <div class="contentContainer" id="contentContainer">
+
 
         <section id="courseUpdates" class="courseUpdates" runat ="server">
              <div class="infoTitleDiv">
@@ -135,6 +138,24 @@
             
         </section>
 
+        <script>
+            function myFunction3() {
+                var space = document.getElementById("space3");
+                var moreText = document.getElementById("more3");
+                var btnText = document.getElementById("mybtn3");
+
+                if (space.style.display === "none") {
+                    space.style.display = "inline";
+                    btnText.value = "Show More";
+                    moreText.style.display = "none";
+                } else {
+                    space.style.display = "none";
+                    btnText.value = "Show Less";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
+
 
         <div class="gradientBar" id="instructorsID">
 
@@ -170,15 +191,37 @@
         <section id="resources" class="resources" runat ="server">
              <div class="infoTitleDiv">
                 <label class="infoTitle">Resources</label>
-            </div>
-            
+            </div> 
         </section>
-
-        <div class="blank">
-            &nbsp;
         </div>
+        
 
     </form>
+    <script type="module">
+        const nav2 = document.getElementById("navbar2");
+        const container = document.getElementById("contentContainer");
+        var count = 0;
+        if (document.getElementById("updatesList").childElementCount == 0) { 
+            nav2.removeChild(nav2.children[0]);
+            container.removeChild(container.children[0]);
+            container.removeChild(container.children[0]);
+            count++
+
+        }
+        
+        if (document.getElementById("prereqList").childElementCount == 0) {
+            nav2.removeChild(nav2.children[2 - count]);
+            container.removeChild(container.children[2 - count]);
+            container.removeChild(container.children[2 - count]);
+            count++
+        }
+        if (document.getElementById("resources").childElementCount == 0) {
+            nav2.removeChild(nav2.children[5 - count]);
+            container.removeChild(container.children[5 - count]);
+            container.removeChild(container.children[5 - count]);
+        }
+      
+    </script>
     <script>
         document.documentElement.style.scrollBehavior = "smooth";
         function findPosition(obj) {
@@ -192,29 +235,29 @@
             }
         }
         function funcCourseUpdates() {
-            const element = document.getElementById("labDiv");
-            window.scrollTo(0, findPosition(element)+100);
+            const element = document.getElementById("courseUpdates");
+            window.scrollTo(0, element.offsetTop - 170);
 
         }
         function funcDescription() {
-            const element = document.getElementById("descriptionID");
-            window.scrollTo(2, findPosition(element));
+            const element = document.getElementById("description");
+            window.scrollTo(0, element.offsetTop-170);
         }
         function funcPrerequisites() {
-            const element = document.getElementById("prerequisitesID");
-            element.scrollIntoView();
+            const element = document.getElementById("prerequisites");
+            window.scrollTo(0, element.offsetTop - 170);
         }
         function funcSyllabus() {
-            const element = document.getElementById("syllabusID");
-            element.scrollIntoView();
+            const element = document.getElementById("syllabus");
+            window.scrollTo(0, element.offsetTop - 170);
         }
         function funcInstructors() {
-            const element = document.getElementById("instructorsID");
-            element.scrollIntoView();
+            const element = document.getElementById("instructors");
+            window.scrollTo(0, element.offsetTop - 170);
         }
         function funcResources() {
-            const element = document.getElementById("resourcesID");
-            element.scrollIntoView();
+            const element = document.getElementById("resources");
+            window.scrollTo(0, element.offsetTop - 170);
         };
         window.addEventListener('scroll', () => {
  
@@ -227,21 +270,8 @@
             }
 
         })
-        function myFunction3() {
-            var space = document.getElementById("space3");
-            var moreText = document.getElementById("more3");
-            var btnText = document.getElementById("mybtn3");
-
-            if (space.style.display === "none") {
-                space.style.display = "inline";
-                btnText.value = "Show More";
-                moreText.style.display = "none";
-            } else {
-                space.style.display = "none";
-                btnText.value = "Show Less";
-                moreText.style.display = "inline";
-            }
-        }
+        
     </script>
+    
 </body>
 </html>

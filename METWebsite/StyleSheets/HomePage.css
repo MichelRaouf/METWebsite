@@ -343,9 +343,7 @@ html, body {
     font-size: 2.7vw;
     color: white;
     font-weight: 700;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 15%;
+    margin: 5% 5% 10% 5%;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -355,8 +353,11 @@ html, body {
     font-weight: 300;
     margin-right: 5%;
     margin-left: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
     font-family: 'Montserrat', sans-serif;
+    cursor:default;
+    line-height:2.5vw;
+
 }
 
 .viewCourses {

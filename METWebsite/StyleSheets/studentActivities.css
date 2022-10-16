@@ -42,4 +42,5 @@ html, body {
     width: 32.5vw;
     height: 24.154589371980677vw;
     opacity: 0.5;
+    transition: all 0.3s ease-in
 }
