@@ -148,6 +148,7 @@
     <Content Include="images\coursesPageImages\upArrow.svg" />
     <Content Include="images\DevelopersBlack.png" />
     <Content Include="images\ErrorIcon.png" />
+    <Content Include="images\homePageImages\grayCross.svg" />
     <Content Include="images\HonorsImages\Ahmed Sabah.png" />
     <Content Include="images\HonorsImages\Christine Farahat.png" />
     <Content Include="images\HonorsImages\Hayat Mohamed.png" />

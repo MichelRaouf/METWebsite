@@ -12,6 +12,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
+           
+        <script>
+            function openNewsOverlay(title,desc) {
+                document.getElementById("newsOverlay").style.display = "block";
+                document.getElementById("newsTitle").innerHTML = title;
+                document.getElementById("newsDescription").innerHTML = desc;
+
+            }
+            function closeNewsOverlay() {
+                document.getElementById("newsOverlay").style.display = "none";
+
+            }
+
+        </script>
+
+
         <%--<div class="scrollable">
             <div class="header">
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
@@ -203,6 +220,24 @@
             </a>
 
         </div>
+            <div id="newsOverlay" class="overlay">
+  
+  <div class="overlay-content">
+      <div class="TitleDiv">
+          
+          <label class="overlayTitle" id="newsTitle"></label>
+     
+         
+          <button class="testButton" onclick="closeNewsOverlay()"  type="button" > 
+              <img src="./images/homePageImages/graycross.svg" alt="Cross button" /></button>
+
+    </div>
+      <hr />
+      <div style="padding :30px;">
+      <p runat="server" id="newsDescription"> </p>
+          </div>
+  </div>
+</div>  
 
     </form>
 
@@ -365,5 +400,8 @@
         }
         var box = document.getElementsByClassName("whiteBox");
     </script>
+
+
+
 </body>
 </html>

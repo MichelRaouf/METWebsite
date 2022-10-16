@@ -38,6 +38,7 @@ namespace METWebsite
             {
                 String title = reader.GetValue(1).ToString();
                 String description = reader.GetValue(2).ToString();
+                String fullDescription = description;
                 String url = reader.GetValue(4).ToString();
                 String truncationSuffix = "…";
                 description = description.Length > 125? description.Substring(0, 125) + truncationSuffix: description;
@@ -49,8 +50,10 @@ namespace METWebsite
                 var div12 = new HtmlGenericControl("div");
                 var h = new HtmlGenericControl("h2");
                 var p = new HtmlGenericControl("p");
-                var button = new HtmlGenericControl("button");
+                var button = new HtmlButton();
 
+                button.Attributes.Add("type", "button");
+                button.Attributes.Add("onclick",  "openNewsOverlay(" + "\"" + title + "\"" + "," + "\"" + fullDescription + "\"" + ")");
                 div1.Attributes.Add("class", "card swiper-slide");
                 div11.Attributes.Add("class", "imageContent");
                 span.Attributes.Add("class", "overlay");
