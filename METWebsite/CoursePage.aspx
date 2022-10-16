@@ -236,28 +236,28 @@
         }
         function funcCourseUpdates() {
             const element = document.getElementById("courseUpdates");
-            window.scrollTo(0, element.offsetTop - 160);
+            window.scrollTo(0, element.offsetTop - 170);
 
         }
         function funcDescription() {
             const element = document.getElementById("description");
-            window.scrollTo(0, element.offsetTop-160);
+            window.scrollTo(0, element.offsetTop-170);
         }
         function funcPrerequisites() {
             const element = document.getElementById("prerequisites");
-            window.scrollTo(0, element.offsetTop - 160);
+            window.scrollTo(0, element.offsetTop - 170);
         }
         function funcSyllabus() {
             const element = document.getElementById("syllabus");
-            window.scrollTo(0, element.offsetTop - 160);
+            window.scrollTo(0, element.offsetTop - 170);
         }
         function funcInstructors() {
             const element = document.getElementById("instructors");
-            window.scrollTo(0, element.offsetTop - 160);
+            window.scrollTo(0, element.offsetTop - 170);
         }
         function funcResources() {
             const element = document.getElementById("resources");
-            window.scrollTo(0, element.offsetTop - 160);
+            window.scrollTo(0, element.offsetTop - 170);
         };
         window.addEventListener('scroll', () => {
  
