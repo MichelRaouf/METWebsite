@@ -11,7 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="scrollable">
+        <%--<div class="scrollable">
             <div class="header">
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
                 <img class="bar" src="./images/topBarImages/bar.svg"/>
@@ -27,6 +27,20 @@
                 <button class="navbtn" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
             </div>
 
+        </div>--%>
+        <div class="nav-bar-space" id="subNav">
+            <nav class="navBar" id="navScrolled" >
+                <img class="topLogo"  src="images/New Logo.svg"/>
+                <img class="scrollLogo" id="activeLogo" src="images/New Logo2.svg"/>
+                <div class="navContent" id="scrolledContent" >
+                    <a href="HomePage.aspx">Home</a>
+                    <a href="CourseHomePage.aspx">Courses</a> 
+                    <a id="activeNavElement" href="StaffHomePage.aspx">Staff</a>
+                    <a href="StudentActivities.aspx">Student Activity</a>
+                    <a href="AlumniPage.aspx">Alumni</a>
+                    <a href="AboutUsPage.aspx">About Us</a> 
+                </div>
+            </nav>
         </div>
 
         <div class="ProfileHeader" id="ProfileHeader" runat="server">
@@ -50,56 +64,47 @@
                     <img class="iconNoPhone" src="images/Profile/faxIcon.svg" />
                 </div>
                 <div class="iconLineDiv" id="phoneDiv" runat="server">
-                    <img class="iconPhone" src="images/Profile/phoneIcon.svg" />
+                    <img id="iconPhone" src="images/Profile/phoneIcon.svg" />
                 </div>
 
             </div>
         </div>
 
         <div id="navbar2" class="navbar2">
-            <div class="AboutNav">
-                <asp:Label Text="Personal Info" runat="server" onClick="funcPersonalInfo()"/>
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Teaching" runat="server" onClick="funcTeaching()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Research" runat="server" onClick="funcResearch()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Publication" runat="server" onClick="funcPublications()" />
-            </div>
-            <div class="AboutNav">
-                <asp:Label Text="Activities" runat="server" onClick="funcActivities()" />
-            </div>
+            <a onclick="funcPersonalInfo()">Personal Info</a>
+            <a onclick="funcTeaching()">Teaching</a>
+            <a onclick="funcResearch()">Research</a>
+            <a onclick="funcPublications()">Publication</a>
+            <a onclick="funcActivities()">Activities</a>
+            
         </div>
 
         <script>
             document.documentElement.style.scrollBehavior = "smooth";
 
+
             function funcPersonalInfo() {
                 const element = document.getElementById("phoneDiv");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
 
             }
             function funcTeaching() {
                 const element = document.getElementById("teachingBar");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
             }
             function funcResearch() {
                 const element = document.getElementById("researchBar");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
             }
             function funcPublications() {
                 const element = document.getElementById("publicationsBar");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
             }
             function funcActivities() {
                 const element = document.getElementById("activityBar");
-                element.scrollIntoView();
+                window.scrollTo(0, element.offsetTop - 160);
             };
         </script>
-
         <section id="PersonalInfo" class="PersonalInfo" runat ="server">
              <div class="infoTitleDiv">
                 <label class="infoTitle">Personal Info</label>
@@ -127,95 +132,97 @@
 
             </span>
 
-            <script>
-                document.documentElement.style.scrollBehavior = "smooth";
-                function myFunction() {
-                    var space = document.getElementById("space");
-                    var moreText = document.getElementById("more");
-                    var btnText = document.getElementById("myBtn");
-
-                    if (space.style.display === "none") {
-                        space.style.display = "inline";
-                        btnText.value = "Show More";
-                        moreText.style.display = "none";
-                    } else {
-                        space.style.display = "none";
-                        btnText.value = "Show Less";
-                        moreText.style.display = "inline";
-                    }
-                }
-
-                function myFunction2() {
-                    var space = document.getElementById("space2");
-                    var moreText = document.getElementById("more2");
-                    var btnText = document.getElementById("mybtn2");
-
-                    if (space.style.display === "none") {
-                        space.style.display = "inline";
-                        btnText.value = "Show More";
-                        moreText.style.display = "none";
-                    } else {
-                        space.style.display = "none";
-                        btnText.value = "Show Less";
-                        moreText.style.display = "inline";
-                    }
-                }
-
-                function myFunction3() {
-                    var space = document.getElementById("space3");
-                    var moreText = document.getElementById("more3");
-                    var btnText = document.getElementById("mybtn3");
-
-                    if (space.style.display === "none") {
-                        space.style.display = "inline";
-                        btnText.value = "Show More";
-                        moreText.style.display = "none";
-                    } else {
-                        space.style.display = "none";
-                        btnText.value = "Show Less";
-                        moreText.style.display = "inline";
-                    }
-                }
-
-                function myFunction4() {
-                    var space = document.getElementById("space4");
-                    var moreText = document.getElementById("more4");
-                    var btnText = document.getElementById("mybtn4");
-
-                    if (space.style.display === "none") {
-                        space.style.display = "inline";
-                        btnText.value = "Show More";
-                        moreText.style.display = "none";
-                    } else {
-                        space.style.display = "none";
-                        btnText.value = "Show Less";
-                        moreText.style.display = "inline";
-                    }
-                }
-
-                function myFunction5() {
-                    var space = document.getElementById("space5");
-                    var moreText = document.getElementById("more5");
-                    var btnText = document.getElementById("mybtn5");
-
-                    if (space.style.display === "none") {
-                        space.style.display = "inline";
-                        btnText.value = "Show More";
-                        moreText.style.display = "none";
-                    } else {
-                        space.style.display = "none";
-                        btnText.value = "Show Less";
-                        moreText.style.display = "inline";
-                    }
-                }
-            </script>
-
             <div id="buttonMore1" class="showMoreDiv" runat="server">
                 <asp:Button ID="myBtn" CssClass="showMore" runat="server" Text="Show More" OnClientClick="myFunction();return false;"/>
             </div>
         </section>
 
-        
+   <script>
+       //const nav2 = document.getElementById("navbar2");
+       //var count = 0;
+
+
+       document.documentElement.style.scrollBehavior = "smooth";
+       function myFunction() {
+           var space = document.getElementById("space");
+           var moreText = document.getElementById("more");
+           var btnText = document.getElementById("myBtn");
+
+           if (space.style.display === "none") {
+               space.style.display = "inline";
+               btnText.value = "Show More";
+               moreText.style.display = "none";
+           } else {
+               space.style.display = "none";
+               btnText.value = "Show Less";
+               moreText.style.display = "inline";
+           }
+       }
+
+       function myFunction2() {
+           var space = document.getElementById("space2");
+           var moreText = document.getElementById("more2");
+           var btnText = document.getElementById("mybtn2");
+
+           if (space.style.display === "none") {
+               space.style.display = "inline";
+               btnText.value = "Show More";
+               moreText.style.display = "none";
+           } else {
+               space.style.display = "none";
+               btnText.value = "Show Less";
+               moreText.style.display = "inline";
+           }
+       }
+
+       function myFunction3() {
+           var space = document.getElementById("space3");
+           var moreText = document.getElementById("more3");
+           var btnText = document.getElementById("mybtn3");
+
+           if (space.style.display === "none") {
+               space.style.display = "inline";
+               btnText.value = "Show More";
+               moreText.style.display = "none";
+           } else {
+               space.style.display = "none";
+               btnText.value = "Show Less";
+               moreText.style.display = "inline";
+           }
+       }
+
+       function myFunction4() {
+           var space = document.getElementById("space4");
+           var moreText = document.getElementById("more4");
+           var btnText = document.getElementById("mybtn4");
+
+           if (space.style.display === "none") {
+               space.style.display = "inline";
+               btnText.value = "Show More";
+               moreText.style.display = "none";
+           } else {
+               space.style.display = "none";
+               btnText.value = "Show Less";
+               moreText.style.display = "inline";
+           }
+       }
+
+       function myFunction5() {
+           var space = document.getElementById("space5");
+           var moreText = document.getElementById("more5");
+           var btnText = document.getElementById("mybtn5");
+
+           if (space.style.display === "none") {
+               space.style.display = "inline";
+               btnText.value = "Show More";
+               moreText.style.display = "none";
+           } else {
+               space.style.display = "none";
+               btnText.value = "Show Less";
+               moreText.style.display = "inline";
+           }
+       }
+   </script>
 
         <div class="gradientBar" id="teachingBar">
 
@@ -242,7 +249,7 @@
              <div class="infoTitleDiv">
                 <label class="infoTitle">Research</label>
             </div>
-            <div class="infoSubTitleDiv">
+            <div class="infoSubTitleDiv" id="infoSubTitleDivInter">
                 <label class="infoSubTitle">Research Interests</label>
             </div>
             <span id="space3"></span>
@@ -294,5 +301,38 @@
             &nbsp;
         </div>
     </form>
+    <script>
+        if ((document.getElementById("educationSection").children).length == 1) {
+            document.getElementById("educationSection").style.display = "none";
+        }
+        if ((document.getElementById("employmentSection").children).length == 3) {
+            document.getElementById("employmentSection").style.display = "none";
+        }
+        if ((document.getElementById("teachingSection").children).length == 3) {
+            document.getElementById("teachingSection").style.display = "none";
+            ((document.getElementById("navbar2").children)[1]).style.display = "none";
+        }
+        if (((document.getElementById("researchSection").children).length == 6)
+            && (document.getElementById("reInterests").children).length == 0) {
+            document.getElementById("researchSection").style.display = "none";
+            ((document.getElementById("navbar2").children)[2]).style.display = "none";
+        }
+        if (((document.getElementById("researchSection").children).length == 6)
+            && (document.getElementById("reInterests").children).length > 0) {
+            document.getElementById("infoSubTitleDivLinks").style.display = "none";
+        }
+        if (((document.getElementById("researchSection").children).length > 6)
+            && (document.getElementById("reInterests").children).length == 0) {
+            document.getElementById("infoSubTitleDivInter").style.display = "none";
+        }
+        if ((document.getElementById("publicationsSection").children).length == 3) {
+            document.getElementById("publicationsSection").style.display = "none";
+            ((document.getElementById("navbar2").children)[3]).style.display = "none";
+        }
+        if ((document.getElementById("activitySection").children).length == 3) {
+            document.getElementById("activitySection").style.display = "none";
+            ((document.getElementById("navbar2").children)[4]).style.display = "none";
+        }
+    </script>
 </body>
 </html>

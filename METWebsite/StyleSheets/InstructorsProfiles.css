@@ -76,8 +76,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 2.5vw;
-    margin-bottom: 3vw;
+
 }
 
 .separatingBar {
@@ -135,6 +134,7 @@ html, body {
     font-weight: 500;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease-in;
 }
 
     .viewProfile:hover {

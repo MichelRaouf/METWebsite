@@ -9,17 +9,15 @@ html, body {
 
 .body {
     display: flex;
-    height:stretch;
     height:39vw;
     flex-direction: row;
-    margin-top: 1.875vw;
+    margin-top: 3vw;
     align-items:start;
+    justify-content:space-around;
 }
 
 .index {
     margin-top:1vw;
-    margin-left: 1.71875vw;
-    margin-right: 0.677vw;
     width: 30vw;
     overflow-x: hidden;
     overflow-y: auto;
@@ -36,15 +34,13 @@ html, body {
         }
 
 .vertical {
-    margin-right: 2.96875vw;
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(237, 28, 36, 1), rgba(255, 203, 5, 1));
     height: 36vw;
-    width: 0.075vw;
+    width: 0.1vw;
 }
 
 .semesters {
     margin-top:1vw;
-    margin-right: 8.125vw;
     width: 56.352vw;
     height: 36vw;
     overflow-x: hidden;
@@ -262,4 +258,83 @@ a {
     a:hover {
         text-decoration: none;
         color: #4B8FEA;
+    }
+
+/*******************/
+
+/*TEST*/
+nav .drop-down {
+    list-style: none;
+    overflow: hidden;
+    width: 53vw;
+    background-color:white;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 1.2vw;
+    margin: 0 auto;
+    padding: 0;
+    -webkit-transition: height 0.3s ease;
+    transition: height 0.3s ease-in;
+    margin-bottom: 3vw;
+}
+
+    nav .drop-down.closed {
+        font-family: 'Montserrat', sans-serif;
+        width: 53vw;
+        background-color: white;
+        height: 3.8vw;
+        border-radius: 1.2vw;
+        margin-bottom: 1.8vw;
+        display: block;
+    }
+
+        nav .drop-down.closed li {
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(237, 28, 36, 1), rgba(255, 203, 5, 1));
+            height: 3.8vw;
+            cursor: pointer;
+            transition: height 0.3s ease-in;
+        }
+    nav .drop-down li {
+        background-color: black;
+        height: 3.8vw;
+        cursor: pointer;
+    }
+
+            nav .drop-down li a {
+                display: flex;
+                flex-direction: row;
+                column-gap: 3vw;
+                justify-content: start;
+                align-items: center;
+                color: white;
+                text-decoration: none;
+                height: 100%;
+                padding-left: 2vw;
+                font-size: 1.7vw;
+                font-weight: 500;
+            }
+    nav .drop-down img {
+        margin-top:0.1vw;
+        width: 1.3vw;
+    }
+#semesterCourses {
+        background-color: white;
+        list-style: none;
+    }
+    #semesterCourses li{
+        background-image:none;
+        background-color:white;
+        cursor:default;
+    }
+#semesterCourses li a {
+    width:fit-content;
+    column-gap:0;
+    color:black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+    cursor:pointer;
+}
+    #semesterCourses li a:hover {
+        color: #4B8FEA
     }

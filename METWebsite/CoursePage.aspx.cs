@@ -181,11 +181,11 @@ namespace METWebsite
                 upperDiv.Controls.Add(vertical);
                 upperDiv.Controls.Add(detailsDiv);
                 var horizontalDiv = new HtmlGenericControl("div");
-                horizontalDiv.Attributes.Add("class", "horizontal");
+                //horizontalDiv.Attributes.Add("class", "horizontal");
                 var itemDiv = new HtmlGenericControl("div");
                 itemDiv.Attributes.Add("class", "itemDiv");
                 itemDiv.Controls.Add(upperDiv);
-                itemDiv.Controls.Add(horizontalDiv);
+                //itemDiv.Controls.Add(horizontalDiv);
                 var lowerDiv = new HtmlGenericControl("div");
                 lowerDiv.Attributes.Add("class", "lower");
                 con.Open();
@@ -208,7 +208,7 @@ namespace METWebsite
                     var materialItemDiv = new HtmlGenericControl("div");
                     materialItemDiv.Attributes.Add("class", "materialItemDiv");
                     materialItemDiv.Controls.Add(materialItem);
-                    lowerDiv.Controls.Add(materialItemDiv);
+                    detailsDiv.Controls.Add(materialItemDiv);
                 }
                 itemDiv.Controls.Add(lowerDiv);
                 var horizontal2 = new HtmlGenericControl("div");
