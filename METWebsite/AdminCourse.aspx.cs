@@ -48,7 +48,7 @@ namespace METWebsite
                 buttonsDiv.Controls.Add(editButton);
                 buttonsDiv.Controls.Add(deleteButton);
                 var courseItem = new HtmlGenericControl("div");
-                courseItem.Attributes.Add("class", "courseItem");
+                courseItem.Attributes.Add("class", "ItemDiv");
                 courseItem.Controls.Add(labelDiv);
                 courseItem.Controls.Add(buttonsDiv);
                 itemsDiv.Controls.Add(courseItem);

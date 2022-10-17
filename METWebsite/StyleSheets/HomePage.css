@@ -620,3 +620,85 @@ html, body {
     margin-right:0.3vw;
    
 }
+
+
+
+
+
+
+
+
+
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.overlay-content {
+    background-color: white;
+    border-radius: 0.78vw;
+    position: relative;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.overlay .closebtn {
+    font-size: 6.5vw;
+}
+
+@media screen and (max-height: 58.5vw) {
+    .overlay a {
+        font-size: 2.6vw
+    }
+}
+
+.overlayTitle {
+    color: black;
+    position :absolute;
+    width : 100%;
+    font-size : 25px;
+
+
+}
+
+.TitleDiv{
+    height : 30px;
+    display : flex;
+    justify-content : flex-end;
+    align-items : center;
+
+  
+
+}
+.testButton {
+    margin-right: 15px;
+    position: absolute;
+    cursor: pointer;
+    background : none;
+    border : none;
+    height : 20px;
+    width : 20px;
+   
+ 
+}
+#newsDescription{
+    border : solid black 1px;
+    border-radius : 5px;
+    padding : 15px;
+    margin : 0;
+ 
+}
+
+
+

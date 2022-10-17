@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="StyleSheets/AdminHeaderNav.css" />
     <link rel="stylesheet" href="./StyleSheets/AdminCourse.css" />
     <link rel="stylesheet" href="./StyleSheets/AdminOverlay.css" />
+    <link rel="stylesheet" href="./StyleSheets/AdminItemsContainer.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -71,7 +72,7 @@
                 </div>
             </div>
             <div class="itemsDiv" id="itemsDiv" runat="server">
-                <div class="addCourseItem">
+                <div class="addItemsDiv">
                     <asp:Button Text="Add Course" runat="server" CssClass="addButton" OnClick="AddCourse" />
                 </div>
 

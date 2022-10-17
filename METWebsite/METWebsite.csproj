@@ -147,6 +147,7 @@
     <Content Include="images\coursesPageImages\upArrow.svg" />
     <Content Include="images\DevelopersBlack.png" />
     <Content Include="images\ErrorIcon.png" />
+    <Content Include="images\homePageImages\grayCross.svg" />
     <Content Include="images\HonorsImages\Ahmed Sabah.png" />
     <Content Include="images\HonorsImages\Christine Farahat.png" />
     <Content Include="images\HonorsImages\Hayat Mohamed.png" />
@@ -167,6 +168,7 @@
     <Content Include="LecturersProfiles.aspx" />
     <Content Include="LecturersSearchRes.aspx" />
     <Content Include="StudentActivityProfile.aspx" />
+    <Content Include="StyleSheets\AdminItemsContainer.css" />
     <Content Include="StyleSheets\AdminDefineWeeks.css" />
     <Content Include="StyleSheets\AdminHeaderNav.css" />
     <Content Include="StyleSheets\AdminInstructorToCourse.css" />
