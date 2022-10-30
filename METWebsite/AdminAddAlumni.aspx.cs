@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -60,10 +61,20 @@ namespace METWebsite
 
 
         }
-      
+
+        protected void Save_Address(object sender, EventArgs e)
+        {
+            Session["URL"] = filesDiv.InnerHtml;
+        }
+
+
 
         protected void Yes_Click(object sender, EventArgs e)
         {
+            string strFileName;
+            string strFilePath;
+            strFileName = input1.PostedFile.FileName;
+            strFilePath = Path.GetFileName(strFileName);
             string strcon = System.Configuration.ConfigurationManager.ConnectionStrings["MET"].ConnectionString;
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
@@ -74,9 +85,31 @@ namespace METWebsite
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@name", nameInput.Value));
                 cmd.Parameters.Add(new SqlParameter("@description", aboutInput.Value));
-                cmd.Parameters.Add(new SqlParameter("@image_url", "aa"));
+                cmd.Parameters.Add(new SqlParameter("@image_url", "./images/HonorsImages/" + Session["URL"].ToString()));
                 cmd.ExecuteNonQuery();
                 con.Close();
+                
+                if (input1.Value != "")
+                {
+                    //if (!Directory.Exists(strFolder))
+                    //{
+                    //   Directory.CreateDirectory(strFolder);
+                    //}
+                    // Save the uploaded file to the server.
+                    strFilePath = "./images/HonorsImages/" + strFileName;
+                    if (File.Exists(strFilePath))
+                    {
+                        
+                    }
+                    else
+                    {
+                        input1.PostedFile.SaveAs(strFilePath);
+                    }
+                }
+                else
+                {
+
+                }
                 button2.Visible = false;
                 button3.Visible = false;
                 var div = new HtmlGenericControl("div");

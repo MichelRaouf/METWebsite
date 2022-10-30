@@ -33,6 +33,24 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlInputText nameInput;
 
         /// <summary>
+        /// input1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile input1;
+
+        /// <summary>
+        /// filesDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl filesDiv;
+
+        /// <summary>
         /// aboutInput control.
         /// </summary>
         /// <remarks>

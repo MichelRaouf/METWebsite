@@ -63,7 +63,7 @@ namespace METWebsite
             addButton.CssClass += "addButton";
             addButton.Click += AddCourse;
             var addCourseItem = new HtmlGenericControl("div");
-            addCourseItem.Attributes.Add("class", "addCourseItem");
+            addCourseItem.Attributes.Add("class", "addItemsDiv");
             addCourseItem.Controls.Add(addButton);
             itemsDiv.Controls.Add(addCourseItem);
             SqlConnection con = new SqlConnection(strcon);
@@ -101,7 +101,7 @@ namespace METWebsite
                 buttonsDiv.Controls.Add(editButton);
                 buttonsDiv.Controls.Add(deleteButton);
                 var courseItem = new HtmlGenericControl("div");
-                courseItem.Attributes.Add("class", "courseItem");
+                courseItem.Attributes.Add("class", "ItemDiv");
                 courseItem.Controls.Add(labelDiv);
                 courseItem.Controls.Add(buttonsDiv);
                 itemsDiv.Controls.Add(courseItem);
@@ -132,7 +132,19 @@ namespace METWebsite
             div2.Controls.Add(div3);
             div3.Controls.Add(yesButton);
             div3.Controls.Add(noButton);
-            label.InnerHtml = "Are you sure you want to delete this course?";
+            String courseCode = "";
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            SqlCommand cmdCode = new SqlCommand("getCourseBySerial", con);
+            cmdCode.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdCode.Parameters.Add(new SqlParameter("@course_serial", Int32.Parse(Session["deleteID"].ToString())));
+            SqlDataReader readerCode = cmdCode.ExecuteReader();
+            while (readerCode.Read())
+            {
+                courseCode = readerCode.GetValue(0).ToString();
+            }
+            con.Close();
+            label.InnerHtml = "Are you sure you want to delete (" + courseCode + ")?";
             yesButton.Visible = true;
             noButton.Visible = true;
             form1.Controls.Add(div);
@@ -162,11 +174,11 @@ namespace METWebsite
         }
         protected void x_click(object sender, EventArgs e)
         {
-            Response.Redirect("temp.aspx");
+            Response.Redirect("AdminCourse.aspx");
         }
         protected void NoDelete(object sender, EventArgs e)
         {
-            Response.Redirect("temp.aspx");
+            Response.Redirect("AdminCourse.aspx");
         }
     }
 }

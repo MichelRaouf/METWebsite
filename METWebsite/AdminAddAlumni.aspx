@@ -10,8 +10,7 @@
        
 </head>
 <body>
-    <form id="form1" runat="server">
-
+    <form id="form1" method="post" runat="server" enctype="multipart/form-data" action="AdminAddAlumni.aspx">
             <div class="header">
              
                 <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
@@ -93,10 +92,12 @@
                 <br />
                 <div class="profileButtonContainer">
                 <label for="input1" class="profilePicture" id="labelforpic">Choose Image               
-                <input type="file"   id="input1" onchange="func()" />  
+                <input type="file" runat="server" id="input1" onchange="func()" />  
                     </label> 
-                <div class="files"></div>
-                
+                <div class="files" id="files"></div>
+                    <div id="filesDiv" runat="server">
+
+                    </div>
                 </div>
   
 
@@ -130,10 +131,9 @@
         function func() {
             var y = document.getElementById("labelforpic");
             var x = document.getElementById("input1");
-            var div = document.getElementsByClassName("files")[0];
-            div.innerHTML = x.files.item(0).name;
-           
-            
+            //var div = document.getElementsByClassName("files")[0];
+            //div.innerHTML = x.files.item(0).name;
+            document.getElementById("filesDiv").innerHTML = x.files.item(0).name;            
         }
         
     </script>
