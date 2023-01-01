@@ -1,0 +1,86 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.addInstructorDiv {
+    font-size: 2.43vw;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.name, .position, .email {
+    margin-top: 2vw;
+}
+
+.nameLabel, .positionLabel, .emailLabel {
+    font-size: 1.62vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#nameInput, #positionInput, #emailInput {
+    border: solid #dbdfe3 1px;
+    border-radius: 2px;
+    height: 2.4vw;
+    width: 26.0416666vw;
+    float: left;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9vw;
+    -webkit-transition: all .2s;
+}
+
+    #nameInput:focus, #positionInput:focus, #emailInput:focus {
+        outline: solid;
+        border-color: #FFBF80;
+        outline-color: #FFDFC8;
+    }
+
+.sendInvite {
+    color: white;
+    background-color: #FFD0A1;
+    font-size: 1.296vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    width: 15.625vw;
+    height: 6.296vh;
+    border-radius: 5px;
+    border: none;
+    align-items: center;
+    -webkit-transition: all .3s;
+}
+
+    .sendInvite:hover {
+        background-color: black;
+        cursor: pointer;
+    }
+
+.buttonDiv {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5vh;
+    margin-left: 42.1875vw;
+    margin-right: 42.1875vw;
+    margin-bottom: 2vw;
+}

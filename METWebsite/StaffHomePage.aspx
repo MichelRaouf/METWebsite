@@ -1,65 +1,79 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffHomePage.aspx.cs" Inherits="METWebsite.staffHomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffHomePage.aspx.cs" Inherits="METWebsite.temp1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-     <link  rel="stylesheet" href="./StyleSheets/StaffHomePage.css"/>
+    <title>Staff Home</title>
+    <link rel="icon" href="./images/gucLogo.png"/>
+    <link  rel="stylesheet" href="./StyleSheets/Header.css"/>
+    <link  rel="stylesheet" href="./StyleSheets/StaffHomePage.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-          <div class="header">
-                            <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
-                            <img class="bar" src="./images/topBarImages/bar.svg"/>
-                            <label class="label1">Faculty of Media Engineering & Technology</label>
-            
-                    <asp:Button ID="Button1" CssClass="login" runat="server" Text="Login"  />
-            
+    <%--    <div class="scrollable">
+            <div class="header">
+                <img class="logo" src="./images/topBarImages/GUC-logo 2.svg" />
+                <img class="bar" src="./images/topBarImages/bar.svg"/>
+                <label class="facultyLabel">Faculty of Media Engineering & Technology</label>
+            </div>
+
+            <div class="navbar">
+                <button class="navbtn" onserverclick="toHome" runat="server"><img src="images/staff/home.png" class="navImgHomeBookHeadphones"  /> <span>Home</span></button>
+                <button class="navbtn" onserverclick="toCourses" runat="server"><img src="images/staff/book.png"class="navImgHomeBookHeadphones"/> <span>Courses</span></button>
+                <button class="navbtnin" onserverclick="toStaff" runat="server"><img src="images/staff/group.png" class="navImgGroup"/><span>Staff</span></button>
+                <button class="navbtn" onserverclick="toStudentActiv" runat="server"><img src="images/staff/headphones.png" class="navImgHomeBookHeadphones" /><span>Student Activity</span></button>
+                <button class="navbtn" onserverclick="toAlumni" runat="server"><img src="images/staff/graduated.png"class="navImgGrad" /><span>Alumni</span></button>
+                <button class="navbtn" onserverclick="toAbout" runat="server"><img src="images/staff/info.png"class="navImgAbout" /><span>About Us</span></button>
+            </div>
+
+        </div>--%>
+         <div class="nav-bar-space" id="subNav">
+            <nav class="navBar" id="navScrolled" >
+                <img class="topLogo"  src="images/New Logo.svg"/>
+                <img class="scrollLogo" id="activeLogo" src="images/New Logo2.svg"/>
+                <div class="navContent" id="scrolledContent" >
+                    <a href="HomePage.aspx">Home</a>
+                    <a href="CourseHomePage.aspx">Courses</a> 
+                    <a id="activeNavElement" href="StaffHomePage.aspx">Staff</a>
+                    <a href="StudentActivities.aspx">Student Activity</a>
+                    <a href="AlumniPage.aspx">Alumni</a>
+                    <a href="AboutUsPage.aspx">About Us</a> 
+                </div>
+            </nav>
         </div>
-        <div class="navbar">
-            <div >
-                <img src="images/staff/home.png" alt="Alternate Text" class="navimg" />
-                                    <asp:Button Text="Home" runat="server" CssClass="navbtn" OnClick="toHome" />
-            </div>
-                <div>
-                <img src="images/staff/book.png" alt="Alternate Text"class="navimg"/>
-                                    <asp:Button Text="Courses" runat="server" CssClass="navbtn" OnClick="toCourses" />
-            </div>
-                <div>
-                <img src="images/staff/group.png" alt="Alternate Text" class="navimg2"/>
-                                    <asp:Button Text="Staff" runat="server" CssClass="navbtnin" OnClick="toStaff" />
-            </div>
-                <div >
-                <img src="images/staff/headphones.png" alt="Alternate Text"class="navimg" />
-                                    <asp:Button Text="Student Activity" runat="server" CssClass="navbtn" OnClick="toStudentActiv" />
-            </div>
-                <div >
-                <img src="images/staff/graduated.png" alt="Alternate Text"class="navimg3" />
-                                    <asp:Button Text="Alumni" runat="server" CssClass="navbtn" OnClick="toAlumni" />
-            </div>
-                <div >
-                <img src="images/staff/info.png" alt="Info" class="navimg4" />
-                                    <asp:Button Text="About Us" runat="server" CssClass="navbtn" OnClick="toAbout" />
-            </div>
-          
-             
+        <div class="container">
+            <a href="LecturersProfiles.aspx">
+                <div class="meetLecturers" onmouseover="hoverMe(this.getAttribute('class'))" onmouseout="stopHovering(this.getAttribute('class'))">     
+                    <img class="lecturersImg" src="images/staff/class 1.png" />
+                    <label href="LecturersProfiles.aspx" class="imageTxt">  
+                        <span >Meet Your Lectures </span>
+                    </label>
+                </div>
+            </a>
+            <a href="TAsProfiles.aspx">
+                <div class="meetTAs" onmouseover="hoverMe(this.getAttribute('class'))" onmouseout="stopHovering(this.getAttribute('class'))">
+                    <img  class="TAsImg" src="images/staff/TA .png" />
+                    <label  class="imageTxt"> 
+                        <span >Meet Your TAs </span> 
+                    </label>
+                </div>
+            </a>
         </div>
 
-
-          <div class="meetLecturers">
-             
-                <img class="lecturersImg" src="images/staff/class 1.png" style="width:100%" />
-                 <a href="LecturersProfiles.aspx" class="imageTxt">  <span >Meet Your Lectures </span></a>
-
-            </div>
-         <div class="meetTAs">
-                <img  class="TAsImg" src="images/staff/TA .png" style="width:100%"/>
-            <a href="TAsProfiles.aspx" class="imageTxt"> <span >Meet Your TAs </span> </a>
-
-
-            </div>
-         
     </form>
+    <script>
+        
+        function hoverMe(parent) {
+            document.getElementsByClassName(parent)[0].children[0].setAttribute('id', 'hovered')
+            document.getElementsByClassName(parent)[0].children[1].setAttribute('id', 'hoveredText')
+            
+        }
+        function stopHovering(parent) {
+            document.getElementsByClassName(parent)[0].children[0].removeAttribute('id')
+            document.getElementsByClassName(parent)[0].children[1].removeAttribute('id')
+        }
+
+    </script>
 </body>
 </html>

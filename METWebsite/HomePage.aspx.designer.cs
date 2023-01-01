@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class HomePage
+    public partial class temp
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Button1 control.
+        /// introSlideshow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl introSlideshow;
 
         /// <summary>
         /// readMoreButton control.
@@ -42,13 +42,13 @@ namespace METWebsite
         protected global::System.Web.UI.WebControls.Button readMoreButton;
 
         /// <summary>
-        /// newsdiv control.
+        /// cardWrapper control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl newsdiv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cardWrapper;
 
         /// <summary>
         /// viewCoursesButton control.
@@ -76,5 +76,14 @@ namespace METWebsite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button button10;
+
+        /// <summary>
+        /// newsDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl newsDescription;
     }
 }

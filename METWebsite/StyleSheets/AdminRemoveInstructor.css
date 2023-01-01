@@ -1,0 +1,48 @@
+﻿html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.searchButton {
+    width: 1.6vw;
+    height: 1.4vw;
+}
+
+.hierarchyTitle {
+    = margin-top: 1.8vw;
+    font-family: Tanseek,sans-serif;
+    font-size: 3.1vw;
+    font-weight: 400;
+    letter-spacing: 0.2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+    .hierarchyTitle div {
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 1.3vw;
+        padding-left: 0.9765625vw;
+        margin-right: 3.5vw;
+    }
+
+    .hierarchyTitle input[type=text] {
+        height: 2.5vw;
+        width: 20vw;
+        background-color: white;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        padding-left: 0.3255208333333333vw;
+        margin-right: 1.0416666666666667vw;
+        font-size: 1.0416666666666667vw;
+    }
+
+        .hierarchyTitle input[type=text]:focus {
+            outline: none;
+        }

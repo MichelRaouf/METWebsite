@@ -1,120 +1,20 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
-    width: 100%;
-    margin-left: -1px;
+.* {
+    box-sizing: border-box;
 }
 
-.header {
-    height: 7.6171875vw;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: start;
+html, body {
+    margin: 0px;
+    height: 100%;
 }
 
-    .header > div {
-        flex-grow: 1 1 0;
-        display: flex;
-        background-color: #ffff;
-        padding: 20px;
-        font-size: 2vw;
-        top: 0px;
-    }
-
-.login {
-    position: relative;
-    width: 10.590494791666666vw;
-    height: 3.7109375vw;
-    border-radius: 0.32552vw;
-    background-color: #FFCB05;
-    border: none;
-    font-size: 1.5625vw;
-    margin-left: 22vw;
-    font-weight: bold;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.navbtn {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5625vw;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    vertical-align: middle;
-}
-    .navbtn:hover {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: solid;
-        border-color: red;
-        border-width: 3px;
-        cursor: pointer;
-    }
-
-.navbar {
-    background-color: black;
-    height: 4.5vw;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-    .navbar > div {
-        margin-left: 10px;
-        flex-grow: 1 1 0;
-        display: flex;
-        padding: 1.3vw;
-        top: 0px;
-    }
-
-.logo {
-    width: 20.57vw;
-    height: 5.315104166666667vw;
-}
-
-.bar {
-    width: 2.57vw;
-    height: 5.315104166666667vw;
-}
-
-.navimg {
-    width: 1.8229166666666667vw;
-    height: 1.8229166666666667vw;
-    padding-top: .27vw;
-    vertical-align: middle;
-}
-
-.navimg2 {
-    width: 2.5vw;
-    height: 2.5vw;
-    vertical-align: middle;
-    padding-top: .4vw;
-}
-
-.navimg3 {
-    width: 3vw;
-    height: 3vw;
-    padding-top: .4vw;
-    vertical-align: middle;
-}
-
-.navimg4 {
-    width: 2.3vw;
-    height: 2.3vw;
-    padding-top: .4vw;
-    vertical-align: middle;
-}
-
-.label1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8vw;
-}
+/*.scrollable{
+    top:0px;
+    position:fixed;
+    background-color:white;
+    width:100%;
+}*/
 
 .studentActivity {
     display: flex;
@@ -124,6 +24,7 @@ body {
     align-items: center;
     padding-top: 0.8051529790660226vw;
 }
+
     .studentActivity > div {
         flex-grow: 1 1 0;
         display: flex;
@@ -131,50 +32,15 @@ body {
         height: 24.154589371980677vw;
     }
 
+.clubDiv:hover .image {
+    opacity: 1;
+    width: 33.5vw;
+    height: 24.8978074vw;
+}
+
 .image {
     width: 32.5vw;
     height: 24.154589371980677vw;
     opacity: 0.5;
+    transition: all 0.3s ease-in
 }
-
-.incuabator:hover .image, .brain:hover .image, .acm:hover .image, .gdg:hover .image, .ieee:hover .image, .svy:hover .image {
-    opacity: 1;
-    width: 34vw;
-    height: 25.764895330112722vw;
-   
-}
-.login:hover {
-    background-color: black;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.navbtn:hover {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid;
-    border-color: red;
-    border-width: 3px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-
-
-
-
-.navbtnin {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5625vw;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    vertical-align: middle;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid;
-    border-color: red;
-    border-width: 3px;
-    cursor: default;

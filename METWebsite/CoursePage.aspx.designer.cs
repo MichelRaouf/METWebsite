@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class CourePage
+    public partial class temp8
     {
 
         /// <summary>
@@ -24,138 +24,174 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Button2 control.
+        /// courseTitleDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl courseTitleDiv;
 
         /// <summary>
-        /// ctitle control.
+        /// creditDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ctitle;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl creditDiv;
 
         /// <summary>
-        /// ccredits control.
+        /// lectureDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ccredits;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lectureDiv;
 
         /// <summary>
-        /// clecs control.
+        /// tutDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl clecs;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tutDiv;
 
         /// <summary>
-        /// ctuts control.
+        /// labDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ctuts;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl labDiv;
 
         /// <summary>
-        /// clabs control.
+        /// courseUpdates control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl clabs;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl courseUpdates;
 
         /// <summary>
-        /// cupdates control.
+        /// updatesList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cupdates;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl updatesList;
 
         /// <summary>
-        /// cdescription control.
+        /// description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cdescription;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl description;
 
         /// <summary>
-        /// cpre control.
+        /// textDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cpre;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl textDiv;
 
         /// <summary>
-        /// csyllabus control.
+        /// prerequisites control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl csyllabus;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl prerequisites;
 
         /// <summary>
-        /// csyllabus2 control.
+        /// prereqList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl csyllabus2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl prereqList;
 
         /// <summary>
-        /// mybtn7 control.
+        /// syllabus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button mybtn7;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl syllabus;
 
         /// <summary>
-        /// cprof control.
+        /// more3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cprof;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl more3;
 
         /// <summary>
-        /// cta control.
+        /// buttonMore3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cta;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl buttonMore3;
 
         /// <summary>
-        /// cres control.
+        /// mybtn3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cres;
+        protected global::System.Web.UI.WebControls.Button mybtn3;
+
+        /// <summary>
+        /// instructors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl instructors;
+
+        /// <summary>
+        /// lecturersList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lecturersList;
+
+        /// <summary>
+        /// tasList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tasList;
+
+        /// <summary>
+        /// resources control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl resources;
     }
 }

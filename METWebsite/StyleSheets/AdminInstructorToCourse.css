@@ -1,0 +1,242 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+/** {
+    box-sizing: border-box;
+}*/
+
+.header {
+    height: 7.6171875vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    top: 0px;
+}
+
+    .header > div {
+        flex-grow: 1 1 0;
+        display: flex;
+        background-color: #ffff;
+        padding: 20px;
+        font-size: 2vw;
+        top: 0px;
+    }
+
+.logo {
+    width: 20.57vw;
+    height: 5.315104166666667vw;
+}
+
+.bar {
+    width: 2.57vw;
+    height: 5.315104166666667vw;
+}
+
+.label1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vw;
+}
+
+.adminLogo {
+    width: 3.875vw;
+    height: 7.67920133vh;
+    margin-left: 20vw;
+}
+
+.adminLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.56vw;
+    font-weight: 600;
+    margin-left: 1vw;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 17.03125vw;
+    margin-right: 17.03125vw;
+    background: linear-gradient(to right, #FFE171, #FFC3C6);
+    border-radius: 40px;
+    vertical-align: middle;
+    justify-content: space-around;
+}
+
+.dashboard {
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+    font-size: 1.62vw;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.8vh;
+    margin-left: 1vw;
+}
+
+.navLabels {
+    vertical-align: middle;
+    color: white;
+    font-size: 1.62vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dashIconLabel {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboardIcon {
+    vertical-align: middle;
+}
+
+.assignDiv {
+    font-size: 2.43vw;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.courses, .instructors, .instructorsSelected {
+    margin-top: 4.629629vh;
+    margin-left: 9.9479167vw;
+    margin-right: 9.9479167vw;
+    border-radius: 20px;
+    background-image: linear-gradient(#FFE172, #FFD595);
+    padding-top: 3vh;
+    text-align: center;
+}
+
+.instructors, .instructorsSelected {
+    display: none;
+}
+
+.courseSelected {
+    margin-top: 4.629629vh;
+    margin-left: 9.9479167vw;
+    margin-right: 9.9479167vw;
+    border-radius: 20px;
+    background-image: linear-gradient(#FFE172, #FFD595);
+    padding-top: 3vh;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 0.5vw;
+    display: none;
+}
+
+.selectCourseLabel, .selectInstructorsLabel {
+    font-size: 1.89vw;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#courseInput, #instructorInput {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.coursesList, .instructorsList, .instructorsListSelected {
+    display: grid;
+    grid-template-columns: repeat(2, 34.8567708vw);
+    justify-content: center;
+    grid-column-gap: 2vw;
+    grid-row-gap: 0.7vw;
+    margin-bottom: 0.7vw;
+}
+
+.courseItem, .instructorItem {
+    background-color: white;
+    border-radius: 15px;
+    width: 34.8567708vw;
+    height: 5vh;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 4vw;
+    text-align: center;
+    align-items: center;
+}
+
+.courseItemSelected {
+    background-color: white;
+    border-radius: 15px;
+    width: 34.8567708vw;
+    height: 5vh;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 4vw;
+    text-align: center;
+    align-items: center;
+    margin-left: 22.6236979vw;
+}
+
+.courseName, .courseCode {
+    font-size: 1vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    vertical-align: middle;
+}
+
+.courseLabel {
+}
+
+.instructorName, .positionLabel, .positionLabel {
+    font-size: 1vw;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    vertical-align: middle;
+}
+
+.select {
+    background-color: #43BB64;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 4vw;
+    height: 1.8vw;
+}
+
+    .select:hover {
+        background-color: black;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+.deselect {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 4.8vw;
+    height: 1.8vw;
+}
+
+    .deselect:hover {
+        background-color: black;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+.bottom {
+    height: 1vw;
+}
+
+.selectRoles {
+    font-size: 1.5vw;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #43BB64;
+    width: 14vw;
+    height: 6.4vh;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1.2vw;
+}

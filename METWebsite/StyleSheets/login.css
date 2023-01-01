@@ -1,0 +1,92 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    background-color: #F1F1F1;
+}
+.signIn {
+    background-color: white;
+    width: 27vw;
+/*   height: 72vh;
+*/   border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: absolute;
+    top: 50vh;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left : 8%;
+}
+.welcomeMET {
+    font-size: 1.5vw;
+    margin: 0px;
+    margin-top: 3vw;
+    margin-left: 2.95vw;
+}
+
+.title {
+    font-size: 3.5vw;
+    margin: 0;
+    margin-left:2.95vw;
+    padding-bottom : 1.5vw;
+}
+
+.signInLabel {
+    margin-left: 2.95vw;
+    padding-top: 1.8vw;
+    font-size : 1vw;
+}
+
+
+
+.signInTextBox {
+    width: 20.25vw;
+    height: 2.8275vw;
+    border-radius: .3vw;
+    margin: auto;
+    margin-top: 0.6vw;
+    margin-bottom: 0;
+    padding-left: .3vw;
+    font-size: 1.1vw;
+   
+}
+a {
+    text-decoration: none;
+    margin-left: 17.7vw;
+    font-size: 0.74vw;
+}
+
+
+.loginButton {
+    background: #FFCB05;
+    border: none;
+    border-radius:0.5vw;
+    width: 11vw;
+    height: 2.8275vw;
+    color: white;
+    font-size: 1.3vw;
+    margin-left: 14vw;
+    margin-top : 2.5vw;
+    margin-bottom : 3vw;
+}
+    .loginButton:hover {
+        background-color: black;
+        transition: 0.5s;
+    }
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.METLogo {
+    width : 50%;
+    height : 42%;
+    margin: 0;
+    position: absolute;
+    top: 50vh;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left : 43vw;
+}
+.wrongInput {
+    margin-left: 3vw;
+    color : red;
+    display : none;
+}

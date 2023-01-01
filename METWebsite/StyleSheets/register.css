@@ -1,0 +1,309 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+.bodyDiv {
+    width: 60%;
+    border: 1px solid black;
+    margin: auto;
+    padding: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: flex-start;
+}
+*{
+    font-family : Montserrat;
+}
+h1 {
+    margin: auto;
+    text-align :center;
+}
+h2{
+    width : 100%;
+    text-align: center;
+}
+
+
+.columnInputs{
+    display : flex;
+    flex-direction : row; 
+    flex-wrap :wrap;
+    row-gap : 40px;
+    width : 50%;
+    align-items: center;
+    justify-content : center;
+    
+}
+
+.show-more {
+    margin-top : 70px;
+    margin-right : 70px;
+    background-color: #FFCB05;
+    align-content: center;
+    width: 7vw;
+    height: 2.5vw;
+    border-radius: 0.32552vw;
+    border: none;
+    font-size: 1vw;
+    font-weight: 600;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .show-more:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
+
+
+
+
+:focus {
+    outline: none;
+}
+
+/* necessary to give position: relative to parent. */
+input  {
+    font: 0.9765625vw 'Muli', sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 0.06510416666666667vw;
+}
+
+
+.col-3 {
+    float: left;
+    width: 65%;
+   
+    position: relative;
+}
+
+
+.effect-19 {
+    border: 0.06510416666666667vw solid #ccc;
+    padding: 0.4557291666666667vw 0.9114583333333334vw;
+    transition: 0.4s;
+    background: transparent;
+}
+
+    .effect-19 ~ .focus-border:before,
+    .effect-19 ~ .focus-border:after {
+        content: "";
+        position: absolute;
+        top: -0.06510416666666667vw;
+        left: 50%;
+        width: 0;
+        height: 0.13020833333333334vw;
+        background-color: black;
+        transition: 0.4s;
+    }
+
+    .effect-19 ~ .focus-border:after {
+        top: auto;
+        bottom: 0;
+    }
+
+    .effect-19 ~ .focus-border i:before,
+    .effect-19 ~ .focus-border i:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0.13020833333333334vw;
+        height: 0;
+        background-color: black;
+        transition: 0.6s;
+    }
+
+    .effect-19 ~ .focus-border i:after {
+        left: auto;
+        right: 0;
+    }
+
+    .effect-19:focus ~ .focus-border:before,
+    .effect-19:focus ~ .focus-border:after,
+    .has-content.effect-19 ~ .focus-border:before,
+    .has-content.effect-19 ~ .focus-border:after {
+        left: 0;
+        width: 100%;
+        transition: 0.4s;
+    }
+
+    .effect-19:focus ~ .focus-border i:before,
+    .effect-19:focus ~ .focus-border i:after,
+    .has-content.effect-19 ~ .focus-border i:before,
+    .has-content.effect-19 ~ .focus-border i:after {
+        top: -0.06510416666666667vw;
+        height: 100%;
+        transition: 0.6s;
+    }
+
+    .effect-19 ~ label {
+        position: absolute;
+        left: 0.9114583333333334vw;
+        width: 100%;
+        top: 0.6510416666666666vw;
+        color: #aaa;
+        transition: 0.3s;
+        z-index: -1;
+        letter-spacing: 0.032552083333333336vw;
+    }
+
+    .effect-19:focus ~ label, .effect-19:not(:placeholder-shown) ~ label {
+        top: -1.171875vw;
+        left: 0;
+        font-size: 0.78125vw;
+        color: black;
+        transition: 0.3s;
+    }
+.addEdu{
+    width: 37%;
+    row-gap:0;
+    border : none;
+    margin-top: -15px;
+    background : none;
+    cursor : pointer;
+    font-weight : 600;
+    margin-left : auto;
+    margin-right : 50px;
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+    font-size : 17px;
+}
+    .addEdu img {
+        width: 20px;
+        height: 20px;
+        transition: all .3s;
+    }
+.addEdu:hover img{
+    transform : rotate(-180deg);
+    transition : all .4s;
+}
+.addEdu:hover{
+    text-decoration : underline;    
+}
+
+.show-more[disabled] {
+    background-color: #EBECEA;
+    color: lightgray;
+    cursor: default;
+}
+
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.content {
+    width: 50%;
+    float: left;
+    display: flex;
+}
+
+.container {
+    width: 400%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    left: 0;
+    transition: 400ms;
+    left: 0;
+}
+
+    .container.next {
+        left: -100%;
+    }
+
+        .container.next.next2 {
+            left: -200%;
+        }
+
+.singleEducation {
+    display: contents
+}
+
+#interestsDiv {
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+}
+
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: 50px auto;
+}
+
+    .avatar-upload .avatar-edit {
+        position: absolute;
+        right: 12px;
+        z-index: 1;
+        top: 10px;
+    }
+
+        .avatar-upload .avatar-edit input {
+            display: none;
+        }
+
+            .avatar-upload .avatar-edit input + label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 34px;
+                height: 34px;
+                margin-bottom: 0;
+                border-radius: 100%;
+                background: #FFFFFF;
+                border: 1px solid transparent;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                cursor: pointer;
+                font-weight: normal;
+                transition: all 0.2s ease-in-out;
+            }
+
+                .avatar-upload .avatar-edit input + label:hover {
+                    background: #f1f1f1;
+                    border-color: #d6d6d6;
+                }
+
+    .avatar-upload .avatar-preview {
+        width: 192px;
+        height: 192px;
+        position: relative;
+        border-radius: 100%;
+        border: 6px solid #F8F8F8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+
+.avatar-preview1 {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+}
+
+.avatar-upload .avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+

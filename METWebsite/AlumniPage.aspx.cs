@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace METWebsite
 {
-    public partial class alumniPage : System.Web.UI.Page
+    public partial class temp4 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,8 +17,8 @@ namespace METWebsite
             //create new sqlconnection and connection to database by using connection string from web.config file  
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-            SqlCommand cmd2 = new SqlCommand("select count(*) from Honors",con);
-            int x = (int) cmd2.ExecuteScalar();
+            SqlCommand cmd2 = new SqlCommand("select count(*) from Honors", con);
+            int x = (int)cmd2.ExecuteScalar();
             SqlCommand cmd = new SqlCommand("getAllAlumni", con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             SqlDataReader reader = cmd.ExecuteReader();
@@ -28,11 +28,12 @@ namespace METWebsite
             {
                 String name = reader.GetValue(0).ToString();
                 String description = reader.GetValue(1).ToString();
+                String imgURL = reader.GetValue(2).ToString();
                 var div = new HtmlGenericControl("div");
                 div.Attributes.Add("class", "honorsProfile");
                 var profimg = new HtmlGenericControl("img");
                 profimg.Attributes.Add("class", "img");
-                profimg.Attributes.Add("src", "images/alumniPageImages/image 6.png");
+                profimg.Attributes.Add("src", imgURL);
                 var infodiv = new HtmlGenericControl("div");
                 infodiv.Attributes.Add("class", "profileTextContainer");
                 var h4 = new HtmlGenericControl("h4");
@@ -45,18 +46,19 @@ namespace METWebsite
                 infodiv.Controls.Add(h4);
                 infodiv.Controls.Add(p);
                 div.Controls.Add(infodiv);
-                honordiv.Controls.Add(div);
-                
-                if (count!= x && count%3 !=0 )
+                honorDiv.Controls.Add(div);
+                if (count != x && count % 3 != 0)
                 {
-                    var lol = new HtmlGenericControl("div");
-                    lol.Attributes.Add("class", "lol");
-                    honordiv.Controls.Add(lol);
+                    var whiteBar = new HtmlGenericControl("div");
+                    whiteBar.Attributes.Add("class", "whiteBar");
+                    honorDiv.Controls.Add(whiteBar);
                 }
                 count++;
-                
             }
-
+        }
+        protected void toLogin(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
         protected void toHome(object sender, EventArgs e)
         {

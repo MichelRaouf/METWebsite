@@ -1,0 +1,163 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+/*.scrollable{
+    top:0px;
+    position:fixed;
+    background-color:white;
+    width:100%;
+}*/
+
+.honors {
+    width: inherit;
+    background-color: #343434;
+    padding: 0.6510416666666666vw;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.honorsDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -1.953125vw;
+}
+
+.honorsTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5807291666666665vw;
+    padding-top: -1.6276041666666667vw;
+    font-weight: 600;
+    background-color: #b52329;
+    text-align: center;
+    color: white;
+    height: 3.90625vw;
+    width: 40.104166666666664vw;
+}
+
+.gucSpan {
+    font-size: 3.7760416666666665vw;
+}
+
+.honorsProfile {
+    margin: 0.6510416666666666vw;
+    margin-bottom: 6.510416666666667vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    align-content: start;
+    width: 30%;
+}
+
+.img {
+    width: 9.765625vw;
+}
+
+.profileTextContainer {
+    display: flex;
+    margin-top: 0.3255208333333333vw;
+    margin-left: 0.9765625vw;
+    flex-direction: column;
+    justify-items: center;
+    width: 18.229166666666668vw;
+}
+
+.honorName {
+    margin-top: 0;
+    margin-bottom: 0.13020833333333334vw;
+    margin-top: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 1.66015625vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.honorParagraph {
+    /*margin: 0;
+    color: white;
+    font-size: 0.9765625vw;
+    font-family: 'Montserrat', sans-serif;*/
+    color: white;
+    font-family: Montserrat;
+    position: relative;
+    font-size: 1vw;
+    font-weight: 600;
+    text-align: start;
+}
+
+.whiteBar {
+    background-color: white;
+    height: 10.091145833333334vw;
+    width: 0.20833333333333334vw;
+    margin-right: 1.3020833333333333vw;
+}
+
+@font-face {
+    font-family: Tanseek;
+    src: url('../fonts/Tanseek Modern Pro Arabic.ttf');
+}
+
+.careers {
+    background-color: white;
+    display: flex;
+    padding: 4.5vw;
+    flex-direction: row;
+    align-items: center;
+}
+
+.careerText {
+    width: 20.4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.careerTitle {
+    font-family: Tanseek, sans-serif;
+    font-size: 3.5vw;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.whiteBarAlumni {
+    height: 19.5vw;
+    margin-left: 5vh;
+    margin-right: 1vw;
+    margin-top: 1.6vw;
+}
+
+.companies {
+    width: 68vw;
+    height: 21vw;
+}
+
+.redLabel {
+    background-color: rgba(237,28,36,0.7);
+    width: 30%;
+    display:flex;
+    justify-content:center;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+}
+
+.guciansLabel {
+    color: white;
+    opacity: 100%;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,181 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+/*.scrollable{
+    top:0px;
+    position:fixed;
+    background-color:white;
+    width:100%;
+}*/
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.whyMETimg {
+    width: 100%;
+    flex-direction: row;
+}
+
+.infoDiv {
+    position: relative;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.quoteLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.65vw;
+    top: 0px;
+    left: 0px;
+    position: relative;
+}
+
+.hansDiv {
+    display: block;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.hansLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 300;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    width: 100%;
+}
+
+.navbar2 {
+    height: 4vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5vw;
+    background-color: #F5D243;
+    z-index: 10000;
+    position: sticky;
+    top: 5.1vw;
+    box-shadow: 0 0 1vw 0 rgba(0,0,0,0.1);
+}
+    .navbar2 a {
+        position: relative;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5vw;
+        font-weight: 500;
+        letter-spacing: 0.07vw;
+        color: white;
+        cursor: pointer;
+        transition: all 0.17s ease-in;
+    }
+
+
+        .navbar2 a:hover {
+            font-size: 1.8vw;
+            font-weight: 600;
+        }
+
+    .yellowNav > div {
+        margin-left: 0.8051529790660226vw;
+        flex-grow: 1 1 0;
+        display: flex;
+        padding: 1.3vw;
+        top: 0vw;
+    }
+
+.aboutNav {
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    line-height: 3.9452495974235107vw;
+}
+
+    .aboutNav:hover {
+        font-weight: 900;
+        text-decoration: underline;
+        font-size: 1.6vw;
+        cursor: pointer;
+    }
+
+.aboutH {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.45vw;
+    font-weight: 600;
+    position: relative;
+    padding-left: 40px;
+    color: #000000;
+}
+
+.brackets {
+    color: #f5d243;
+}
+
+.majorSpan {
+    color: #999999;
+}
+
+.majorDescription {
+    text-align: left;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.65vw;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.majorGroups {
+    font-size: 2vw;
+    text-align: left;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    padding-left: 40px;
+}
+
+.listItem {
+    list-style: none;
+    text-align: left;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.65vw;
+    padding-left: 65px;
+}
+
+    .listItem li::before {
+        content: "\2022";
+        color: #F5D243;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+li {
+    margin: 15px 0;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 1vw;
+}

@@ -11,7 +11,7 @@ namespace METWebsite
 {
 
 
-    public partial class TAsProfiles
+    public partial class temp3
     {
 
         /// <summary>
@@ -24,21 +24,21 @@ namespace METWebsite
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Button1 control.
+        /// taDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl taDiv;
 
         /// <summary>
-        /// tadiv control.
+        /// searchInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tadiv;
+        protected global::System.Web.UI.WebControls.TextBox searchInput;
     }
 }

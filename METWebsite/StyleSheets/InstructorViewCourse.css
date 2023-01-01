@@ -1,0 +1,387 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+/*    border: 3px solid green;
+*/
+body {
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+.title {
+    font-family: 'Montserrat';
+    font-size: 2.818035426731079vw;
+    font-weight: 500;
+    text-align: center;
+    color : black;
+}
+
+.updates {
+    font-family: 'Montserrat';
+    font-size: 1.6103059581320451vw;
+    font-weight: 600;
+    color: #ED1C24;
+    margin-bottom: 3.2552083333333335vw;
+    margin-left: 1.953125vw;
+    line-height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+span {
+    font-family: Monda;
+    font-size: 1.6276041666666667vw;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+.updatesTable {
+    border : none;
+    table-layout: auto;
+    width: 80%;
+    font-size : 2vw;
+}
+.Edit {
+    background-color: #FFCB05;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 10vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    text-indent: -0.6510416666666666vw;
+}
+.editIcon {
+    vertical-align: middle;
+    justify-content: start;
+    margin-right: 1vw;
+    width: 2vw;
+    height: 2vw;
+}
+
+.Edit:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.Delete {
+    background-color: #ED1C24;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 10vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    text-indent: -0.6510416666666666vw;
+}
+.AddNew {
+    display : block;
+    background-color: black;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 20vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    margin : auto;
+    text-indent: -0.6510416666666666vw;
+    margin-bottom : 2vw;
+    margin-top : 2vw;
+    cursor : pointer;
+}
+
+.Delete:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.innerSpan {
+   vertical-align : middle;
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: white;
+    font-family: "Montserrat";
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+.weekEdit{
+    
+    width: 3.5%;
+    height: 3.5%;
+    margin-left : auto;
+}
+
+
+.AddNewMaterials {
+    display: block;
+    background-color: black;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 15vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    margin: auto;
+    text-indent: -0.6510416666666666vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    cursor: pointer;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.overlay-content {
+    background-color : white;
+    border-radius: 0.78vw;
+    position: relative;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    
+    margin : auto;
+}
+
+.overlay .closebtn {
+    font-size: 6.5vw;
+}
+
+@media screen and (max-height: 58.5vw) {
+    .overlay a {
+        font-size: 2.6vw
+    }
+
+
+}
+.overlayTitle {
+    color: black;
+}
+.AnnouncmentTextBox{
+    width : 40.22vw;
+    height: 15.1vw;
+    font-size : 1.5vw;
+    margin-top :1.56vw;
+}
+.confirm_cancel_Buttons{
+    display : flex;
+    flex-direction: row;
+    column-gap : 2vw;
+    margin-left :23vw;
+    margin-top: 2vw;
+    padding-bottom : 2vw;
+}
+.show-more {
+    background-color: #FFCB05;
+    align-content: center;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.32552vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+    .show-more:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+.cancel {
+    background-color: #E6E6E6;
+    align-content: center;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.32552vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #A3A3A3;
+    font-family: 'Montserrat', sans-serif;
+}
+    .cancel:hover {
+        background-color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+.yes_no_Buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 9.12vw;
+    margin : auto;
+    justify-content : center;
+    margin-top : 6.5vw;
+    padding-bottom : 6.5vw;
+}
+.divTitle{
+    display : flex;
+    flex-direction: row;
+    column-gap : 1.63vw;
+    align-content : center;
+    align-items : center;
+}
+
+
+.AddNewWeek {
+    display: block;
+    background-color: #FFCB05;
+    border: none;
+    border-radius: 0.32552vw;
+    width: 12vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    margin: auto;
+    text-indent: -0.6510416666666666vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    cursor: pointer;
+   
+}
+.AddNewWeek:hover {
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#dropdownList{
+    width : 13vw;
+    height : 3.9vw;
+}
+
+
+
+
+.trash {
+    background: black;
+    width: 22px;
+    height: 26.66666666666667px;
+    display: inline-block;
+    border: none;
+    position: relative;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    cursor : pointer;
+}
+
+    .trash span {
+        position: absolute;
+        height: 4px;
+        background: black;
+        top: -6.333333px;
+        left: -3.3333333333333px;
+        right: -3.3333333333333px;
+        border-top-left-radius: 3.3333333333333px;
+        border-top-right-radius: 3.3333333333333px;
+        transform: rotate(0deg);
+        transition: transform 250ms;
+        transform-origin: 19% 100%;
+    }
+
+        .trash span:after {
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 2.3333333333333px;
+            background: black;
+            top: -3.3333333333333px;
+            border-top-left-radius: 3.3333333333333px;
+            border-top-right-radius: 3.3333333333333px;
+            transform: rotate(0deg);
+            transition: transform 250ms;
+            transform-origin: 19% 100%;
+            left: 9px;
+        }
+
+
+    .trash i {
+        position: relative;
+        width: 1.666666666666px;
+        height: 16.66666666666px;
+        background: #fff;
+        display: block;
+        margin: 4.6666667px auto;
+        border-radius: 1.666666666666px;
+    }
+
+        .trash i:after {
+            content: '';
+            width: 1.666666666666px;
+            height: 16.66666666666px;
+            background: #fff;
+            position: absolute;
+            left: -6px;
+            border-radius: 1.666666666666px;
+        }
+
+        .trash i:before {
+            content: '';
+            width: 1.666666666666px;
+            height: 16.66666666666px;
+            background: #fff;
+            position: absolute;
+            right: -6px;
+            border-radius: 1.666666666666px;
+        }
+
+    .trash:hover span {
+        transform: rotate(-45deg);
+        transition: transform 250ms;
+        background: #ED1C24;
+    }
+    .trash:hover {
+        background: #ED1C24;
+    }
+        .trash:hover span:after {
+            background: #ED1C24;
+        }
+
